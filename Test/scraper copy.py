@@ -42,10 +42,6 @@ class TripAdvisorScraper:
             "Cache-Control": "no-cache"
         }
 
-    def build_url(self, offset):
-        """Construit l'URL pour une page donnée."""
-        return f"{self.base_url}&o=a{offset}"
-
     def make_request(self, url, retries=3):
         """Effectue une requête GET avec gestion des erreurs et mise à jour du User-Agent."""
         for attempt in range(retries):
@@ -72,10 +68,24 @@ class TripAdvisorScraper:
             logger.error(f"Erreur lors de l'analyse d'un restaurant : {str(e)}")
             return None
 
-    def scrape_page(self, offset):
-        """Récupère les informations des restaurants sur une page spécifique."""
-        url = self.build_url(offset)
-        logger.info(f"Scraping des résultats à l'offset {offset} : {url}")
+    def parse_review(self, element):
+        """Extrait les informations d'un avis."""
+        try:
+            title_elem = element.find('a', class_='ocfR3SKN')
+            rating_elem = element.find('span', class_='ui_bubble_rating')
+            text_elem = element.find('q', class_='IRsGHoPm')
+            return {
+                'Titre': title_elem.text.strip() if title_elem else "N/A",
+                'Note': rating_elem['class'][1].split('_')[-1] if rating_elem else "N/A",
+                'Texte': text_elem.text.strip() if text_elem else "N/A"
+            }
+        except Exception as e:
+            logger.error(f"Erreur lors de l'analyse d'un avis : {str(e)}")
+            return None
+
+    def scrape_page(self, url):
+        """Récupère les informations des restaurants et des avis sur une page spécifique."""
+        logger.info(f"Scraping des résultats de la page : {url}")
 
         try:
             content = self.make_request(url)
@@ -91,43 +101,40 @@ class TripAdvisorScraper:
                     restaurants.append(data)
                 time.sleep(randint(1, 2))
 
-            return restaurants
+            # Extraction des avis
+            review_divs = soup.find_all('div', class_='review-container')
+            reviews = []
+
+            for div in review_divs:
+                data = self.parse_review(div)
+                if data:
+                    reviews.append(data)
+                time.sleep(randint(1, 2))
+
+            return restaurants, reviews
         except Exception as e:
-            logger.error(f"Erreur lors du scraping de l'offset {offset} : {str(e)}")
-            return []
-
-    def scrape_all_pages(self, max_pages=50):
-        """Récupère les informations des restaurants sur plusieurs pages."""
-        all_restaurants = []
-        empty_pages = 0
-
-        for page_number in range(max_pages):
-            offset = page_number * 30
-            restaurants = self.scrape_page(offset)
-            if restaurants:
-                all_restaurants.extend(restaurants)
-                empty_pages = 0
-                logger.info(f"Offset {offset} : {len(restaurants)} restaurants trouvés.")
-            else:
-                empty_pages += 1
-                if empty_pages >= 2:
-                    logger.info("Arrêt du scraping après 2 pages vides consécutives.")
-                    break
-            time.sleep(randint(self.min_delay, self.max_delay))  # Pause entre les pages
-            
-        return pd.DataFrame(all_restaurants)
+            logger.error(f"Erreur lors du scraping de la page : {str(e)}")
+            return [], []
 
 def main():
-    base_url = "https://www.tripadvisor.fr/RestaurantSearch?geo=187265&sortOrder=popularity"
+    base_url = "https://www.tripadvisor.fr/Restaurant_Review-g187265-d23540733-Reviews-Restaurant_Bergamote-Lyon_Rhone_Auvergne_Rhone_Alpes.html"
     scraper = TripAdvisorScraper(base_url)
 
     try:
-        df = scraper.scrape_all_pages(max_pages=50)  # Scrape jusqu'à 50 pages
-        if not df.empty:
-            df.to_csv('restaurants_lyon.csv', index=False, encoding='utf-8-sig')
-            logger.info(f"Scraping terminé avec succès : {len(df)} restaurants trouvés.")
+        restaurants, reviews = scraper.scrape_page(base_url)
+        if restaurants:
+            df_restaurants = pd.DataFrame(restaurants)
+            df_restaurants.to_csv('restaurant_bergamote.csv', index=False, encoding='utf-8-sig')
+            logger.info(f"Scraping des restaurants terminé avec succès : {len(df_restaurants)} restaurants trouvés.")
         else:
             logger.error("Aucun restaurant trouvé.")
+
+        if reviews:
+            df_reviews = pd.DataFrame(reviews)
+            df_reviews.to_csv('reviews_bergamote.csv', index=False, encoding='utf-8-sig')
+            logger.info(f"Scraping des avis terminé avec succès : {len(df_reviews)} avis trouvés.")
+        else:
+            logger.error("Aucun avis trouvé.")
     except Exception as e:
         logger.error(f"Échec du scraping : {str(e)}")
 
