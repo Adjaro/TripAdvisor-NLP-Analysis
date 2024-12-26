@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 class TripAdvisorScraper:
-    def __init__(self, base_url):
+    def __init__(self, base_url): 
         """
         Initialise le scraper.
         :param base_url: URL de base pour le scraping

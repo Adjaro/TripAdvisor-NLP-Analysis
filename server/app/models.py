@@ -29,16 +29,45 @@ class DimAuteur(Base):
     email = Column(String, nullable=True)
 
 
-class FaitAvis(Base):
+class FaitNotes(Base):
     __tablename__ = "fait_avis"
     id_avis = Column(Integer, primary_key=True, index=True)
     id_restaurant = Column(Integer, ForeignKey("dim_restaurant.id_restaurant"))
     id_date = Column(Integer, ForeignKey("dim_date.id_date"))
     id_auteur = Column(Integer, ForeignKey("dim_auteur.id_auteur"))
 
-    note = Column(Integer, nullable=False)
+    note = Column(Integer, nullable=True)
+    note_cuisine = Column(Integer, nullable=True)
+    note_service = Column(Integer, nullable=True)
+    note_qualite_prix = Column(Integer, nullable=True)
+    note_ambiance = Column(Integer, nullable=True)
+
+    restaurant = relationship("DimRestaurant")
+    date = relationship("DimDate")
+    auteur = relationship("DimAuteur")
+
+
+
+class FaitCommentaire(Base):
+    __tablename__ = "fait_avis"
+    id_avis = Column(Integer, primary_key=True, index=True)
+    id_restaurant = Column(Integer, ForeignKey("dim_restaurant.id_restaurant"))
+    id_date = Column(Integer, ForeignKey("dim_date.id_date"))
+    id_auteur = Column(Integer, ForeignKey("dim_auteur.id_auteur"))
+
     commentaire = Column(String, nullable=True)
+
+    restaurant = relationship("DimRestaurant")
+    date = relationship("DimDate")
+    auteur = relationship("DimAuteur")
+
+
+class FaitAvis2(Base):
     nb_commentaire = Column(Integer, nullable=True)
+
+    restaurant = relationship("DimRestaurant")
+    date = relationship("DimDate")
+    auteur = relationship("DimAuteur")
 
     restaurant = relationship("DimRestaurant")
     date = relationship("DimDate")
