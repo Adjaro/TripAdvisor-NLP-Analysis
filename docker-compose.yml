@@ -1,23 +1,14 @@
-version: '3'
+version: '1'
 
 services:
-  server:
-    build:
-      context: ./server
-      dockerfile: Dockerfile
-    ports:
-      - "8000:8000"
-    volumes:
-      - sqlite_data:/app/
 
-  client:
+  stremlit:
     build:
-      context: ./client
+      context: ./app
       dockerfile: Dockerfile
     ports:
       - "8501:8501"
-    depends_on:
-      - server
-
+    volumes:
+      - sqlite_data:/app/
 volumes:
   sqlite_data:
