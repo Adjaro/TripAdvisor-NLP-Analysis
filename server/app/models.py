@@ -1,13 +1,14 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
+import uuid
 
 Base = declarative_base()
 
 # Table: dim_restaurant
 class DimRestaurant(Base):
     __tablename__ = "dim_restaurant"
-    id_restaurant = Column(Integer, primary_key=True, index=True)
+    id_restaurant = Column(String, primary_key=True, index=True, autoincrement=True)
     nom = Column(String, nullable=True)
     service = Column(String, nullable=True)
     type_cuisine = Column(String, nullable=True)
@@ -17,30 +18,30 @@ class DimRestaurant(Base):
 # Table: dim_date
 class DimDate(Base):
     __tablename__ = "dim_date"
-    id_date = Column(Integer, primary_key=True, index=True)
+    id_date = Column(String, primary_key=True, index=True, autoincrement=True)
     date = Column(Date, nullable=True)
     mois = Column(Integer, nullable=True)
     annee = Column(Integer, nullable=True)
 
 class DimAuteur(Base):
     __tablename__ = "dim_auteur"
-    id_auteur = Column(Integer, primary_key=True, index=True)
+    id_auteur = Column(String, primary_key=True, index=True, autoincrement=True)
     auteur = Column(String, nullable=True)
     email = Column(String, nullable=True)
 
 
 class FaitNotes(Base):
     __tablename__ = "fait_avis"
-    id_avis = Column(Integer, primary_key=True, index=True)
+    id_avis = Column(String, primary_key=True, index=True, autoincrement=True)
     id_restaurant = Column(Integer, ForeignKey("dim_restaurant.id_restaurant"))
     id_date = Column(Integer, ForeignKey("dim_date.id_date"))
     id_auteur = Column(Integer, ForeignKey("dim_auteur.id_auteur"))
 
-    note = Column(Integer, nullable=True)
-    note_cuisine = Column(Integer, nullable=True)
-    note_service = Column(Integer, nullable=True)
-    note_qualite_prix = Column(Integer, nullable=True)
-    note_ambiance = Column(Integer, nullable=True)
+    nombre_etoile = Column(Integer, nullable=True)
+    # note_cuisine = Column(Integer, nullable=True)
+    # note_service = Column(Integer, nullable=True)
+    # note_qualite_prix = Column(Integer, nullable=True)
+    # note_ambiance = Column(Integer, nullable=True)
 
     restaurant = relationship("DimRestaurant")
     date = relationship("DimDate")
@@ -50,7 +51,7 @@ class FaitNotes(Base):
 
 class FaitCommentaire(Base):
     __tablename__ = "fait_avis"
-    id_avis = Column(Integer, primary_key=True, index=True)
+    id_avis = Column(String, primary_key=True, index=True)
     id_restaurant = Column(Integer, ForeignKey("dim_restaurant.id_restaurant"))
     id_date = Column(Integer, ForeignKey("dim_date.id_date"))
     id_auteur = Column(Integer, ForeignKey("dim_auteur.id_auteur"))

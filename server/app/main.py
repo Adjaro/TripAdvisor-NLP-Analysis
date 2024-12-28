@@ -1,8 +1,12 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-from . import models, database
+from .model import models , schemas
+from .utils import database
 from pydantic import BaseModel
 from .scraper import TripadvisorScraper
+from .alimentationBd import insert_json_data
+import os
+# print(data_dir)
 
 app = FastAPI()
 
@@ -20,6 +24,12 @@ def get_db():
 @app.on_event("startup")
 async def startup():
     models.Base.metadata.create_all(bind=database.engine)
+    # Insert data
+    # data_dir = '/data'
+    # data_dir = os.path.join(os.getcwd(), 'data')  # Chemin relatif vers un dossier "data" local
+    data_dir = os.path.join(os.path.dirname(__file__), "data")
+    print(data_dir)
+    insert_json_data(data_dir)
 
 @app.post("/items/")
 def create_item(item: ItemCreate, db: Session = Depends(get_db)):
@@ -44,6 +54,9 @@ def scrape_restaurant(url, driver_path):
 
 
 
-@app.get("/items/")
-def read_items(db: Session = Depends(get_db)):
-    return db.query(models.Item).all()
+@app.get("/allrestaurants")
+def read_restaurant(db: Session = Depends(get_db)):
+    res  = db.query(models.DimRestaurant).all()
+    print(res)
+
+    return res

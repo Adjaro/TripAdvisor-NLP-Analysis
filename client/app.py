@@ -1,27 +1,46 @@
+# app.py
 import streamlit as st
-import requests
-import json
+from interface import accueil , navbar, dashbord, cartographie, analyse_nlp, visualisation_data, scrapper_restaurant, rapport
+import time
 
-API_URL = "http://server:8000"
+ 
 
-st.title("Item Manager")
+# Configuration pour la largeur de la page
 
-# Create Item
-with st.form("create_item"):
-    name = st.text_input("Name")
-    description = st.text_input("Description")
-    if st.form_submit_button("Create Item"):
-        response = requests.post(
-            f"{API_URL}/items/",
-            json={"name": name, "description": description}
-        )
-        if response.status_code == 200:
-            st.success("Item created!")
+st.set_page_config(
+    page_title="Tripadvisor Scraper",
+    page_icon="🌍",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
-# List Items
-if st.button("Refresh Items"):
-    response = requests.get(f"{API_URL}/items/")
-    if response.status_code == 200:
-        items = response.json()
-        for item in items:
-            st.write(f"Name: {item['name']}, Description: {item['description']}")
+def connect_DataBase():
+    return True
+
+# Vérifiez le serveur avant de lancer l'application Streamlit
+if connect_DataBase():
+    # Initialisation de l'état de la page si nécessaire
+    if 'page' not in st.session_state:
+        st.session_state.page = 'Accueil'
+    
+    # Afficher le menu latéral
+    navbar.show()
+
+    # Affichage du contenu en fonction de la page sélectionnée
+    if st.session_state.page == 'Accueil':
+        accueil.show()
+    elif st.session_state.page == 'Dashbord':
+        dashbord.show()
+    elif st.session_state.page == 'Cartographie':
+        cartographie.show()
+    elif st.session_state.page == 'Analyse NLP':
+        analyse_nlp.show()
+    elif st.session_state.page == 'Visualisation data':
+        visualisation_data.show()
+    elif st.session_state.page == 'Scrapper Restaurant':
+        scrapper_restaurant.show()
+    elif st.session_state.page == 'Rapport':
+        rapport.show()
+
+else:
+    st.error("Le serveur n'est pas disponible. Veuillez réessayer plus tard.")
