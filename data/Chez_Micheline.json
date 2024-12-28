@@ -1,0 +1,904 @@
+{
+    "nom": "Chez Micheline",
+    "adresse": "14 Place Carnot, 69002 Lyon France",
+    "classement": 192,
+    "horaires": [
+        "lun : 8:30-22:00",
+        "mar : 8:30-22:30",
+        "mer : 8:30-22:30",
+        "jeu : 8:30-22:30",
+        "ven : 8:30-22:30",
+        "sam : 8:30-22:30"
+    ],
+    "note_globale": 4.5,
+    "note_cuisine": 4.5,
+    "note_service": 4.5,
+    "note_rapportqualiteprix": 4.3,
+    "note_ambiance": 4.4,
+    "infos_pratiques": "Non renseigné",
+    "repas": [
+        "Déjeuner",
+        "Dîner"
+    ],
+    "regimes": "Non renseigné",
+    "fourchette_prix": "Non renseigné",
+    "fonctionnalités": [
+        "Réservations",
+        "Places assises",
+        "Sert de l'alcool",
+        "Bar complet",
+        "Cartes bancaires acceptées",
+        "Service de table"
+    ],
+    "type_cuisines": [
+        "Française",
+        "Européenne",
+        "Saine"
+    ],
+    "latitude": 45.750404,
+    "longitude": 4.828682,
+    "nb_avis": 129,
+    "nbExcellent": 85,
+    "nbTrèsbon": 29,
+    "nbMoyen": 9,
+    "nbMédiocre": 3,
+    "nbHorrible": 3,
+    "avis": [
+        {
+            "pseudo": "Passenger40007341505",
+            "titre_review": "Seduite",
+            "nb_etoiles": 4,
+            "date": "8 décembre 2024",
+            "experience": "family",
+            "review": "Je conseille ce restaurant .\nJolie brasserie ,plats excellents et copieux.\nServeurs agréables et rapides .\nNous y retournerons avec plaisir"
+        },
+        {
+            "pseudo": "Claude A",
+            "titre_review": "Idéal pour un déjeuner très bon et agréable.",
+            "nb_etoiles": 5,
+            "date": "2 décembre 2024",
+            "experience": "couples",
+            "review": "Un restaurant type brasserie très agréable et savoureux.\nServeur et serveuse avenants\nMalgré leur tardive d'arrivée 14h35...\nMerci à vous\nClaude"
+        },
+        {
+            "pseudo": "Cécile F",
+            "titre_review": "Belle découverte",
+            "nb_etoiles": 5,
+            "date": "14 novembre 2024",
+            "experience": "solo",
+            "review": "Heureuse orientation et belle découverte !\nUn dîner dans un cadre cosy, une assiette plus que complète, un accueil au top et des serveurs aux petits soins.\nJe recommande."
+        },
+        {
+            "pseudo": "Fred",
+            "titre_review": "Pas terrible",
+            "nb_etoiles": 3,
+            "date": "30 septembre 2024",
+            "experience": "business",
+            "review": "Resto hyper bruyant à l’interieur. Le service n est pas très agréable. Les plats sont corrects … mais bon doute sur les œufs meurette … malade le soir même 😞\nJe ne reviendrais pas ."
+        },
+        {
+            "pseudo": "504vah",
+            "titre_review": "Première fois pour nous et plutôt déçus .",
+            "nb_etoiles": 3,
+            "date": "19 septembre 2024",
+            "experience": "friends",
+            "review": "La cuisine du déjeuner est correcte ( plat du jour copieux) , le service est rapide , le cadre est sympathique . Mais c'est très bruyant, les serveurs (se) sont hyper speed : ils courent dans tous les sens , pour avoir du pain ou pour payer la note impossible d'accrocher un(e) serveur(se) . Bref, on a envie de vite sortir pour prendre l'air . \nEt c'est dommage car il y a tout dans cet établissement pour que ce soit un endroit charmant . \nJe ne pense pas y retourner car nous n'avons pas réussi à apprécier le moment ."
+        },
+        {
+            "pseudo": "Nissa",
+            "titre_review": "Endroit agréable mais...",
+            "nb_etoiles": 3,
+            "date": "26 juillet 2024",
+            "experience": "couples",
+            "review": "3 e fois que j y vais malheureusement ça c'est pas passé comme les 2 premières fois \nServeuse désagréable qui n'accepte pas les critiques sur sa sauce au poivre qui n étais pas au poivre🤷‍♀️ dommage..."
+        },
+        {
+            "pseudo": "Eric V",
+            "titre_review": "Très bonne table",
+            "nb_etoiles": 5,
+            "date": "29 mai 2024",
+            "experience": "business",
+            "review": "Très bonne adresse sur la place Carnot, rapport qualité prix très satisfaisant, cuisine maison savoureuse.\nJe recommande vivement cette brasserie."
+        },
+        {
+            "pseudo": "Gérard G",
+            "titre_review": "Repas assourdissant.",
+            "nb_etoiles": 3,
+            "date": "15 mai 2024",
+            "experience": "friends",
+            "review": "Endroit très bruyant où il faut hurler pour se faire entendre de son voisin. Plats corrects, rapport qualité prix correct. Serveuse peu aimable mais serveur aimable. Trop de tables dans ce resto."
+        },
+        {
+            "pseudo": "Malokoksis",
+            "titre_review": "Petite perle",
+            "nb_etoiles": 5,
+            "date": "10 mai 2024",
+            "experience": "family",
+            "review": "Super petit resto place Carnot , au top !\nLes plats sont généreux, très bon et des produits de qualités. \nLe service impeccable, avec un serveur plus que sympathique. \nAdresse à garder absolument !"
+        },
+        {
+            "pseudo": "So'",
+            "titre_review": "Très bon",
+            "nb_etoiles": 4,
+            "date": "23 avril 2024",
+            "experience": "friends",
+            "review": "Très bon restaurant ! Cuisine généreuse et très bonne. Un bon rapport qualité prix !\nPersonnel sympathique également."
+        },
+        {
+            "pseudo": "45viviane45",
+            "titre_review": "BON RESTAURANT",
+            "nb_etoiles": 4,
+            "date": "19 avril 2024",
+            "experience": "couples",
+            "review": "Bon restaurant, recommandé par notre hôtel. Carte du dîner avec choix de 6 plats, de 16,50 à 22 €.\nPeu d'intimité, avec nécessité de pousser la voix pour s'entendre."
+        },
+        {
+            "pseudo": "walhalla254",
+            "titre_review": "Ptit dej",
+            "nb_etoiles": 4,
+            "date": "4 avril 2024",
+            "experience": "couples",
+            "review": "Petit déjeuner correct, avec de bons produits et service sympathique. Quoi demander de plus. Nous n'y avons pas mangé le midi ou soir, mais la carte proposait de bons petits plats, différents de la majorité des bouchons"
+        },
+        {
+            "pseudo": "Dewulf",
+            "titre_review": "Une découverte grâce à ce site.",
+            "nb_etoiles": 4,
+            "date": "31 mars 2024",
+            "experience": "business",
+            "review": "Bon restaurant qui nous a servi avec célérité à notre demande un plat du jour de bonne facture.\nRestaurant proche de Perrache, j'y retournerai sans problème."
+        },
+        {
+            "pseudo": "Margot V",
+            "titre_review": "Parfait!",
+            "nb_etoiles": 5,
+            "date": "4 mars 2024",
+            "experience": "family",
+            "review": "Nous avons débarquer dans ce restaurant avec nos deux petites filles et notre énorme chien… et quelle surprise! Des sourires, des serveurs et serveuses accueillants… et pour ne rien gâcher nous nous sommes régalé!!! Le tartare est tout simplement une tuerie! Et le plat du jour aussi! \nUn grand merci pour votre gentillesse!"
+        },
+        {
+            "pseudo": "jostaw",
+            "titre_review": "Une bonne adresse",
+            "nb_etoiles": 5,
+            "date": "17 février 2024",
+            "experience": "family",
+            "review": "Un agréable restaurant avec du choix \nUne cuisine raffinée avec des produits frais \nService rapide et efficace \nUn moment sympa"
+        },
+        {
+            "pseudo": "Gerard W",
+            "titre_review": "Excellent",
+            "nb_etoiles": 4,
+            "date": "14 février 2024",
+            "experience": "friends",
+            "review": "Excellente cuisine, simple mais raffinée. Je recommande particulièrement le plat du jour. Le fondant au chocolat en dessert était délicieux. Les prix sont abordables. Je vous conseille de réserver…."
+        },
+        {
+            "pseudo": "Jean paul M",
+            "titre_review": "Bon copieux sympathique",
+            "nb_etoiles": 5,
+            "date": "10 février 2024",
+            "experience": "family",
+            "review": "Toujours aussi sympathique et accueillant\nLe sourire du service est aussi bien que la qualité de la cuisine\nPlats simples mais généreux frais et excellents\nLa preuve c'est toujours plein\nUn grand merci à toute l'équipe"
+        },
+        {
+            "pseudo": "montagny201",
+            "titre_review": "restau sympa",
+            "nb_etoiles": 4,
+            "date": "10 février 2024",
+            "experience": "family",
+            "review": "restau sympa place Carnot. On s est vraiment régalé oeufs meurette, rumsteck, gratin de ravioles, salade lyonnaise tout était délicieux Service rapide. Prudent de réserver sa table"
+        },
+        {
+            "pseudo": "Leya67",
+            "titre_review": "Très chouette restaurant",
+            "nb_etoiles": 4,
+            "date": "10 février 2024",
+            "experience": "friends",
+            "review": "Tout c'est sympa, simple et chaleureux chez Micheline. On y mange très bien (voire: très très bien), dans un décor coocooning et de bon goût mais sans chichis, et l'équipe est adorable. Une adresse à retenir et on y retourne avec plaisir !"
+        },
+        {
+            "pseudo": "Amandineanthoniozblanc",
+            "titre_review": "Parfait",
+            "nb_etoiles": 5,
+            "date": "20 janvier 2024",
+            "experience": "family",
+            "review": "Repas parfait mais plat trop copieux. Cuisine traditionnelle et fait maison. Un plus pour le menu enfant proposé."
+        },
+        {
+            "pseudo": "Olivier Paul",
+            "titre_review": "Heureux hasard",
+            "nb_etoiles": 5,
+            "date": "17 janvier 2024",
+            "experience": "couples",
+            "review": "Nous avions besoin de chaleur ce soir de janvier. Nous déambulant au hasard à la sortie de notre hôtel, une décoration sympa à travers la vitrine, du monde, des gens, visiblement heureux et de belles assiettes, le beau sourire d’un membre du staff. Et hop, nous entrons! Effectivement, endroit, très sympathique, le personnel est très chaleureux, la carte est simple mais très bien exécuté, Le cote du Rhône y est bon., c’est tout ce dont nous avions besoin"
+        },
+        {
+            "pseudo": "christelle m",
+            "titre_review": "Super découverte",
+            "nb_etoiles": 5,
+            "date": "13 janvier 2024",
+            "experience": "couples",
+            "review": "Très belle découverte. Accueil au top. Plats fait maison et familiaux. Et ils font bistrot aussi toute le journée. Nous vous le conseillons."
+        },
+        {
+            "pseudo": "Dominique V",
+            "titre_review": "Micheline, un prénom qui fleure bon la cuisine de maman.",
+            "nb_etoiles": 5,
+            "date": "1 janvier 2024",
+            "experience": "family",
+            "review": "Intrigué et attiré par le nom, je réserve un jeudi soir pour 2…\nAccueil très chaleureux… ambiance bistrot… \nBelle carte … pas trop de plats…\nApéro, plat, dessert… très sympa… le service est à l’écoute et très professionnel…\nBonne adresse"
+        },
+        {
+            "pseudo": "lilou83orange",
+            "titre_review": "Moment très agréable",
+            "nb_etoiles": 5,
+            "date": "10 décembre 2023",
+            "experience": "family",
+            "review": "Un super accueil dès notre arrivée. Installés confortablement nous avons très bien dîné : plats excellents (produits frais, saveurs exquises), serveuses et serveurs adorables.\nNous reviendrons sans hésiter..\nUn grand merci pour ce repas."
+        },
+        {
+            "pseudo": "lpsl69",
+            "titre_review": "Agréable surprise.",
+            "nb_etoiles": 5,
+            "date": "26 novembre 2023",
+            "experience": "couples",
+            "review": "Arrivée sans réservation. Ils ont fait le maximum pour nous accueillir malgré les tables bien remplies.\nService attentif. \nQualité et quantité au rendez-vous. \nTrès bonne adresse."
+        },
+        {
+            "pseudo": "stan",
+            "titre_review": "Après un salon fatiguant",
+            "nb_etoiles": 4,
+            "date": "23 novembre 2023",
+            "experience": "business",
+            "review": "Rien à redire, la qualité et la quantité sont là! L’ambiance est bon enfant, le cadre jovial. \nJe ne peux vous dire qu’une seule chose allez y"
+        },
+        {
+            "pseudo": "Ecesu B",
+            "titre_review": "Accueil sympa",
+            "nb_etoiles": 5,
+            "date": "18 novembre 2023",
+            "experience": "couples",
+            "review": "Un resto très chaleureux avec les repas très gourmands! Sercive rapide! Penser à réserver pour le soir."
+        },
+        {
+            "pseudo": "baroudeurs35",
+            "titre_review": "Dîner en famille",
+            "nb_etoiles": 5,
+            "date": "31 octobre 2023",
+            "experience": "family",
+            "review": "De passage à Lyon pour le week-end de La Toussaint, nous avons dîner en famille dans ce restaurant trouvé via ce site. \nNous n’avons pas été déçu. Les plats sont copieux, élaborés avec de bons produits. Les assiettes sont copieuses. Le cadre est très sympa. Nous vous recommandons ce restaurant."
+        },
+        {
+            "pseudo": "Jean-Charles BOU",
+            "titre_review": "Très bon restaurant.",
+            "nb_etoiles": 5,
+            "date": "29 octobre 2023",
+            "experience": "family",
+            "review": "Excellent restaurant près de la gare de Perrache. \nJ'y ai dégusté à la carte un excellent magret de canard, à la fois savoureux, copieux et très digeste."
+        },
+        {
+            "pseudo": "philippe r",
+            "titre_review": "Bon restaurant",
+            "nb_etoiles": 4,
+            "date": "13 octobre 2023",
+            "experience": "couples",
+            "review": "Très bonne cuisine, les plats sont copieux.\nLe service a été rapide et serveur sympathique.\nNous reviendrons"
+        },
+        {
+            "pseudo": "Antoine B",
+            "titre_review": "Excellente adresse",
+            "nb_etoiles": 5,
+            "date": "7 octobre 2023",
+            "experience": "family",
+            "review": "Très belle découverte à 2 pas de Perrache/Carnot. Produits et service de qualité. Excellent rapport qualité prix. Accueil chaleureux, service rapide, deco raffinée."
+        },
+        {
+            "pseudo": "Anh T",
+            "titre_review": "Service rapide, bons plats",
+            "nb_etoiles": 5,
+            "date": "5 septembre 2023",
+            "experience": "couples",
+            "review": "Les serveurs sont très sympa, actifs. Ils prennent la commande rapidement et les plats sont prêts dans pas longtemps. Prix raisonnable."
+        },
+        {
+            "pseudo": "jeanclaude_kuhn",
+            "titre_review": "Repas chez Micheline",
+            "nb_etoiles": 5,
+            "date": "5 septembre 2023",
+            "experience": "solo",
+            "review": "Excellent accueil et repas bien sympathique, le rapport qualité prix me semble être très correct.\nJe conseillerais volontiers à mes amis de connaître ce restaurant"
+        },
+        {
+            "pseudo": "Alain R",
+            "titre_review": "Un bon moment dans la convivialité et le respect",
+            "nb_etoiles": 5,
+            "date": "29 juin 2023",
+            "experience": "family",
+            "review": "Cuisine exceptionnel et service irréprochable.\nDe plus, nous sommes restés tardivement et merci de ne pas nous avoir \"viré\" alors que cela aurait été complètement compréhensible.\n\nJe recommande vivement !"
+        },
+        {
+            "pseudo": "juliette",
+            "titre_review": "Bon moment sympa",
+            "nb_etoiles": 4,
+            "date": "26 mai 2023",
+            "experience": "none",
+            "review": "Nous avons été bien reçu, plats très corrects, copieux et bons. \nNous recommandons cet établissement"
+        },
+        {
+            "pseudo": "mourad a",
+            "titre_review": "Excellente cuisine",
+            "nb_etoiles": 5,
+            "date": "18 avril 2023",
+            "experience": "couples",
+            "review": "Excellente cuisine, accueil chaleureux et agréable, je le recommande fortement \nVivement.\nSes plats sont un vrai delice tres généreux pour la quantité"
+        },
+        {
+            "pseudo": "lolo",
+            "titre_review": "Déjeuner très agréable",
+            "nb_etoiles": 5,
+            "date": "25 mars 2023",
+            "experience": "couples",
+            "review": "Très bel endroit très bon plat un accueil chaleureux de bons professionnels entouré d'une équipe à la hauteur le serveur était particulièrement sympathique rien à dire je recommande fortement nous sommes de Nice et je reviendrai régulièrement y manger...... Merci lolo"
+        },
+        {
+            "pseudo": "Alex",
+            "titre_review": "A fuir",
+            "nb_etoiles": 1,
+            "date": "18 mars 2023",
+            "experience": "business",
+            "review": "Serveur (certain max) d’apparence sympathique mais d’une belle hypocrisie. Se moque des clients avec ces petites copines en terrasse. Belle mentalité"
+        },
+        {
+            "pseudo": "NeletFlo Choron",
+            "titre_review": "Une bonne adresse",
+            "nb_etoiles": 4,
+            "date": "17 mars 2023",
+            "experience": "couples",
+            "review": "Même s'il est difficile de juger sur un seul repas, les plats que nous avions (saucisson lyonnais et quenelle de brochet) étaient fait maison et bons. La mousse au chocolat en dessert était bonne également."
+        },
+        {
+            "pseudo": "Boubay",
+            "titre_review": "Bonne brasserie",
+            "nb_etoiles": 4,
+            "date": "17 mars 2023",
+            "experience": "couples",
+            "review": "Encore une fois, je déplore que la note bien n’existe pas! Je mets très bien parce que je ne veux pas mettre moyen.\nBrasserie tout à fait correcte. C’est bon, le service est rapide, les portions sont généreuses et les plats sont servis chauds.\nLe personnel est sympathique et les prix sont raisonnables."
+        },
+        {
+            "pseudo": "Hortensias62",
+            "titre_review": "Tres bonne cuisine",
+            "nb_etoiles": 4,
+            "date": "8 mars 2023",
+            "experience": "family",
+            "review": "Bon accueil, attente à l’extérieur mais pas très longue. \nPlats très bons.\nBonne adresse. Il est conseillé de réserver !!"
+        },
+        {
+            "pseudo": "FaustineDijon",
+            "titre_review": "Tout dépend des serveurs...",
+            "nb_etoiles": 2,
+            "date": "27 février 2023",
+            "experience": "none",
+            "review": "Je ne suis pas de Lyon et je me faisais régulièrement un plaisir de faire découvrir ce petit bijou à mes amis lyonnais, mais attention, il faut tomber sur la bonne équipe. Un lundi (9 janvier 2023) : un super duo de serveurs bienveillants, à l'humour fin et communicatif et fiers de leur cuisine. Ce soir : un serveur méprisant et agressif m'a jugé \"condescendant (!!!)\" et a cru que je remettais en cause ses compétences quand je lui ai demandé, prévenant, si nous n'étions pas trop tard pour le chef (il était 20h30). De même, son collègue prenait plus tard + de 200 € de règlement comme une machine, sans nous adresser un regard, voire un sourire, et encore moins un merci... Je me suis retenu d'exprimer mon indignation à cette fine équipe pour ne pas mettre mal à l'aise mes amis ou les autres clients présents, mais l'attitude de l'équipe en salle n'était pas à la hauteur du cuisinier et de ses plats."
+        },
+        {
+            "pseudo": "Frenchbackpacker",
+            "titre_review": "Un bon petit bistro !",
+            "nb_etoiles": 4,
+            "date": "19 février 2023",
+            "experience": "friends",
+            "review": "Sympathique petit restaurant, les mets sont bons, les quantités sont vraiment généreuses , l’accueil est très sympa ! Rien à dire, ça fait totalement le taff , les frites maisons sont très bonnes"
+        },
+        {
+            "pseudo": "Mic",
+            "titre_review": "Belle découverte !",
+            "nb_etoiles": 5,
+            "date": "7 février 2023",
+            "experience": "couples",
+            "review": "Quel délice et belle découverte des œufs moeurette. Dommage plus de place pour goûter ces beaux desserts, la prochaine fois 😁"
+        },
+        {
+            "pseudo": "maxrvp20",
+            "titre_review": "Très agréable decouverte",
+            "nb_etoiles": 5,
+            "date": "17 janvier 2023",
+            "experience": "business",
+            "review": "Nous sommes venus à 8 dans le restaurant. C'est vrai que le choix d'entrées(2) et de plats (6) sont limite mais par-contre nous avons pris tous les différent choix à 8 et nous avons tous les 8 très bien mangé. Le service est rapide et ils connaissent bien leur métier. Bonne adresse à lyon"
+        },
+        {
+            "pseudo": "Nicolas",
+            "titre_review": "Mais quelle adresse !",
+            "nb_etoiles": 5,
+            "date": "7 janvier 2023",
+            "experience": "friends",
+            "review": "Super endroit ! Pas de chichi, du bon, du simple, du goûteux, tout ce au'on aime !\nOn choisit à l'ardoise, on commande rapidement, on est servi dans la foulée et on passe un petit moment de bonheur ...\nContinuez ainsi ...!"
+        },
+        {
+            "pseudo": "Progressier",
+            "titre_review": "Super-moment",
+            "nb_etoiles": 5,
+            "date": "6 janvier 2023",
+            "experience": "family",
+            "review": "La nourriture est parfaite et l’ambiance est chaleureuse. Je recommande le ‘rumsteak’ et les desserts!"
+        },
+        {
+            "pseudo": "Typic13",
+            "titre_review": "Malveillant",
+            "nb_etoiles": 1,
+            "date": "26 novembre 2022",
+            "experience": "family",
+            "review": "Sous son nom de gentille grand mère se cache un restaurateur qui vous explique qu'il n a pas 20 secondes (resto vide) pour faire chauffer un pot de bébé. \nPas très pro et encore moins bienveillant."
+        },
+        {
+            "pseudo": "Emmanuel Q",
+            "titre_review": "Convivial et très bon !",
+            "nb_etoiles": 5,
+            "date": "16 novembre 2022",
+            "experience": "family",
+            "review": "Les plats sont consistants et très bons.\nLe service est rapide, les serveurs sont efficaces et souriants.\nCadre familial très sympathique !"
+        },
+        {
+            "pseudo": "Julien",
+            "titre_review": "personnel attentionné, parts généreuses",
+            "nb_etoiles": 5,
+            "date": "16 novembre 2022",
+            "experience": "none",
+            "review": "personnel attentionné, parts généreuses, un restaurant très convivial, à deux pas de perrache sur la place carnot"
+        },
+        {
+            "pseudo": "Corine R",
+            "titre_review": "Familiale et très conviviale",
+            "nb_etoiles": 5,
+            "date": "12 novembre 2022",
+            "experience": "couples",
+            "review": "Nous avons passé une excellente soirée au restaurant Chez Micheline. Service rapide, très bon, rien à dire ! Des frites maisons excellentes et assiette très généreuse. Si vous voulez bien manger et un service de qualité, on vous le recommande !"
+        },
+        {
+            "pseudo": "MathieuM127",
+            "titre_review": "Top",
+            "nb_etoiles": 5,
+            "date": "20 octobre 2022",
+            "experience": "friends",
+            "review": "Excellent restaurant sur la place Carnot \nLe personnel est agréable , les plats très bons et copieux ! \nŒufs meurettes \nQuasi de veau , purée de patates douces \nGratin de ravioles sauce forestière \nRien à redire juste excellent moment passé la bas !"
+        },
+        {
+            "pseudo": "GgDine",
+            "titre_review": "Veille de semi et marathon",
+            "nb_etoiles": 4,
+            "date": "2 octobre 2022",
+            "experience": "friends",
+            "review": "Se trouvant juste à côté de notre hôtel, nous avions réservé pour le dîner du soir précédent notre course à pied.\nPeut-être pas une bonne idée d’après le serveur les plats étant assez riches !\nBref nous nous décidons pour un gratin de ravioles A.O.C forestier (cèpes, girolles, pleurotes) délicieux mais effectivement très riches. Le canard à l’orange et sa purée de pommes de terre et courgettes, et le rumsteck et ses frites.\nEn dessert quel dommage il ne restait plus de tarte au noix ! Du coup ce fût crème brûlée et ananas.\nMalheureusement nous n’avons pas pu modifier nos plats car le chef était seul ce soir là d’après le serveur.\nAu moment de l’addition, serveur très honnête car s’est rendu compte qu’il nous avait demandé plus que nécessaire.\nService sympathique, temps d’attente raisonnable.\nBon rapport qualité/prix.\nJe recommande"
+        },
+        {
+            "pseudo": "Peregrinasoy",
+            "titre_review": "Simple et sympathique",
+            "nb_etoiles": 5,
+            "date": "19 septembre 2022",
+            "experience": "none",
+            "review": "Pour un repas sans prétention mais servi avec attention, un accueil agréable et des prix raisonnables.\nJolie déco, serveurs attentionnés."
+        },
+        {
+            "pseudo": "K7322",
+            "titre_review": "Copieux ! 😋",
+            "nb_etoiles": 4,
+            "date": "14 septembre 2022",
+            "experience": "family",
+            "review": "Une carte restreinte mais des plats très bons et surtout très copieux !\nPersonnel très accueillant. \nIl faut réserver sinon vous risquez de ne pas avoir de table 😉"
+        },
+        {
+            "pseudo": "Julien Thomas",
+            "titre_review": "Une bonne soirée",
+            "nb_etoiles": 4,
+            "date": "11 septembre 2022",
+            "experience": "friends",
+            "review": "Nous avons été bien accueillis, le personnel est très sympa et attentif aux besoins de chacun.\nLe repas était bon, assez copieux cependant.\nNous avons passé un bon moment"
+        },
+        {
+            "pseudo": "An'-Cé P",
+            "titre_review": "Déjeuner rapide et savoureux",
+            "nb_etoiles": 4,
+            "date": "28 août 2022",
+            "experience": "none",
+            "review": "Un accueil au top, des plats copieux et délicieux. \nPour un déjeuner de travail ou entre amis, c'est une bonne adresse !\nd'ailleurs n'hésitez pas à réserver, car c'est souvent complet le midi !"
+        },
+        {
+            "pseudo": "Pascal B",
+            "titre_review": "Très bonne table et accueil chaleureux",
+            "nb_etoiles": 5,
+            "date": "1 juillet 2022",
+            "experience": "none",
+            "review": "Je ne suis pas de ceux qui laissent des avis en général, mais lorsque je vis un moment qui mérite d'être partagé, alors je prends le temps de dire merci. Merci au cuisto pour ces délicieux plats bien préparés aux saveurs délicates et à la serveuse qui nous a bien accueilli et servi. La terrasse dehors est un plus qui se savoure également comme le reste. Bien situé, sur une jolie place lyonnaise, n'hésitez pas à prendre part au festin si vous êtes dans les parages."
+        },
+        {
+            "pseudo": "Sandrine",
+            "titre_review": "Repas",
+            "nb_etoiles": 5,
+            "date": "19 juin 2022",
+            "experience": "friends",
+            "review": "Cuisine excellente,Acceuil au top, convivialité \nMagnifique moment entre amis.\nEt grand merci pour votre Acceuil"
+        },
+        {
+            "pseudo": "Constance",
+            "titre_review": "Comme à la maison",
+            "nb_etoiles": 5,
+            "date": "11 juin 2022",
+            "experience": "friends",
+            "review": "Quelle surprise d’avoir découvert « Chez Micheline » ! Un accueil chaleureux dans un cadre instagrammable. Laissez-vous surprendre par le cocktail « Chez Micheline », parfait pour l’été. Poursuivez avec un plat estivale : brochette de bœuf sur un lit King Size de frites. Des serveurs attentifs et au petit soin !"
+        },
+        {
+            "pseudo": "Hakan O",
+            "titre_review": "Parfait je recommande",
+            "nb_etoiles": 5,
+            "date": "14 mai 2022",
+            "experience": "family",
+            "review": "Très bon restaurant plats fait maison et très copieux et le serveur très sympathique et à l’écoute. Très bon rapport qualité prix je recommande fortement très bien placé merci pour cet accueil"
+        },
+        {
+            "pseudo": "QuandLappetitVa",
+            "titre_review": "Simple bon sympa et chaleureux",
+            "nb_etoiles": 5,
+            "date": "7 mai 2022",
+            "experience": "family",
+            "review": "Service efficace et très sympa, jolie carte et cuisine avec des produits de qualité. Une très bonne adresse pour un bistrot qui a du charme."
+        },
+        {
+            "pseudo": "AnnaValentine",
+            "titre_review": "Super adresse",
+            "nb_etoiles": 5,
+            "date": "22 avril 2022",
+            "experience": "friends",
+            "review": "Ce restaurant est une très bonne adresse \nService rapide, cadre agréable et les plats du jour sont toujours très bons"
+        },
+        {
+            "pseudo": "catherine398",
+            "titre_review": "Topissime",
+            "nb_etoiles": 4,
+            "date": "19 mars 2022",
+            "experience": "family",
+            "review": "Accueil très chaleureux \nAmbiance calme \nRepas excellent \nLe seul bémol la carte est peu importante mais il vaut mieux maîtriser peu et bien \nRestaurant à faire sans aucun risque"
+        },
+        {
+            "pseudo": "Julien C",
+            "titre_review": "A fuir",
+            "nb_etoiles": 1,
+            "date": "10 mars 2022",
+            "experience": "friends",
+            "review": "Horrible, la viande est limite avariée. Vraisemblablement la chaîne du froid n’est pas respectée, ou les dates de péremption sont oubliées. Frites maison ok, mais si on part du principe que les patates sont pleines de germes, ca ne serait pas une mauvaise idée de revenir au surgelé. Nous étions venues suite aux bons commentaires de ce restaurants. Nous ne recommencerons pas."
+        },
+        {
+            "pseudo": "Mic",
+            "titre_review": "Merci Jackie et micheline !:p",
+            "nb_etoiles": 5,
+            "date": "5 mars 2022",
+            "experience": "couples",
+            "review": "Mes respect au cuisinier,on a manger comme des rois ! Les serveur aussi d'une accueil vraiment sympathique! Nous qui sommes de passage , Je recommande ce lieu !"
+        },
+        {
+            "pseudo": "Valentin l",
+            "titre_review": "Une belle adresse",
+            "nb_etoiles": 5,
+            "date": "26 février 2022",
+            "experience": "none",
+            "review": "Excellent repas hier midi Chez Micheline. Nous étions 4 et avons mangé 4 plats et desserts différents, chacun a rendu une assiette parfaitement propre malgré des plats très généreusement servis, signe que tout était excellent.\nEt petit détail qui souvent, est le signe à notre sens des bons restaurants : les kirs et les cafés étaient eux aussi au top.\nEnfin, l’accueil est au niveau du repas, charmant et chaleureux.\nNous avions bien fait de réserver car la salle était comble.\nMerci Micheline !"
+        },
+        {
+            "pseudo": "Marie-Christine C",
+            "titre_review": "Une super adresse sur Lyon",
+            "nb_etoiles": 5,
+            "date": "23 février 2022",
+            "experience": "business",
+            "review": "Je recommande fortement ce restaurant. \nL’ambiance est très chaleureuse et les serveurs sont au top. \nLa cuisine est tout simplement délicieuse et très copieuse."
+        },
+        {
+            "pseudo": "Cédric P",
+            "titre_review": "Tellement agréable !",
+            "nb_etoiles": 5,
+            "date": "19 février 2022",
+            "experience": "couples",
+            "review": "Je tiens à souligner dans cette courte rédaction les quelques points qui m'ont marqués.\n\nL'accueil et le service fût d'une qualité que je considère aujourd'hui comme rare dans les établissements de restauration.\n\nTrès avenant sans pour autant être trop intrusif, le service fût très agréable !\n\nNous avons pu nous installer et être servis en l'espace de 5 min.\n\nJe ne peux aujourd'hui juger la cuisine, mais en ce qui concerne le service et les boissons chaudes, ce petit moment fût très sympathique.\n\nMerci à la direction et aux employés pour leur accueil très chaleureux.\n\nUne adresse à ne pas louper dans le 2ème arrondissement de Lyon !"
+        },
+        {
+            "pseudo": "Antoine T",
+            "titre_review": "Arrivé à 14h pour un déjeuner...et accueilli avec le sourire",
+            "nb_etoiles": 5,
+            "date": "18 février 2022",
+            "experience": "family",
+            "review": "Bon expérience dans ce restaurant non dépourvu de charme.\nUne ambiance accueillante, des personnels charmant et des assiettes bien garnies...trop presque."
+        },
+        {
+            "pseudo": "JLQD",
+            "titre_review": "Je recommande",
+            "nb_etoiles": 5,
+            "date": "17 février 2022",
+            "experience": "solo",
+            "review": "Excellent acceuil de toutes les personnes travaillant dans cet établissement. Les plats sont bons. Je recommande vivement!"
+        },
+        {
+            "pseudo": "Charlotte",
+            "titre_review": "Excellent",
+            "nb_etoiles": 5,
+            "date": "11 février 2022",
+            "experience": "family",
+            "review": "Restaurant agréable et familial.\nLa nourriture servie est locale et très bonne.\nL’ambiance est convivial et nous avons été très bien accueilli.\nNous recommandons fortement ce restaurant pour un petit repas en famille."
+        },
+        {
+            "pseudo": "Lucien",
+            "titre_review": "Excellent",
+            "nb_etoiles": 5,
+            "date": "18 décembre 2021",
+            "experience": "none",
+            "review": "Encore merci pour votre accueil et la qualité du repas!! Viande excellente..tout était parfait ..merci et à bientôt..nous recommandons vivement mais pensez à réserver.."
+        },
+        {
+            "pseudo": "Ghislaine31",
+            "titre_review": "Excellente cuisine familiale",
+            "nb_etoiles": 4,
+            "date": "14 décembre 2021",
+            "experience": "none",
+            "review": "les plats du jour sont généreux avec une excellente cuisine familiale. Le cadre très agréable. Un plus pour la belle vaisselle de grand mère. Le service très sympathique. On vous accueille chaleureusement."
+        },
+        {
+            "pseudo": "magali",
+            "titre_review": "Dîner au top",
+            "nb_etoiles": 5,
+            "date": "7 décembre 2021",
+            "experience": "couples",
+            "review": "Accueil très sympathique ! \nRepas très agréable et très bien exécuté , frites maison excellentes parole de chti ! \nÀ faire"
+        },
+        {
+            "pseudo": "Nicolas D",
+            "titre_review": "Découverte et déconvenue .",
+            "nb_etoiles": 2,
+            "date": "5 décembre 2021",
+            "experience": "family",
+            "review": "Cadre lumineux et accueil sympa , tout s’annonçait bien ; tout s’est d’ailleurs bien passé , jusque nos séjours aux toilettes la nuit qui a suivi … notre salade au saumon gravelax ne passait ni chez ma femme , ni chez moi (tous les 2 avions pris le même plat ).\nDommage . 😭"
+        },
+        {
+            "pseudo": "Jenn39",
+            "titre_review": "Une vraie brasserie",
+            "nb_etoiles": 5,
+            "date": "4 décembre 2021",
+            "experience": "family",
+            "review": "Une vrai brasserie à la française avec une pointe de tradition lyonnaise \nLa cuisson du bœuf parfaitement respectée selon le choix ( pas si simple).\nMention spéciale pour les frites, des vraies, des bonnes. \nSimple, efficace et goûteux.\nJ’y reviendrais avec plaisir.\nPetite salle, pensez à réserver !!!"
+        },
+        {
+            "pseudo": "Virginie C",
+            "titre_review": "Des plats brasserie au top !",
+            "nb_etoiles": 5,
+            "date": "2 décembre 2021",
+            "experience": "business",
+            "review": "Belle découverte et excellent rapport qualité prix. Des plats bien franchouillards, cuisinés comme à la maison, excellents.. Le personnel à l'écoute et très sympathique. Rien à redire !! On reviendra."
+        },
+        {
+            "pseudo": "zoldock",
+            "titre_review": "Bonne brasserie",
+            "nb_etoiles": 5,
+            "date": "29 novembre 2021",
+            "experience": "couples",
+            "review": "Tres bon restaurant les plats sont tres copieux et tres bien préparés le tout pour un tarif correct 12€ plat du jour avec un personnel agréable et un cadre sympa"
+        },
+        {
+            "pseudo": "Waltzer G",
+            "titre_review": "Petit resto avec ambiance sympathique 👌",
+            "nb_etoiles": 5,
+            "date": "20 novembre 2021",
+            "experience": "couples",
+            "review": "En w-d sur Lyon nous voulions un resto pas trop loin de notre hôtel à notre arrivée vendredi soir.\nNous avons trouvé celui ci.\nPetit endroit fort convivial. Carte réduite pour des produits et plats de qualité.\nQuelques entrées, 6 plats sur le tableau et quelques desserts.\nLe gratin de raviole aux champignons un régal mais ne comptez pas les calories 😁\nLe seul bémol, mon magret de canard sauce à l'orange....c'était un petit morceau de magret et non un entier ou même un demi magret.....et pour un bon alsacien comme moi c'était un peu léger.....heureusement que j'ai choisi le gâteau moelleux aux chocolat, celui là il vous cale l'estomac 👍 La crème brûlée est superbe aussi. \nPersonnel très sympa également 👌\nEt les prix sont très convenables.\nJe recommandd😃"
+        },
+        {
+            "pseudo": "sylvie J",
+            "titre_review": "Très bonne adresse",
+            "nb_etoiles": 5,
+            "date": "11 novembre 2021",
+            "experience": "friends",
+            "review": "Restaurant extrêmement sympathique \nServeuse très serviable \nAmbiance décontracté et repas excellent surtout la ravioli à tomber\nSans hésiter."
+        },
+        {
+            "pseudo": "83delf",
+            "titre_review": "Excellente adresse, service rapide",
+            "nb_etoiles": 5,
+            "date": "11 novembre 2021",
+            "experience": "friends",
+            "review": "Excellent bistrot sur la place Carnot, service rapide, plats copieux et très bons, serveur très sympa. Une bonne adresse pour déjeuner entre amies."
+        },
+        {
+            "pseudo": "Laura B",
+            "titre_review": "Topitop",
+            "nb_etoiles": 5,
+            "date": "4 novembre 2021",
+            "experience": "couples",
+            "review": "Parfait, accueil chaleureux, repas excellent, service rapide. L'ambiance feutrée, le serveur est très sympa et à de bon tips pour lyon. Et le service continue l'après midi."
+        },
+        {
+            "pseudo": "Amélie D",
+            "titre_review": "Je recommande",
+            "nb_etoiles": 5,
+            "date": "3 novembre 2021",
+            "experience": "friends",
+            "review": "Très rapide, très copieux et surtout très bon! Un choix de carte pour tous les goûts, et même un menu enfant.\nJe recommande sans hésitation"
+        },
+        {
+            "pseudo": "christophe b",
+            "titre_review": "Simple mais goûteux, et très agréable",
+            "nb_etoiles": 5,
+            "date": "26 septembre 2021",
+            "experience": "business",
+            "review": "Simplement bon, simplement et agréablement accueilli, servis. \nPour y avoir dîner 2 soirs d’affilée, cela semble la norme. \nBravo"
+        },
+        {
+            "pseudo": "Nicolas ML",
+            "titre_review": "Belle adresse sur la place Carnot !",
+            "nb_etoiles": 5,
+            "date": "19 septembre 2021",
+            "experience": "friends",
+            "review": "Très bonne adresse qui remplit pas mal de cases :\n- cuisine de qualité et savoureuse\n- service rapide\n- des menus abordables\n- une décoration sympathique\n- deux terrasses sympathique dont une sous les arbres de la place Carnot."
+        },
+        {
+            "pseudo": "guillaume25000",
+            "titre_review": "Rapide, efficace, sympathique, très bon.",
+            "nb_etoiles": 5,
+            "date": "4 juillet 2021",
+            "experience": "couples",
+            "review": "Très bon repas (boeuf mariné et gratin de ravioles forestier), personnel sympathique, service agréable et efficace. \nJe recommande"
+        },
+        {
+            "pseudo": "Guenillette",
+            "titre_review": "Très belle découverte !",
+            "nb_etoiles": 5,
+            "date": "2 juillet 2021",
+            "experience": "friends",
+            "review": "Excellentes assiettes, apéro « le Micheline » excellent, serveurs très sympas, service rapide, endroit agréable. A recommander !"
+        },
+        {
+            "pseudo": "Françoise L",
+            "titre_review": "repas amical",
+            "nb_etoiles": 4,
+            "date": "2 juillet 2021",
+            "experience": "none",
+            "review": "très bon restaurant : accueil très sympa, choix de plats, vraiment bien ; je recommande. Le seul défaut : un peu bruyant, on ne s'entendait pas parler et de plus, avec les masques !!!"
+        },
+        {
+            "pseudo": "DeLyonFrance",
+            "titre_review": "Chez Micheline",
+            "nb_etoiles": 3,
+            "date": "11 juin 2021",
+            "experience": "couples",
+            "review": "En terrasse, agréable. Carte simple et classique. Un peu cher. Plats bien préparés, service avec le sourire."
+        },
+        {
+            "pseudo": "luciegimenez",
+            "titre_review": "bon emplacement et bonne cuisine",
+            "nb_etoiles": 4,
+            "date": "27 mai 2021",
+            "experience": "family",
+            "review": "Super restaurant sur la place carnot ! \nLes tapas à partager sont très peu copieuse, par contre le plat l’est vraiment !! le rapport qualité prix est très correct, la terrasse est très bien placé le coin est super.\nJe recommande"
+        },
+        {
+            "pseudo": "Breizhcec",
+            "titre_review": "Notre cantine quand on vient voir notre fille a lyon",
+            "nb_etoiles": 5,
+            "date": "19 octobre 2020",
+            "experience": "family",
+            "review": "Une adresse incontournable à Lyon avec une carte simple mais excellente, des frites maison délicieuses. Aujourd'hui un saumon sur lit de poireaux avec un risotto : un vrai bonheur pour les gourmands que nous sommes.\nNous reviendrons lors de notre prochain séjour à lyon pour une 6ème fois sans soucis."
+        },
+        {
+            "pseudo": "Ritchicloud",
+            "titre_review": "Très belle découverte",
+            "nb_etoiles": 5,
+            "date": "5 octobre 2020",
+            "experience": "none",
+            "review": "Un bon restaurant Place Carnot, non je ne vois pas ?! Mais si \"Chez Micheline\" .\nIl n'y a pas de secret lorsque le restaurateur et son équipe aime ce qu'ils font cela se ressent dès l'ouverture de la porte du restaurant à l'adition. \nNous avons passé un agréable moment et surtout bien mangé (là est l'essentiel)."
+        },
+        {
+            "pseudo": "Foodporn",
+            "titre_review": "Client regulié",
+            "nb_etoiles": 4,
+            "date": "4 octobre 2020",
+            "experience": "none",
+            "review": "Je suis un habitué de l'établissement, le cadre et la décoration sont agréable et moderne. \nEn cuisine le chef nous régal et les desserts de Nelly sont excellents et gourmands (surtout le fondant au chocolat).\nCôté salle Max est toujours souriant et Flo se montre passionné en véritable maitre de maison. \n\nPetit bémol quant à la fidélisation client..."
+        },
+        {
+            "pseudo": "Martine G",
+            "titre_review": "Très bon",
+            "nb_etoiles": 3,
+            "date": "23 septembre 2020",
+            "experience": "none",
+            "review": "Repas très bon mais un bémol pour le service oublié de lancer la commande de notre table donc attente très longue"
+        },
+        {
+            "pseudo": "bernard c",
+            "titre_review": "BON RAPPORT QUALITE/PRIX",
+            "nb_etoiles": 5,
+            "date": "5 septembre 2020",
+            "experience": "none",
+            "review": "Accueil sympa,salades copieuses et succulentes,plats cuisinés avec des produits frais,desserts variés et cafés gourmands agréables,en résumé tout est bien."
+        },
+        {
+            "pseudo": "Delia M",
+            "titre_review": "Très bon",
+            "nb_etoiles": 4,
+            "date": "26 août 2020",
+            "experience": "family",
+            "review": "C'est très bon et les produits sont frais. De plus, la déco est originale et soignée. Seul bémol : nous y sommes allés un soir où l'ardoise ne proposait pas grand chose..."
+        },
+        {
+            "pseudo": "Lucille S",
+            "titre_review": "Excellents plats du jour",
+            "nb_etoiles": 5,
+            "date": "18 juillet 2020",
+            "experience": "friends",
+            "review": "Produits frais, simples mais cuisinés avec finesse. Très sud dans l'esprit : pâtes, risotto, légumes divers, huile d'olive"
+        },
+        {
+            "pseudo": "Cloé D",
+            "titre_review": "Excellent !",
+            "nb_etoiles": 5,
+            "date": "9 juillet 2020",
+            "experience": "family",
+            "review": "Une nourriture fait maison, délicieuse, un rapport qualité/ prix excellent. Un personnel accueillant et un environnement chaleureux. Excellent ! Nous recommandons."
+        },
+        {
+            "pseudo": "Polo",
+            "titre_review": "Très bon, je vais fréquemment",
+            "nb_etoiles": 5,
+            "date": "18 février 2020",
+            "experience": "none",
+            "review": "Très bon, je vais fréquemment chez Micheline et je n’ai jamais été déçus.\nLa qualité et la variété des mets est satisfaisante et la cuisine y est bien faite. Un lieu calme faisant de la cuisine traditionnelle.\nJe recommande"
+        },
+        {
+            "pseudo": "Simon",
+            "titre_review": "Belle découverte place Carnot.",
+            "nb_etoiles": 5,
+            "date": "12 janvier 2020",
+            "experience": "couples",
+            "review": "Belle découverte place Carnot. Choix limité, gage de qualité ! Nous avons très bien mangé dans ce petit restaurant à la décoration vintage très réussie ! Prix raisonnables. \nHabitant le quartier, nous y retournerons volontiers !"
+        },
+        {
+            "pseudo": "piotrek",
+            "titre_review": "Belle surprise",
+            "nb_etoiles": 5,
+            "date": "21 décembre 2019",
+            "experience": "family",
+            "review": "En visite sur Lyon, nous nous arrêtons place Carnot et rentrons chez Micheline bistrot restaurant. Sourire à l accueil, au service, belle table. Andouillette a la moutarde très bonne et thon tataki excellent. Nous reviendrons. Merci pour l accueil, bonnes fêtes à tous. Beaujolais family."
+        },
+        {
+            "pseudo": "Estefilabe",
+            "titre_review": "Bon et copieux",
+            "nb_etoiles": 5,
+            "date": "14 décembre 2019",
+            "experience": "couples",
+            "review": "En déplacement professionnel c'est par hasard que nous nous sommes retrouvées à cette adresse pour dîner. \n\nTrès bon accueil, des plats savoureux et copieux et tout fait maison. \n\nOn a très bien mangé et été agréablement surprises. Je recommande cet endroit. Très bon rapport qualité prix."
+        },
+        {
+            "pseudo": "MrsBill",
+            "titre_review": "Absolument fantastique",
+            "nb_etoiles": 5,
+            "date": "10 octobre 2024",
+            "experience": "friends",
+            "review": "Recommandé par l'hôtel. \nNous sommes à Paris depuis 3 jours et nous avons pensé avoir de bons repas. \nHaut la main c'était 10 / 10 \n\nFlovour, présentation, valeur, service. \nPate pour commencer suivi de Tuna Tataki, Aperol Spritzers. \nHmmmmm"
+        },
+        {
+            "pseudo": "Nicholas C",
+            "titre_review": "Buzzy.",
+            "nb_etoiles": 4,
+            "date": "5 septembre 2024",
+            "experience": "friends",
+            "review": "Vraiment sympathique, restaurant de quartier populaire. Vif décontracté avec un personnel vraiment serviable. \nMenu limité mais 'coeureux'. Portions énormes et vraiment savoureux."
+        },
+        {
+            "pseudo": "MICHELLE Q",
+            "titre_review": "Fin parfaite à Lyon",
+            "nb_etoiles": 5,
+            "date": "10 juillet 2024",
+            "experience": "friends",
+            "review": "Excellent petit restaurant près de notre hôtel, était une excellente trouvaille avec nos amis pour les boissons avant le dîner, malheureusement n'y a pas dîné ce soir-là, mais est revenu le lendemain soir en couple. Les deux repas Excellent, poulet kebab pour mon partenaire, dont je goûte testé, juteux et succulent et ma pile d'aubergine délicieuse. Environ spritz et chardonnay parfait \nDîner en plein air excellent dans l'air chaud du soir"
+        },
+        {
+            "pseudo": "Ian H",
+            "titre_review": "Beau bistrot français",
+            "nb_etoiles": 5,
+            "date": "15 février 2020",
+            "experience": "couples",
+            "review": "Nous avons choisi cet endroit la dernière nuit si notre visite à Lyon était basée sur la proximité de notre hôtel, après trop de marche sur quatre jours! C'était un bon choix. Une chambre confortable et intime avec une belle atmosphère détendue. Le personnel de la table était sympathique et accueillant. Nous avions tous les deux le Confit de Canard Parmentier à la crème brûlée à suivre, accompagné d'une bouteille de Beaujolais local. La nourriture était excellente et à un prix raisonnable, et cela combiné à l'ambiance fait un choix de restaurant heureux. Conseillé."
+        }
+    ]
+}
