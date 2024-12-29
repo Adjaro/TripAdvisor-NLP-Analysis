@@ -11,16 +11,7 @@ from functools import lru_cache
 # Configurer la locale en français
 locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
 
-# Créer les tables uniquement si nécessaire
-# models.Base.metadata.create_all(bind=database.engine)
 
-# Fonction pour ouvrir la base de données
-# def get_db():
-#     db = database.SessionLocal()
-#     try:
-#         yield db
-#     finally:
-#         db.close()
 
 # Charger un fichier JSON
 def read_json_file(file_path):

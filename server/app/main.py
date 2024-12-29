@@ -1,19 +1,21 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-from .model import models , schemas
+from .model import models, schemas
 from .utils import database
 from pydantic import BaseModel
 from .scraper import TripadvisorScraper
-from .alimentationBd import insert_json_data
+from .alimentationBd import insert_json_data, get_data_list, read_json_file
 import os
-# print(data_dir)
+import logging
+from typing import List
+
+# Setup logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
-class ItemCreate(BaseModel):
-    name: str
-    description: str
-
+# Database dependency
 def get_db():
     db = database.SessionLocal()
     try:
@@ -21,42 +23,81 @@ def get_db():
     finally:
         db.close()
 
+async def check_existing_data(db: Session, nom_restaurant: str, address: str) -> bool:
+    try:
+        exists = db.query(models.DimRestaurant, models.DimLocation)\
+            .join(models.DimLocation)\
+            .filter(
+                models.DimRestaurant.nom == nom_restaurant,
+                models.DimLocation.adresse == address
+            ).first() is not None
+        return exists
+    except Exception as e:
+        logger.error(f"Error checking existing data: {e}")
+        return False
+
 @app.on_event("startup")
 async def startup():
-    models.Base.metadata.create_all(bind=database.engine)
-    # Insert data
-    # data_dir = '/data'
-    # data_dir = os.path.join(os.getcwd(), 'data')  # Chemin relatif vers un dossier "data" local
-    data_dir = os.path.join(os.path.dirname(__file__), "data")
-    print(data_dir)
-    insert_json_data(data_dir)
+    try:
+        models.Base.metadata.create_all(bind=database.engine)
+        data_dir = os.path.join(os.path.dirname(__file__), "data")
+        logger.info(f"Data directory: {data_dir}")
 
-@app.post("/items/")
-def create_item(item: ItemCreate, db: Session = Depends(get_db)):
-    db_item = models.Item(**item.dict())
-    db.add(db_item)
-    db.commit()
-    db.refresh(db_item)
-    return db_item
+        files = get_data_list(data_dir)
+        if not files:
+            logger.warning("No data files found")
+            return
 
-@app.get("/scrape/")
-def scrape_restaurant(url, driver_path):
-    # # Exemple d'utilisation
-    # url = 'https://www.tripadvisor.fr/Restaurant_Review-g187265-d3727154-Reviews-Les_Terrasses_de_Lyon-Lyon_Rhone_Auvergne_Rhone_Alpes.html'
-    # driver_path = 'path/to/chromedriver.exe'
-    # scraper = TripadvisorScraper(url, driver_path)
-    # scraper.scrape()
-   
-    scrape = TripadvisorScraper(url, driver_path)
-    scrape.scrape()
-    return {"message": "Scraping terminé, données sauvegardées dans restaurant_data.json."}
+        data = read_json_file(os.path.join(data_dir, files[0]))
+        db = next(get_db())
+        try:
+            data_exists = await check_existing_data(db, data['nom'], data['adresse'])
+            if not data_exists:
+                logger.info("Inserting initial data...")
+                await insert_json_data(data_dir)
+            else:
+                logger.info("Data already exists in database")
+        finally:
+            db.close()
+    except Exception as e:
+        logger.error(f"Error during startup: {e}")
+        raise
+
+@app.get("/scrape")
+def scrape(url: str):
+    try:
+        scraper = TripadvisorScraper(url)
+        scraper.scrapper()
+        return {"message": "Scraping successful"}
+    except Exception as e:
+        logger.error(f"Error during scraping: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
-
-
-@app.get("/allrestaurants")
+@app.get("/allrestaurants", response_model=List[schemas.DimRestaurant])
 def read_restaurant(db: Session = Depends(get_db)):
-    res  = db.query(models.DimRestaurant).all()
-    print(res)
+    try:
+        return db.query(models.DimRestaurant).all()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
-    return res
+@app.get("/location", response_model=List[schemas.DimLocation])
+def read_location(db: Session = Depends(get_db)):
+    try:
+        return db.query(models.DimLocation).all()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/date", response_model=List[schemas.DimDate])
+def read_date(db: Session = Depends(get_db)):
+    try:
+        return db.query(models.DimDate).all()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/review", response_model=List[schemas.FaitAvis])
+def read_review(db: Session = Depends(get_db)):
+    try:
+        return db.query(models.FaitAvis).all()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
