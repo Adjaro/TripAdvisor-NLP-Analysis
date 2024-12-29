@@ -8,6 +8,10 @@ from .alimentationBd import insert_json_data, get_data_list, read_json_file
 import os
 import logging
 from typing import List
+import pandas as pd
+from fastapi import Query
+from typing import Optional
+from sqlalchemy import text
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -70,6 +74,7 @@ def scrape(url: str):
         scraper.scrapper()
         # return {"message": "Scraping successful"}
         data = scraper.data
+
         return data
     except Exception as e:
         logger.error(f"Error during scraping: {e}")
@@ -97,9 +102,42 @@ def read_date(db: Session = Depends(get_db)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/review", response_model=List[schemas.FaitAvis])
-def read_review(db: Session = Depends(get_db)):
+
+
+@app.get("/review")
+async def read_review(
+    skip: int = Query(default=0, ge=0),
+    limit: int = Query(default=100, le=1000),
+    restaurant_id: Optional[str] = None,
+    min_note: Optional[int] = Query(default=None, ge=1, le=5),
+    max_note: Optional[int] = Query(default=None, ge=1, le=5),
+    db: Session = Depends(get_db)
+):
     try:
-        return db.query(models.FaitAvis).all()
+        query = db.query(models.FaitAvis)
+
+        # Apply filters
+        if restaurant_id:
+            query = query.filter(models.FaitAvis.id_restaurant == restaurant_id)
+        if min_note:
+            query = query.filter(models.FaitAvis.note >= min_note)
+        if max_note:
+            query = query.filter(models.FaitAvis.note <= max_note)
+
+        # Add pagination and streaming
+        total = query.count()
+        reviews = query.offset(skip).limit(limit).yield_per(100)
+
+        return {
+            "total": total,
+            "skip": skip,
+            "limit": limit,
+            "reviews": [schemas.FaitAvis.model_validate(review) for review in reviews]
+        }
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        logger.error(f"Error fetching reviews: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error fetching reviews: {str(e)}"
+        )

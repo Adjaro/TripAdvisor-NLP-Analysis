@@ -21,3 +21,7 @@ services:
 
 volumes:
   sqlite_data:
+
+networks:
+  app_network:
+    driver: bridge

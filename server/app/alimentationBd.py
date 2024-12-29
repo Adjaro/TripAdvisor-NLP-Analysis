@@ -2,16 +2,36 @@ import json
 import os
 import datetime
 import uuid
-import locale
 from dateutil import parser
 from .utils import database
 from .model import models, schemas
 from functools import lru_cache
+import logging
 
-# Configurer la locale en français
-locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
+# Setup logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
+# models.Base.metadata.create_all(bind=database.engine)
 
+@lru_cache(maxsize=None)
+def get_month_mapping():
+    return {
+        'janvier': 'January', 'février': 'February', 'mars': 'March',
+        'avril': 'April', 'mai': 'May', 'juin': 'June', 'juillet': 'July',
+        'août': 'August', 'septembre': 'September', 'octobre': 'October',
+        'novembre': 'November', 'décembre': 'December'
+    }
+
+def parse_date(date_str):
+    try:
+        fr_to_en = get_month_mapping()
+        day, month, year = date_str.split(' ')
+        month_en = fr_to_en[month.lower()]
+        date_en = f"{day} {month_en} {year}"
+        return parser.parse(date_en, dayfirst=True)
+    except Exception as e:
+        logger.error(f"Error parsing date {date_str}: {e}")
 
 # Charger un fichier JSON
 def read_json_file(file_path):
@@ -22,23 +42,6 @@ def read_json_file(file_path):
 def get_data_list(data_dir='./data'):
     return [f for f in os.listdir(data_dir) if f.endswith('.json')]
 
-# Préparer les correspondances de mois (optimisé avec cache)
-@lru_cache(maxsize=None)
-def get_month_mapping():
-    return {
-        'janvier': 'January', 'février': 'February', 'mars': 'March',
-        'avril': 'April', 'mai': 'May', 'juin': 'June', 'juillet': 'July',
-        'août': 'August', 'septembre': 'September', 'octobre': 'October',
-        'novembre': 'November', 'décembre': 'December'
-    }
-
-# Parser les dates en utilisant les correspondances
-def parse_date(date_str):
-    fr_to_en = get_month_mapping()
-    day, month, year = date_str.split(' ')
-    month_en = fr_to_en[month.lower()]
-    date_en = f"{day} {month_en} {year}"
-    return parser.parse(date_en, dayfirst=True)
 
 # Insérer des données en base de données (optimisé pour les batchs)
 def insert_data(dict_data):
