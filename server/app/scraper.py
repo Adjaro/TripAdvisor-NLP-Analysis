@@ -321,8 +321,9 @@ class TripadvisorScraper:
     
 # def main():
 #     url = "https://www.tripadvisor.fr/Restaurant_Review-g187265-d5539701-Reviews-L_Institut_Restaurant-Lyon_Rhone_Auvergne_Rhone_Alpes.html"
-#     scraper = RestaurantScraper(url)
-#     
+#     scraper = TripadvisorScraper(url)
+#     scraper.scrapper()
+#     data = scraper.data
 #     print(data)
 
 # if __name__ == "__main__":

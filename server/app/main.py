@@ -68,7 +68,9 @@ def scrape(url: str):
     try:
         scraper = TripadvisorScraper(url)
         scraper.scrapper()
-        return {"message": "Scraping successful"}
+        # return {"message": "Scraping successful"}
+        data = scraper.data
+        return data
     except Exception as e:
         logger.error(f"Error during scraping: {e}")
         raise HTTPException(status_code=500, detail=str(e))
