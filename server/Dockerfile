@@ -1,39 +1,30 @@
+# Étape 1 : Utilisation d'une image légère
 FROM python:3.9-slim
 
-# Install system dependencies
+# Étape 2 : Installation des outils et de Google Chrome
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
-    gnupg2 \
-    apt-transport-https \
-    ca-certificates \
+    curl \
+    gnupg \
+    unzip \
     && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
-    && apt-get update && apt-get install -y --no-install-recommends \
-    google-chrome-stable \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get clean
+    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list \
+    && apt-get update && apt-get install -y --no-install-recommends google-chrome-stable \
+    && wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip \
+    && unzip /tmp/chromedriver.zip -d /usr/local/bin/ \
+    && rm -rf /var/lib/apt/lists/* /tmp/*
 
-# Set Chrome environment variables
-ENV CHROME_BIN=/usr/bin/google-chrome-stable
-ENV CHROMEDRIVER_PATH=/usr/local/bin/chromedriver
-ENV PYTHONUNBUFFERED=1
+# Étape 3 : Définir le port d'affichage pour Chrome
+ENV DISPLAY=:99
 
-# Create non-root user
-RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
-    && mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
-
-# Set working directory and copy files
+# Étape 4 : Définir le répertoire de travail
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+
+# Étape 5 : Copier les fichiers nécessaires
 COPY . .
-RUN chown -R chrome:chrome /app
 
-# Set Chrome flags for headless operation
-ENV CHROME_FLAGS="--headless --disable-gpu --no-sandbox --disable-dev-shm-usage"
+# Étape 6 : Mise à jour de pip et installation des dépendances
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-# Switch to non-root user
-USER chrome
-
-# Start the application
+# Étape 7 : Commande par défaut pour exécuter l'application
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

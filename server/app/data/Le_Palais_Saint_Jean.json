@@ -1,7 +1,7 @@
 {
     "nom": "Le Palais Saint Jean",
     "adresse": "40 Rue Saint Jean 69005, 69005 Lyon France",
-    "classement": 1619,
+    "classement": 1617,
     "horaires": [
         "dim : 11:30-23:30",
         "lun : 11:30-23:30",
@@ -46,7 +46,7 @@
     "longitude": 4.827588,
     "nb_avis": 853,
     "nbExcellent": 213,
-    "nbTrèsbon": 214,
+    "nbTrèsBon": 214,
     "nbMoyen": 146,
     "nbMédiocre": 138,
     "nbHorrible": 142,
@@ -1524,7 +1524,7 @@
             "review": "De passage rapide de quelques heures dans le vieux Lyon,superbe endroit pittoresque, seul point positif pour \n le reste des boissons au repas on reste sur sa faim, les boissons sont très chères,ex le soda 6€ le double de certains endroits en France dont l'Alsace, le menu enfant 19€ volaille panée sèche avec 1 sirop à l'eau,les plats tout juste mangeables sans recherches, les mêmes légumes dans tous les plats, la tête de veau vu le tarif 26€ (à la carte) ,pris en formule menu 31€ tout de même, très mal préparée, fade et pas appétissante du tout que de gros et gras morceaux de couleurs grisâtre, même la vinaigrette décomposée et avec de gros morceaux, pommes vapeur mal tournées et fade, le pain servi n'est même pas frais. Quelle déception et prix de dingue complètement injustifié de la part de cette établissement….."
         },
         {
-            "pseudo": "Panier D",
+            "pseudo": "Annie G",
             "titre_review": "pas mal mais un peu cher",
             "nb_etoiles": 4,
             "date": "25 juillet 2019",
@@ -1532,7 +1532,7 @@
             "review": "cadre sympa en terrasse si on veut avoir 1 ambiance animee. Repas tres bon par contre rapport qualité prix important"
         },
         {
-            "pseudo": "Annie G",
+            "pseudo": "El Paceno",
             "titre_review": "Pas le meilleur",
             "nb_etoiles": 3,
             "date": "7 juillet 2019",
@@ -1540,7 +1540,7 @@
             "review": "Ne fais pas partie de la liste officielle des bouchons lyonnais, ce restaurant extrêmement bien placé offre des grands classique de la restauration française sans les sublimer à des prix logique vu la situation idéale dans le vieux Lyon.\n\nÀ noter les excellent menus enfants, chers certes, mais j´en ai rarement vu d´aussi bons avec des produits aussi nobles."
         },
         {
-            "pseudo": "El Paceno",
+            "pseudo": "Celilly",
             "titre_review": "Bien",
             "nb_etoiles": 4,
             "date": "4 juillet 2019",
@@ -1548,7 +1548,7 @@
             "review": "Restaurant testé un dimanche soir en juillet, choisi au hasard parce qu’il était moins bondé que les autres.\nLes menus nous paraissaient un peu chers par rapport aux autres restos du coin et comme il était déjà tard, nous avons simplement pris des spécialités lyonnaises : quenelle et saucisson lyonnais. Les plats étaient très bons et ont été servis rapidement. Dommage qu’il n’y avait pas de légumes avec la quenelle...\nBelle carte des vins mais les prix étaient très élevés, nous avons donc choisi le pichet.\nLe serveur qui s’occupait de notre table était sympathique, rapide et professionnel."
         },
         {
-            "pseudo": "Celilly",
+            "pseudo": "carlyn0033",
             "titre_review": "RESTAURANT À TOURISTES",
             "nb_etoiles": 2,
             "date": "4 juillet 2019",
@@ -1556,7 +1556,7 @@
             "review": "Je ne recommande pas ce restaurant dans le vieux Lyon qui se dit bouchon mais il n'en est rien. Les serveurs ne sont pas aimables, vous ne pouvez pas vous asseoir où vous voulez et la nourriture est médiocre.La salade lyonnaise n'est pas bonne, les frites traversent la rue car proviennent du restaurant d'en face et mis à part la salade ils ne proposent pas de plats typiques lyonnais comme le saucisson ou la planche.Le service est long et la note salée pour ce que vous mangez.À déconseiller"
         },
         {
-            "pseudo": "carlyn0033",
+            "pseudo": "Brigitte O",
             "titre_review": "Bon rapport qualité prix",
             "nb_etoiles": 4,
             "date": "15 juin 2019",
@@ -1564,7 +1564,7 @@
             "review": "À lire les avis, nous étions perplexes\nNous avons été très bien accueillis par des serveuses attentives et rapides\nLe menu gnafron est copieux, avec une belle variété de spécialités lyonnaises pour un prix très raisonnable pour le vieux Lyon \nCervelle de canut, quenelle, ravioles, tout est bon et copieux\nEt le cadre est agréable quoiqu’un peu bruyant"
         },
         {
-            "pseudo": "Brigitte O",
+            "pseudo": "Maryse G",
             "titre_review": "Lieu convivial dans le vieux Lyon",
             "nb_etoiles": 4,
             "date": "23 mai 2019",
@@ -1572,7 +1572,7 @@
             "review": "Nous avons déjeuné dans ce restaurant lors d'un week-end à Lyon et avons aprécié sa situation dans le vieux Lyon, sa cuisine du terroir ainsi que le service impeccable."
         },
         {
-            "pseudo": "Maryse G",
+            "pseudo": "Mél P",
             "titre_review": "Horrible",
             "nb_etoiles": 1,
             "date": "21 avril 2019",
@@ -1580,7 +1580,7 @@
             "review": "A fuir absolument! Serveur tres mal aimable, plus d'une heure pour recevoir notre plat(on nous avait carrément oublié malgré 2 relances) aucune excuse au moment de payer l'addition, nourriture moyenne au vue du prix et pour couronner le tout nous avons été malades dans l'après midi suite à notre déjeuner."
         },
         {
-            "pseudo": "Mél P",
+            "pseudo": "Biou O",
             "titre_review": "Attrape touristes",
             "nb_etoiles": 2,
             "date": "21 avril 2019",
@@ -1588,7 +1588,7 @@
             "review": "Vraiment très déçus de ce bouchon lyonnais qui présente bien mais au rapport qualité-prix déplorable, on en ressort avec un goût amer. Des plats à 25-30€ pour du cabillaud et des légumes aussi « bons » qu’à la cantine, pas de préparation particulière, un suprême de volaille minuscule, pas de proposition dans le plat. C’est du niveau courtepaille mais 2x plus cher."
         },
         {
-            "pseudo": "Biou O",
+            "pseudo": "chouquette69",
             "titre_review": "Bon repas ce samedi de pâques",
             "nb_etoiles": 4,
             "date": "20 avril 2019",
@@ -1596,7 +1596,7 @@
             "review": "Nous avons passé un bon moment au Palais Saint Jean. Le service est très professionnel et sympathique. Les plats traditionnels lyonnais sont vraiment très bon, les desserts maison sont excellents notamment le nougat glacé aux pralines . Bref je recommande."
         },
         {
-            "pseudo": "chouquette69",
+            "pseudo": "yvesdoise",
             "titre_review": "Bonne entrée et c’est tout!",
             "nb_etoiles": 2,
             "date": "20 avril 2019",
@@ -1604,7 +1604,7 @@
             "review": "Une découverte inintéressante malgré de bonnes entrées, nous avons pris le pâté en croûte et le saumon mariné. Petite déception sur les plats, la quenelle n’a aucun intérêt et le poulet crème est fade. Mais que dire des 4 desserts préfabriqués !!! Nous avons préféré ne pas en prendre plutôt que de goûter ça. Nous avions demandé un café en substitution des desserts mais ils ont refusé car dans le Vieux Lyon, pas besoin de s’occuper des clients, la réputation et le service client ne sont pas une priorité ici. \nA éviter pour celui qui veut être heureux d’être passé à Lyon."
         },
         {
-            "pseudo": "yvesdoise",
+            "pseudo": "Michel J",
             "titre_review": "Court séjour à Lyon...",
             "nb_etoiles": 5,
             "date": "31 mars 2019",
@@ -1636,7 +1636,7 @@
             "review": "Des assiettes qui n ont de\" g \"astronomique que le prix le café a 3.20eu la bouteille d eau a 7eu (a croire qu on se trouve dans le désert ) le pichet de vin de 46 cl a 17 euro \nles bouteille a la carte a des 35 40 eu au moins cher (a noter que je suis dans la région des vaqueyras rasteau et autre je suis peut être trop exigeant )\nAu niveau du gout médiocre qualité des plats industrielle cuisine tout venant pour touristes vous payez la situation du restau .les tables les unes sur les autres ( impossible de manger pour les fauteuil roulants ou les personnes fortes)les serveurs vous tape dans la chaise tout le long du repas.Un personnel en stress sur les nerfs qui vous souris arriver au dessert qui vous jette les verres et les assiettes sur la table.Une attente interminable entre deux plats obliges après 40 minutes de demander a être servis .Seul la crème brûlée a trouve grâce a mes yeux.Pour finir erreur sur la note ( de 20 euro tout de mème encore attente pour la monnaie avec en plus des regards suspicieux comme si on voulait les rouler et enfin des excuses du bout des lèvres) du au fait que les serveurs courent dans tout les sens sous la pression du patron .pour moi un restau d abatage( les clients sont pris pour du bétail a parquets le plus possible dans un tout petit espace) qui n a pour but que de caler un estomac . si vous chercher a vous faire plaisir gustativement si vous chercher a passer un moment de détente et de plaisir surtout surtout passe votre chemin une adresse a oublier et surtout a ne pas recommander"
         },
         {
-            "pseudo": "Gilles S",
+            "pseudo": "Cécile",
             "titre_review": "Soirée en couple",
             "nb_etoiles": 5,
             "date": "9 mars 2019",
@@ -1644,7 +1644,7 @@
             "review": "Un bon repas dans un cadre agréable au cœur de St Jean\nUn super accueil par une équipe souriante.\nJe recommande vraiment"
         },
         {
-            "pseudo": "Cécile",
+            "pseudo": "Raymond F",
             "titre_review": "Palais ....de la mal bouffe",
             "nb_etoiles": 1,
             "date": "27 janvier 2019",
@@ -1652,7 +1652,7 @@
             "review": "Passez votre chemin,il pousse le bouchon dans la médiocrité,attrape touriste .Qualité prix mediocre....un vrai faux bouchon"
         },
         {
-            "pseudo": "Raymond F",
+            "pseudo": "Eric V",
             "titre_review": "Le repas ne vaut pas l'écrin",
             "nb_etoiles": 3,
             "date": "27 janvier 2019",
@@ -1660,7 +1660,7 @@
             "review": "Nous avons choisi cet établissement pour les mets locaux. Dès l'entrée (oeufs meurettes) nous avons été perplexes. Le plat était tiède. Ensuite le plat principal était quelconque et sans saveurs (tête de veau). De plus les haricots qui accompagnaient n'étaient pas cuits. Dommage nous pensions qu'eu égard aux promesses extérieures nous aurions été transportés gustativement."
         },
         {
-            "pseudo": "Eric V",
+            "pseudo": "pfccauchye",
             "titre_review": "Excellent",
             "nb_etoiles": 5,
             "date": "19 janvier 2019",
@@ -1668,7 +1668,7 @@
             "review": "De passage sur Lyon je me suis rendu dans ce restaurant, et j’ai pu découvrir la très fine cuisine lyonnaise, l’accueil est également très agréable avec un personnel très compétent. \nDe plus le quartier du vieux Lyon est très agréable. \nSi vous passer dans cette région faites le détour !"
         },
         {
-            "pseudo": "pfccauchye",
+            "pseudo": "betty d",
             "titre_review": "Très bonne table",
             "nb_etoiles": 4,
             "date": "13 janvier 2019",
@@ -1676,7 +1676,7 @@
             "review": "Nous sommes tombées dans ce bon restaurant par hasard, on vous le recommande chaudement. Service très agréable et aux petits oignons. Rapport qualité/prix excellent.\nVous pouvez y aller les yeux fermés 😛"
         },
         {
-            "pseudo": "betty d",
+            "pseudo": "Florian B",
             "titre_review": "Très bon restaurant",
             "nb_etoiles": 4,
             "date": "12 janvier 2019",
@@ -1684,7 +1684,7 @@
             "review": "Superbe repas de l’entrée au plat, en passant par le vin ! Belle présentation des assiettes et saveurs qui s’allient magnifiquement bien.\n\nLe dessert par contre laisse vraiment à désirer par rapport à sa taille et au fait qu’il parait sortir de chez Métro ...\n\nLe service est très bien réalisé, ni trop ni trop peu présent ; bons conseils.\n\nPour 141€ à deux, on termine sur une mauvaise note liée exclusivement au dessert ..."
         },
         {
-            "pseudo": "Florian B",
+            "pseudo": "Tinie1403",
             "titre_review": "Mitigé",
             "nb_etoiles": 3,
             "date": "4 janvier 2019",
@@ -1692,7 +1692,7 @@
             "review": "Repas correct, service correct seul bémol le patron semble très désagréable avec ses serveuses qui elles sont sympathiques et un serveur (Jeremy) très hautain et désagréable avec clients et personnels , absolument pas professionnel, il devrait changer de métier"
         },
         {
-            "pseudo": "Tinie1403",
+            "pseudo": "kenza69",
             "titre_review": "Restaurant médiocre et cher",
             "nb_etoiles": 2,
             "date": "3 janvier 2019",
@@ -1700,7 +1700,7 @@
             "review": "Je déconseille vivement. Mon plat (raviole de romans) était degeulasse et le plat de quenelle de mon compagnon était moyen. \n\nBoissons très chères ( 6€ le Pepsi) et le personnel est très désagréable. \n\nRestaurant à éviter"
         },
         {
-            "pseudo": "kenza69",
+            "pseudo": "Pat P",
             "titre_review": "A éviter",
             "nb_etoiles": 1,
             "date": "30 décembre 2018",
@@ -1708,7 +1708,7 @@
             "review": "Personnel tres antipathique ! Limite bofff ! Tres cher (le café à 3.20 euros !!!) Nous n'avons pas etait servis ensemble !!! Seul point positif le Pepsi des enfants etait frais !!!\nA déconseiller !!!"
         },
         {
-            "pseudo": "Pat P",
+            "pseudo": "26-100",
             "titre_review": "je trouve que le \"patron\" est plus avenant avec un humour ,ce qui ai un plus !...",
             "nb_etoiles": 4,
             "date": "17 décembre 2018",
@@ -1716,7 +1716,7 @@
             "review": "Très bien reçu, un menu excellant, raffinée ,\"patron souriant \"...Une bonne journée gastronomique. Un service efficace, par une charmante serveuse . Parfait !.."
         },
         {
-            "pseudo": "26-100",
+            "pseudo": "Thomas G",
             "titre_review": "1er bouchon",
             "nb_etoiles": 4,
             "date": "15 décembre 2018",
@@ -1724,7 +1724,7 @@
             "review": "C'est la première fois que je dinais dans un bouchon lyonnais et je n'ai pas été déçu. Le service était impeccable, le serveur sympathique à souhait et de bons conseils. Le service à été rapide, et les repas étaient bons et la quantité parfaite. Au final nous avons passé un excellent moment."
         },
         {
-            "pseudo": "Thomas G",
+            "pseudo": "lb842017",
             "titre_review": "Excellent moment !!",
             "nb_etoiles": 5,
             "date": "13 décembre 2018",
@@ -1844,7 +1844,7 @@
             "review": "Environnement, décoration typique des bouchons lyonnais. Cuisine pour la plupart fait maison, j'ai apprécié le logo \"fait maison\" sur la carte. Les serveurs et serveuses adorables et souriants. Par contre gros point noir sur le chef de rang et le patron qui manque de respect à leur personnel et cela devant les clients !!! Insultes et engueulades diverses. Nous avons failli partir à cause de cela...."
         },
         {
-            "pseudo": "Gilles S",
+            "pseudo": "François S",
             "titre_review": "A éviter",
             "nb_etoiles": 1,
             "date": "15 septembre 2018",
@@ -1884,7 +1884,7 @@
             "review": "19€ pour le menu Enfant, soit : un blanc de poulet avec une poignée de frites et une sauce crême fraîche champignon + 1 seule boule de glace = 19€ !!!! C'est dingue, du jamais vu !! Nous avons eu LE SENTIMENT D’ÊTRE VOLé.\n\nPar ailleurs les autres menus ne sont pas extraordinaires, plutôt moyens, mais affichent des prix raisonnables compte tenu de l'entrée+plat+dessert (grosso modo 23 - 29 -35€)"
         },
         {
-            "pseudo": "Gilles S",
+            "pseudo": "mlag",
             "titre_review": "Ouhlala....",
             "nb_etoiles": 2,
             "date": "20 août 2018",
@@ -1892,7 +1892,7 @@
             "review": "Franchement, la nourriture est bonne mais mon copain et moi avons tous les deux choppé la diarrhée après avoir mangé dans ce resto + il y avait des traces de m*rde sur la lunette des toilettes, je précise qu’elles étaient sèches donc là depuis longtemps ! J’ai essayé de les enlever avec un bout de papier toilette mais rien à faire, incrustée dans la lunette."
         },
         {
-            "pseudo": "mlag",
+            "pseudo": "Pascal D",
             "titre_review": "Mon premier « bouchon »",
             "nb_etoiles": 1,
             "date": "18 août 2018",
@@ -1900,7 +1900,7 @@
             "review": "Horrible, des ravioles plein d’huile et un tartare de saumon fade, deux tranches de foie gras en entrée 3 bières coût total 101 € !!!\nÀ vomir"
         },
         {
-            "pseudo": "Gilles S",
+            "pseudo": "Jean-Michel P",
             "titre_review": "Excellentissime‼️",
             "nb_etoiles": 5,
             "date": "15 août 2018",
@@ -1908,7 +1908,7 @@
             "review": "À peine cinq minutes de la cathédrale Saint Jean, au détour d’un ruelle, le palais saint jean ne laisse pas indifférent, je veux voir le menu.. :) je me laisse tenter.. des plats de folie !! Toutes les saveurs de la cuisine traditionnelle sont là ‼️je me régale c’est trop bon ‼️"
         },
         {
-            "pseudo": "Pascal D",
+            "pseudo": "SUIRIANA",
             "titre_review": "sans intérêt",
             "nb_etoiles": 3,
             "date": "13 août 2018",
@@ -1916,7 +1916,7 @@
             "review": "Cuisine fade (sauce accompagnant la quenelle sans goût - crumble citron (ou est le citron) ? ) - 3.20€ le café ... le patron qui accélère votre départ pour remonter la table ... bref un restaurant sans intérêt -"
         },
         {
-            "pseudo": "Jean-Michel P",
+            "pseudo": "Mael H",
             "titre_review": "Très moyen",
             "nb_etoiles": 2,
             "date": "10 août 2018",
@@ -1924,7 +1924,7 @@
             "review": "Nous nous sommes arrêtés pour manger et le service était assez long ce qui est normal pour la saison. Mais le plat reçu n'était pas celui demandé. Puis, suite au retour en cuisine la nouvelle commande n'était pas cuite... bref je n'irai plus..."
         },
         {
-            "pseudo": "SUIRIANA",
+            "pseudo": "kevin_dg",
             "titre_review": "Première et dernière fois",
             "nb_etoiles": 2,
             "date": "9 août 2018",
@@ -1932,7 +1932,7 @@
             "review": "Nous sommes venus déjeuner à deux un midi de semaine. Nous nous faisons accueillir par une serveuse très sèche et froide qui clairement n'aime pas son métier, on avait vraiment l'impression de la déranger. Nous décidons de prendre un menu à 23€ avec une salade toute simple en entrée, un vulgaire gratin de ravioles regorgeant d'huile que je n'ai même pas pu finir et un nougat glacé sûrement surgelé. \nEt pour couronner le tout, nous avons payé pour un Pepsi et un monaco la modique somme de 12,50€ !!! \nAutrement dit, c'est un attrape-touristes."
         },
         {
-            "pseudo": "Mael H",
+            "pseudo": "Fee-verteclaire",
             "titre_review": "Hors de prix : 7€ bouteille d’eau",
             "nb_etoiles": 2,
             "date": "3 août 2018",
@@ -1940,7 +1940,7 @@
             "review": "Restaurant bien placé mais le service est abominable! La serveuse très hautaine et à la limite de l’impolitesse... il faut changer de métier madame. Les plats sont plutôt bons mais hors de prix comparé aux bouchons des autres rues. Une bouteille d’eau à 7€, je vous encourage à demander de l’eau en carafe!"
         },
         {
-            "pseudo": "kevin_dg",
+            "pseudo": "Ashley R",
             "titre_review": "Repas excellent mais service à revoir ..",
             "nb_etoiles": 3,
             "date": "29 juillet 2018",
@@ -1948,7 +1948,7 @@
             "review": "Nous sommes venus manger vendredi midi en famille. Superbe carte nous décidons de nous arrêtez pour manger. Les serveuses nous voient et nous ignorent totalement .. Je décide donc de dire \"bonjour\" pour qu'enfin elle remarque notre présence. Et là pas du tout sympathiques, elle nous prend de haut l'air hautain .. Et ce pendant tout le service. Pas de \"bonne appétit\", à peine \"merci\", pas de sourire rien .. Vraiment désagréables ! Nous y retournerons à condition que les serveuses ne soit pas les mêmes .."
         },
         {
-            "pseudo": "Fee-verteclaire",
+            "pseudo": "Hanifa R",
             "titre_review": "Restaurant Bien situé",
             "nb_etoiles": 4,
             "date": "29 juillet 2018",
@@ -1956,7 +1956,7 @@
             "review": "Bonjour. Nous avons bénéficié d une offre Restopolitan pour découvrir ce restaurant qui est idéalement situé. La terrasse se trouve dans une ruelle très animée. Le service est très rapide. Plus de 90% des plats sont fait maison. Les tarifs sont raisonnables. Nous avons apprécié les plats. Je ne mets pas 5/5 car il manque un peu de convivialité, les tables sont trop serrées on mange avec son voisin, et le personnel n est pas toujours très souriant. Mais je recommande quand même ce restaurant."
         },
         {
-            "pseudo": "Ashley R",
+            "pseudo": "01MP",
             "titre_review": "belles assiettes",
             "nb_etoiles": 4,
             "date": "24 juillet 2018",
@@ -1964,7 +1964,7 @@
             "review": "un endroit tres agréable ! une terrasse tres bien placée ! beaucoup de monde se presse! l'interieur du restaurant est tres agréable poutres portes en ogives ! bon pour la restauration rien a dire ! pris le menu a 28e ! au choix divers entrees : prix oeufs meurette vin rouge : excellent (2 oeufs) apres andouillette a la moutarde : tres bon et tres copieux donc un detour a faire ! proprietaire et personnel tres agéables ! un bon point"
         },
         {
-            "pseudo": "Hanifa R",
+            "pseudo": "MarielleB38",
             "titre_review": "bon petit bouchon",
             "nb_etoiles": 4,
             "date": "18 juillet 2018",
@@ -2084,7 +2084,7 @@
             "review": "Foie gras peu de goût\nEntrecôte de boeuf, qualité très moyenne\nBavette de boeuf immangeable...une semelle\nqualité /prix très cher\nJe n'y retournerai plus"
         },
         {
-            "pseudo": "Gilles S",
+            "pseudo": "Arnaud R",
             "titre_review": "piège à touristes",
             "nb_etoiles": 1,
             "date": "2 avril 2018",
@@ -2108,7 +2108,7 @@
             "review": "Le service est plus que moyen! Le personnel traite les gens uniquement comme des touristes sans intérêt parce que de passage!! 1h30 d'attente entre l'entrée et le moment où abandonnant l'idée de manger, on finit par demander l'addition!! Le responsable est irrespectueux, insultant et malhonnête! NE SURTOUT PAS Y ENTRER!!!"
         },
         {
-            "pseudo": "Gilles S",
+            "pseudo": "Pat-Francois",
             "titre_review": "Circulez...",
             "nb_etoiles": 2,
             "date": "18 mars 2018",
@@ -2116,7 +2116,7 @@
             "review": "Ensemble du personnel plus qu'antipathique,n'ayant en plus qu'une hâte,que vous laissiez votre place.\nQualité de la cuisine servie bien bien moyenne.\nPour résumé,un BON piège à touristes!!!"
         },
         {
-            "pseudo": "Pat-Francois",
+            "pseudo": "allezVaOl",
             "titre_review": "St Patrick a St Jean",
             "nb_etoiles": 5,
             "date": "18 mars 2018",
@@ -2124,7 +2124,7 @@
             "review": "L animation était au rendez-vous dans la rue St Jean. La bière coule à flot en ce soir de St Patrick et de Grand Chelem de nos amis Irlandais..! L’instant est très agréable et bien dans la tradition du bouchon avec un accueil charmant et des plats classiques, de la saveur....merci à Restopolitan de cette proposition...nous y reviendrons !"
         },
         {
-            "pseudo": "allezVaOl",
+            "pseudo": "alisabsyl C",
             "titre_review": "Satisfait",
             "nb_etoiles": 4,
             "date": "9 mars 2018",
@@ -2132,7 +2132,7 @@
             "review": "Plats copieux et très bons. Service rapide et sympathique. Toutefois je n'ai jamais vu un menu enfant aussi cher (19€) alors que nos menus étaient à 20€."
         },
         {
-            "pseudo": "alisabsyl C",
+            "pseudo": "batimbayi01",
             "titre_review": "UNE HALTE SUPER SYMPATHIQUE",
             "nb_etoiles": 4,
             "date": "4 mars 2018",
@@ -2140,7 +2140,7 @@
             "review": "Un bon établissement accueillant, service rapide, choix des menus et qualité des mets servis. Service non stop, 7 jours sur7. Nous reviendrons"
         },
         {
-            "pseudo": "batimbayi01",
+            "pseudo": "Vauj",
             "titre_review": "Bonne cuisine mais beaucoup trop cher !",
             "nb_etoiles": 3,
             "date": "27 février 2018",
@@ -2148,7 +2148,7 @@
             "review": "Cadre sympa, personnel très agréable par contre le service est beaucoup trop long. La cuisine est très bonne et les assiettes très bien présentées mais les tarifs sont beaucoup trop élevés par rapport aux produits proposés. Nous avons été déçu notamment par les desserts : que vous preniez un menu premier prix ou le menu le plus cher vous avez les mêmes desserts : crème brûlée, mousse au chocolat, verrine de crumble au citron ou nougat glacé, on s'attend à un un meilleur choix quand on monte en prix dans les menus. Desserts très légers quand on prend un menu à 29 euros, on s'attend à autre chose ! De plus, les boissons sont beaucoup trop chères pour exemple la bouteille d'un litre d'eau plate est à 7 euros... Nous n'y retournerons pas."
         },
         {
-            "pseudo": "Vauj",
+            "pseudo": "Maïnepatou",
             "titre_review": "Aucun effort!!!!",
             "nb_etoiles": 1,
             "date": "26 février 2018",
@@ -2156,7 +2156,7 @@
             "review": "Attention: essuyez vos couverts entre les plats car on ne va pas vous les changer!!!\nLa vaisselle, ça coute!\nQuand aux plats , ordinaire pour le prix on attend une autre qualité.\nBeaucoup moins dans l'assiette, ca ira quand même si c'est mieux présenté.\n2 jours, 2 restaurants de ce niveau , on ne voudrait pas repartir de lyon avec de si mauvaises images de la gastronomie locale."
         },
         {
-            "pseudo": "Maïnepatou",
+            "pseudo": "Nicopopo21",
             "titre_review": "Bonne surprise",
             "nb_etoiles": 4,
             "date": "19 février 2018",
@@ -2164,7 +2164,7 @@
             "review": "Nous avons mangé en famille (3 adultes et 2 enfants)\nLe menu du jour était top, les ravioles de saumon géniales, l'andouillette extra!!!\n\nBémol : le menu enfant est beaucoup trop cher (19€), à revoir.\nAccueil correct, manque en effet un peu de sympathie"
         },
         {
-            "pseudo": "Nicopopo21",
+            "pseudo": "Fireworks",
             "titre_review": "Médiocrité jusqu’à la fin",
             "nb_etoiles": 2,
             "date": "18 février 2018",
@@ -2172,7 +2172,7 @@
             "review": "Nous sommes allées un dimanche après-midi, on était contents de trouver un resto encore ouvert a 14h30, mais on a découvert une attrape touriste classique. Toutes les tables en étaient occupées, les serveurs ont étés assez désintéressés de satisfaire les clients. La nourriture avait très peu de goût. Le desserts sont fades et peu présentable. On aurait préféré de manger plutôt au McDo."
         },
         {
-            "pseudo": "Fireworks",
+            "pseudo": "Philippe H",
             "titre_review": "Tres bon rapport qualité-prix",
             "nb_etoiles": 4,
             "date": "11 février 2018",
@@ -2180,7 +2180,7 @@
             "review": "L'acceuil est sympathique, le cadre agréable, les plats arrivent chauds et rapidement ;-)\nDe ce temps, la soupe à l'oignon était appréciable et de bonne qualité. Les ravioles étaient bonnes, la quenelle excellente, la bavette généreuse et cuite comme demandée, les légume l'accompagnants étaient originaux et très bons ! (betterave, legumes oubliés, encore croquants, super ! gratin dauphinois très bon). Très bon desserts ! Un menu entrée-plat-dessert de ce niveau, à 23€, c'est très correct ! Nous reviendrons !\nPersonnel sympathique."
         },
         {
-            "pseudo": "Philippe H",
+            "pseudo": "Sandra L",
             "titre_review": "Très agréable et copieux",
             "nb_etoiles": 4,
             "date": "20 janvier 2018",
@@ -2188,7 +2188,7 @@
             "review": "Le restaurant est calme et bien chauffé. La cuisine est bonne est copieuse. Restaurant calme avec musique d’ambiance agréable. \nService courtois. \nParfait pour une soirée en amoureux."
         },
         {
-            "pseudo": "Sandra L",
+            "pseudo": "Quentin E",
             "titre_review": "Avoir l'air de déranger le personnel !",
             "nb_etoiles": 2,
             "date": "14 janvier 2018",
@@ -2196,7 +2196,7 @@
             "review": "Nous sommes arrivés les premiers dans le restaurant et on nous a dit de nous installer sur la table contre la porte d'entrée. Étant en hiver et les premiers nous avons demandé de nous mettre à une autre table car nous allions être dérangés par les personnes suivantes et être en courant d'air pendant tout le repas. La serveuse (très mal aimable) nous a alors montré une autre table en soufflant.\nTout le repas a été avec des échanges froids même avec les autres serveurs.\nBref vraiment avoir l'air de déranger. Plats rien d'exceptionnels."
         },
         {
-            "pseudo": "Quentin E",
+            "pseudo": "Compass736851",
             "titre_review": "Ne pas y mettre les pieds",
             "nb_etoiles": 1,
             "date": "7 janvier 2018",
@@ -2204,7 +2204,7 @@
             "review": "Bavette pas fraîche et trop salée (sûrement pour cacher le goût avarié), sauce au vin sucrée: même pas touché, gratin dauphinois surgelé, ravioles trop grasses, cramé... à éviter de toute urgence. Seuls points positifs : bavette demandée saignante et reçue saignante, restau bien situé donc beaucoup de monde y transite, mais un parler anglais trop médiocre pour un lieu si touristique pour des personnes étrangères."
         },
         {
-            "pseudo": "Compass736851",
+            "pseudo": "Forza_Alfa_Romeo",
             "titre_review": "Un bouchon sans plus",
             "nb_etoiles": 3,
             "date": "4 janvier 2018",
@@ -2733,14 +2733,6 @@
         },
         {
             "pseudo": "Dominique S",
-            "titre_review": "Des quenelles artisanales...",
-            "nb_etoiles": 5,
-            "date": "31 mars 2017",
-            "experience": "couples",
-            "review": "Des quenelles artisanales délicieuses! Consommation somme toute un peu onéreuses.\nAucunement déçue par mon choix de restaurant. Je recommande!"
-        },
-        {
-            "pseudo": "Boulangerie G",
             "titre_review": "Aucune surprise pour un 3.5/5",
             "nb_etoiles": 3,
             "date": "25 mars 2017",
@@ -2748,67 +2740,51 @@
             "review": "Tout est complet il est 20:30 samedi soir et vous êtes 6 pour diner?\nPas de risques.\nLe palais de St jean vous accueillera et vous passerez un bon moment le lieu est vaste contrairement à d'autres bouchons parfois très serrés\nCôté plat c'est pas le meilleur mais les prix sont tenus donc rien n'a redire pas d'arnaque : 22€ le menu 3 plats. \nBon acceuil et bon service."
         },
         {
-            "pseudo": "Bruno",
-            "titre_review": "Nous avions hésité avant d'y...",
-            "nb_etoiles": 5,
-            "date": "23 mars 2017",
-            "experience": "family",
-            "review": "Nous avions hésité avant d'y aller à cause de certains avis négatifs. Nous avons été donc agréablement surpris. La cuisine était excellente. Avec la réduction la fourchette c'était un excellent rapport qualité prix. Nous y retournerons sans hésiter !"
-        },
-        {
-            "pseudo": "Jean L",
+            "pseudo": "Boulangerie G",
             "titre_review": "jamais déçu",
             "nb_etoiles": 5,
             "date": "23 mars 2017",
-            "experience": "family",
+            "experience": "couples",
             "review": "C'est toujours avec plaisir que nous allons dîner au Palais saint Jean... cuisine traditionnelle Lyonnaise de qualité, bon vin, bon moment en tête à tête ou entre amis...\nVraiment jamais déçu, je recommande vivement"
         },
         {
-            "pseudo": "Mar L",
+            "pseudo": "Bruno",
             "titre_review": "Bien, mais...",
             "nb_etoiles": 3,
             "date": "14 mars 2017",
-            "experience": "business",
+            "experience": "family",
             "review": "Un restaurant bien situé dans le centre du vieux Lyon, cadre sympa. La carte de spécialité lyonnaise est moyenne... dommage."
         },
         {
-            "pseudo": "Virginie épicurienne et voyageuse",
+            "pseudo": "Jean L",
             "titre_review": "Le prix pour le cadre et le service pas pour le plat.",
             "nb_etoiles": 3,
             "date": "13 mars 2017",
-            "experience": "couples",
+            "experience": "family",
             "review": "beau restaurant bien placé et bon service, accueillant et serviable. service a toute heure.\nDommage que la cuisine ne suive pas. pas mauvais mais super non plus.\nLa salades Lyonnaise de taille très moyenne pour le prix, trempé par l'eau des œufs pochés était du coup sans gout, avec des croûtons gorgé d'eau. les autres salades étaient moyennes aussi, seul les ravioles de roman remontent le niveau."
         },
         {
-            "pseudo": "CathyNaika",
+            "pseudo": "Mar L",
             "titre_review": "Très bonne adresse",
             "nb_etoiles": 5,
             "date": "12 mars 2017",
-            "experience": "friends",
+            "experience": "business",
             "review": "Pour mon premier \"bouchon\" j'ai trouvé sa hyper réussit l'accueil plus qu'agréable souriant et marrant ! \nNiveau repas alors là belle surprise : présentation super (pour l'entrée) produits frais et même de qualité car le goût et les arômes sont la ! \nRien à dire vraiment merci au Palais St jean c'était super bonne continuation !!"
         },
         {
-            "pseudo": "Conditions d'utilisation\nConfidentialité et utilisation des cookies\nAccord d'utilisation des cookies\nPlan du site\nFonctionnement du site\nContactez-nous",
+            "pseudo": "Virginie épicurienne et voyageuse",
             "titre_review": "En demi teinte",
             "nb_etoiles": 4,
             "date": "12 mars 2017",
-            "experience": "",
+            "experience": "couples",
             "review": "2 ème visite dans ce restaurant. Lors de ma 1 ère visite j'y étais allée avec 2 amies en terrasse. Bien qu'il y avait un monde de fous nous avions été très bien accueillies et avions passé un moment très agréable. Nous avions très bien mangé. 2 ème visite un samedi soir à l'intérieur, nous étions dans les premiers il était à peine 18h30, malheureusement nous avons été servis très très très rapidement cela nous a donné l'impression qu'il fallait vite laisser la place pour d'autres clients potentiels. C'est dommage. Nous avons bien mangé mais sans plus. Attention au saint Marcellin... Il était vraiment trop \"fait\", je n'ai pu en manger que 2 morceaux et j'ai été malade toute la nuit !"
         },
         {
-            "pseudo": "",
-            "titre_review": "cuisine sans intérêt...",
-            "nb_etoiles": 3,
-            "date": "3 mars 2017",
-            "experience": "",
-            "review": "cuisine sans intérêt \nfinalement cher pour la qualité \nmême avec la réduction de la fourchette. \nnous n'y retournerons pas"
-        },
-        {
-            "pseudo": "",
+            "pseudo": "CathyNaika",
             "titre_review": "Du bonheur dans l'assiette !",
             "nb_etoiles": 5,
             "date": "24 février 2017",
-            "experience": "",
+            "experience": "friends",
             "review": "Eh bien, je me suis trompée : Lyonnaise réticente d'aller dans un \"attrape touristes\" ! \nDe A à Z tout est très bien. L'accueil est chaleureux, la cuisine est super bonne et très variée. Mes amis du Doubs voulaient découvrir la cuisine lyonnaise, c'était parfait. \nJ'y retournerai, merci Marc !"
         },
         {
@@ -3540,7 +3516,7 @@
             "review": "Après une visite en famille nous nous sommes arrêtés au Palais Saint Jean en espérant manger dans un \"vrai bouchon lyonnais\". Malheureusement celui ci est à catégoriser dans les attrapes touristes. \nPour commencer une salade avec une sauce industrielle, pour d'autres une salade lyonnaise avec des allumettes de lardons qu'on peut trouver en super marché. En plat un tablier de sapeur qui devait dates de plusieurs jours accompagnés de pomme de terre sans saveur (cuites à l'avance) et pour finir des désert apportés en 3 min montre en main. Une mousse à la mangue qui devait être de la poudre, pour d'autres une mousse au chocolat sans saveur et une crème brûlée froide ... Le tout expédiée en 1h top chrono !\nPour couronner le tout on nous a apporté l'addition en même temps que les déserts. Et le restaurant ne prend pas les tickets restaurants... :/ \nBref un vrai attrape touriste et au moment d'encaisser on dit qu'on est déçu par la qualité des produits et on le justifie par les pommes de terres qui sont tout molles voir brûlés pour certaines. On demande au serveur si elles sont préparés à l'avance on nous assurent que non et du coup on demande à le vérifier en cuisine et bizarrement le serveur s'enfui sans nous donner suite ..."
         },
         {
-            "pseudo": "Gilles S",
+            "pseudo": "Philippe B",
             "titre_review": "excellent rapport qualité prix",
             "nb_etoiles": 5,
             "date": "31 mai 2016",
@@ -3548,7 +3524,7 @@
             "review": "amateurs de tête de veau , c'est au palais saint jean !!\nrestaurent formidable , accueil sympatrique .\nla terrasse extérieure est agréable .\ntrès bon moment dans cet endroit qui ce trouve dans le vieux LYON\nje recommande ......."
         },
         {
-            "pseudo": "Philippe B",
+            "pseudo": "Pierre C",
             "titre_review": "Balade rue St jean",
             "nb_etoiles": 4,
             "date": "31 mai 2016",
@@ -3556,7 +3532,7 @@
             "review": "Sommes arrêtés au Palais pour faire connaissance avec un bouchon...\nRien à voir avec ceux de la circulation ! Lol\nBien apprecie ! Très bon rapport qualité prix ."
         },
         {
-            "pseudo": "Pierre C",
+            "pseudo": "carlacellupica",
             "titre_review": "Restaurant très convivial",
             "nb_etoiles": 5,
             "date": "31 mai 2016",
@@ -3564,7 +3540,7 @@
             "review": "Des plats de très bonne qualité, un service performant et un cadre est très agréable. Je recommande vivement cette adresse !"
         },
         {
-            "pseudo": "carlacellupica",
+            "pseudo": "momo69800",
             "titre_review": "Restaurant",
             "nb_etoiles": 5,
             "date": "30 mai 2016",
@@ -3572,7 +3548,7 @@
             "review": "Superbe endroit avec une équipe sympa .la carte est bien garnie Bon rapport qualité prix. Très bon accueil. A refaire."
         },
         {
-            "pseudo": "momo69800",
+            "pseudo": "Fa N",
             "titre_review": "Ça c'est du bouchon !",
             "nb_etoiles": 5,
             "date": "30 mai 2016",
@@ -3580,7 +3556,7 @@
             "review": "Super accueil, cadre et plats typiquement lyonnais.\nTellement délicieux !!!\nPrix abordables !\nLe top du top, 2 repas merveilleux et ils il y en aura d'autres !"
         },
         {
-            "pseudo": "Fa N",
+            "pseudo": "Delphine D",
             "titre_review": "Authentique bouchon lyonnais",
             "nb_etoiles": 5,
             "date": "30 mai 2016",
@@ -3588,7 +3564,7 @@
             "review": "La terrasse extérieure est réellement agréable en période estivale. La cuisine est plutôt raffinée, le service est très professionnel et le rapport qualité prix est très attrayant. Très bon restaurant."
         },
         {
-            "pseudo": "Delphine D",
+            "pseudo": "Barkette B",
             "titre_review": "Super moment",
             "nb_etoiles": 5,
             "date": "30 mai 2016",
@@ -3596,7 +3572,7 @@
             "review": "Agréable moment entre Amis. Cuisine très bien et personnel très sympathique. Accueil professionnel et bon repas."
         },
         {
-            "pseudo": "Barkette B",
+            "pseudo": "Cathy S",
             "titre_review": "A refaire",
             "nb_etoiles": 5,
             "date": "30 mai 2016",
@@ -3604,7 +3580,7 @@
             "review": "Moi quand je suis contente je le dis \nC'est comme quand je ne le suis pas\nLà non seulement on était ravis par la carte et la diversité des propositions mais aussi par la \"coherence\" du restaurant \nMets Lyonnais décor pittoresque ambiance super chaleureuse et intimiste en même temps, à faire en couple ou entre potes\nJe m'attendais au resto \"plan plan\" (commr souvent) je me suis retrouvée dans un super bouchon qui dépote ! \nJe recommande vivement - nous y retournerons \nPourquoi chercher ailleurs quand on a trouvé ce qu'on aime \nPs : amatrice de quenelles je peux vous dire que la leur est à tomber !!"
         },
         {
-            "pseudo": "Cathy S",
+            "pseudo": "Cher C",
             "titre_review": "Un bon rapport qualité prix",
             "nb_etoiles": 5,
             "date": "30 mai 2016",
@@ -3612,7 +3588,7 @@
             "review": "La viande y est excellente ce qui est rare dans les restaurants situés dans des zones touristiques! L'accueil est chaleureux, le service plutôt rapide et très bonne ambiance le soir. Durant la période des fêtes, ne pas manquer leur foie gras de qualité."
         },
         {
-            "pseudo": "Cher C",
+            "pseudo": "Zouille69310",
             "titre_review": "Très bon restaurant situé dans le quartier de saint jean",
             "nb_etoiles": 5,
             "date": "30 mai 2016",
@@ -3620,7 +3596,7 @@
             "review": "Tres bonnes prestations accueil impeccable personnel à l écoute rien a redire .Le cadre est en accord avec le quartier .Jolie terrasse ou l on peux tranquillement siroter un petit cocktail \ntout en regardant le quartier s animer. Nous sommes à deux pas d une multitude de curiosité à visiter ( palais de justice cathédrale traboules vieux quartiers typiquement lyonnais ). Ce restaurant se situe dans le vieux Lyon site incontournable quand on visite notre belle ville de Lyon.\nLa cuisine est digne d un grand restaurant nous avons passé une soirée mémorable . À refaire très vite .\nZahiya"
         },
         {
-            "pseudo": "Zouille69310",
+            "pseudo": "Nadine H",
             "titre_review": "Exellent !",
             "nb_etoiles": 5,
             "date": "29 mai 2016",
@@ -3628,7 +3604,7 @@
             "review": "Très bonne adresse,nous reviendrons sans problème,super accueil, la qualité est présente dans tous les plats,adresse à recommander."
         },
         {
-            "pseudo": "Nadine H",
+            "pseudo": "FarAway551436",
             "titre_review": "Bon",
             "nb_etoiles": 5,
             "date": "29 mai 2016",
@@ -3636,7 +3612,7 @@
             "review": "Personnels agréables, les plats sont excellent et copieux, je trouve qu'il y a beaucoup de choix à la carte, le cadre est très sympathique"
         },
         {
-            "pseudo": "FarAway551436",
+            "pseudo": "vero12121314",
             "titre_review": "Agréable",
             "nb_etoiles": 5,
             "date": "28 mai 2016",
@@ -3644,7 +3620,7 @@
             "review": "Restaurent de qualité, très bon service. \nLa qualité Est superbe, des bons plats locaux et des dessers maison.\nPersonnel super."
         },
         {
-            "pseudo": "vero12121314",
+            "pseudo": "Veronik P",
             "titre_review": "Super",
             "nb_etoiles": 5,
             "date": "28 mai 2016",
@@ -4220,7 +4196,7 @@
             "review": "Restaurants à eviter typiquement une arnaque pour les touristes trop cher pour ce que c'est. Portion pour des petits-enfants un prix très cher.\nPersonnel antipathique"
         },
         {
-            "pseudo": "Gilles S",
+            "pseudo": "thewinner73",
             "titre_review": "Ambiance et service sympatique",
             "nb_etoiles": 4,
             "date": "9 décembre 2015",
@@ -4228,7 +4204,7 @@
             "review": "un manager (peut etre le patron d'ailleurs) et un personnel idem font de ce restaurant un endroit a essayer sans probleme pour la qualite de ses plats typiquement \"bouchon lyonnais\" la cuisine ici n'est pas que de l assemblage !!! si vous avez envie de vous faire plaisir en vin essayez a tout prix le cote rotie 2011 un vrai delice!! peu mieux faire sur le coin toilette mais on on ne peut pas tout avoir dans les vieux immeubles."
         },
         {
-            "pseudo": "thewinner73",
+            "pseudo": "domjoly1",
             "titre_review": "Super!",
             "nb_etoiles": 5,
             "date": "6 décembre 2015",
@@ -4236,7 +4212,7 @@
             "review": "Cadre sympathique, ambiance conviviale, le serveur était plein d'humour et très gentil. Nous avons pris plusieurs menus dont celui a 27€ : Les assiettes étaient copieuses et j'ai adoré la quenelle ! Je recommande et contrairement au commentaire ci dessous, le rapport qualité-prix es top (ça me change du sud où il n'y a rien dans l'assiette !!)"
         },
         {
-            "pseudo": "domjoly1",
+            "pseudo": "Philippe L",
             "titre_review": "À éviter",
             "nb_etoiles": 2,
             "date": "5 décembre 2015",
@@ -4244,7 +4220,7 @@
             "review": "Un repas bien cher pour ce qu'il y a dans l'assiette .Un plat direct servi en même temps que les entrées des deux autres menus.Un bouteille de vin (bien chère ! ) attendue tout le long du repas.Bref une mauvaise soirée pour moi qui voulait faire découvrir un bouchon lyonnais ."
         },
         {
-            "pseudo": "Philippe L",
+            "pseudo": "Emilie V",
             "titre_review": "Excès de prix",
             "nb_etoiles": 2,
             "date": "5 décembre 2015",
@@ -4548,28 +4524,12 @@
             "review": "Un restaurant ou même la salade est immangeable, les verres qu'ils collent, le poulet avarié. \nVous quittez ce lieu et vous cherchez a mettre quelque choses dans votre bouche pour enlever l'horrible goût qu'il a reste dans votre bouche. \nAFFREUX"
         },
         {
-            "pseudo": "Nikko-Sandra N",
-            "titre_review": "Déception totale",
-            "nb_etoiles": 1,
-            "date": "3 mai 2015",
-            "experience": "couples",
-            "review": "Étant tout le week-end à Lyon , nous avons essayés plusieurs bouchons Lyonnais . Celui-ci était un attrape touristes ! Cuisine bas de gamme ... Et le pot de vin 1/5 ... Y'a beaucoup mieux dans le même quartier ... Attention !"
-        },
-        {
             "pseudo": "anne-gaelle m",
             "titre_review": "Cantine",
             "nb_etoiles": 2,
             "date": "1 mai 2015",
             "experience": "couples",
             "review": "Quand je vois les derniers avis, j'ai l'impression de ne pas être allé dans le même restaurant...\ncuisine type cantine.\nrien de fait maison.\nIls ont même le culot d'écrire \"desserts maison\".... et la serveuse ouvre le réfrigérateur et sort sa brique de crème anglaise. ...\nmon mari à voulu goûter la fameuse tarte à la praline, on la déconseille +++.\nJe n'y remettrai pas les pieds!"
-        },
-        {
-            "pseudo": "Cindy-Flore",
-            "titre_review": "Pas mal mais seulement pour les plats",
-            "nb_etoiles": 3,
-            "date": "18 avril 2015",
-            "experience": "family",
-            "review": "Tres bon dans l'ensemble mais attention si vous rentrez avec un bebe en poussette vous serez mal vu ! Peu de place comme dans la plupart des bouchons dautant plus que le serveur (pas souriant... Houla) nous a placé pres de lentrée (pour sortir plus vite ?) donc jetais pas tres a laise, limpression de gener le service :( mais bon, si avoir un enfant cest rester cloitré chez soit.... Bof !!\n\nSinon les plats etaient bons et salade de chevre copieuse. Etonné dy trouver des legumes anciens :)\nPour la tarte aux pralines jai ete tres deçu ! La mienne cetait un glaçage alors que mes proches avaient une grosse epaisseur et des morceaux de pralines.\n\nPour le prix cest touristique... Donc sortez le porte monnaie ! Cest ainsi pour tous les resto de la meme rue.\nY allez une fois pour tester mais pas deux :-/"
         },
         {
             "pseudo": "chatvero",
@@ -4584,7 +4544,7 @@
             "titre_review": "Agréable restaurant",
             "nb_etoiles": 5,
             "date": "12 avril 2015",
-            "experience": "friends",
+            "experience": "family",
             "review": "Tres bon moment ! Assiette généreuse et service très sympa ....la sensation d être dans un petit'resto du Sud de la France avec ses pavés et une clientèle internationale !!!!! \nAdresse à recommander absolument à saint jean"
         },
         {
@@ -4592,7 +4552,7 @@
             "titre_review": "Un attrape touristes.",
             "nb_etoiles": 1,
             "date": "7 avril 2015",
-            "experience": "family",
+            "experience": "couples",
             "review": "Restaurant très cher, pour la qualité tant des plats, que du vin et des desserts\n\n64 euros pour deux personnes, pour un vin de qualité médiocre, deux desserts à 8 euros, gâteau à la praline : sucre fondu coloré rose, avec deux pralines dessous sur une base de pâte blanche, mon compagnon et moi-même avons eu mal à l'estomac toute la nuit,et une partie de la journée suivante, nous mettons en cause le dessert, mais peut être est-ce la sauce blanche, identique pour une andouillette que pour le plat que j'avais choisi : des coquilles st Jacques.\n\nBref, passez votre chemin, si vous ne voulez pas être malade !!!!"
         },
         {
@@ -4600,7 +4560,7 @@
             "titre_review": "Agréable surprise",
             "nb_etoiles": 5,
             "date": "4 avril 2015",
-            "experience": "",
+            "experience": "friends",
             "review": "Au beau milieu d'une multitude de restaurant, la Palais Saint Jean n'affiche pas les meilleures notes du site. Malgré tout mes collègues ont voulu persister et avons décidé de manger là. Le service était très sympa, la déco dans l'esprit \"bouchon lyonnais\" et la nourriture excellente. J'ai commencé par une soupe à l'oignon plutôt copieuse et très goûteuse. Pour continuer avec une très bonne andouillette accompagné de gratin de pomme de terre, le dessert : mousse au chocolat. \n\nJe recommande franchement ce restaurant qui mérite de s'y arrêter car pas déçus du tout !\n\nEn vous remerciant"
         },
         {
@@ -4608,7 +4568,7 @@
             "titre_review": "Bien situé, plats appétissants mais boissons trop chères",
             "nb_etoiles": 3,
             "date": "27 mars 2015",
-            "experience": "",
+            "experience": "family",
             "review": "Nous sommes allés dans ce restaurant grâce à un bon groupon. Nous avons donc pu choisir des plats à la carte pour 39 euros à 2. Les assiettes sont plutôt copieuses et à part le poulet trop cuit donc plutôt sec, le reste a été parfait.\nPar contre, un petit kir coûte 6 euros, c'est exagéré, et les desserts à la carte a 8 euros, bien trop chers pour ce que c'est. L'accueil a été agréable, le service un peu long du fait de l'affluence."
         },
         {
@@ -4636,35 +4596,19 @@
             "review": "nous avons été placés à une minuscule table pour 2, personne ne sait préoccuper de mon manteau et tout mon barda (c'était le 29/12/2014 et il commençait à neigé le soir!!! Bon nous prenons un apéro sans chips ou olives....la serveuse fait son travail sans gentillesse (il faut dire elle a un léger accent) nous sommes servis très rapidement 1 heure chrono pour notre premier repas à notre arrivée à Lyon, c'était un essai d'un bouchon très bien question plats mais plus chers et moins sympathique que nos autres bouchons pour 2 : 66.80 avec le vin . Déçus"
         },
         {
-            "pseudo": "Girly Z",
-            "titre_review": "Très bon",
-            "nb_etoiles": 4,
-            "date": "30 janvier 2015",
-            "experience": "couples",
-            "review": "On a mangé à 6 et tout le monde était ravi par son plat. Personnellement j'ai mangé de la joue de porc confite vraiment fondante et goûteuse!\nLe service était pro et convivial. Bref je recommande!"
-        },
-        {
             "pseudo": "fanadevoyages",
             "titre_review": "service correct",
             "nb_etoiles": 3,
             "date": "1 janvier 2015",
-            "experience": "none",
+            "experience": "couples",
             "review": "la carte est assez variée et les mets sont corrects, sans plus. Nous y sommes allés pendant la période des fêtes et l'endroit était assez fréquenté. Il doit y avoir quand même un intérêt que, pour notre part, nous n'avons pas trouvé."
-        },
-        {
-            "pseudo": "Doktor_Fergu",
-            "titre_review": "Honnête sans plus...",
-            "nb_etoiles": 3,
-            "date": "29 décembre 2014",
-            "experience": "friends",
-            "review": "Nos enfants ont apprécié, donc c'est bon signe (cuisses de grenouilles et ravioles). Nous un peu moins (saucisson surcuit, mais nous ne l'avons pas signalé à l'arrivée des assiettes, donc voilà...). Service assez aimable, pas suffisamment toutefois pour offrir spontanément les cafés (chers, 2.80€ le déca!) suite à cette erreur de cuisson. Je ne suis pas du genre à insister ni à faire un scandale. Bref, le but c'est de faire du chiffre (pas donné: 5€ l'Ice-Tea Lipton) sans trop d'élégance ni de personnalité, mais expérience finalement pas trop désagréable."
         },
         {
             "pseudo": "31sissou",
             "titre_review": "Prix apéritifs et café indécents (6€ le kir et 2,8€ le café) trop cher !",
             "nb_etoiles": 3,
             "date": "23 décembre 2014",
-            "experience": "family",
+            "experience": "none",
             "review": "Menu à 17,90 correct mais les à côtés trop chers!(apéritifs et café) dommage ! Le cadre est sympa, les mets bons, service correct.\nBien regarder la carte avant de commander."
         },
         {
@@ -4672,7 +4616,7 @@
             "titre_review": "Repas entre copines",
             "nb_etoiles": 3,
             "date": "17 décembre 2014",
-            "experience": "couples",
+            "experience": "friends",
             "review": "Accueil :serveur et serveuse très desagrable surtout le serveur qui nous a fait une réflexion sur notre retard de 10mms nous étions venus entre copines et part Groupon . Le repas était bon .mais on a senti qu il fallait partir de suite après la dernière bouchée ."
         },
         {
@@ -4688,7 +4632,7 @@
             "titre_review": "A éviter",
             "nb_etoiles": 1,
             "date": "13 décembre 2014",
-            "experience": "business",
+            "experience": "couples",
             "review": "Attente interminable.\nNous avons attendu 30 minutes le menu! Si nous n'étions pas en train de nourrir notre fils, nous serions partis en courant.\nService déplorable.\nServeuses désagréables et d'une inefficacité rarement vue!"
         },
         {
@@ -4696,7 +4640,7 @@
             "titre_review": "Agréable durant la fête des Lumières.",
             "nb_etoiles": 4,
             "date": "9 décembre 2014",
-            "experience": "couples",
+            "experience": "family",
             "review": "Nous avons découvert ce restaurant le lundi 8 décembre à l'occasion de la fête des lumières. Un menu spécial y était proposé : entré-plat-dessert pour 23€. J'ai eu l'occasions de manger une salade lyonnaise, un pavé de saumon à l'oseille et une mousse au chocolat pour finir. La personne qui m'accompagnait a choisi de goûter le pâté en croute fait maison ainsi que l'andouillette. \nNous avons été servis rapidement malgré le monde. Les plats étaient tous très bons, les quantités tout à fait satisfaisantes (la salade lyonnaise était même très copieuse). \nBref, nous avons découvert de bonnes saveurs et avons mangé à notre faim. \nLes serveurs étaient agréables. \nBémol : le prix des boissons (5€ le soda!). \n\nUne adresse à conseiller"
         },
         {
@@ -4704,7 +4648,7 @@
             "titre_review": "Rien d'extra... pour résumé : une usine.",
             "nb_etoiles": 3,
             "date": "7 décembre 2014",
-            "experience": "none",
+            "experience": "business",
             "review": "Voila un restaurant ou on doit abattre de la clientèle pour qu'elle reste le moins possible dans l'établissement. Dommage... En effet, meme si on mange de manière assez simple, cela reste correct. Mais tout est fait pour que cela aille vite et le personnel, très maladroit d'ailleurs, ne s'en cache pas. \nConclusion : vous savez à quoi vous en tenir !"
         },
         {
@@ -4712,7 +4656,7 @@
             "titre_review": "a perdu de sa chaleur",
             "nb_etoiles": 3,
             "date": "27 novembre 2014",
-            "experience": "friends",
+            "experience": "couples",
             "review": "Restaurant qui restait correct et chaleureux , cette fois ci une desillusion\nD une part une personne qui fait des recherches sur internet debout a cote de la caisse , un patron qui mange avec ses amis et qui parle moto sans s interesser a sa clientele mais plus a sa sono et clou du spectacle sur le premier menu a 17,90 une soupe a l oignon avec quelques croutons mais ou il a fallu debourser un supplement de 2 euros pour avoir un petit ramequin de gruyere rape commentaire du serveur ce n est pas le directeur qui decide c est moi parceque le cuisinier est oblige d ouvrir un sachet (a vous de juger de l opportunite de sa reponse) du coup il n a pas du etre etonne de ne pas recevoir de pourboire nous n etionspas habitues a cela"
         },
         {
@@ -4720,7 +4664,7 @@
             "titre_review": "Bcp de choses a revoir pour etre digne d un restaurant agreable",
             "nb_etoiles": 2,
             "date": "24 novembre 2014",
-            "experience": "",
+            "experience": "none",
             "review": "Restauration tres bonne - une grande deception : venue via Groupon le montant de la valeur du bon n a pas ete respecte ! Le pretexte et excuse du patron \"erreur de Groupon .....\" Desole mais on verifie ou ...on assume cher patron ! Pour moi c est de la publicite mensongere - dommage"
         },
         {
@@ -4728,7 +4672,7 @@
             "titre_review": "Un vrai bouchon",
             "nb_etoiles": 3,
             "date": "11 novembre 2014",
-            "experience": "",
+            "experience": "friends",
             "review": "De vrais spécialités lyonnaises dans un cadre de bistrot. Les prix sont correctes, les plats sont bons et copieux. Le vins que nous avions pris était un saint Joseph en pichet...très décevant. Service efficace et rapide (trop rapide?).\nToilettes très litigieuses...\nNous n'y retournerons pas car il doit y avoir plus correcte eau m^me prix dans cette ville de gastronomie"
         },
         {
@@ -4748,99 +4692,43 @@
             "review": "A première vue, restaurant très agreable. Malheureusement le resultat est décevant (serveurs antipathiques, prix élevés, et une attente considérable). La restauration ne rattrape pas tout ..."
         },
         {
-            "pseudo": "Ugo S",
-            "titre_review": "A refaire !",
-            "nb_etoiles": 5,
-            "date": "23 octobre 2014",
-            "experience": "none",
-            "review": "Nous étions 4 adultes plus un enfant bas âges et le service fut génial d'abord par la gentillesse des serveurs et serveuses qui ne nous ont pas refusé malgré l'enfant contrairement à d'autres restaurants avant. Les plats sont très bons et sont arrivés aux bons moments sans attente et les plats typiques étaient exécutés à la perfection. Très bon et vivement conseiller !"
-        },
-        {
             "pseudo": "Charlotte S",
             "titre_review": "Un goût amer",
             "nb_etoiles": 2,
             "date": "18 octobre 2014",
-            "experience": "family",
+            "experience": "none",
             "review": "Les plats étaient bons (ravioles romanes recommandées), mais une mousse au chocolat qui ne vaut pas le détour. Beaucoup d'attente pour si peu d'amabilité.\nBien dommage."
-        },
-        {
-            "pseudo": "Davjedi",
-            "titre_review": "Bon resto accueil moyen",
-            "nb_etoiles": 3,
-            "date": "18 octobre 2014",
-            "experience": "couples",
-            "review": "La cuisine est excellente et copieuse. Tout est fait maison. Le prix peut paraître rebutant mais cela vaut dans l'ensemble ce que ça coûte sauf pour le menu enfant trop cher pour un steak haché gratin (15€!!!) sans la menthe à l'eau (4€!!). Pour le reste un petit bémol pour l'accueil et les toilettes"
-        },
-        {
-            "pseudo": "anne-sophie B",
-            "titre_review": "Attrape touristes",
-            "nb_etoiles": 2,
-            "date": "12 octobre 2014",
-            "experience": "couples",
-            "review": "Restaurant très moyen, la cuisine est vraiment trop grasse (même pour des spécialités lyonnaises ce n'est pas normal de retrouver tant d'huile et d'assaisonnement dans les plats).\nL'accueil est assez froid et les produits ont l'air très industriels."
         },
         {
             "pseudo": "BENOITD509",
             "titre_review": "risqué ?",
             "nb_etoiles": 2,
             "date": "7 octobre 2014",
-            "experience": "couples",
-            "review": "Nous y sommes allés avec de la famille pour faire découvrir le quartier Saint Jean et ses fameux restaurants. Le tout étant de ne pas tomber dans un piège à touristes ! \nAccueil parfait, placement en terrasse très agréable, nous optons pour un menu. Les plats sont extrêmement copieux, plutôt bon (salade lyonnaise en entrée, la taille d’un plat, quenelle en plat très bonne mais choix des desserts limités et très classique ! ).\nL’addition sans surprise. Bref, tout est bien.\nMais voilà, il faut bien un bémol : lors de vos passages aux toilettes, vous pourrez apprécier une vue sur les cuisines franchement ragoutante (un pauvre papy fait la plonge dans une eau croupie…).\nRésultat sur 4, nous dénonmbrons 3 malades… seul celui qui a mangé le tablier de sapeur a été épargné… le tartare et les quenelles ont eu raison des estomacs des 3 autres… \nVoilà ce qui explique la note mitigée car impossible de faire le lien…"
-        },
-        {
-            "pseudo": "Alexandre M",
-            "titre_review": "Du lyonnais encore du lyonnais et c'est pour du lyonnais qu'il faut y aller",
-            "nb_etoiles": 4,
-            "date": "5 octobre 2014",
             "experience": "family",
-            "review": "Resto/bouchon au centre du vieux Lyon. Cadre authentique dans rue animée. Carte riche des mets locaux : boudin, quenelle, tablier de sapeur, pâte en croûte.... Grenouilles...etc...bien faits. Service honnête au bon rythme. Bon choix de vins à tarif dans la moyenne. Il est par contre difficile de faire son choix de part la construction des menus ( pas de lien entre les menus)."
+            "review": "Nous y sommes allés avec de la famille pour faire découvrir le quartier Saint Jean et ses fameux restaurants. Le tout étant de ne pas tomber dans un piège à touristes ! \nAccueil parfait, placement en terrasse très agréable, nous optons pour un menu. Les plats sont extrêmement copieux, plutôt bon (salade lyonnaise en entrée, la taille d’un plat, quenelle en plat très bonne mais choix des desserts limités et très classique ! ).\nL’addition sans surprise. Bref, tout est bien.\nMais voilà, il faut bien un bémol : lors de vos passages aux toilettes, vous pourrez apprécier une vue sur les cuisines franchement ragoutante (un pauvre papy fait la plonge dans une eau croupie…).\nRésultat sur 4, nous dénonmbrons 3 malades… seul celui qui a mangé le tablier de sapeur a été épargné… le tartare et les quenelles ont eu raison des estomacs des 3 autres… \nVoilà ce qui explique la note mitigée car impossible de faire le lien…"
         },
         {
             "pseudo": "Patrick C",
             "titre_review": "Bien dans l'ensemble",
             "nb_etoiles": 3,
             "date": "4 octobre 2014",
-            "experience": "",
+            "experience": "couples",
             "review": "Bien mais chère. Les assiettes sont copieuses et très bon. Le service est à revoir. Nous avons toujours l’impression de déranger les serveurs. Le sourire est en option. Heureusement que l’on y mange bien, par contre le vin est très chère."
-        },
-        {
-            "pseudo": "Thierry B",
-            "titre_review": "Correct mais prix un peu élevés",
-            "nb_etoiles": 3,
-            "date": "27 septembre 2014",
-            "experience": "",
-            "review": "Dans le vieux Lyon, zone piétonne charmante et beaucoup de bouchons très touristiques.\nContrairement à d'autres avis, service correct et assez rapide. Plats corrects sans être exceptionnels. Le prix est malgré tout plus élevé que dans la plupart des autres bouchons."
         },
         {
             "pseudo": "gigi382014",
             "titre_review": "A REFAIRE!!!!!",
             "nb_etoiles": 4,
             "date": "20 septembre 2014",
-            "experience": "",
+            "experience": "couples",
             "review": "par le biais de groupon,nous y sommes allés pour la 2eme fois.Tres bien mangé,serveuse très sympathique,bien situé au coeur de saint jean.Nous y retournerons sans problème"
-        },
-        {
-            "pseudo": "ajpgaix",
-            "titre_review": "Je ne le conseille pas",
-            "nb_etoiles": 2,
-            "date": "14 septembre 2014",
-            "experience": "",
-            "review": "Bonjour. Accueil et service à améliorer: 1h d'attente pour l'entrée; pas d'écoute du client. Repad sans émerveillement. Entrée saumon mariné au citron (je cherche encore le goût de la marinade lol) gratin de pomme de terre bon et dessert crème brûlée pas crémeuse comme je l'aime. Il n'est plus ce qu'il était point de vue présentation et goût..."
-        },
-        {
-            "pseudo": "Kadu21",
-            "titre_review": "Tres moyen",
-            "nb_etoiles": 3,
-            "date": "11 septembre 2014",
-            "experience": "",
-            "review": "Resto assez cher avec un menu a 17.90. Qualité moyenne des produit (industriels). L'accueil assez froid et le personnel pas très agréable. Un sourire suffirait amplement. Resto a évite pour ma part ."
         },
         {
             "pseudo": "Champiot F",
             "titre_review": "Deception en terrasse",
             "nb_etoiles": 2,
             "date": "3 septembre 2014",
-            "experience": "",
+            "experience": "couples",
             "review": "Nous souhaitions nous offrir un petit moment de plaisir à deux à la fin des vacances.\nNous avons choisi ce restaurant par hasard, car nous n'avions pas de guide.\nMal nous en a pris! Les 2 menus choisis (19 et 25 €) présentaient des plats sans personnalité.\nPortion congrue de gateau de foie avec une sauce tomate en tube, quenelle de brochet accompagnée de ... riz (que des féculents!), et le pompon pour les desserts!\nOn nous amène la carte des desserts et nous commandons des tartes à la praline. Mon mari déjà très agacé par le service déplorable (garçon surbooké et que tout agace, \"trop de monde\"), questionne sur le prix des desserts et nous découvrons que pour le menu à 19 €, la tarte à la praline fait l'objet d'un supplément sans que cela ne soit indiqué nulle part!\nMais la tarte à la praline mérite bien son nom: il n'y a qu'une praline sur toute la tarte et donc pas de goût, un vrai bloc de sucre!\nNous sommes repartis déçus et furieux par le mépris généré par ces professionnels.\nPourquoi est-il si difficile de bien faire un métier, ou sont passés les professionnels qui aiment leur métier et les gens qu'ils reçoivent?\nNous avons compté le nombre des couverts, multiplié par le prix moyen des repas, et trouvé de jolies sommes par soir ou par saison. Le prix de location doit être élevé certes mais cela ne justifie pas de prendre les clients pour des poires."
         },
         {
@@ -4848,23 +4736,15 @@
             "titre_review": "Bon rapport Qualité prix",
             "nb_etoiles": 4,
             "date": "26 août 2014",
-            "experience": "",
+            "experience": "family",
             "review": "Invité un dimanche midi nous avons découvert ce bouchon. Nous avions réservé une table en terrasse qui nous a été gardée malgré le monde. (Combien de restaurateur aurait \"vendu\" la table au premier touriste venu). La cuisine est bonne et le rapport qualité prix est correct. Rien à dire sur l'accueil et l'ambiance."
-        },
-        {
-            "pseudo": "Emilie C",
-            "titre_review": "A éviter",
-            "nb_etoiles": 1,
-            "date": "19 août 2014",
-            "experience": "couples",
-            "review": "Que dire de plus qu'à éviter.\nCet établissement est l'un des nombreux attrapes touristes que compte la belle ville de Lyon.\nNous aurions dû fuir dès l'accueil glacial.\nNous avons réussi à rapidement commander, mais n'avons rien vu arriver avant longtemps...\nUne demi-heure pour obtenir l'apéritif, une heure pour l'entrée, qui n'est pourtant qu'une malheureuse petite salade verte accompagnée de sa sauce industrielle.\nAu bout d'une heure trente de galère et de réprimandes de la part de ce qu'il semble être la gérante, nous nous sommes décidés à partir.\nPas de plat, ni de dessert !!!\nAucune excuse, ni de gène de la part de la patronne qui préfère vraisemblablement appâter les touristes, plutôt que de fidéliser la clientèle.\nTarifs très élevés, surtout pour la qualité de ce que l'on a pu goûter.\nTouristes et lyonnais, prenez vos jambes à votre cou."
         },
         {
             "pseudo": "Alain M",
             "titre_review": "Horrible !",
             "nb_etoiles": 2,
             "date": "7 août 2014",
-            "experience": "friends",
+            "experience": "couples",
             "review": "Un menu du jour à 22 € de qualité médiocre, je n'ai même pas terminé le plat principal !\nUne carte des vins, avec des prix dignes d'un grand restaurant .........pas un rosé à moins de 30 € la bouteille............\nLe tout couronné d'une \"scène de ménage\" entre le patron et un serveur ............ la plus mauvaise soirée de notre séjour !\nSeul professionnalisme de l'établissement .......une terrasse attirante avec des tables recouvertes d'une nappe blanche en tissu...........de quoi berner un couple de touristes !"
         },
         {
@@ -4872,7 +4752,7 @@
             "titre_review": "Service inadmissible",
             "nb_etoiles": 1,
             "date": "5 août 2014",
-            "experience": "family",
+            "experience": "friends",
             "review": "Au hasard nous avons choisis ce bouchon puis avons vite regrettés!\nle serveur était vraiment exécrable autant dans son travail que dans son comportement !! C'est inadmissible de se faire limite engueuler lorsque on demande quelque chose !!! les prix des boissons sont bien trop élevés (5€ pour tout sodas) la nourriture trop salée seul la salade végétarienne en entrée était bonne."
         },
         {
@@ -4880,23 +4760,15 @@
             "titre_review": "Un bouchon sympathique",
             "nb_etoiles": 4,
             "date": "3 août 2014",
-            "experience": "couples",
+            "experience": "family",
             "review": "Nous avons déjeuner un midi de juillet dans ce bouchon lyonnais sous la recommandation d'un ami.\nLe cadre est sympathique et typique du vieux Lyon avec ces nombreux restos. Tout est propre, malgré des tables trop proche les unes des autres. \nL'accueillant est chaleureux et la jeune serveuse est tout sourire pour ses clients, malgré l'heure tardive de notre arrivée (14h)\nLe menu enfant est un peu cher pour un steak avec accompagnement et une glace (la boisson n'est pas comprise)\nLa serveuse nous proposera malgré tout d'accompagner le plat des enfants avec des frites plutôt que le gratin dauphinois. \nNous avons pris le menu Gnafron à 17,90€ et rien à redire: les plats sont copieux et appétissant. \nLe temps d'attente entre chaque plat est assez long par contre malgré le peu de clients présent. \nPetit bémol pour le dessert, la tarte aux pralines manque de volume, juste une tranche qui baigne dans une dose de crème anglaise.\n\nDans l'ensemble une bonne adresse à recommander."
-        },
-        {
-            "pseudo": "Kittoche",
-            "titre_review": "Déplacement. Pro",
-            "nb_etoiles": 4,
-            "date": "14 juillet 2014",
-            "experience": "none",
-            "review": "Restaurant déjà connu par les collègues, je les ai suivi a la découverte de Lyon que je connaissais pas. Dans une petit rue pavé très animée, repas en terrasse, serveur très sympas. Menu très copieux pour 19€ & dijo offert ! Bonne soirée !"
         },
         {
             "pseudo": "Aure C",
             "titre_review": "Bon repas mais prix non justifié.",
             "nb_etoiles": 3,
             "date": "13 juillet 2014",
-            "experience": "family",
+            "experience": "couples",
             "review": "Très bon repas, copieux, bien présenté. Dessert maison mais tarte aux pralines non maîtrisée.\nAttention, ne pas prendre de café, c'est du vol !!! 5€60 les 2 expresso. Du jamais vu !!"
         },
         {
@@ -4904,7 +4776,7 @@
             "titre_review": "PARFAIT!!",
             "nb_etoiles": 5,
             "date": "11 juillet 2014",
-            "experience": "friends",
+            "experience": "none",
             "review": "Cet établissement est une belle surprise car étant amené à venir manger régulièrement sur Lyon et pour avoir plusieurs fois diné sur cette jolie place,je peux certifier que le palais est jean est le meilleur (et aussi le plus cher).\nJe recommande vivement la tarte fine au saint Marcellin qui est un delice.\nLe service est plutôt efficace.\nLe seul bémol que ferait concerne la tarte praline qui n'est PS une tarte parole de lyonnais!\nSinon tout est parfait."
         },
         {
@@ -4912,7 +4784,7 @@
             "titre_review": "Piège a touristes",
             "nb_etoiles": 1,
             "date": "9 juillet 2014",
-            "experience": "couples",
+            "experience": "family",
             "review": "Comment décrire ce restaurant ? 120€ pour 4 personnes alors que le veille dans la rue Mercière 60€, et bien meilleur. Gâteau de foies de volaille sans aucune goût , a ce demander si ce n était pas du tout prêt vue la consistance . Gratin de ravioles insipide, et les prix un tablier de sapeur a 22€ alors qu en face 11€. Un temps fou pour nous servir alors qu il n y avait pratiquement personne dans le restaurant . Nous aurions dû nous en douter car tous les autres étaient complets. A éviter"
         },
         {
@@ -4920,7 +4792,7 @@
             "titre_review": "PARFAIT",
             "nb_etoiles": 4,
             "date": "23 juin 2014",
-            "experience": "family",
+            "experience": "friends",
             "review": "Pas de surprise en deux ans ! toujours très bon . produits de qualités. grand choix et sevices impeccable"
         },
         {
@@ -4928,31 +4800,15 @@
             "titre_review": "A ne pas manquer",
             "nb_etoiles": 4,
             "date": "19 juin 2014",
-            "experience": "none",
+            "experience": "couples",
             "review": "Nous y avons été hier soir . L'accueil était agréable et chaleureux, les plats succulents. Tous les produits cuisinés étaient d'une fraicheur exceptionnelle. Le service impeccable, bref une excellente soirée dans un endroit que je recommande à Lyon en plus dans le charme du quartier St Jean, bref un restaurant à ne pas manquer."
-        },
-        {
-            "pseudo": "Amandine B",
-            "titre_review": "Une belle adresse !",
-            "nb_etoiles": 5,
-            "date": "9 juin 2014",
-            "experience": "friends",
-            "review": "Nous sommes allés deux fois dans ce restaurant via des groupons et c'était parfait ! Des plats à la carte et en illimité ! Un excellent service en semaine (peu de monde) \nJe vous conseille de surveiller de temps en temps les offres sur groupon !"
-        },
-        {
-            "pseudo": "Lolo2408",
-            "titre_review": "Très bon établissement",
-            "nb_etoiles": 5,
-            "date": "11 mai 2014",
-            "experience": "",
-            "review": "Nous avons dînés un soir avec ma compagne. Tout à été parfait les plats sont très bien présentés très copieux.La cuisine est très bonne et l'accueil est pro et sympathique bref un bon endroit où dîner en couple ou à plusieurs"
         },
         {
             "pseudo": "Jean P",
             "titre_review": "Un bouchon ?",
             "nb_etoiles": 2,
             "date": "5 mai 2014",
-            "experience": "",
+            "experience": "family",
             "review": "J'ai dîné le 3 mai 2014 dans ce restaurant.\nLes serveuses étaient pressées et bousculaient fréquemment les convives placés près de l'allée.\nJ'ai profité pleinement de la conversation de mes voisins, moins de cinquante centimètres séparaient nos tables.\nAncien habitant de Lyon, je n'ai pas reconnu le goût des plats que j'appréciais, en particulier le tablier de sapeur. Le gras double était trop cuit et mal assaisonné, la friture trop grasse et sans aucun croustillant.\nCe restaurant n'a de bouchon ... que le nom !"
         },
         {
@@ -4960,7 +4816,7 @@
             "titre_review": "J'ai rarement mangé aussi bien !",
             "nb_etoiles": 5,
             "date": "1 mai 2014",
-            "experience": "",
+            "experience": "none",
             "review": "Je suis allée dans ce restaurant à 15h le 30 avril en compagnie d'une amie. Super bon accueil. La serveuse était souriante et professionnel. Entrée : salade lyonnaise (j'ai cru que c'était un plat tellement elle était énorme !) En plat, la quenelle de brochet. Mon dieu une tuerie ! Et en dessert la tarte aux pralines. J'ai plus qu'aimé ! Pour 17,90 €, j'en ai eu pour mon argent. Très bon rapport qualité/prix !! En sortant, j'ai cru que mon ventre allait explosé ! Dés que je retourne à Lyon, j'y vais direct ! En conclusion, un délice du début à la fin avec une serveuse serviable et souriante !"
         },
         {
@@ -4968,7 +4824,7 @@
             "titre_review": "Rien à redire",
             "nb_etoiles": 4,
             "date": "1 mai 2014",
-            "experience": "",
+            "experience": "friends",
             "review": "Un délice ! Nous sommes venues manger le 30.04.14 à 15h, heure assez tardive... Pourtant le service était impeccable. Nous avons été très bien reçues. La serveuse très accueillante, souriante et sympathique. Les plats étaient délicieux de l'entrée au dessert. Rien à redire, on y retournera sans doute ! =)"
         },
         {
@@ -5012,19 +4868,11 @@
             "review": "Je suis allée dîner dans ce restaurant avec un bon groupon. J'ai été agréablement surprise par l'accueil, le confort et la qualité des produits. \nHabituellement, lorsque l'on se rend dans un restaurant avec un bon groupon, on est souvent mis à l'écart dans la salle et le menu est souvent imposé et pas très varié. Mais pas dans ce restaurant ! On choisit directement sur la carte. Pour ma part, j'ai pris du foie gras et des st jacques, c'était délicieux. La situation du resto en plein cœur de St Jean est idéale. Bref, j 'y retournerai."
         },
         {
-            "pseudo": "ÉLOÏSE C",
-            "titre_review": "Sans plus",
-            "nb_etoiles": 3,
-            "date": "1 avril 2014",
-            "experience": "business",
-            "review": "Nous avions achete un bon groupon afin de connaitre ce restaurant. \nOn pouvait choisir une entrée, un plat et un dessert sur la carte. On a hallucine sur les prix à la carte surtout quand les plats arrivent dans notre assiette. Les prix ne sont pas du tout justifiés. .. c est bon mais sans plus. Jamais je n aurais payé ce prix !! Mais au prix de groupon ca restait plus que raisonnable. \nLe serveur était peu agréable: pas un sourire ,peu détendu et nous pressait sans arrêt ( un robot?)\nLes toilettes sont dans la cour et font sales et mal entretenus.\nLes espaces sont très restreints et banquette peu confortable. \n\nConclusion: on y retournera pas."
-        },
-        {
             "pseudo": "Thierry L",
             "titre_review": "Bon",
             "nb_etoiles": 4,
             "date": "26 mars 2014",
-            "experience": "couples",
+            "experience": "business",
             "review": "En me rendant dans ce type d'établissement je ne m'attend pas à manger comme chez Bocuse, j'imagine que vue la fréquentation, un samedi soir, on nous servira plus du sous-vide ou du congelé que du frais. Erreur, cet établissement sert des produits frais de bonne qualité, et l'équipe de salle est à la hauteur. Je suis souvent amené par mon métier à fréquenter divers types de restaurant et celui-ci dans la catégorie \"brasserie/bouchon\" à fort débit est très haut dessus de la moyenne. Un signe qui ne trompe pas, une carte des desserts restreinte qui laisse peu de doutes quant à la qualité \"faits maisons\". Un bémol les prix des pots, préférez une bouteille."
         },
         {
@@ -5044,19 +4892,11 @@
             "review": "C'est typiquement le genre de restaurant ou j'en ressors ni satisfaite mais ni complètement dégoûtée! Rien de bien recherché au niveau de la qualité des plats, une présentation simple, mais le tout fonctionne. Il n'y a qu'au niveau du dessert que j'ai vraiment été déçue : une tarte au citron, visiblement pas faite du jour... Voire de la semaine. \nSinon, la déco est sympa. Le resto n'était pas plein, alors c'était agréable, mais vu le nombre de couverts, je pense qu'il peut rapidement se transformer en cantine. Pour finir, un bon point pour une serveuse à l'écoute!"
         },
         {
-            "pseudo": "Guillaume C",
-            "titre_review": "Très bonne adresse",
-            "nb_etoiles": 4,
-            "date": "1 mars 2014",
-            "experience": "friends",
-            "review": "Malgré avoir trouvé un petit morceau de plastique dans la salade, et avoir eu un gratin pas assez chaud, le serveur à réagit très rapidement. \nLa cuisine est très raffinée et à recommander. \nLe cadre est sympa."
-        },
-        {
             "pseudo": "Streetriple675",
             "titre_review": "Notre palais n'a pas apprécié",
             "nb_etoiles": 2,
             "date": "27 février 2014",
-            "experience": "family",
+            "experience": "couples",
             "review": "Sauces sorties directement du sachet.\nAndouillette bouillie.\nQuenelle très très ordinaire.\nLe tout servi par un personnel à l'image des plats.\nRapport qualité/prix très inférieur au MacDo.\nVoyageurs, passez au large !"
         },
         {
@@ -5064,7 +4904,7 @@
             "titre_review": "Bouchon lyonnais uniquement de nom.",
             "nb_etoiles": 3,
             "date": "19 février 2014",
-            "experience": "couples",
+            "experience": "friends",
             "review": "Le lieu et la devanture laisse bon présage, mais c'est au fil du repas que la \"supercherie\" prend forme. Un personnel qui tourne entre deux établissements ( un propriétaire qui a donc trouvé le bon filon pour tirer profits de la réputation des bouchons et des touristes ), mais le personnel reste très agréable ! \nLes présentations des plats sont très belles, le plat principal très bon, mais c'est au niveau de l'entrée et du désert qu'il y a problème. Pas très savoureux, et explicable car il s'agit tout simplement de nourriture congelé, acheté, uniquement posé dans l'assiette. La tarte à la praline par exemple est dur comme du béton, et surtout à un prix surdimensionné de 7€ la petite part, autant dire que cette tarte achetée est vite rentabilisée ! \n\nLes vrai spécialités lyonnaises sont rares, préférez les menus où pour le coup, les prix sont raisonnables."
         },
         {
@@ -5072,7 +4912,7 @@
             "titre_review": "très satisfaisant",
             "nb_etoiles": 3,
             "date": "19 février 2014",
-            "experience": "business",
+            "experience": "family",
             "review": "de passage à Lyon je suis tombé sur ce restaurant qui propose de la cuisine lyonnaise: tarte aux pralines, tablier de sapeur, gâteau de foie, andouillettes. C'était bon, servi avec le sourire. Pas très cher, il ne faut donc pas exiger ce que pourrait offrir tel autre restaurant de la ville pour 20€ par personne de plus. on peut aller là sans appréhension"
         },
         {
@@ -5080,7 +4920,7 @@
             "titre_review": "decevant!!!!!",
             "nb_etoiles": 2,
             "date": "18 février 2014",
-            "experience": "",
+            "experience": "couples",
             "review": "L'accueil est aussi congelé que les plats que nous avons mangé... enfin, nous semble-t-il... pour le plat principal d'un menu!"
         },
         {
@@ -5088,7 +4928,7 @@
             "titre_review": "A éviter",
             "nb_etoiles": 2,
             "date": "10 février 2014",
-            "experience": "",
+            "experience": "business",
             "review": "Le serveur a voulu nous parquer dans un coin pour laisser la place à d'autres clients qui ne sont jamais venus. La nourriture est convenable mais sans plus. Les pots de vin sont chers."
         },
         {
@@ -5116,19 +4956,11 @@
             "review": "Le restaurant est situé en plein coeur du vieux Lyon. Entrée plat et dessert pour 27 euros. Très correct parce que tout est vraiment délicieux et les plats sont très bien présentés. Seul point négatif, il fait beaucoup trop chaud dans ce restaurant. Sinon on à rien à redire... on reviendra lors de notre prochain séjour à Lyon."
         },
         {
-            "pseudo": "Anthony03700",
-            "titre_review": "On a perdu l'esprit du bouchon",
-            "nb_etoiles": 3,
-            "date": "28 décembre 2013",
-            "experience": "couples",
-            "review": "Le repas est correct mais le dessert n'est certainement pas maison. Le service est assez rude. Bref, on est loin de l'esprit Bouchon Lyonnais. Dommage"
-        },
-        {
             "pseudo": "gian",
             "titre_review": "la vitrine est formidable , l’arrière vous fait fuir",
             "nb_etoiles": 3,
             "date": "11 décembre 2013",
-            "experience": "friends",
+            "experience": "couples",
             "review": "Je suis rentré dans ce restaurant parce-qu’il avait bel allure , un personnel accueillant . \nLa salle est agréable , bien claire et propre . Le service suit bien . Le repas correct sans plus . \nMais pour aller aux toilettes , vous traversez d'abord le bar qui est sombre , puis vous arrivez dans un couloir où d'un coté il y a la cuisine et en face un WC et une petite courette avec 3 WC de chantier . Les plats sortants de la cuisine par une porte battante qui brasse l'air traversent cet espace peu hygiénique . Cela vous coupe l’appétit !"
         },
         {
@@ -5136,7 +4968,7 @@
             "titre_review": "Très bien",
             "nb_etoiles": 4,
             "date": "9 décembre 2013",
-            "experience": "none",
+            "experience": "friends",
             "review": "Nous avons mangé dans ce resto à l'occasion de la fête de lumière à Lyon. Nous l'avons choisi un peu au hasard car il y a des 10ène de Bouchon Lyonnais dans cette rue et ce soir là il y a avait la queue partout. Verdict nous n'avons pas été déçu car nous avons super bien mangé. La viande était....une tuerie(pavé de bœuf)!!!!! Servi avec super gratin dauphinois (d'ailleurs je veux bien la recette). Le service était un peu expéditif mais je pense que c'est du au nombre de couverts dans la journée. Seul petit bémol je n'ai pas retrouvé la déco typique d'un bouchon."
         },
         {
@@ -5144,7 +4976,7 @@
             "titre_review": "Bien mais tarifs élevés",
             "nb_etoiles": 4,
             "date": "8 décembre 2013",
-            "experience": "couples",
+            "experience": "none",
             "review": "Repas copieux. Personnel agréable.salle bruyante. 6 € le Coca c'est exagéré. Tarte au praline pas terrible."
         },
         {
@@ -5154,14 +4986,6 @@
             "date": "14 novembre 2013",
             "experience": "couples",
             "review": "Nous sommes allés en couple dans ce restaurant lors d'un week-end à Lyon (le dimanche soir veille d'un jour ferié), en utilisant une carte restopolitain qui donne droit à un repas offert.\nNous avions reservé la veille sur internet.\nLe restaurant est situé en plein coeur du vieux Lyon, dans un cadre agréable, après avoir été bien accueilli , nous avons rapidement été servi, nous avons pris un menu à 27€ (de mémoire), ( exemple de ce que nous avons commandé : tarte au st marcelin, salade au feuilleté au chèvre, lassagne de cabillaud au beure blanc...), nous avions peur de tomber dans un piège à touriste, mais pas du tout, le repas était excellent, les plats raffinés et très bien présenté! Nous le recommandons!"
-        },
-        {
-            "pseudo": "Cesar-Gelvez",
-            "titre_review": "Dur dur",
-            "nb_etoiles": 2,
-            "date": "2 novembre 2013",
-            "experience": "friends",
-            "review": "Le service presque militaire. La carte a rallonge ou la moitie vient de chez metro, surtout les desserts. Seulement un toilettes pour eeux salles. Bref. On ne reviendra pas."
         },
         {
             "pseudo": "Lili R",
@@ -5176,7 +5000,7 @@
             "titre_review": "Un Restaurant à Touristes .....à ne pas recommander",
             "nb_etoiles": 2,
             "date": "22 juillet 2013",
-            "experience": "couples",
+            "experience": "friends",
             "review": "Un mauvais Restaurant\n\nSe dit \" Bouchon Lyonnais\" . En fait , un Restaurant à touristes. \n\nAccueil : OK\n\nService : Assez moyen\n\nLe vin ( Nous avions pris du Brouilly) était mauvais. \n\nLa Cuisine était très médiocre.\n\nLes Spécialités Lyonnaises ne sont pas à recommander ( à part peut-être la Salade Lyonnaise).\nLe pâté en croûte et le \" tablier de sapeur \" sont très secs. \nLa tête de veau est très moyenne.\n\nLe Restaurant est situé dans le Vieux Lyon à deux pas de la Cathédrale.Terrasse extérieure.\n\nUn Restaurant à ne pas recommander. Un \" ba... touristes\"."
         },
         {
@@ -5184,7 +5008,7 @@
             "titre_review": "bon rapport qualité prix",
             "nb_etoiles": 4,
             "date": "24 juin 2013",
-            "experience": "family",
+            "experience": "couples",
             "review": "bon rapport qualité prix. service correct accueil sympa. plats copieux, bien présentés.bon conseils à la commande. les noix de st jacques un régal. on sort content de ce restaurant, au milieu du vieux lyon, facile d'accès par le métro arrêt vieux lyon."
         },
         {
@@ -5192,7 +5016,7 @@
             "titre_review": "Un très bon restaurant",
             "nb_etoiles": 4,
             "date": "4 juin 2013",
-            "experience": "none",
+            "experience": "couples",
             "review": "Ne pas y aller le soir. Les plats sont très copieux et très bon, d'où ma remarque de ne pas y aller le soir, parce que la digestion se fait mal après. \nJe le recommande, en plus de l'endroit où il se trouve, quartier St Jean."
         },
         {
@@ -5200,7 +5024,7 @@
             "titre_review": "Menu enfant : steak haché + 1 boule de glace = 15€ !!",
             "nb_etoiles": 3,
             "date": "30 mai 2013",
-            "experience": "",
+            "experience": "family",
             "review": "Bonjour la marge sur le menu enfant ! \nC'est d'autant plus surprenant que les menus adultes sont à un bon rapport qualité/prix."
         },
         {
@@ -5208,7 +5032,7 @@
             "titre_review": "Enfin une bonne adresse dans le vieux Lyon",
             "nb_etoiles": 4,
             "date": "27 mai 2013",
-            "experience": "",
+            "experience": "none",
             "review": "Lyonnais ,lyonnaise un bon restaurant dans le vieux Lyon ça existe ........ Mention spéciale au pied de cochon gratiné . régalez vous!"
         },
         {
@@ -5260,14 +5084,6 @@
             "review": "Dans les rues pietonnes du vieux Lyon, un restaurant choisi au hasard, pour sa grande terrasse, et sa carte.Toute la gastronomie Lyonnaise .Un peu d attente, mais c est la condition quand les produits sont frais.Personnel a l ecoute du client. La carte est bien faite, les menus sympas, les portions sont genereuses, et ce qui ne gache rien, c est bon.Les prix sont honnetes.(Par exemple un menu complet pour 14 euros)."
         },
         {
-            "pseudo": "06BIOT",
-            "titre_review": "Vraiment moyen ... sans plus",
-            "nb_etoiles": 3,
-            "date": "31 mars 2013",
-            "experience": "couples",
-            "review": "Ce restaurant est bien placé dans le vieux Lyon, à un endroit où la concurrence est forte. Nous avons pris des menus à 15,90€, et ce que nous avons mangé ne valait pas plus (les desserts - mousse au chocolat et tarte aux pralines - étaient même médiocres !). Le verre de rosé à 5€ tout de même ! Et les plats du même nom, si on les prend à la carte, dépassent les 17€ !!"
-        },
-        {
             "pseudo": "danielle s",
             "titre_review": "un plaisir pour le palais",
             "nb_etoiles": 4,
@@ -5276,19 +5092,11 @@
             "review": "Ce Palais nous a ravis.connu par un deal,nous avons profité à fond de l'accueil,du service,et de la délicieuse cuisine.Déjeuner à la carte,grand choix,belle présentation.Nous y retournerons avec plaisir."
         },
         {
-            "pseudo": "Gil06300",
-            "titre_review": "Bon restaurant pour la pause de midi",
-            "nb_etoiles": 4,
-            "date": "19 janvier 2013",
-            "experience": "friends",
-            "review": "Attiré par la formule de midi à 12€, nous avons décidé d'essayer ce restaurant dans le Vieux Lyon. Nous ne regrettons pas notre choix. \nLes plats du jour étaient très bons et le service efficace. \nUn bon restaurant pour une pause déjeuner express. Une bonne cuisine lyonnaise."
-        },
-        {
             "pseudo": "hofmannd",
             "titre_review": "Menu de Réveillon",
             "nb_etoiles": 4,
             "date": "4 janvier 2013",
-            "experience": "family",
+            "experience": "couples",
             "review": "41 euros, sans les boissons, bon, varié, bien présenté et un personnel de qualité. Le dessert, sorbet au citron vert est un vrai régal avec ses petits confits de citron. Mes compliments au chef !"
         },
         {
@@ -5296,7 +5104,7 @@
             "titre_review": "excellent restaurant",
             "nb_etoiles": 5,
             "date": "11 décembre 2012",
-            "experience": "business",
+            "experience": "friends",
             "review": "Nous avons découvert ce restaurant grâce aux deals, ces nouveaux sites qui proposent des restaurants à moitié prix.\nCe fut un véritable délice; aussi bien dans l'assiette que la gentillesse du patron et du personnel.\nDans ces restaurants de deals, il y a souvent un menu imposé et au Palais de st Jean, on vous donne la carte et vous choisissez ce que vous voulez.\nNous y retournerons avec plaisir.\nJe signale aussi le restaurant de fruits de mer le \"BONEFISH\" à Champagne au mont d'Or qui n'est malheureusement pas dans vos données et qui est à connaître , mais dépêchez-vous car les propriétaires ont décidé d'abandonner les fruits de mer pour en faire un resto chinois à partir de janvier; comme s'il n'y avait pas assez de restos chinois\nDe plus, ce restaurant se trouve pas loin de conforama,( à 100 mètres) et on n'a pas de problème pour se garer.\nResponsable super agréable et le plateau de fruits de mer, bien garni."
         },
         {
@@ -5304,7 +5112,7 @@
             "titre_review": "Bon mais service à revoir",
             "nb_etoiles": 2,
             "date": "9 novembre 2012",
-            "experience": "couples",
+            "experience": "family",
             "review": "Nous y avons été en tant que salon de thé à 16h l'après-midi.\nComme nous ne prenions pas de repas et que nous avions un enfant nous avons été placés l'entrée.\nNous avons pris 2 desserts très bons et des boissons chaudes.\nUn serveur fort sympathique et souriant mais les deux autres auraient sûrement préféré ne pas avoir de clientèle famille avec enfant et ils en ont parlé avec d'autres clients en anglais.\nLa base du métier de la restauration reste l'hygiène et la qualité des plats pour un cuisinier et en salle la courtoisie et la politesse.\nA revoir..."
         },
         {
@@ -5312,7 +5120,7 @@
             "titre_review": "Un bon restaurant au coeur du vieux Lyon",
             "nb_etoiles": 4,
             "date": "22 octobre 2012",
-            "experience": "solo",
+            "experience": "business",
             "review": "Arrivé tard à Lyon et désirant goûter à la cuisine locale, nous avons cherché un \"bouchon\". Tous étaient soit pleins soit heure trop tardive (22h) en milieu de semaine. Le Palais St Jean, nous à accueilli gentillement et le repas était excellent (même si les plats sont un peu chers et surtout les vins).\nNéanmoins adresse à recommander, dans le vieux Lyon typique et près du métro."
         },
         {
@@ -5320,7 +5128,7 @@
             "titre_review": "Sympathique",
             "nb_etoiles": 4,
             "date": "30 septembre 2012",
-            "experience": "",
+            "experience": "couples",
             "review": "Restaurant fort sympathique en semaine car moins de monde. Cuisine correcte et service efficace. Je le conseille"
         },
         {
@@ -5328,7 +5136,7 @@
             "titre_review": "moyen comme beaucoup à St Jean",
             "nb_etoiles": 2,
             "date": "13 septembre 2012",
-            "experience": "",
+            "experience": "solo",
             "review": "Le seul interêt de ce restaurant est sa position au centre de St Jean. Le reste une cuisine moyenne, des prix élevés."
         },
         {
@@ -5500,19 +5308,11 @@
             "review": "Cet endroit avait l'air bien avec ce qui semblait ton nappes blanches. Ils étaient papier. Le service était médiocre. Nous étions deux couples avec un client. Ils ont oublié l'entrée des clients et nous avons terminé lorsque son arrivée. Le vin était bon, mais la qualité de la nourriture était la pire que nous ayons vu à Lyon. Evitez cet endroit comme la peste. Méfiez vous ont été prévenus."
         },
         {
-            "pseudo": "farantesrodrigues",
-            "titre_review": "Il y a beaucoup mieux à Lyon",
-            "nb_etoiles": 1,
-            "date": "14 décembre 2014",
-            "experience": "none",
-            "review": "Le service, on a l'impression que vous êtes à Paris, les serveurs sont trashes vous et fait ce qu'il veut. Je voulais un menu à 19€ et j'ai fini par payer 24 EUR parce que je n'ai pas lu les petits détails comme la soupe à l'oignon ayant fromage au sommet ... Et il ne faut pas s'attendre à un sourire sur quoi que ce soit commander.\nLa qualité de la nourriture est correcte. J'ai mangé une andouillette et je n'ai pas été déçu. Pour le désert J'avais la crème brûlée et c'était juste aussi. Le soupe à l'oignon sur entrée était très normal quand même ... Les vins sont largement trop cher pour Lyon (prix parisien).\nDans l'ensemble, nous étions 5 adultes et 2 enfants et nous avons eu l'impression que nous sommes entrés dans un piège à touristes. Nos amis locaux n'étaient vraiment pas à l'aise avec notre choix et je vous conseille de chercher d'autres restaurants à proximité, vous trouverez bien mieux."
-        },
-        {
             "pseudo": "Maria João C",
             "titre_review": "Turist piège",
             "nb_etoiles": 1,
             "date": "14 décembre 2014",
-            "experience": "couples",
+            "experience": "none",
             "review": "Le service moyen pas bon et le serveur façon désagréable. La musique était trop forte. La nourriture trop Fat et les prix extrêmement élevés pour la qualité. Très déçu."
         },
         {
@@ -5520,7 +5320,7 @@
             "titre_review": "Un restaurant chaleureux dans une ville sympa",
             "nb_etoiles": 4,
             "date": "28 septembre 2014",
-            "experience": "family",
+            "experience": "couples",
             "review": "promenade dans la vieille ville de Lyon vous cherchez un restaurant est un défi. La plupart des restaurants pareils et ont la même nourriture (recherche de nourriture locale, pas étonnant). Alors que nous étions à la recherche d'un endroit agréable avec un personnel amical et avec de la bonne nourriture.\n\nLe restaurant offre des plats locaux. Il n'est pas bon marché, mais la nourriture était bonne. Nous avons commencé avec foie gras et pate qui était composé des morceaux de viande rafistolés avec leur sauce.\nJ'ai essayé la tête veals tandis que ma femme a pris et entrecôte. Tandis que l'entrecôte était bon, la tête veals était très intéressant (il s'avère que c'est une spécialité locale). J'ai eu cela dans le passé en Irlande et les plats sont très différentes.\nJ'ai terminé avec fromage tandis que ma femme a pris les tarte Plalines, tous deux étaient excellents.\nLe personnel était sympathique et nous avons passé une agréable soirée."
         },
         {
@@ -5536,7 +5336,7 @@
             "titre_review": "savoureux repas dans 'Vieux Lyon'",
             "nb_etoiles": 3,
             "date": "2 mars 2014",
-            "experience": "none",
+            "experience": "family",
             "review": "Un accueillant restaurant dans la vieille ville. Nous avons pris un repas tôt le soir et nous n'avons eu aucun problème avec le service. Menu, c'est que de Lyon typique bouchon et nous en avons profité en essayant saucisses locaux. C'était un bon choix. serveur était utile et efficace. Un délicieux repas dans une région pleine de caractère."
         },
         {
@@ -5544,7 +5344,7 @@
             "titre_review": "Le service est horrible",
             "nb_etoiles": 1,
             "date": "18 juillet 2013",
-            "experience": "family",
+            "experience": "none",
             "review": ". Les membres du personnel sont condescendants et désagréable. Ils ne sont pas sympathique et familial. Ils n'ont même pas nous dire où les salles étaient."
         },
         {
@@ -5552,7 +5352,7 @@
             "titre_review": "Bon arrêt pour déjeuner",
             "nb_etoiles": 3,
             "date": "30 octobre 2012",
-            "experience": "business",
+            "experience": "family",
             "review": "Nous nous sommes arrêtés ici pour le déjeuner du dimanche au mois d'octobre. C'était bien de sortir du froid et la nourriture consistante Lyonnais était juste ce dont nous avions besoin.\n\nNous avons mangé du menu 17 EUR. L'entrée de la soupe à l'oignon avec son qui ressemble Crouton massive de c'était bon, mais il aurait pu être plus chaud. Le Boudin Noir sur son lit de pommes était excellent. mousse au chocolat et Ile flottant pour le dessert aussi étaient bien.\n\nLe restaurant était plein à craquer, mais le service était très attentionné. Avec seulement une toilettes (parfaitement propre) pour tout le restaurant, un voyage aux toilettes ailleurs avant votre visite évite la queue !"
         },
         {
@@ -5560,7 +5360,7 @@
             "titre_review": "La nourriture est correcte et ainsi que le service",
             "nb_etoiles": 3,
             "date": "16 octobre 2012",
-            "experience": "",
+            "experience": "business",
             "review": "Nous sommes entrés dans ce restaurant un vendredi soir quand vous cherchez pour les restaurants. La seule soirée pas prévu avant dans notre visite à Lyon. Nous avons choisi celui-ci dans la vieille ville parce qu'il y avait plein de clients de dîner et pensé ensuite la nourriture doit être bonne. La nourriture était correcte, rien d'exceptionnel et inoubliable mais c'était correct et le service était correct aussi. Nous avons passé une bonne soirée dans l'ensemble."
         }
     ]

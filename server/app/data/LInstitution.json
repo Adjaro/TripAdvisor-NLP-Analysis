@@ -1,7 +1,7 @@
 {
     "nom": "L'Institution",
     "adresse": "24 Rue de la Republique, 69002 Lyon France",
-    "classement": 2177,
+    "classement": 2202,
     "horaires": [
         "dim : 11:30-17:15 - 18:00-23:15",
         "lun : 11:30-17:15 - 18:00-23:15",
@@ -49,9 +49,9 @@
     ],
     "latitude": 45.763294,
     "longitude": 4.835575,
-    "nb_avis": 1000,
+    "nb_avis": 1002,
     "nbExcellent": 202,
-    "nbTrèsbon": 308,
+    "nbTrèsBon": 308,
     "nbMoyen": 180,
     "nbMédiocre": 149,
     "nbHorrible": 163,
@@ -3674,46 +3674,30 @@
         },
         {
             "pseudo": "Floflo1995",
-            "titre_review": "C’est la deuxième fois que...",
-            "nb_etoiles": 5,
-            "date": "3 avril 2017",
-            "experience": "family",
-            "review": "C’est la deuxième fois que j'y allais. Établissement très agréable où l'on mange bien. J'avais été un peu déçu la première fois car la remise de la Fourchette n'était pas appliquée sur certains produits de la carte. Cette fois ci , aucune restriction, peut être suite à mon premier commentaire... Bref très satisfait cette fois ci."
-        },
-        {
-            "pseudo": "Célia B",
             "titre_review": "Pause goûter à l'institution",
             "nb_etoiles": 3,
             "date": "3 avril 2017",
-            "experience": "couples",
+            "experience": "family",
             "review": "Accueil mitigé, les serveurs n'ont pas l'air content d'être là, aucun sourire, pas accueillant.\nNous avons bu un jus de fruit artisanal, la carte des boissons est chère! Mon jus de fruit n'était pas frais! \nLe cadre est sympathique, et joli."
         },
         {
-            "pseudo": "thierrybourcy",
+            "pseudo": "Célia B",
             "titre_review": "Demi-tour!",
             "nb_etoiles": 1,
             "date": "3 avril 2017",
-            "experience": "business",
+            "experience": "couples",
             "review": "Les serveurs nous ont laissé nous installer puis sont venus nous changer de place nous installant à une table très mal placée. Toutes celles que nous demandions étaient \"réservées\" (pas de carte dessus pourtant) et le restaurant était vide, nous sommes donc partis sous le regard indifférent des serveurs."
         },
         {
-            "pseudo": "jose d",
-            "titre_review": "Dans une salle magnifique...",
-            "nb_etoiles": 5,
-            "date": "2 avril 2017",
-            "experience": "couples",
-            "review": "Dans une salle magnifique, installés confortablement, nous avons beaucoup apprécié des entrées fraiches puis des rognons de veau très relevés avant des desserts variés: baba au rhum moelleux, tiramisu à la mangue onctueux ou encore une excellente tarte au citron ... \nSoirée parfaite en tous points."
-        },
-        {
-            "pseudo": "Bruno",
+            "pseudo": "thierrybourcy",
             "titre_review": "UNE BELLE CARTE",
             "nb_etoiles": 5,
             "date": "1 avril 2017",
-            "experience": "family",
+            "experience": "business",
             "review": "Excellent accueil, service impeccable et rapide, un vin de Beaune au verre absolument délicieux, des plats à la carte ou un menu très soignés, le tout dans une ambiance confortable en plein centre ville."
         },
         {
-            "pseudo": "Alain G",
+            "pseudo": "jose d",
             "titre_review": "Un peu cher mais très bonne qualité",
             "nb_etoiles": 3,
             "date": "16 mars 2017",
@@ -3721,23 +3705,23 @@
             "review": "Nous sommes allés dans ce restaurant le midi pour profiter de la terrasse très ensoleillé.\nJ'ai commander un tigre qui pleure (pièce de bœuf avec une sauce piquante)\nLA qualité et la cuisson de la viande était très bonne les frites manquaient de croustillant mais étaient faites maison.\nLa sauce piquante de la viande était bonne mais rien qui justifie 35 euros.\nPetit bémol mon amie à pris une salade césar bien trop simple en ingrédients et quantités pour le prix. Même si la sauce césar était vraiment très bien réalisée.\nNous avons passé un agréable moment dans ce restaurant un peu chic et avons été très bien servi."
         },
         {
-            "pseudo": "subob21",
+            "pseudo": "Bruno",
             "titre_review": "Terrasse agréable",
             "nb_etoiles": 4,
             "date": "14 mars 2017",
-            "experience": "couples",
+            "experience": "family",
             "review": "Une terrasse rue de la République avec vue sur la bourse qui est agréable. Une carte sympathique et un baba au rhum excellent avec une chantilly maison à tomber."
         },
         {
-            "pseudo": "MoonBlue",
+            "pseudo": "Alain G",
             "titre_review": "Grand classique lyonnais",
             "nb_etoiles": 3,
             "date": "12 mars 2017",
-            "experience": "friends",
+            "experience": "couples",
             "review": "Ouvert le dimanche. \nConsommation agréables mais chères sur la rue de la république, l'ancien bar américain reste une institution \nMais les sièges sont inconfortables sous la véranda et on est serres \nSinon le service est tout à fait bon"
         },
         {
-            "pseudo": "Antonio",
+            "pseudo": "subob21",
             "titre_review": "Cuisine de bonne qualité accueil pédant",
             "nb_etoiles": 3,
             "date": "9 mars 2017",
@@ -3745,35 +3729,35 @@
             "review": "Une soirée dans Lyon, un potentiel bon moment à une terrasse couverte pour manger lyonnais, si l'on accepte l'accueil déplorable et le service pédant, cela peut être un endroit intéressant. Mais ça gâche tout. Dans l'assiette c'est réussi et assez copieux. Au moins ça reste un point positif. On ne peut pas se revendiquer brasserie et faire du guindé alors que les prestations ne suivent pas. Et au prix indiqués sans la réduction la fourchette, fuyez !"
         },
         {
-            "pseudo": "valérie f",
+            "pseudo": "MoonBlue",
             "titre_review": "excellent rapport qualité-prix",
             "nb_etoiles": 5,
             "date": "1 mars 2017",
-            "experience": "couples",
+            "experience": "friends",
             "review": "très bel établissement, trés cosy , trés agréable, calme ,parfaitement bien situé, le personnel est sympathique, professionnel et efficace. Les mets sont copieux et succulents, très bon rapport qualité- prix!"
         },
         {
-            "pseudo": "IznoGood69",
+            "pseudo": "Antonio",
             "titre_review": "Sympa",
             "nb_etoiles": 4,
             "date": "28 février 2017",
-            "experience": "friends",
+            "experience": "couples",
             "review": "Établissement agréable \nCadre feutré. \nIl est cool d'y prendre l'apéro. \nEndroit est calme. \nLe personnel sympathique. On peu donc faire une pause reposante et apprécier l'endroit \nSitué proche tu théâtre. De l Hôtel de Ville et des commerces."
         },
         {
-            "pseudo": "Conditions d'utilisation\nConfidentialité et utilisation des cookies\nAccord d'utilisation des cookies\nPlan du site\nFonctionnement du site\nContactez-nous",
+            "pseudo": "valérie f",
             "titre_review": "endroit agréable",
             "nb_etoiles": 4,
             "date": "24 février 2017",
-            "experience": "",
+            "experience": "couples",
             "review": "bien situé, accueil aimable, cadre plaisant, bons produits, service efficace, nous avons bien aimé ce lieu.\nnous avons profité d'une offre la fourchette ce qui ramène à la baisse des tarifs un peu hauts pour les plats servis.dans ces conditions le rapport qualité -prix est correct; sans l'offre j'aurai trouvé les prix trop élevés."
         },
         {
-            "pseudo": "",
+            "pseudo": "IznoGood69",
             "titre_review": "Ambiance \"M'as tu vu\"",
             "nb_etoiles": 3,
             "date": "20 février 2017",
-            "experience": "",
+            "experience": "friends",
             "review": "Cadre cosy, personnel au petit soin, mais une ambiance \"too much, m'as tu vu\" ce dégage de cet établissement. Prix prohibitif pour une cuisine standard, dommage."
         },
         {
@@ -5177,44 +5161,20 @@
             "review": "L'Instution ne doit porter que son nom! le cadre est très agréable et cosy mais les plats basiques et insipides sont déraisonnablement facturés au prix fort. Le service est attentif."
         },
         {
-            "pseudo": "CRT13008",
-            "titre_review": "Moyen",
-            "nb_etoiles": 3,
-            "date": "25 avril 2015",
-            "experience": "business",
-            "review": "Restaurant assez classe sur la rue de la République, cadre raffiné et terrasse sympas, prix pratiqués un peu élevés, ne correspondant pas forcément à un restaurant sans vue/emplacement particulièrement valorisant."
-        },
-        {
             "pseudo": "loulou69f",
             "titre_review": "Pratique pour se restaurer rapidement; trop cher",
             "nb_etoiles": 3,
             "date": "19 avril 2015",
-            "experience": "family",
+            "experience": "business",
             "review": "Nous sommes arrivés vers 13h30; \nCe n'était pas facile de trouver une table pour 6, ailleurs.\nLa sale a été relookée et est agréable, bien que un peu sombre.\nNous avons pris des formules du jour. c'est bon mais cela nous a paru cher .\nBref adresse pour dépanner davantage que pour se faire plaisir."
-        },
-        {
-            "pseudo": "Lino M",
-            "titre_review": "Excellent",
-            "nb_etoiles": 5,
-            "date": "15 avril 2015",
-            "experience": "",
-            "review": "Excellent!!!!\nAccueil parfait, personnel très professionnel, repas délicieux. \nNous reviendrons\nMerci à très bientôt"
         },
         {
             "pseudo": "DATCH56",
             "titre_review": "Dejeuner en famille",
             "nb_etoiles": 4,
             "date": "13 avril 2015",
-            "experience": "",
+            "experience": "family",
             "review": "Très bon restaurant, chic, classe et très bon service, très bonne qualité des produits a recommander"
-        },
-        {
-            "pseudo": "Isabelle T",
-            "titre_review": "Beurk",
-            "nb_etoiles": 1,
-            "date": "8 avril 2015",
-            "experience": "",
-            "review": "C'est joli mais hélas on est pas tous logés à la même enseigne pour l'accueil. On est restées plus d'une heure trente sans qu'on daigne s'occuper de débarrasser ou nous proposer un café. Sans doute parce que nous avons demandé à changer de table a cause de l'odeur des toilettes qui remonte de l'escalier... Ça se fait pas de dire que ça pue ? Je les ai visités merci bien. Si la cuisine est pareille je m'attends au pire. Bref ne pas fréquenter ce lieu serait plus raisonnable pour le risque sanitaire. En plus c'est hors de prix. Deux cafés 10€ !! Ça ne vaut pas le détour. Fuyez !!"
         },
         {
             "pseudo": "Véronique F",
@@ -5273,19 +5233,11 @@
             "review": "Trés mal installés sur des banquettes trop basses , un service médiocre , une carte alléchante dans laquelle certains plats n'étaient pas disponibles.... à 20h un samedi soir...., le reste d'une qualité très médiocre , je vous déconseille de tester \"les ravioles de gambas maison dans un jus de vanille bourbon\" , en fait 2 raviolis baignant dans un bouillon clairet , sans saveur ,ni odeur..... Le reste à l'identique.....\nPour finir , une addition ...salée malgré les 30% de la Fourchette !!!!!"
         },
         {
-            "pseudo": "jicoco",
-            "titre_review": "Agréable",
-            "nb_etoiles": 4,
-            "date": "21 mars 2015",
-            "experience": "friends",
-            "review": "Très joli cadre , jolie carte et bon rapport qualité prix ! À proximité de la comédie Odéon ... Pratique avant un spectacle ,\nrapidité de service , avec amabilité et professionnalisme . \nTrès bon moment ! J'y retournerai certainement ."
-        },
-        {
             "pseudo": "Nicolas-Paul GARNIER",
             "titre_review": "Repas du soir",
             "nb_etoiles": 4,
             "date": "4 mars 2015",
-            "experience": "none",
+            "experience": "friends",
             "review": "Parti un soir pour y manger en toute tranquillité avec un ami, nous avons commencé par prendre un verre en terrasse...\nEn fait, dans la véranda chauffée (ne pas se mettre à côté de la porte, à cause des courants d'air incessants...), puis nous avons continué par un repas à l'intérieur..\nCadre agréable, confortable, même si les luminaires \"du plafond\" peuvent choquer...\nRepas bon, agréable\nService présent mais discret...\nDonc...\nUne bonne adresse pour faire un repas \"bon\" dans un cadre agréable..."
         },
         {
@@ -5293,7 +5245,7 @@
             "titre_review": "Décevant",
             "nb_etoiles": 2,
             "date": "8 février 2015",
-            "experience": "couples",
+            "experience": "none",
             "review": "Envi d'un café avec une petite douceur dans l'apres-midi, nous nous sommes arretes dans ce bel endroit... Enfin \"bel endroit\" au premiers abords seulement:\nUne chaussette trainant sur le sol en terrasse / Prix exorbitant pour un service moyen / Décoration qui pourrait tout rehaussée si elle etait entretenue : rideau dechiré, ampoule ne fonctionnant pas, poussiere dans les moulures... Tres tres BOF!!! Mais le glas final a ete mon passage aux toilettes : sales, papiers jonchant le sol et seche main non fonctionnel...\nTres decevant pour cet endroit !!!"
         },
         {
@@ -5325,31 +5277,15 @@
             "titre_review": "Entre deux.",
             "nb_etoiles": 3,
             "date": "1 février 2015",
-            "experience": "",
+            "experience": "couples",
             "review": "Nous voilà parti à la découverte de cette établissement, dont je me souvenais que de l'ancienne appellation : \"Bar américain\".\nL'accueil est professionnel et l'ambiance du restaurant originale, entre l'ancien et le moderne.\nLes plats servis étaient bons dans l'ensemble, mais nous avons noté quelques petits \"loupés\", notamment concernant la cuisson de certains plats. Ce ne serait pas ma première recommandation dans ma liste des restaurants Lyonnais, mais pour autant, je ne le déconseillerai pas.\nEnfin, un gros point négatif : L'entretien des locaux... Un peu de ménage au plafond, quelques ampoules à changer, et surtout des sanitaires à complètement restaurer, voilà quelques détails qui ne feraient pas de mal !"
-        },
-        {
-            "pseudo": "Dominique BB",
-            "titre_review": "Une excellente adresse",
-            "nb_etoiles": 5,
-            "date": "1 février 2015",
-            "experience": "",
-            "review": "Une très belle salle, un personnel efficace et fort sympathique (une mention particulière pour le chef de rang très professionnel et maniant l'humour !) et une cuisine savoureuse (belles escalopes de foie gras poêlées, risotto de Saint Jacques aux petits légumes anciens tout simplement parfait, pain perdu excellent...). Un excellent déjeuner pour une quarantaine d'euros justifiés (après réduction)"
-        },
-        {
-            "pseudo": "Mag-Gui C",
-            "titre_review": "Bravo",
-            "nb_etoiles": 5,
-            "date": "28 janvier 2015",
-            "experience": "solo",
-            "review": "Oui! Bravo,vous avez su me surprendre...\nEn effet, en arrivant chez vous, je croyais qu'en prenant ma veste pour la mettre sur le porte manteau,vous alliez me garder aussi ma carte bleue! !\nMais il n'en est rien...fort surpris pour la qualité prix, le service et le cadre! \nUne mise en scène digne de la pièce que je venais de regarder à l'Odéon! !!\nDommage de ne pas être souvent à proximité de votre établissement, mais cela ne m'empêchera pas de revenir très bientôt.\nEncore félicitation..."
         },
         {
             "pseudo": "gourmet699",
             "titre_review": "Beurre perimee de 10 jours servi a table",
             "nb_etoiles": 1,
             "date": "20 janvier 2015",
-            "experience": "business",
+            "experience": "solo",
             "review": "Bonjour,\nJe me suis installe ce mardi 20 Janvier a l'INSTITUTION pour prendre un appertif , autour des 6h00 pm.\nJ'avais commande une Chiffonnade de Jambon avec un Jus de tomate.\nAu cours du repas , j'ai demande un autre morceau de Beurre .\nLe serveur m'en amene un. Quand j'ai commence a manger, le gout etait bizarre .\nJ'ai regarde l'emballage , la date d'expiration etait du 10 Janvier .\nDonc j'ai ete servi un beurre perime de 10 Jours.\nDiscretement. J'ai appele une personne du service pour lui signaler tout calmement.\nLa personne a fait l'etonnee, et depuis pendant plus de 20 min , personne n'est venue me voir .\nQuand j'ai appelle la serveuse pour demander un cafe , je lui ai demande que c'est il passe, elle m'a dit : Jai dit au responsable, on n'avait pas fait attention, on a tout jete.\nPuis au moment de demander l'addition, un autre serveur m'a dit que c'etait offert , ce qu j'ai refuse et j'ai demande a ce qu'on m'appelle le responsable .\nJ'ai demande au responsable qu'on s'isole pour en parler. Je lui ai dit que je compte denoncer cet incident et la il me repond : faites votre travail .....\nA la fin, J'ai paye la note de 23.20 euros .\nJe souhaite que vos services fassent le necessaire aupres de cet etablissement car si le beurre a 10 est peu etre mangeable sans incident sur la sante, ca ne sera pas le cas de la mayonnaise ou la bechamelle....."
         },
         {
@@ -5357,23 +5293,15 @@
             "titre_review": "Quel dommage",
             "nb_etoiles": 2,
             "date": "12 janvier 2015",
-            "experience": "couples",
+            "experience": "business",
             "review": "Cet endroit, idéalement situé, beau, confortable, pourrait être aussi un bistrot de qualité. Mais une fois servi, on est vite déçu : ma salade Caesar \"revisitée\", se limitait à 2 morceaux de blanc de poulet, quelques feuilles, un peu de sauce, 2 petits bouts d'un genre de biscotte. Le verre de Saint Joseph était facturé 7,90 € (je n'avais pas demandé le prix avant !), et pour finir, un café au prix extravagant de 2,90 €. A noté toutefois : l'accueil est fort sympathique, et le service irréprochable."
-        },
-        {
-            "pseudo": "Julie C",
-            "titre_review": "Cadre magnifique",
-            "nb_etoiles": 5,
-            "date": "10 janvier 2015",
-            "experience": "couples",
-            "review": "Superbe restaurant, service irréprochable (et serveur sympathique) ainsi que qualité rt gout dans l'assiette. Peut-être un peu cher pour ce qu'on mange mais il ne faut pas oublier le cadre splendide!"
         },
         {
             "pseudo": "flo_michon",
             "titre_review": "PARFAIT",
             "nb_etoiles": 5,
             "date": "6 janvier 2015",
-            "experience": "none",
+            "experience": "couples",
             "review": "Un décor raffiné, un personnel charmant et efficace, une cuisine excellente, un peu cher cependant, mais on paie tout cela !"
         },
         {
@@ -5381,31 +5309,15 @@
             "titre_review": "Correct mais sans plus",
             "nb_etoiles": 3,
             "date": "5 janvier 2015",
-            "experience": "none",
+            "experience": "couples",
             "review": "L'accueil était très bien, le cadre très sympa, le repas correct mais l'addition très élevée par rapport à la qualité des plats servis. Il faudrait revoir les tarifs à la baisse.\nPetite remarque pour le personnel : faites la poussière près des lampes; ça fait pas très sérieux pour un établissement qui se veut \"chic\"."
-        },
-        {
-            "pseudo": "Pierre-A69",
-            "titre_review": "Honnête",
-            "nb_etoiles": 3,
-            "date": "4 janvier 2015",
-            "experience": "none",
-            "review": "Cadre très cosi. Ambiance chaleureuse et feutrée. Service impeccable. Brasserie correcte du centre ville. Prix en conséquence. Un léger regret pour le café gourmand : les pâtisseries n'étaient pas à la hauteur."
-        },
-        {
-            "pseudo": "flocon83",
-            "titre_review": "A fuir",
-            "nb_etoiles": 1,
-            "date": "2 janvier 2015",
-            "experience": "business",
-            "review": "C'est sur que l emplacement est correct , le cadre est plutôt chic mais quelle déception ! De la charcuterie \"lyonnaise\" digne d une mauvaise cantine , le plat sans aucune saveur , nous n avons même pas pris le dessert compris dans notre menu . Et le tout pour une centaine d euros .institution de quoi ?"
         },
         {
             "pseudo": "Liomartin",
             "titre_review": "Quel Dommage !",
             "nb_etoiles": 1,
             "date": "1 janvier 2015",
-            "experience": "",
+            "experience": "none",
             "review": "Quel dommage que dans un lieu aussi beau et historique ou de l'extérieur on devine un certain raffinement, le service soit à ce point pitoyable !\nLes bases du service à la clientèle sont baffoués par les serveurs et surtout comble de tout acceptés par un maître d'hôtel tout aussi peu professionnel, certains restaurant ou café de quartier n'en accepterez pas un quart !\nIl est évident que notre choix pour le dinner ne fut pas ici, j'aimerais bien savoir a qui appartient ce lieu et qui accepte cette attitude, quel dommage !"
         },
         {
@@ -5413,39 +5325,15 @@
             "titre_review": "Bien, peut mieux faire!",
             "nb_etoiles": 3,
             "date": "1 janvier 2015",
-            "experience": "",
+            "experience": "none",
             "review": "Beaucoup d'atouts en faveur de l'institution: service continu, décor raffiné, confort, produits de bonne qualité.\nDes axes de progrès : en ce qui concerne l'accueil et le service, inégal tout au long du repas, et plutôt impersonnel, malgré le nombre de serveurs. Par ailleurs, la musique diffusée est tout à fait incohérente et dérangeante(genre chérie FM): pourquoi pas une ambiance jazz y, lounge?"
-        },
-        {
-            "pseudo": "SANDRA310874",
-            "titre_review": "Et la politesse ?",
-            "nb_etoiles": 2,
-            "date": "27 décembre 2014",
-            "experience": "",
-            "review": "Voici 3 fois que je me rend dans cette brasserie. Pour un déjeuner \"sans intérêt\" et de plus pas donner! Puis en fin d après midi. \nEt la première chose qui m'a frappé c est que \n\"La Politesse n est pas une institution chez eux\". Avec tant de serveurs comment se fait-il que aucun ne remarquent votre départ??? \nQuel dommage avec un nom pareil!"
-        },
-        {
-            "pseudo": "Anne D",
-            "titre_review": "Très pro !!!",
-            "nb_etoiles": 4,
-            "date": "20 décembre 2014",
-            "experience": "",
-            "review": "J'y viens régulièrement et pour cause: les produits sont de très bonne qualité et d'une grande régularité dans leur préparation. \nLe cadre est vraiment très agréable et on y passe un bon moment. \nDe plus, j'avoue que j'ai été agréablement surprise samedi lorsque exceptionnellement la viande n'était pas à mon goût, et qu'on ne nous a pas compté ce plat. \nDécidément ici tout est pro...le service, la table et le côté commercial!!!"
-        },
-        {
-            "pseudo": "Benizo",
-            "titre_review": "Pas top!",
-            "nb_etoiles": 2,
-            "date": "20 décembre 2014",
-            "experience": "",
-            "review": "J'ai été dans cet endroit boire un verre avec des amies, le personnel est très bizarre, nous étions mal a l'aise, on avait clairement la sensation d'embêter en souhaitant commander. Décevant pour ce bel endroit"
         },
         {
             "pseudo": "RichardC1972",
             "titre_review": "Service lamentable",
             "nb_etoiles": 1,
             "date": "20 décembre 2014",
-            "experience": "",
+            "experience": "none",
             "review": "L'accueil est expéditif, 10 minutes en revanche pour recevoir une carte, puis 15 minutes supplémentaires avant de pouvoir passer commande. Au final, nous n'avons jamais reçu nos verres de vin mais appris que notre commande n'avais pas été passée car il y avait eu un problème. Ca arrive, mais la moindre des choses c'est de faire un geste commercial en offrant un café ou nos verres jamais reçus. Au final 45 minutes. De perdues et sortis assoiffés et affamés ! Jamais vécu cela auparavant.."
         },
         {
@@ -5453,7 +5341,7 @@
             "titre_review": "Une adresse incontournable",
             "nb_etoiles": 5,
             "date": "19 décembre 2014",
-            "experience": "",
+            "experience": "business",
             "review": "La carte est très cosy, l'accueil impeccable et la carte au top! Produits de grande qualité, le tartare de bœuf au couteau, le risotto aux truffes, hachis parmentier de canard... Rien de décevant. A tester!"
         },
         {
@@ -5481,35 +5369,11 @@
             "review": "Nous étions un groupe de 18 personnes, et avons réservé la formule avec la pièce de théâtre à la Comédie Odéon. Nous avons été accueilli dans un très bel établissement, qui change des différents bouchons plus typiques visités auparavant! bon repas, serveurs efficaces.Mais la note des vins un peu salée..."
         },
         {
-            "pseudo": "Victoria M",
-            "titre_review": "Sympa",
-            "nb_etoiles": 4,
-            "date": "9 décembre 2014",
-            "experience": "friends",
-            "review": "Personnel accueillant, belles assiettes soignées et un cadre élégant. \n1ère visite top !\n2ème, plats pas très chaud, dommage !\nMais nous y retourneront!"
-        },
-        {
-            "pseudo": "Mimie0812",
-            "titre_review": "A la hauteur",
-            "nb_etoiles": 4,
-            "date": "9 décembre 2014",
-            "experience": "business",
-            "review": "Nous avions peur de tomber dans un attrape touriste en pleine rue piétonne de Lyon et au final nous n'avons pas été déçu!\nUn très bon accueil, des serveurs agréables, même si certains était un peu perdus...!!!\nLa nourriture était très bonne et le prix pas excessif!"
-        },
-        {
-            "pseudo": "Srooney84",
-            "titre_review": "Dejeuner en amoureux",
-            "nb_etoiles": 3,
-            "date": "8 décembre 2014",
-            "experience": "friends",
-            "review": "Cadre très sympa, personnel agréable, service de qualité et cuisine raffinée (tous les produits ne sont pas \"vraiment\" maison, je pense plutôt à un travail d'assemblage côté cuisine mais les produits étaient de bonne qualité, ce qui est rare pour de l'assemblage!!), Quelques détails à changer : Addition un peu salée à mon goût et passage de la foule entre la terrasse et l'intérieur qui ne cesse jamais, ce qui est assez gênant quand on se pose pour manger tranquillement. Mais bon moment passé tout de même, je reviendrais."
-        },
-        {
             "pseudo": "olivier M",
             "titre_review": "trop long !!",
             "nb_etoiles": 2,
             "date": "8 décembre 2014",
-            "experience": "couples",
+            "experience": "friends",
             "review": "diner le 08 12 2014 dans ce restaurant et de nouveau une déception concernant le service , arrivée à 19h15 , départ à 21h20 , pour manger un plat suivi d'un café !!!!! on s'étonne après que certains établissement ferme...3eme et dernière sortie dans ce restaurant qui ne respecte pas la clientele"
         },
         {
@@ -5517,39 +5381,15 @@
             "titre_review": "Une brasserie classique",
             "nb_etoiles": 3,
             "date": "7 décembre 2014",
-            "experience": "friends",
+            "experience": "business",
             "review": "Le cadre est sympa, tout comme le personnel, des sourires, un accueil agreable... mais on est dans une brasserie on recherche donc l'efficacité. Quand c'est ce que l'on demande, on n'est pas deçu. Pour les plats, idem... on peut avoir du mets raffinés, des vins superbes, comme des plats plus simples, mais attention simple n'est pas simpliste et cela reste bon.\nPour conclure, on n'est pas deçu. Le prix reste dans la moyenne des brasseries plutot classe. La aussi pas de surprise. On y retournera"
-        },
-        {
-            "pseudo": "manueh",
-            "titre_review": "Mal à l'aise",
-            "nb_etoiles": 3,
-            "date": "5 décembre 2014",
-            "experience": "couples",
-            "review": "Dès le départ, on ressent une présence trop forte de serveurs en costumes cravates : où m 'ont emmené mes amis ?\n\nL'intérieur est très cosy voire kitch. Pas de badauds à l'intérieur, plutôt des dandys, des clubbeurs, des commerçants, des professions libérales, peu de jeunes ( sauf en terrasse pour ci roter une bière), ...\nPas l'ambiance d'un restaurant lyonnais !\n\nLes menus et plats sont accessibles financièrement parlant. \n\nUne satisfaction : un ragoût de joue de bœuf au bon goût MAIS. En quantité minuscule. \n\nMinuscule est un leitmotiv ! Les Ravioles de gambas font sourire ... jaune (il n'y en a QUE deux). Idem pour la quenelle (industrielle) car elle est vraiment pas plus grosse qu'une Giraudet. Le Pain Perdu n'est pas assez humidifié ...\n\nBons vins (Viognier et Vosnes Romanée).\n\nJe n'aime pas ce genre de restaurant. \n\nC'est moi qui choisit la prochaine fois !!!"
-        },
-        {
-            "pseudo": "Gronaldo70",
-            "titre_review": "Apparence",
-            "nb_etoiles": 2,
-            "date": "1 décembre 2014",
-            "experience": "",
-            "review": "Bel établissement de l'extérieur, très sale a l'intérieur. Nous avons payé très cher le peu que nous avons consommé. La qualité était moyenne et la quantité ridicule. Une belle arnaque pour touristes."
-        },
-        {
-            "pseudo": "ALHD",
-            "titre_review": "Pour le décor, pas pour l'assiette !",
-            "nb_etoiles": 2,
-            "date": "22 novembre 2014",
-            "experience": "",
-            "review": "Cadre cosy, personnel souriant. \nMais 45 minutes pour un tartare de boeuf quelconque avec des frites molles, et un foie de veau rosé (commandé à point) avec un wok de légumes (uniquement des poivrons).\n\nA regarder, ... sans toucher."
         },
         {
             "pseudo": "Startupz",
             "titre_review": "Très bien",
             "nb_etoiles": 4,
             "date": "20 novembre 2014",
-            "experience": "",
+            "experience": "friends",
             "review": "Nous avons été surpris de découvrir un personnel chaleureux et accueillant. Le cadre est propre et soigné. Nous avons très bien mangé."
         },
         {
@@ -5557,7 +5397,7 @@
             "titre_review": "Bien, pas plus",
             "nb_etoiles": 3,
             "date": "17 novembre 2014",
-            "experience": "",
+            "experience": "couples",
             "review": "Déjeuner après 14h? Pas de problème à l'Institution. Un service très attentionné, une viande de boeuf seignante et des bonne frîtes. La terrasse était bien chauffée et nous avons eu plaisir de voir passer le monde dehors."
         },
         {
@@ -5565,7 +5405,7 @@
             "titre_review": "Très beau",
             "nb_etoiles": 4,
             "date": "14 novembre 2014",
-            "experience": "",
+            "experience": "friends",
             "review": "Nous avons déjeuné dans ce restaurant\nNous avions choisi de déjeuner à l'intérieur (car il est possible de déjeuner sous la verrière) et nous n'avons pas regretté. Le cadre est magnifique. \nLes prix sont élevés mais rien à dire sur la qualité des plats et du service. Top !!"
         },
         {
@@ -5573,43 +5413,19 @@
             "titre_review": "très bien",
             "nb_etoiles": 5,
             "date": "11 novembre 2014",
-            "experience": "",
+            "experience": "couples",
             "review": "un personnel soigné et poli qui vous reconnait, vous salue, prend soins de ses habitués les desserts délicieux et l'intérieur vraiment cosy! Je le recommande chaudement!!"
         },
         {
-            "pseudo": "Darylaaa",
-            "titre_review": "Lamentable.",
-            "nb_etoiles": 1,
-            "date": "10 novembre 2014",
-            "experience": "couples",
-            "review": "Je suis écoeurée par ce piège. Outre le cadre génial et le service fort correct, comment peut-on oser proposer des plats aussi dégueulasses à ce prix? Quelle honte!\n\nUne escalope milanaise dure de chez dure, immangeable, servie avec un pauvre morceau de citron racorni, une sauce dont Panzani n'a rien à envier, et des pâtes mal cuites et sans goût. Le dessert était aussi exceptionnel qu'un gâteau acheté à la boulangerie du quartier.\n\nFranchement évitez ce foutage de gueule. Hors de prix pour une daube pareille. Je ne félicite pas le patron."
-        },
-        {
-            "pseudo": "Direction L",
-            "titre_review": "Cossu",
-            "nb_etoiles": 4,
-            "date": "8 novembre 2014",
-            "experience": "couples",
-            "review": "Si vous cherchez un restaurant confortable et cossu en pleine presqu'île , choisissez l'Institution .\nCe restaurant qui dispose de plus d'une grande terrasse offre une cuisine simple mais très bonne .\nTartare , aile de raie , viande ou poisson du jour , tout est bien présenté et bien cuisine .\n\nUn emplacement idéal"
-        },
-        {
-            "pseudo": "Francois B",
+            "pseudo": "Aureeel",
             "titre_review": "Super resto",
             "nb_etoiles": 4,
             "date": "4 novembre 2014",
-            "experience": "business",
+            "experience": "couples",
             "review": "Super service, personnel très gentil (contrairement aux autres resto ou nous sommes allés). \nLa cuisine était délicieuse (filet de boeuf; tartare de boeuf; entrecôte) tout était bon."
         },
         {
-            "pseudo": "Aureeel",
-            "titre_review": "lamentable",
-            "nb_etoiles": 1,
-            "date": "1 novembre 2014",
-            "experience": "business",
-            "review": "25 minutes pour avoir enfin un serveur qui daigne s occuper de nous.\nqui nous annonce a la fin de la commande ne plus avoir la boisson commandée en premier .....et qui soupir \nrépartis au bout de 15 minutes sans avoir été servis\nune armada de serveurs qui s agitent et passent devant vous souvent les mains vides ...et cerise sur le gâteau se faire bousculer par une serveuse qui ne fait même pas ses excuses ....\nla table a côté a fait comme nous \nbref nul et archi nul passer son chemin et laisser l institution"
-        },
-        {
-            "pseudo": "PHILIPPE P",
+            "pseudo": "Anil Y",
             "titre_review": "Pas mal",
             "nb_etoiles": 3,
             "date": "29 octobre 2014",
@@ -5617,123 +5433,59 @@
             "review": "Il est difficile de trouver un resto s'ouvrir ses portes tout la journée á Lyon. On y préfére pour nos repas d'aprem. Les serveurs sont chalereux et accueillant. Les sandwich et les soupes sont pas mal. Mais le probleme grave est la vitesse de service car y a pas assez serveur. On attend trop pour nos commandes."
         },
         {
-            "pseudo": "Direction L",
-            "titre_review": "Moyen",
-            "nb_etoiles": 3,
-            "date": "10 octobre 2014",
-            "experience": "family",
-            "review": "Bonne terrasse pour un déjeuner rapide avec un personnel très souriant et agréable. \nPar contre, peu chanceuse, la suggestion du jour était épuisée dès 12:30 ! Et la salade césar revisitée ressemblait à une assiette préparée rapidement où le poulet n'était même pas découpé. \nSoit, il faisait beau et la terrasse agréable !!"
-        },
-        {
-            "pseudo": "Anil Y",
+            "pseudo": "LYLIBELLL",
             "titre_review": "Très très décevant",
             "nb_etoiles": 2,
             "date": "10 octobre 2014",
-            "experience": "couples",
+            "experience": "business",
             "review": "Forte d'une bonne opinion sur ce restaurant fréquenté jusqu'ici le soir, j'y ai emmené un client pour tester la formule déjeuner : douche froide !\nNous commandons du champagne qui nous est servi dans des verres ( il n'y a donc pas de flutes à l'Institution !...)\nLe plat du jour \"poulet au gingembre\" est sec, avec une sauce au goût de brulé épouvantable et quant au gingembre je le cherche encore ( je précise que j'ai vécu à la réunion et que je connais le gingembre). Pour couronner le tout, il nous fallu attendre un temps interminable un dessert au goût très ordinaire. Heureusement que le magnifique décor était lui au rende-vous mais ce n'est pas le décor que l'on mange...Quelle déception !"
         },
         {
-            "pseudo": "Kginc",
+            "pseudo": "GS",
             "titre_review": "Peut toujours faire mieux!",
             "nb_etoiles": 3,
             "date": "6 octobre 2014",
-            "experience": "",
+            "experience": "business",
             "review": "Cadre très cosy avec une véranda lumineuse et une terrasse agréable lorsqu'il fait beau. Concernant l'accueil le \"bonjour\" n'est pas assez immédiat. COUP DE GUEULE: manque de naturel, de professionnalisme et de sourire d'un des jeunes serveurs hautains qui a les cheveux plaqués en arrière par le gel, qui n'a rien à faire en restauration, heureusement que TOUS ses collègues relèvent le niveau... Carte au large choix avec des valeurs sûres, qui étaient vraiment bonnes mais peu copieuese. Les tarifs ne sont pas compétitifs malgré l'emplacement il faudrait les revoir a la baisse. Dommage que ce soit si impersonnel au final bref on sera mieux reçus ailleurs..."
         },
         {
-            "pseudo": "LYLIBELLL",
-            "titre_review": "Vraiment très sympa !!!",
-            "nb_etoiles": 4,
-            "date": "29 septembre 2014",
-            "experience": "",
-            "review": "Malheureusement pour eux, le restaurant était vide c'est vrai le lundi à Lyon c'est pas simple pour les restaurateurs, mais pour nous c'était top, bonne ambiance, plats très corrects et -30% par la fourchette ce serait criminel de s'en priver ;-)"
-        },
-        {
-            "pseudo": "GS",
-            "titre_review": "Très sympa",
-            "nb_etoiles": 4,
-            "date": "28 septembre 2014",
-            "experience": "",
-            "review": "Testé et approuvé sur plusieurs fois Très beau cadre à l'intérieur mais belle terrasse aussi\nUne superbe carte innovante et très goûteuse \nUn service compétent et remarquable \nA voir et à ressayer en fonction d'une nouvelle carte"
-        },
-        {
-            "pseudo": "Lou L",
+            "pseudo": "francis G",
             "titre_review": "Agréablement surpris",
             "nb_etoiles": 4,
             "date": "26 septembre 2014",
-            "experience": "",
+            "experience": "couples",
             "review": "Ancien client, je n'avais pas remis les pieds dans cette brasserie suite au comportement (souvent difficile) des serveurs. Aujourd'hui 12h30, ma conjointe insiste, elle y est allée quelques semaines auparavant et avait été agréablement surprise. Je cède, nous nous asseyons et dégustons notre plat . S'en suivis une véritable découverte, j'ai meme hésité à féliciter la cuisine. Rien d'original dan sles plats mais beaucoup de soin dans la préparation. Je le recommanderai par la suite. Les serveurs sont toujours difficiles à cerner, faux sourires et soupirs dès la tete tournée."
         },
         {
-            "pseudo": "jérôme W",
-            "titre_review": "Tres tres moyen",
-            "nb_etoiles": 2,
-            "date": "15 septembre 2014",
-            "experience": "",
-            "review": "Accueil extremement decevant. Cher pour ce que c'est. Le cadre et l'emplacement sont neanmoins chic \nLes serveurs sont imbuvables\nTant pis pour eux on y retournera plus \nOn ira ailleurs \nEt ce n'est pas les bars et brasseries qui manquent a Lyon"
-        },
-        {
-            "pseudo": "francis G",
+            "pseudo": "Philippe B",
             "titre_review": "L'âge et le cadre n'excuse pas la médiocrité de l'assiette",
             "nb_etoiles": 2,
             "date": "15 septembre 2014",
-            "experience": "",
+            "experience": "family",
             "review": "Cette \"vénérable\" institution a réellement besoin de se ressaisir si elle souhaite perdurer. Client régulier de cette brasserie lorsque je résidais à LYON, j'y ai diné hier soir pour mon plus grand regret.Si le service a été acceptable, le repas a été bien médiocre. Risotto mal cuit et non crémeux, travers de porc à peine tièdes et pas assez caramélisées, frites banales et trop cuites, desserts quelconques... Une impression de cuisine industrielle qui plus est mal maîtrisée ! \nCerise sur le gâteau, des prix excessifs pour une telle prestation. A éviter absolument."
         },
         {
-            "pseudo": "Johann Z",
+            "pseudo": "SenegambiaAgadir",
             "titre_review": "Mauvais rapport qualité prix",
             "nb_etoiles": 2,
             "date": "12 septembre 2014",
-            "experience": "",
-            "review": "Service et décor soignés, mais les plats à la carte sont chers, peu copieux et très décevants : sauce hollandaise servie froide ainsi que des petites tomates cuites que l'on a \"oublié\" de réchauffer. Une queue de lotte minuscule servie avec son arête.. On pense à de la cuisine d'assemblage mal assemblée."
-        },
-        {
-            "pseudo": "Philippe B",
-            "titre_review": "J'étais habitué à mieux avant...",
-            "nb_etoiles": 3,
-            "date": "10 septembre 2014",
-            "experience": "",
-            "review": "L'institution porte certes bien son nom, pour la qualité de ses repas, je m'y rendais régulièrement quand je vivais à Lyon, en y retournant je constate une réelle dégradation des prestation de qualités de service et des vins également à des tarifs scandaleusement élevés. Le cadre intérieur est beau, et apaisant, si vous voulez un moment calme en hyper centre de la ville, sinon passez votre chemin des dizaines de bars aux prestations nettement supérieures sont à quelques pas..."
-        },
-        {
-            "pseudo": "gilleslelion",
-            "titre_review": "Très décevant....",
-            "nb_etoiles": 1,
-            "date": "6 septembre 2014",
             "experience": "couples",
-            "review": "Dommage que le cadre raffiné et élégant de cette brasserie ne soit pas à la hauteur de la cuisine et du service.\nLe Club Sandwich = pas bon\nHaricots verts accompagnant le saumon pas cuits, après l avoir signalés ils nous sont ramenés noircis .... Et tout aussi durs...\nAucun accueil digne de ce nom, personnel tout juste poli, service beaucoup trop long pour une brasserie\nLe propriétaire ne daigne jamais dire bonjour...\nCe restaurant bénéficie d un superbe emplacement, c est son seul et unique intérêt.\nÀ éviter!"
-        },
-        {
-            "pseudo": "van1988",
-            "titre_review": "Resto exceptionnel!",
-            "nb_etoiles": 5,
-            "date": "2 septembre 2014",
-            "experience": "business",
-            "review": "Super resto, nous avons prit 2 tartares ( saumon et boeuf) et rapport qualité/ prix c' étais parfait! Il y avait bien assez et la présentation était exceptionnelle , le personnel au petit soin, et la crème\nbrûlée étais une tuerie! Super déco, j' y retournerai sans hésiter."
+            "review": "Service et décor soignés, mais les plats à la carte sont chers, peu copieux et très décevants : sauce hollandaise servie froide ainsi que des petites tomates cuites que l'on a \"oublié\" de réchauffer. Une queue de lotte minuscule servie avec son arête.. On pense à de la cuisine d'assemblage mal assemblée."
         },
         {
             "pseudo": "Fabrice L",
             "titre_review": "bien pour une soirée théatre",
             "nb_etoiles": 4,
             "date": "29 août 2014",
-            "experience": "family",
+            "experience": "couples",
             "review": "avons testé cette brasserie restaurant avant u spectacle au théâtre. accueil agréable, service efficace. nous avons pris une formule rapide, nourriture de bonne qualité\nun peu cher quand même pour une formule du jour. terrasse extérieure bruyant du fait de la proximité de la route."
-        },
-        {
-            "pseudo": "Emlyn_Lili",
-            "titre_review": "Très sympa et bon",
-            "nb_etoiles": 4,
-            "date": "19 août 2014",
-            "experience": "family",
-            "review": "Pour un dîner en amoureux, le lundi soir, on est content de trouver un bon restaurant ouvert!\nCelui ci est en plus très bon avec des produits frais et bien travaillés, avec une influence japonaise très réussie (king crabe façon Maki et tataki de thon et thian de légumes pour moi). Il y a également des plats plus classiques qui semblent quand même assez travaillés, mention spéciale pour l'en cotent farci au chorizo,un délice. Le service est très sympathique? Ce qui ne gâche rien. Je recommande donc. Sans hésiter ."
         },
         {
             "pseudo": "cindykala",
             "titre_review": "Un très beau cadre",
             "nb_etoiles": 4,
             "date": "2 août 2014",
-            "experience": "couples",
+            "experience": "business",
             "review": "La Comédie Odéon nous avait recommandé ce restaurant, nous n'avons pas été déçus. Le service est très aimable et les plats beaux et bons. Cet établissement est ouvert très tard, tout à côté du théâtre, ce qui est très appréciable. L'attente entre les plats est assez longue, ce sera le seul bémol."
         },
         {
@@ -5741,7 +5493,7 @@
             "titre_review": "Un cadre baroque pour une table banale",
             "nb_etoiles": 3,
             "date": "10 juillet 2014",
-            "experience": "business",
+            "experience": "family",
             "review": "Très déçus, j'avais partagé cette table il y a quelques mois avec des amis et cette adresse a bien changé depuis.\nLes plats ne sont pas du tout relevés (manque de sel, de poivre ...).\nLa cuisine semble sortie tout droit du congélateur.\nLes serveurs sont tout juste aimables.\nPassez votre chemin, vous y perdrez votre temps."
         },
         {
@@ -5749,7 +5501,7 @@
             "titre_review": "Moment très agréable",
             "nb_etoiles": 4,
             "date": "7 juillet 2014",
-            "experience": "business",
+            "experience": "family",
             "review": "Nous sommes venu avec le correspondant espagnol de mon fils et pour lui faire découvrir la gastronomie française. Le repas s'est merveilleusement bien déroulé. Les mets choisis très bon et on sent surtout que ce sont des produits frais. Accueil très sympathique. Nous reviendrons avec plaisir."
         },
         {
@@ -5765,7 +5517,7 @@
             "titre_review": "A éviter",
             "nb_etoiles": 1,
             "date": "8 juin 2014",
-            "experience": "friends",
+            "experience": "business",
             "review": "Pour un déjeuner tardif nous avons été orienté sur ce restaurant datant de 150 ans.\nAprès une totale incompétence dans les whiskys reconnue par le personnel, nous décidons de faire un repas plat+dessert et de profiter de la promotion de La Fourchette. \nMalheureusement ma cannette devait avoir été marathonnienne dans une vie antérieure, ce qui est dommage car la sauce était délicieuse et les 2 (oui, que 2) asperges parfaites. Le gratin dauphinois qui l'accompagnait était plus proche du béton que du crémeux de la veille au Pailleron.\nVu l'attente alors qu'il était 15 heures, nous avons stoppé les frais et sommes passés au cafés. \n2 whiskys, 2 plats, 2 cafés : presque 100€."
         },
         {
@@ -5773,7 +5525,7 @@
             "titre_review": "Du tape à l'oeil",
             "nb_etoiles": 1,
             "date": "8 juin 2014",
-            "experience": "family",
+            "experience": "business",
             "review": "l'institution , adresse qui nous a été communiqué par la fourchette suite à l'annulation de notre réservation au baronn . Le cadre se veux cosi début XXeme avec des gros lustres art moderne qui n'ont rien a voir avec le cadre énormes masses suspendues au dessus de nos tête. Nous avons souhaiter déjeuner en salle hélas non climatisée.Ce restaurant est un rendez vous de mamies en goguette souffrant d'agueusie .Après lecture de la carte , nous demandons au serveur ce qu'étais \"la spécialité Lyonnaise\" inscrite sur la carte et la réponse \"une salade\" , ok mais qu'y a t'il dedans ??? réponse lardon et oeufs . bon ok Nous choisissons l'apéritif tout en choisissant dans la carte et demandons des wisky dont l'un non tourbée , drame le serveur ne savait pas que ça existait et donc nous dit son incompétence dans ce domaine . Puis le choix des plats St Jacques et rizzotto au chorizzo , une banalité sans nom et une canette en croute qui devait avoir faite le criterium du Dauphiné tellement la viande était dure. Après le café je décide d'aller aux toilettes et horreur et odeurs le serrure de la porte des hommes est cassée et la cuvette des toilettes etait répandue au sol . Si la cuisine est dans le même état que les toilettes je craint le pire .si il y a bien un restaurant où jamais nous ne retournerions c'est bien cet endroit."
         },
         {
@@ -5781,7 +5533,7 @@
             "titre_review": "Honteux",
             "nb_etoiles": 1,
             "date": "1 juin 2014",
-            "experience": "friends",
+            "experience": "couples",
             "review": "L'institution est l'ancien \"bar américain\" (ou bar am) que les lyonnais adoraient particulièrement. Maintenant c'est devenu un attrape touristes et une arnaque lyonnaise. Vous qui lisez ces lignes si vous souhaitez dépenser près de 6€ pour un coca et attendre des dizaines de minutes pour être servis alors que la terrasse est loin d'être bondée, allez-y, sinon marchez quelques dizaines de mètres et trouver vous un vrai bar ou l'on ne vous vole pas."
         },
         {
@@ -5789,7 +5541,7 @@
             "titre_review": "TRES BON RESTAURANT",
             "nb_etoiles": 5,
             "date": "31 mai 2014",
-            "experience": "",
+            "experience": "friends",
             "review": "Nous y allons souvent ... jamais déçus ... très agréable la terrasse ...ainsi que l'intérieur ... le restaurant a fêté ses 150 ANS.. BRAVO <3 le service est de qualité ...les serveurs toujours agréables et souriants ...les plats sont excellents toujours bien présentés...même sans réservation nous trouvons toujours une bonne table ...je le recommande fortement ...nous avons l'habitude de faire les restaurants et croyez moi ils ne sont pas toujours à la hauteur de ce qui est inscrit un exemple de la Tour Rose (lamentable)...donc L'Institution est un très bon restaurant qualité prix ...que vous soyez à deux, ou à plusieurs allez-y il le vaut bien :)"
         },
         {
@@ -5797,47 +5549,23 @@
             "titre_review": "institution ??",
             "nb_etoiles": 1,
             "date": "24 mai 2014",
-            "experience": "",
+            "experience": "family",
             "review": "institution de quoi?? de cafés à 3€ qui arrivent tiédes et sans saveur ou de thés à plus de 5 €\nà ce prix là on n'a pas le droit à une petite carte pour choisir le mélange ou l'origine desboissons\ncommandées? pas plus à un sourire de la demoiselle pittbull qui vous a servie ces produits de petites qualité et qui vient vous réclamer de payer l'addition comme si vous alliez partir sans payer le pire = les toilettes (gratuites) sales trés sales admettons qu'aprés le service quelqu'un a eu un probléme gastrique et que le personnel n'ait pas eu le temps de s'en apercevoir mais les grilles d'aeration la derniére fois qu'elles ont été nettoyées cétait il y a 150 ans ?? comme l'age de cette belle brasserie bien mal gérée apparement!!"
-        },
-        {
-            "pseudo": "Bentom95",
-            "titre_review": "L'institution abuse",
-            "nb_etoiles": 2,
-            "date": "15 mai 2014",
-            "experience": "",
-            "review": "Le restaurant avait été privatisé pour l'occasion. Repas médiocre en dehors de la pièce de boeuf excellente. Sinon les serveurs sont mal aimables et grattent sur tout. Tant et si bien que cela gâche tout le reste : si on ne boit pas d'alcool et qu'on n' aime pas l'élément de base du cocktail de substitution il faudra débourser 5,80 € pour un coca. C'est honteux au regard d'une soirée a 120 couverts..."
         },
         {
             "pseudo": "Pierric H",
             "titre_review": "Grosse déception !",
             "nb_etoiles": 3,
             "date": "12 mai 2014",
-            "experience": "",
-            "review": "Nous avons réservé ce restaurant basé sur les avis de La Fourchette. Le décor est moderne, opulent, assurément très chic. Le service est sympathique, policé. Mais quelle déception dans les assiettes : plats fades, cuisson des viandes très approximative.. En bref ce restaurant fut peut être une Institution il y a des années, mais il faudrait se remettre au niveau. Vu l'offre pléthorique des restaurants sur Lyon, il y a d'autres alternatives !"
-        },
-        {
-            "pseudo": "Turalid",
-            "titre_review": "Très bon",
-            "nb_etoiles": 4,
-            "date": "10 mai 2014",
-            "experience": "couples",
-            "review": "Pas bcp de plats à choisir, mais toute et bien faite et le service est rapide. L'ambiance est assez amicale"
-        },
-        {
-            "pseudo": "greenmeadow34",
-            "titre_review": "Une agreable brasserie",
-            "nb_etoiles": 4,
-            "date": "14 avril 2014",
             "experience": "friends",
-            "review": "Venus en famille pour la premiere fois, nous n'avons pas ete decus. Nous avions demande une table dans la veranda: eclairage tamise, bien installes. Le serveur etait tres aimable, rien a redire sur le service. Les prix sont corrects, ni plus , ni moins. La salade lyonnaise tres bonne, ainsi que la canette et le tartare de saumon. Le cheeseburger a ete moins apprecie et le support de pate pour les coquilles st jacques, en entree etait un peu sec. Nous y reviendrons surement pour tester leurs viandes."
+            "review": "Nous avons réservé ce restaurant basé sur les avis de La Fourchette. Le décor est moderne, opulent, assurément très chic. Le service est sympathique, policé. Mais quelle déception dans les assiettes : plats fades, cuisson des viandes très approximative.. En bref ce restaurant fut peut être une Institution il y a des années, mais il faudrait se remettre au niveau. Vu l'offre pléthorique des restaurants sur Lyon, il y a d'autres alternatives !"
         },
         {
             "pseudo": "BRIGITTE H",
             "titre_review": "Service étrange...",
             "nb_etoiles": 3,
             "date": "29 mars 2014",
-            "experience": "friends",
+            "experience": "couples",
             "review": "Habitués de ce restaurant, nous avons été un peu déçus cette fois-ci. Le serveur n'a pas su nous donner une explication claire sur un plat. Du coup, mauvais choix . ;.ce qui ne l'a pas dérangé en retirant une assiette encore pleine. Ce garçon devait être mal réveillé ce jour-là,car devant ma nouvelle tentative pour une autre explication, cette fois-ci à propos du dessert du jour, réponse sèche et sans appel: \"y en n'a pas\"!! .... En bref, pause déjeuner un peu perturbée!!"
         },
         {
@@ -5845,7 +5573,7 @@
             "titre_review": "Une très bonne adresse à Lyon",
             "nb_etoiles": 4,
             "date": "16 mars 2014",
-            "experience": "business",
+            "experience": "friends",
             "review": "Très beau cadre, une cuisine raffinée. Belle caret des vins. Allez-y pour déjeuner le dimanche, terrasse ensoleillé. Très sympa."
         },
         {
@@ -5853,23 +5581,15 @@
             "titre_review": "amelioration",
             "nb_etoiles": 4,
             "date": "15 mars 2014",
-            "experience": "couples",
-            "review": "Je suis revenu dans cet endroit après une déception générale.\nLe chef a du changer!!!\ndes assiettes superbes et très bonnes.\nSeul le serveur qui trouve la carte chère devrait suivre une formation!!!"
-        },
-        {
-            "pseudo": "PrincessLyon",
-            "titre_review": "Aucune classe.",
-            "nb_etoiles": 1,
-            "date": "15 mars 2014",
             "experience": "friends",
-            "review": "Nous nous sommes installés à 8 à une table. Après 30 minutes de patience (sans exagération), j'ai demandé à une serveuse si nous pouvions être servis car nous attendions depuis longtemps et elle m'a répondu qu'elle ne s'occupait pas de notre table. Nous sommes donc partis sans que personne ne se demande pourquoi alors qu'il y a une quinzaine de serveurs. Je ne vous parle pas des prix: 5,60€ la grenadine, 5,80€ le Coca. Dommage le cadre est très beau."
+            "review": "Je suis revenu dans cet endroit après une déception générale.\nLe chef a du changer!!!\ndes assiettes superbes et très bonnes.\nSeul le serveur qui trouve la carte chère devrait suivre une formation!!!"
         },
         {
             "pseudo": "stef7433",
             "titre_review": "Jolie cadre",
             "nb_etoiles": 3,
             "date": "23 février 2014",
-            "experience": "couples",
+            "experience": "business",
             "review": "Nous y sommes allez en couple le 22/02/2014 , le cadre est très jolie entre le restaurant huppé et la brasserie chic, plutôt bien. Pourtant les énormes lustres avec des ampoules grillées et des appliques souffrant du même mal gâche le charme de cette endroit.\nPour ce qui est du repas nous avons prix le menue a 42 € , bien dans l'ensemble même si l assaisonnement serait a revoir. Le service est correct au début du repas et plus la fin approche plus il s'étiole!!!\nEn bref correct."
         },
         {
@@ -5885,7 +5605,7 @@
             "titre_review": "BOF....",
             "nb_etoiles": 3,
             "date": "6 février 2014",
-            "experience": "couples",
+            "experience": "friends",
             "review": "le lieu : idéal en centre ville de lyon., deco class...\n\nLes serveurs : bien habillés.\n\nLa nouriture : fade... \n\nles prix : coquets\n\nbref je n'y retournerai pas"
         },
         {
@@ -5901,7 +5621,7 @@
             "titre_review": "attention au laissez aller!!",
             "nb_etoiles": 4,
             "date": "27 janvier 2014",
-            "experience": "family",
+            "experience": "couples",
             "review": "ce lieu est toujours aussi magique depuis son ouverture il y a un peu plus d'un an, et j'ai tjrs autant de plaisir à venir diner, bruncher ou prendre un café; en revanche, le gerant de l'etablissement ne doit pas avoir de tres bons yeux: environ 10cm de poussiere sur les enceintes murales (qui sont noires), environ 50 à 60% des ampoules des appliques sont soit manquantes, soit grillées, les pieds des lampadaires sont recouverts aussi de 5 cm de poussiere....pour un etablissement qui se veut un peu hors du commun et qui vise une clientele plutôt sensible à la deco, au rafinement, au bien être, ce laisser aller n'est vraiment pas de bon augure: dans quel etat sera t-il dans un an???\net le service est certes souriant, mais totalement non professionnel et vraiment pas rafiné....., attention, la courbe est plutôt descendante que montante!!"
         },
         {
@@ -5917,7 +5637,7 @@
             "titre_review": "Très agreable",
             "nb_etoiles": 4,
             "date": "29 décembre 2013",
-            "experience": "",
+            "experience": "couples",
             "review": "Très bon restaurant. \nService rapide malgré l'heure, les serveurs sont très professionnels (aimable et bonne connaissance des plats et vins). On est pas les uns sur les autres. Les prix sont très raisonnable. A recommander."
         },
         {
@@ -5925,7 +5645,7 @@
             "titre_review": "A découvrir",
             "nb_etoiles": 4,
             "date": "26 décembre 2013",
-            "experience": "",
+            "experience": "family",
             "review": "Un cadre agréable. La cuisine n'est pas exceptionnelle mais le rapport qualité-prix est correct. Service rapide et attentionné.\nUn des rares restaurants à Lyon qui ne sent pas la friture en hiver au point de devoir laver vêtements, pull et manteau après passage.\nJe recommande."
         },
         {
@@ -5933,7 +5653,7 @@
             "titre_review": "Rien à redire",
             "nb_etoiles": 4,
             "date": "19 décembre 2013",
-            "experience": "",
+            "experience": "couples",
             "review": "Très bon moment. Nous avons déjeuné en terrasse (véranda). L'accueil était très pro. et la cuisine très juste. Les assaisonnements et les cuissons sont maitrisées, les produits sont frais et de qualité. La sauce au St Marcelin était un poil liquide mais le boeuf était divin. Le cadre est élégant et la décoration sublime le lieu. Rien à envier au restaurant / brasserie qu'il remplace."
         },
         {
@@ -6001,19 +5721,11 @@
             "review": "le cadre de ce restaurant est absolument magnifique et extrêmement intimiste, vu son emplacement il est toujours bondé et il faut souvent patienter avant de rentrer...\nIl est très agréable de s'y rendre pour prendre un verre ou une pâtisserie par contre le restaurant est très moyen..."
         },
         {
-            "pseudo": "Gourmet@michelin-NOstar",
-            "titre_review": "A fuir......",
-            "nb_etoiles": 1,
-            "date": "18 novembre 2013",
-            "experience": "friends",
-            "review": "Un cadre superbe et un emplacement premium gâchés par un accueil et un service désastreux. Les plats sont très moyens avec un temps de réaction après commande anormalement long. Addition salée a régler debout devant la caisse !!!! \nY'a t'il un manager dans l'établissement ?"
-        },
-        {
             "pseudo": "Isabel P",
             "titre_review": "L'institution auto proclamée",
             "nb_etoiles": 3,
             "date": "17 novembre 2013",
-            "experience": "couples",
+            "experience": "friends",
             "review": "J'ai voulu entrer dans cette \"institution\" hier après-midi... mais une personne m'en a dissuadé. Trop petite, trop ronde, trop âgée ? Sur quelles critères. J'avais rendez-vous avec des amis. On m'a fait comprendre qu'il n'y avait pas de place. Pour trois, cela n'a pas posé de problème !\nJ'avais déjà manger dans le lieu sans que cela me laisse un souvenir impérissable. J'ai voulu y retourner pour la déco, le côté parisien. Le Bar américain était une institution, lui !"
         },
         {
@@ -6021,7 +5733,7 @@
             "titre_review": "malheureuse experience",
             "nb_etoiles": 1,
             "date": "16 novembre 2013",
-            "experience": "family",
+            "experience": "couples",
             "review": "Lunch le 14/11/2013.Nous avons pris le menu à 28 Euros: l'entrée composée d'œufs en meurette était passable, le plat principal comprenait quenelle lyonnaise sauce Nantua et riz, était absolument horrible, quand au dessert qui était une tarte à la praline!!. Nous avons protesté et fait valoir nos droits, c'est le serveur qui a reçu nos doléances car personne d'autre n'a voulu venir."
         },
         {
@@ -6029,7 +5741,7 @@
             "titre_review": "ambiance chic et chaleureuse",
             "nb_etoiles": 5,
             "date": "15 novembre 2013",
-            "experience": "couples",
+            "experience": "family",
             "review": "nous avons adoré l'emplacement, la déco, le confort des fauteuils, le style et le service. La personne qui s'est occupée de notre table: Agathe, s'est montrée très aimable, souriante et professionnelle. Pleines d'attentions, elle a assuré un service parfait malgré le fait que le restaurant était plein.\nLa carte est riche et savoureuse! un bel endroit à recommander!"
         },
         {
@@ -6037,7 +5749,7 @@
             "titre_review": "Plus que \" Moyennasse \" et vraiment trop cher.",
             "nb_etoiles": 3,
             "date": "13 novembre 2013",
-            "experience": "friends",
+            "experience": "couples",
             "review": "Diner 10/11/2013. Le cadre est soigné, bien qu'avec un courant d'air sous la véranda car elle était déchirée (dixit la serveuse) trés déçu par la restauration et moyen pour le service. De plus c'est cher plus de 100 € à 2, avec un plat, un déssert et une bouteille de vin. Pour ce tarif l'on s'attend à bcp mieux. Peu de choix ce soir là, l'on nous signale qu'il manque plusieurs plats par rapport à la carte. \nL'on nous apporte la bouteille de vin avec des verres de \"cantine\" en nous signalant qu'il y a rupture de stock (car beaucoup de cassés !!!!) Le poisson n'est pas assez cuit (après un retour en cuisine il n'est pas beaucoup plus cuit !!!) comme la volaille, l'accompagnement est froid, par contre le gratin dauphinois est trés chaud mais complétement désséché. Le pain est en quantité plus que limité et l'attente entre les plats relativement longue. Bref une adresse sympa pour boire un verre en terrasse, mais pas plus et surtout pas pour diner !!!!"
         },
         {
@@ -6045,7 +5757,7 @@
             "titre_review": "Une ambiance brasserie chic et feutrée",
             "nb_etoiles": 4,
             "date": "7 novembre 2013",
-            "experience": "solo",
+            "experience": "friends",
             "review": "Je suis venue y déjeuner aujourd'hui , dans la véranda toute en verre et acier noir, bordée de buis, c'est très élégant. Les tables sont nappées de blanc, jolie vaisselle, service attentioné, formule du jour impeccable. Le bémol est ce jour que nous avons attendu 35 mn notre plat. Et qu'il y avait une erreur de 20 € dans notre addition, donc vérifiez toujours les additions !"
         },
         {
@@ -6053,7 +5765,7 @@
             "titre_review": "Bonne adresse",
             "nb_etoiles": 4,
             "date": "3 novembre 2013",
-            "experience": "",
+            "experience": "solo",
             "review": "Pour la note globale, je voulais mettre \"bien\" mais nous n'avons le choix qu'entre \"moyen\" et \"très bien\", j'ai donc opté pour le \"très bien\" quand même parce que si j'y vais souvent c'est que l'établissement me plaît. \n\nJ'aime beaucoup le cadre cosy et l'ambiance feutrée. Les luminaires sont assez spéciaux mais tous les goûts sont dans la nature et au bout d'un moment on s'y habitue. Je me pose souvent à l'Institution avec un livre ou mon pc, en plus d'y dîner. \n\nLa carte est intéressante et je recommande particulièrement le tartare de thon en entrée ainsi que le filet de bar avec l'aubergine en plat. Le magret de canard avec sa sauce teriyaki vaut le détour aussi. Quant aux desserts, je me laisse souvent tenter par celui du moment, autrement mon favori reste le moelleux aux amandes. \n\nLes prix sont un peu élevés, la réservation sur LaFourchette peut se révéler intéressante pour un repas à partir de deux personnes. \n\nJe n'ai pas connu l'établissement du temps du Bar Américain, personnellement l'orientation brasserie chic me convient assez. \n\nLe personnel est agréable, et le fait de pouvoir dîner tard est très appréciable (généralement ils servent jusqu'à 23h, il se peut qu'ils terminent le service avant les jours plus calmes). \n\nLes toilettes pourraient être améliorées pour cet établissement qui se veut d'un certain standing (portes papier toilettes mal fixés), et si je devais citer quelque chose qui me gêne, c'est la présence de petites mouches (dans la salle comme dans les toilettes d'ailleurs). \n\nBilan : bon restaurant à divers égards et situé dans un quartier animé (rue de la République). J'y emmène souvent les proches et amis qui viennent me rendre visite sur Lyon. La cuisine n'est pas typique de la région comme dans elle peut l'être un bouchon lyonnais ni gastronomique, elle est plus classique, avec une jolie présentation et tout de même beaucoup de goût dans l'assiette."
         },
         {
@@ -6105,7 +5817,7 @@
             "review": "à éviter, frites réchauffées pas fraiches, au lieu d'avoir des noix de st jacques des vulgaires pétoncles servies à 23€ le plat!!! Avis déposé sur la fourchette supprimé par le restaurant. A fuir..."
         },
         {
-            "pseudo": "Direction L",
+            "pseudo": "lcx69",
             "titre_review": "Copieux, mais banal",
             "nb_etoiles": 3,
             "date": "15 septembre 2013",
@@ -6113,7 +5825,7 @@
             "review": "Certes, on est au plein centre de Lyon, certes, esl plats y sont plutôt copieux, certes l'accueil n'est pas désagréable, mais le rapport qualité / prix est plutôt élevé. compter pas moin de 30 euros le menu entrée/plat/dessert.\nCertes, tout est à peu près bien exécuté, l'ambiance à l'intérieure est plutot cosy, mais c'est quand même cher pour des mets assez classiques."
         },
         {
-            "pseudo": "lcx69",
+            "pseudo": "Susanowoo",
             "titre_review": "ACCUEIL DEPLORABLE! JE DECONSEILLE FORTEMENT !",
             "nb_etoiles": 1,
             "date": "14 septembre 2013",
@@ -6121,7 +5833,7 @@
             "review": "Constat simple:\n- Accueil déplorable\n- Prix élevés\n- Politesse inexistante\n- Irrespect total du client\n- Pas le moindre sourire\n- Environ 30 minutes pour recevoir deux verres\n- Dès la commande alors que vous n'avez pas reçu le verre on vous demande de payer l'addition ! Ils ont surement peur d'être volé par des clients.\n\nProbablement le pire bar de Lyon, je pense déjà que le responsable devrait apprendre la politesse, le respect en général mais surtout le respect du client.\n\nParait-il on ne pouvait pas prendre un verre un samedi à 21h seulement le restaurant, j'ai dis alors un repas mais on a répondu oui mais on ferme.\n\nManifestement ces gens-là n'ont pas voulu accueillir 4 jeunes souhaitant prendre un verre avant d'aller rentrer chez eux.\n\nCette parodie de restaurant-bar pseudo-élitiste est une grande blague.\n\nPour commencer , vous êtes accueillit par la fumée de la zone fumeur ( une sorte de moyen pour eux de vous souhaiter la bienvenue) ensuite les serveurs habillé en pingouin vous repousse où alors vous font remarquer que vous n'êtes pas le bienvenue dans le bar ou le restaurant bref je ne sais pas quoi c'est vraiment.\n\nJ'ai vraiment été choqué au plus profond de moi-même par cet accueil qui pourrait leur porter préjudice si c 'était des personnes à un rang bien supérieur au mien.\n\nMalheureusement, je ne suis qu'un modeste client qui n'a pas un pouvoir égalant celui de BHL. Par conséquent, je ne peux rien faire si ce n'est que baisser les yeux.\n\nMais , je peux au moins dire que les prix sont incroyablement élevés et que les serveurs vous parlent très mal.\n\nCeci n'est pas un avis personnel , mais un véritable fait.\n\nBien de mes amis aimeraient écrire des messages sur ce site , mais ne le ferons pas car ils ne veulent tout simplement pas le faire. Mais le constat est globalement le même.\n\nJE DÉCONSEILLE FORTEMENT !!!\n\nAllez dans un bar du Vieux-Lyon , c'est plus classe et surtout plus agréable, sans oublier que votre banquier ne vous fera pas la gueule après un séjour gustatif dans cet établissement."
         },
         {
-            "pseudo": "Susanowoo",
+            "pseudo": "y c",
             "titre_review": "revoir absolument l'accueil",
             "nb_etoiles": 2,
             "date": "18 août 2013",
@@ -6129,7 +5841,7 @@
             "review": "L accueil est déplorable surtout par le boss, il faut qu'il change de boulot et je ne parle pas du serveur qui vient prendre une commande pour 6 personnes sans un papier et qui ne connait pas sa carte ainsi que le contenue de ses plats. Les assiettes ne sont pas assez copieuses, perso, j'ai pris le blanc de poulet accompagné de petits artichauts sans autre accompagnement, tres light...."
         },
         {
-            "pseudo": "y c",
+            "pseudo": "Foliot",
             "titre_review": "Ne pas venir à Lyon sans y déjeuner",
             "nb_etoiles": 5,
             "date": "16 août 2013",
@@ -6137,7 +5849,7 @@
             "review": "Déco très cosy lounge, même décorateur que la Réserve, que l'Hotel Costes et que l'Institution.\n\nAnciennement le Bar Américain, le nouveau propriétaire a su reprendre l'affaire en main et en faire une maison incontournable de la capitale des Gaules. \n\nIl est conseillé d'y aller pour manger plutôt que pour boire un verre, les consommations sont assez cher mais la qualité va avec. \n\nClub sandwich très bon rapport qualité / prix, j'y vais souvent pour déjeuner et je n'ai jamais été déçu !\n\nPersonnel très sympathique et professionnel. Je suis étonné du commentaire d'Aude2013 qui dit que la serveuse décapsulait la bouteille entre ses cuisses."
         },
         {
-            "pseudo": "Foliot",
+            "pseudo": "Aude2013",
             "titre_review": "Un peu surpris !",
             "nb_etoiles": 2,
             "date": "8 août 2013",
@@ -6145,7 +5857,7 @@
             "review": "Lyonnaise d'adoption, j'adore cette ville et en 30 ans je n'ai pas été aussi déçue que par l'Institution. Pour le point positif, le cadre est agréable. Mais le service très pauvre !! Tout d'abord un accueil glaciale de la serveuse, puis une fois installé et nos boissons et crêpes commandées nous avons la surprise de voir la serveuse ouvrir la bouteille de soda entre ses CUISSES ! Sans parler de la crêpe au grand marnier sans le grand marnier et avec beaucoup de sucre ! Donc retour en cuisine et nouvelle crêpe, qui a été offerte."
         },
         {
-            "pseudo": "Aude2013",
+            "pseudo": "Martine N",
             "titre_review": "un bel endroit",
             "nb_etoiles": 5,
             "date": "25 juillet 2013",
@@ -6153,7 +5865,7 @@
             "review": "Lyon mérite ce genre d'établissement, feutré, cosy et accueillant. Peut être pas accessible à toutes les bourses mais il en est ainsi de toute chose. Chacun y trouvera sa place : repas d'affaires, touristes guide en main, personnes seules..... Longue vie à l'Institution."
         },
         {
-            "pseudo": "Martine N",
+            "pseudo": "Magali b",
             "titre_review": "Cher mais de Qualité",
             "nb_etoiles": 4,
             "date": "15 juillet 2013",
@@ -6161,7 +5873,7 @@
             "review": "Restaurant classe, les plats sont de qualité mais restent chers. \navec mes amis nous avions opté pour la terrasse : bon choix! sous un soleil accablant nous étions au frais, à l'abri des regards mais en mm temps il est possible de voir les passants. C'est agréable!"
         },
         {
-            "pseudo": "Magali b",
+            "pseudo": "PATCO060",
             "titre_review": "Belle brasserie",
             "nb_etoiles": 4,
             "date": "14 juillet 2013",
@@ -6169,7 +5881,7 @@
             "review": "C'est une belle brasserie plutôt dans le style parisien que lyonnais. Il ne s'agit pas d'un bouchon lyonnais mais d'une brasserie avec une cuisine française traditionnelle. Bonne cuisine fraiche et constante, service efficace et professionnel, terrasse agréable dans la zone piétonne mais chaude si la température extérieure est élevée (i.e. il manque des ventilateurs), jolie salle intérieure. A conseiller pour sa cuisine, les prix sont en rapports avec le standing."
         },
         {
-            "pseudo": "PATCO060",
+            "pseudo": "bernard69",
             "titre_review": "Trop chère institution!",
             "nb_etoiles": 3,
             "date": "10 juillet 2013",
@@ -6265,7 +5977,7 @@
             "review": "Débourser 38 euros pour un déjeuner entrée et plat, avec un tartare de thon fade et un morceau de poisson blanc baignant dans son eau, avec un verre de vin quelconque c'est proprement scandaleux ! Comme je regrette le bar américain et sa cuisine excellente. A éviter absolument (surtout qu'à 100 metres vous avez le sublime restaurant des négociants...)"
         },
         {
-            "pseudo": "Direction L",
+            "pseudo": "nessap821",
             "titre_review": "DETESTABLE!",
             "nb_etoiles": 1,
             "date": "9 avril 2013",
@@ -6273,7 +5985,7 @@
             "review": "L'institution: restaurant ambiance chic et pet de sec! Les serveurs croient qu'il travaillent pour Gordon Ramsey ou pour Cyril Lignac, pas un seul sourire quand nous sommes rentrés ils sont obsédés par leurs pourboires et pour payer la note ils se permettent de venir quémander pour payer la note et ose mentir . Le serveur c'est permis de dire à sa collègue lorsque nous sommes partis mon conjoint et moi \" ah bah enfin\"! Et pas d’au-revoir ni de merci, les serveurs se permettent de chanter et prendre des crises de fou-rire devant vous.... je n'y retournerai même si on m'offrait 30 repas gratuits!"
         },
         {
-            "pseudo": "nessap821",
+            "pseudo": "Lanouhe",
             "titre_review": "Agréable pause",
             "nb_etoiles": 5,
             "date": "8 avril 2013",
@@ -6281,7 +5993,7 @@
             "review": "Très bon accueil, service parfais avec Guillaume. Très a l'écoute et serviable. Il nous a change de plats car on ne pouvais pas me manger pour cause de religion. Juste au top"
         },
         {
-            "pseudo": "Lanouhe",
+            "pseudo": "Drvy",
             "titre_review": "Institution...canine !",
             "nb_etoiles": 2,
             "date": "6 avril 2013",
@@ -6289,7 +6001,7 @@
             "review": "Mauvais accueil, lenteur du service, plus de bière pression a 18 heures... Bref ils auraient mieux fait de fermer carrément cet établissement...le mieux reçu ici a été le bouledogue de la table voisine."
         },
         {
-            "pseudo": "Direction L",
+            "pseudo": "Sacha E",
             "titre_review": "institution ?",
             "nb_etoiles": 2,
             "date": "4 avril 2013",
@@ -6297,19 +6009,11 @@
             "review": "Nous étions des fans du Bar Americain ..... \nquelle deception ce nouveau lieu \n\nAttente , Psychorigidité sur les commandes , les crepes c'est 15 H il etait 14H55 ..... soit on commande , prets a patienter ... mais finalement a 15H05 on nous dit que le delai s'est rallongé de 15 mn \nOn se moque quelque peu du client , \nNous pensions y aller le lendemain pour dejeuner , \nSommes allés ailleurs !!!!"
         },
         {
-            "pseudo": "Lavievautdetrevecue",
-            "titre_review": "Poussif, hautain, peu attentif ... prétentieux",
-            "nb_etoiles": 1,
-            "date": "30 mars 2013",
-            "experience": "couples",
-            "review": "Petit arrêt Apéritif en couple... installation rapide (Merci mademoiselle) ensuite les choses se gâtent : près de 20 minutes avant de pouvoir trouver un serveur disponible, et ce malgré de nombreux signes, tentative de commande avortée (on n'a plus ...pourtant nous sommes un samedi à 18h45) on se rabat alors sur deux coupes ... qui arrivent limite tièdes et transformées comme par magie en dés à coudre ... sauf le tarif bien sûr !\nMessieurs, c'est vraiment limite pour une institution ! La qualité de service n'est vraiment pas à la hauteur ... je ne suis ni un chien dans un jeu de quilles ni un pingre ! Et pourtant ..."
-        },
-        {
             "pseudo": "Fabien D",
             "titre_review": "joli",
             "nb_etoiles": 4,
             "date": "19 février 2013",
-            "experience": "business",
+            "experience": "couples",
             "review": "lieux agréable\nservice efficace\nbon produit originaux\nbien situé dans le centre lyonnais\n\ny retourner rapidement"
         },
         {
@@ -6317,43 +6021,19 @@
             "titre_review": "BRAVO L'INSTITUTION !",
             "nb_etoiles": 5,
             "date": "10 février 2013",
-            "experience": "family",
+            "experience": "business",
             "review": "Superbe restaurant, service accueillant (ça nous changeait de l'hôtel NOVOTEL CONFLUENCE ...) prévenant et impeccable. Dans l'assiette : parfait du début à la fin. On y retournera."
         },
         {
-            "pseudo": "Direction L",
+            "pseudo": "BoSs CrS",
             "titre_review": "Cadre superbe certainement mais pour le reste ........",
             "nb_etoiles": 1,
             "date": "19 janvier 2013",
-            "experience": "friends",
+            "experience": "family",
             "review": "Venus prendre un verre en famille (3 personnes) à 15 heures, l'acces à la terrasse couverte nous est refusé..... il semble que ce soit l'apanage des couples . Passons, installés par la suite en plein passage vers la cuisine, nous avons eu droit au défilé des serveurs et accidentellement un petit coup de plateau sur la tête ..... passons ..... mais en dehors des tarifs prohibitifs que j 'accepte si la qualité suit, je ne peux accepter un tiède chocolat chaud fait à l'eau dans une tasse minuscule au prix de 5 euro 50....\nAlors sauf pour les amateurs d'ambiance, passez votre chemin, LES AUTRES FUYEZ ......\nD'autres établissements vous offriront une prestation digne de la réputation de notre belle VILLE"
         },
         {
-            "pseudo": "BoSs CrS",
-            "titre_review": "Dîner annuel d'équipe",
-            "nb_etoiles": 5,
-            "date": "12 janvier 2013",
-            "experience": "couples",
-            "review": "Lors du dîner d'équipe annuel nous avons choisis cet établissement pour sa renommée et pour le cadre. Nous n'avons pas été déçu tout s'y est bien passe les entrées fines et divines, les plats copieux et savoureux, desserts gourmands . Nous avions laisse le choix a la responsable Alice pour les vins et champagne et nous n'avons vraiment pas été déçu. Hâte dy retourner"
-        },
-        {
-            "pseudo": "Direction L",
-            "titre_review": "L Institution de Lyon",
-            "nb_etoiles": 5,
-            "date": "1 janvier 2013",
-            "experience": "couples",
-            "review": "excellent moment dans cette \"institution\" nous avons été ravis du service jusqu aux plats tous raffinés, ambiance cosy. lieu a ne pas manquer sur lyon!!"
-        },
-        {
-            "pseudo": "jeremy m",
-            "titre_review": "Pas trop mal!",
-            "nb_etoiles": 3,
-            "date": "30 décembre 2012",
-            "experience": "friends",
-            "review": "Rien d'americain, d'où le changement de nom en \"l'institution\". Dégustation de légumes croquants très agréable avec un verre de vin, la carte du restaurant est chère et pas en accord avec les plats proposés malgré que ce soit pas si mauvais... Terrasse sympa pour boire un verre!"
-        },
-        {
-            "pseudo": "Direction L",
+            "pseudo": "Yesso69",
             "titre_review": "Pour boire un verre peut être...",
             "nb_etoiles": 2,
             "date": "1 décembre 2012",
@@ -6361,59 +6041,59 @@
             "review": "Mais pas pour y déjeuner ! Le cadre est très joli, le service très bien, en revanche la qualité des plats laisse à désirer.... Un suprême de poulet sec pour moi et un burger froid pour mon amie, sans parler des frites qui sont carrément mauvaises. Déçue par le dessert également, un duo de macarons pas franchement formidable, moi qui suit pourtant fan j'y ai à peine touché. Compte tenu des tarifs on est en droit de s'attendre à mieux !"
         },
         {
-            "pseudo": "Marko_et_Marie",
+            "pseudo": "rudvik",
             "titre_review": "En plein centre, bonne cuisine, mais un service terrible!",
             "nb_etoiles": 3,
             "date": "28 novembre 2012",
-            "experience": "friends",
+            "experience": "couples",
             "review": "Le restaurant/rasserie est située en plein centre ville, sur la rue pietonne - rue de la République. Le décor a l´intérieur est splendide, trés rafiné et chic. La terasse extérieure est aussi tres agréable.\n\nLes plats proposés sont assez simples, du type brasserie, d´excellente qualité et préparés avec attention. La marmite de cochon au miel et vin rouge était un régal. J´ai ete un peu surpris par les nems crevette qui sont servi avec une sauce soja et une sauce ketchup/barbecue. C´est une question de gout, mais je prefere de loin la sauce nem classique nam pla.\n\nLe seul probleme qu´on a eu, et de taille, c´est le service. J´avais l´impression que tout le personnel était en premier jour de formation... Apres 20min d´attente et plusieurs serveurs qui sont passés a cote de nous j´ai du me lever et demander si on peut commander. La meme chose pour la moutarde que je voulais avec mon entrecote, qui était froide entre temps..."
         },
         {
-            "pseudo": "GS",
+            "pseudo": "mikadoParis",
             "titre_review": "l'un des plus bel etablissement de Lyon!",
             "nb_etoiles": 5,
             "date": "29 octobre 2012",
-            "experience": "friends",
+            "experience": "couples",
             "review": "ce restaurant (qui était autrefois le Bar Américain) a été entierement redecoré en Aout dernier, et le resultat est tout simplement Superbe!!\nElegance discrete et rafinée, ambiance cosy et chic, accueil et service vraiment agreables (ce n'est pas si courant pour ce genre d'etablissement de type Brasserie un peu mode), et carte de tres bonne facture: des plats simples et bons, un rapport qualité prix excellent (pour nous qui vivons à Paris....): les plats à 17/22€, les entrées à 10/12€;\nNous y sommes allés dans la matinée une 1ere fois pour decouvrir et prendre un café, et nous avons été tellement emballés, que nous sommes venus y diner le lendemain soir ;\nL'emplacement est top: à côté du metro cordeliers, en face de l'ancienne Bourse;\nJe recommande vivement cet etablissement à toute personne desireuse de se rendre dans un bel etablissement, confortable , agreable et oû vous êtes accueillis avec sourire et gentillesse!\nAlain-Dominique"
         },
         {
-            "pseudo": "Yesso69",
+            "pseudo": "Brune D",
             "titre_review": "Hôtel costes à Lyon, on s'y croirait !",
             "nb_etoiles": 5,
             "date": "25 octobre 2012",
-            "experience": "business",
+            "experience": "friends",
             "review": "Ambiance feutrée, lounge ! \nMusique top ! \nService très agréable, et efficace, toute en discrétion \nCarte variée tout en essayant su allier ses classiques incontournables à de nouveaux plats très tentants !\nIl faudra y retourner pour tout goûter \nBravo !"
         },
         {
-            "pseudo": "Direction L",
+            "pseudo": "jeannelaude",
             "titre_review": "Excellent",
             "nb_etoiles": 5,
             "date": "25 octobre 2012",
-            "experience": "",
+            "experience": "friends",
             "review": "Hier, l'institution avait organisé une superbe soirée gastronomique avec un DJ très très bon.\nLe menu était grandiose à base de truffe, homard enfin que des produits de luxe, j'avoue que de temps en temps, c'est plutot plaisant.\nLe concept était top, le service excellent, les minettes à l'entrée très belles.\nOn se serait cru à l'Hotel Costes à Paris !!!"
         },
         {
-            "pseudo": "rudvik",
+            "pseudo": "KpuB",
             "titre_review": "très bon moment et dîner délicieux",
             "nb_etoiles": 5,
             "date": "25 octobre 2012",
-            "experience": "",
+            "experience": "friends",
             "review": "Ce nouveau restaurant l'institution est une très belle réussite! Nous y avons diné hier soir dans une ambiance lounge très très sympa. Malgré la taille de la salle, j'ai vraiment apprécié ce côté intimiste et cosy difficile à trouver à Lyon! Je me suis laissée tenter par un foie gras mi-cuit aux pommes divin et des gambas servies sur une compotée de fenouil, original et délicieux! La carte des desserts est également très sympa...Bref, ça vaut le coup d'essayer, vous êtes sûrs de passer une bonne soirée!"
         },
         {
-            "pseudo": "mikadoParis",
+            "pseudo": "adele l",
             "titre_review": "TOP. Ca fait du bien à Lyon !!!",
             "nb_etoiles": 5,
             "date": "23 octobre 2012",
-            "experience": "",
+            "experience": "friends",
             "review": "Je viens de déjeuner dans ce nouveau resto ultra tendance et très chic et j'avoue que j'ai été très agréablement surprise.\nNon seulement c'était délicieux mais le cadre est top; trois espaces différents et tous très cosy.\nSuper service et surtout rapide; tout ce que j'aime à l'heure du déjeuner.\nJe le recommande à tous car j'ai passé un excellent moment."
         },
         {
-            "pseudo": "Brune D",
+            "pseudo": "ValentineHR",
             "titre_review": "Bon, chic et cosy",
             "nb_etoiles": 4,
             "date": "3 octobre 2012",
-            "experience": "",
+            "experience": "business",
             "review": "Carte très complète et variée, plats très fins avec chacuns une touche d'originalité (genre cuisine du monde). Le service est discret et rapide. La consigne semble claire: choyer le client, sans en faire des tonnes. Couplé à une décoration très moderne et chaleureuse (moquette hyper épaisse, fauteuil crapaud) c'est pour moi un cadre idéal pour un déjeuner ou dîner d'affaires. Je préfère la salle, plus propice à la conversation, sans être gênés par ses voisins. Côté assiette, je recommande le tartare de saumon, super bon!"
         },
         {
@@ -6449,14 +6129,6 @@
             "review": "Changement de nom il faut maintenant dire l \"Institution\".\nChangement de décor aussi une réussite pour la terrasse mais surtout pour la salle de restaurant qui renoue avec un style feutré, de confortables fauteuils, une moquette épaisse, de splendides luminaires, observez les bougies aux murs. Jacques GARCIA le décorateur avait les bases ils les a transandées.\nUne carte assez large avec des prix plus que corrects, compte tenu du cadre et d'un service haut de gamme, un sans faute.\nJe vous conseille l'entrecôte Black Angus, ou le saucisson à la pistache...et oui quand c'est bon on y retourne, une réserve ? ne pas prendre une table près des cuisines.\nIl y avait une brasserie, il y a maintenant une future institution...."
         },
         {
-            "pseudo": "2013121A1",
-            "titre_review": "Pas mal!",
-            "nb_etoiles": 3,
-            "date": "21 août 2012",
-            "experience": "family",
-            "review": "Rien d'americain, d'où le changement de nom en \"l'institution\". Dégustation de légumes croquants très agréable avec un verre de vin, la carte du restaurant est chère et pas en accord avec les plats proposés malgré que ce soit pas si mauvais... Terrasse superbe pour boire un verre!"
-        },
-        {
             "pseudo": "Instantcalm",
             "titre_review": "Café haut de gamme au milieu de foules bousculées",
             "nb_etoiles": 4,
@@ -6469,7 +6141,7 @@
             "titre_review": "Vraiment bon endroit pour manger",
             "nb_etoiles": 5,
             "date": "22 juillet 2024",
-            "experience": "couples",
+            "experience": "family",
             "review": "Nous avons visité L’Institution deux fois : pour le déjeuner et pour le dîner. Le restaurant a vraiment un grand avantage - sa cuisine fonctionne sans pause et vous êtes en mesure de déjeuner ou dîner quand la plupart des restaurants ne fonctionnent pas! ! \nLes deux visites, nous avons beaucoup apprécié nos plats! ! Salades, plats principaux et dessert étaient vraiment savoureux et les portions étaient vraiment grandes. Il y a aussi un bon choix de spiritueux et de vignes. \nLes choses sont très sympathiques et professionnelles. \nDe plus, ayant une table à l'extérieur, vous pourrez profiter d'une belle vue sur Palais de la Bourse de Lyon pendant votre séjour. \nNous vous recommandons donc vivement L’Institution."
         },
         {
@@ -6485,7 +6157,7 @@
             "titre_review": "Service extrêmement lent et nourriture inférieure à la moyenne.",
             "nb_etoiles": 2,
             "date": "7 juin 2024",
-            "experience": "friends",
+            "experience": "couples",
             "review": "Nous avions du gravlax en entrée, mon mari avait du veau et moi des pâtes comme plat principal. Les entrées étaient la meilleure affaire du dîner. Mes pâtes étaient insipides, et je finis toujours ma nourriture, mais c'était une exception. Le service était extrêmement mauvais et lent. Nous avons eu notre eau quand nous avons terminé nos plats principaux, et la vigne est arrivée en même temps. On a dû demander des couverts ! Heureusement, nous avions la vue sur les gens qui passaient donc nous avions quelque chose à regarder pendant cette attente extrêmement pour la commande, la nourriture et les boissons!"
         },
         {
@@ -6493,7 +6165,7 @@
             "titre_review": "On y mange très bien et le service",
             "nb_etoiles": 4,
             "date": "26 juin 2017",
-            "experience": "family",
+            "experience": "friends",
             "review": "Nous y avons dîné un soir à Lyon. La nourriture et le service étaient très bien et les prix sont raisonnables."
         },
         {
@@ -6501,7 +6173,7 @@
             "titre_review": "Un super endroit pour le petit-déjeuner, le déjeuner et le dîner dans la célèbre rue de la République",
             "nb_etoiles": 4,
             "date": "21 juin 2017",
-            "experience": "solo",
+            "experience": "family",
             "review": "L'intérieur était très chic, à l'extérieur moderne. L'intérieur est très français, style parisien (voir les photos) , le restaurant la terrasse se trouve dans la rue (où se trouvent tous les magasins. Super petit déjeuner. Les salles de bains sont non accessible aux personnes à mobilité réduite. Agréable et très poli serveurs qui parle anglais, menus en anglais."
         },
         {
@@ -6509,7 +6181,7 @@
             "titre_review": "Un bon hôtel mais pas follement enthousiasmant de Lyon",
             "nb_etoiles": 4,
             "date": "28 mai 2017",
-            "experience": "couples",
+            "experience": "solo",
             "review": "Dans une ville célèbre pour son séjour gastronomique la perfection, cette grande brasserie représente un choix judicieux si ils ne nous ont pas beaucoup d'inspiration. Cela étant dit, c'est le personnel est très compétent et l'hôtel est situé au pied de la zone piétonne de la rue de la République font de cet hôtel un bon choix pour aller dîner. Repas à l'intérieur et à l'extérieur, donc prenez vos choix."
         },
         {
@@ -6533,7 +6205,7 @@
             "titre_review": "Une brasserie unique en son genre",
             "nb_etoiles": 5,
             "date": "26 avril 2017",
-            "experience": "",
+            "experience": "couples",
             "review": "Unique avec la chaleur du welllcome, la gentillesse et l'attention des serveurs, et la qualité de la nourriture. Rien de très grande classe restaurant gastronomique dans une ville pleine d'entre eux, mais c'est un très bon hôtel et que le restaurant. Il n'y avait pas grande déception en vue"
         },
         {
