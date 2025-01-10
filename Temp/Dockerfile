@@ -1,39 +1,42 @@
-# Utiliser une image de base Python
 FROM python:3.9-slim
 
-# Installer les dépendances système nécessaires pour Chrome
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    wget \
-    unzip \
-    xvfb \
-    libxi6 \
-    libgconf-2-4 \
-    libappindicator1 \
-    fonts-liberation \
-    libnss3 \
-    libasound2 \
-    xdg-utils \
-    libu2f-udev \
-    ca-certificates && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_DEFAULT_TIMEOUT=120 \
+    LC_ALL=C.UTF-8 \
+    LANG=C.UTF-8
 
-# Installer Google Chrome
-RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    dpkg -i google-chrome-stable_current_amd64.deb || true && \
-    apt-get -f install -y && \
-    rm -rf google-chrome-stable_current_amd64.deb
+# we need some build tools for installing additional python pip packages
+RUN apt-get update \
+    && apt-get install --yes --no-install-recommends \
+    gcc \
+    g++ \
+    build-essential \
+    software-properties-common \
+    git \
+    python3-dev
 
-# Définir le répertoire de travail
 WORKDIR /app
 
-# Copier le fichier requirements.txt dans l'image
-COPY requirements.txt .
+# if we have a packages.txt, install it here, uncomment the two lines below
+# be aware that packages.txt must have LF endings only!
+COPY packages.txt packages.txt
+RUN xargs -a packages.txt apt-get install --yes
 
-# Installer les dépendances Python
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
-# Copier le reste du code source dans le conteneur
+EXPOSE 8501
+
 COPY . .
 
-# Définir la commande de démarrage
-CMD ["python", "main.py"]
+CMD ["streamlit", "run", "main.py"]
+
+# Some docker commands see below:
+# docker build --progress=plain --tag undetected:latest .
+# docker run -ti -p 8501:8501 --rm undetected:latest /bin/bash
+# docker run -ti -p 8501:8501 --rm undetected:latest
+# docker run -ti -p 8501:8501 -v ${pwd}:/app --rm undetected:latest
+# docker run -ti -p 8501:8501 -v ${pwd}:/app --rm undetected:latest /bin/bash

@@ -1,43 +1,35 @@
-FROM python:3.9
+FROM python:3.9-slim
 
-# Installer les dépendances
-RUN apt-get update && apt-get install -y \
-    libglib2.0-0 \
-    libnss3 \
-    libgconf-2-4 \
-    libfontconfig1 \
-    libxss1 \
-    libx11-xcb1 \
-    libxcomposite1 \
-    libxcursor1 \
-    libxi6 \
-    libxtst6 \
-    fonts-liberation \
-    xdg-utils
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_DEFAULT_TIMEOUT=120 \
+    LC_ALL=C.UTF-8 \
+    LANG=C.UTF-8
 
-# Installer Google Chrome
-RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-    && apt install -y ./google-chrome-stable_current_amd64.deb \
-    && rm google-chrome-stable_current_amd64.deb
+# we need some build tools for installing additional python pip packages
+RUN apt-get update \
+    && apt-get install --yes --no-install-recommends \
+    gcc \
+    g++ \
+    build-essential \
+    software-properties-common \
+    git \
+    python3-dev
 
-# Installer chromedriver
-RUN wget -q https://chromedriver.storage.googleapis.com/$(wget -q -O - https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip \
-    && unzip chromedriver_linux64.zip \
-    && mv chromedriver /usr/local/bin/ \
-    && chmod +x /usr/local/bin/chromedriver \
-    && rm chromedriver_linux64.zip
-
-RUN mkdir -p /root/.local/share/undetected_chromedriver && chmod -R 777 /root/.local/share/undetected_chromedriver
-
-# Étape 4 : Définir le répertoire de travail
 WORKDIR /app
 
-# Étape 5 : Copier les fichiers nécessaires
+# if we have a packages.txt, install it here, uncomment the two lines below
+# be aware that packages.txt must have LF endings only!
+COPY packages.txt packages.txt
+RUN xargs -a packages.txt apt-get install --yes
+
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
+
+EXPOSE 8501
+
 COPY . .
 
-# Étape 6 : Mise à jour de pip et installation des dépendances
-RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
-RUN pip install undetected-chromedriver
-
-# Étape 7 : Commande par défaut pour exécuter l'application
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
