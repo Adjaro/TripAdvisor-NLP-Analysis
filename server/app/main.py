@@ -1,17 +1,16 @@
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
-from .model import models, schemas
-from .utils import database
 from pydantic import BaseModel
-from .scraper import TripadvisorScraper
-from .alimentationBd import insert_json_data, get_data_list, read_json_file
+from typing import List, Optional
 import os
 import logging
-from typing import List
 import pandas as pd
-from fastapi import Query
-from typing import Optional
 from sqlalchemy import text
+
+from .model import models, schemas
+from .utils import database
+from .scraper import TripadvisorScraper
+from .alimentationBd import insert_json_data, get_data_list, read_json_file
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -58,7 +57,7 @@ async def startup():
             data_exists = await check_existing_data(db, data['nom'], data['adresse'])
             if not data_exists:
                 logger.info("Inserting initial data...")
-                await insert_json_data(data_dir)
+                insert_json_data(data_dir)  # Removed await
             else:
                 logger.info("Data already exists in database")
         finally:
@@ -72,39 +71,46 @@ def scrape(url: str):
     try:
         scraper = TripadvisorScraper(url)
         scraper.scrapper()
-        # return {"message": "Scraping successful"}
         data = scraper.data
-
         return data
     except Exception as e:
         logger.error(f"Error during scraping: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
-@app.get("/allrestaurants", response_model=List[schemas.DimRestaurant])
-def read_restaurant(db: Session = Depends(get_db)):
+@app.get("/restaurant", response_model=List[schemas.DimRestaurant])
+def read_restaurant(
+    skip: int = Query(default=0, ge=0),
+    limit: int = Query(default=100, le=1000),
+    db: Session = Depends(get_db)
+):
     try:
-        return db.query(models.DimRestaurant).all()
+        return db.query(models.DimRestaurant).offset(skip).limit(limit).all()
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/location", response_model=List[schemas.DimLocation])
-def read_location(db: Session = Depends(get_db)):
+def read_location(
+    skip: int = Query(default=0, ge=0),
+    limit: int = Query(default=100, le=1000),
+    db: Session = Depends(get_db)
+):
     try:
-        return db.query(models.DimLocation).all()
+        return db.query(models.DimLocation).offset(skip).limit(limit).all()
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/date", response_model=List[schemas.DimDate])
-def read_date(db: Session = Depends(get_db)):
+def read_date(
+    skip: int = Query(default=0, ge=0),
+    limit: int = Query(default=100, le=1000),
+    db: Session = Depends(get_db)
+):
     try:
-        return db.query(models.DimDate).all()
+        return db.query(models.DimDate).offset(skip).limit(limit).all()
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-
-
-@app.get("/review")
+@app.get("/review", response_model=List[schemas.FaitAvis])
 async def read_review(
     skip: int = Query(default=0, ge=0),
     limit: int = Query(default=100, le=1000),
@@ -124,20 +130,6 @@ async def read_review(
         if max_note:
             query = query.filter(models.FaitAvis.note <= max_note)
 
-        # Add pagination and streaming
-        total = query.count()
-        reviews = query.offset(skip).limit(limit).yield_per(100)
-
-        return {
-            "total": total,
-            "skip": skip,
-            "limit": limit,
-            "reviews": [schemas.FaitAvis.model_validate(review) for review in reviews]
-        }
-
+        return query.offset(skip).limit(limit).all()
     except Exception as e:
-        logger.error(f"Error fetching reviews: {str(e)}")
-        raise HTTPException(
-            status_code=500,
-            detail=f"Error fetching reviews: {str(e)}"
-        )
+        raise HTTPException(status_code=500, detail=str(e))

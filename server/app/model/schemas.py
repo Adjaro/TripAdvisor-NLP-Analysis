@@ -11,6 +11,26 @@ class DimLocationBase(BaseModel):
 
 class DimRestaurantBase(BaseModel):
     nom: Optional[str]
+    classement: Optional[int]
+    horaires: Optional[str]
+    note_globale: Optional[float]
+    note_cuisine: Optional[float]
+    note_service: Optional[float]
+    note_rapportqualiteprix: Optional[float]
+    note_ambiance: Optional[float]
+    infos_pratiques: Optional[str]
+    repas: Optional[str]
+    # regimes: Optional[str]
+    fourchette_prix: Optional[str]
+    fonctionnalites: Optional[str]
+    type_cuisines: Optional[str]
+    nb_avis: Optional[int]
+    nbExcellent: Optional[int]
+    nbTresbon: Optional[int]
+    nbMoyen: Optional[int]
+    nbMediocre: Optional[int]
+    nbHorrible: Optional[int]
+
     id_location: Optional[str]
 
 class DimDateBase(BaseModel):
@@ -22,8 +42,14 @@ class DimDateBase(BaseModel):
 class FaitAvisBase(BaseModel):
     id_restaurant: str
     id_date: str
-    note: Optional[int]
+    # experience: Optional[str]
+    review: Optional[str]
+    # titre_avis: Optional[str]
+    nb_etoiles: Optional[int]
 
+
+
+    
 # Create schemas
 class DimLocationCreate(DimLocationBase):
     pass

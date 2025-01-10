@@ -18,3 +18,4 @@ selenium==4.27.1
 SQLAlchemy==2.0.36
 undetected-chromedriver==3.5.5
 uvicorn==0.34.0
+webdriver-manager

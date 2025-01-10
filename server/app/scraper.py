@@ -7,10 +7,10 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
-# import undetected_chromedriver as uc
-from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from webdriver_manager.chrome import ChromeDriverManager
 import os
+from selenium import webdriver
 
 class TripadvisorScraper:
     def __init__(self, url):
@@ -20,57 +20,20 @@ class TripadvisorScraper:
         self.nb_pages = None
         self.nb_commentaires_par_page = None
         self.data = None
-        
         self.driver = None
 
-    # def setup_driver(self):
-    #     options = uc.ChromeOptions()
-        
-    #     # Configure Chrome options
-    #     options.add_argument("--headless")
-    #     options.add_argument("--no-sandbox")
-    #     options.add_argument("--disable-dev-shm-usage")
-    #     options.add_argument("--disable-gpu")
-        
-    #     # Set Chrome binary location for Docker
-    #     chrome_binary = "/usr/bin/google-chrome"
-    #     if os.path.exists(chrome_binary):
-    #         options.binary_location = chrome_binary
-        
-    #     try:
-    #         self.driver = uc.Chrome(options=options)
-    #     except Exception as e:
-    #         raise Exception(f"Failed to initialize Chrome driver: {str(e)}")
-
     def create_driver(self):
-        # chromedriver_path = os.path.join(os.path.dirname(__file__), 'chromedriver.exe')
-        # print(chromedriver_path)
- 
-        # service = Service('chromedriver.exe')
+        options = webdriver.ChromeOptions()
+        options.add_argument("--no-sandbox")
+        options.add_argument("--headless")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-dev-shm-usage")
         user_agents = [
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         ]
-        
-        options =  webdriver.ChromeOptions()
-        # options.binary_location =chromedriver_path
-        # options.BINARY_LOCATION_ERROR_MESSAGE = "L'emplacement du navigateur est introuvable."
-        options.add_argument("--disable-blink-features=AutomationControlled")
-        options.add_argument("--incognito")
-        options.add_argument("--headless")
-        options.add_argument("--disable-gpu")
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
         user_agent = random.choice(user_agents)
         options.add_argument(f'--user-agent={user_agent}')
-     
-        options.add_argument("--disable-extensions")
-        options.add_argument("--disable-infobars")
-        options.add_argument("--start-maximized")
-        options.add_argument("--disable-notifications")
-         
-
-        # return uc.Chrome(options=options, service=service)
-        return uc.Chrome(options=options )
+        return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     def handle_cookies(self):
         try:
@@ -100,7 +63,6 @@ class TripadvisorScraper:
             self.nb_total_commentaires = nb_total_commentaires
             self.nb_pages = nb_pages
             self.nb_commentaires_par_page = nb_commentaires_par_page
-            # return nb_commentaires_par_page, nb_total_commentaires, nb_pages
             return nb_commentaires_par_page, nb_total_commentaires, 2
         else:
             return None, None, None
@@ -339,13 +301,11 @@ class TripadvisorScraper:
             data = self.test_scraping(nbPages_texte)
             self.cleanup()
             self.data = data
-            # return data
 
     def cleanup(self):
         if self.driver:
             self.driver.quit()
             time.sleep(2)
-
 
     def __del__(self):
         self.cleanup()
@@ -353,13 +313,12 @@ class TripadvisorScraper:
     def save_data(self, data):
         pass
 
-    
-# def main():
-#     url = "https://www.tripadvisor.fr/Restaurant_Review-g187265-d5539701-Reviews-L_Institut_Restaurant-Lyon_Rhone_Auvergne_Rhone_Alpes.html"
-#     scraper = TripadvisorScraper(url)
-#     scraper.scrapper()
-#     data = scraper.data
-#     print(data)
+def main():
+    url = "https://www.tripadvisor.fr/Restaurant_Review-g187265-d5539701-Reviews-L_Institut_Restaurant-Lyon_Rhone_Auvergne_Rhone_Alpes.html"
+    scraper = TripadvisorScraper(url)
+    scraper.scrapper()
+    data = scraper.data
+    print(data)
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
