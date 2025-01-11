@@ -46,6 +46,11 @@ class TripadvisorScraper:
         options.add_argument("--disable-features=NetworkService")
         options.add_argument("--window-size=1920x1080")
         options.add_argument("--disable-features=VizDisplayCompositor")
+
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_argument("--incognito")
+         
+        
         user_agent = random.choice(user_agents)
         options.add_argument(f'--user-agent={user_agent}')
 
