@@ -2,6 +2,11 @@
 import streamlit as st
 from interface import accueil , navbar, dashbord, cartographie, analyse_nlp, visualisation_data, scrapper_restaurant, rapport
 import time
+from manager import InitialisationBD
+
+
+# Initialisation de la base de données
+InitialisationBD()
 
  
 
