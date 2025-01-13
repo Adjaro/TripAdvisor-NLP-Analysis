@@ -50,7 +50,7 @@ def show():
 
         # Ajouter des filtres
         with st.expander("🔎 Filtres avancés"):
-            col1, col2, col3 = st.columns(3 , gap="small")
+            col1, col2, col3 = st.columns(3)
             
             with col1:
                 cuisine_filters = st.multiselect(
@@ -75,7 +75,7 @@ def show():
         filtered_restaurants = updateDf(filtered_restaurants, 'fonctionnalites', fonctionnalites_filters)
 
         # Afficher la carte
-        map_col, details_col = st.columns([5, 4], gap="small")
+        map_col, details_col = st.columns([5, 4])
         
         with map_col:
             if filtered_restaurants.empty:
@@ -92,7 +92,6 @@ def show():
                         location=[restaurant["latitude"], restaurant["longitude"]],
                         tooltip=restaurant["nom"],
                         icon=folium.Icon(color="red", icon="cutlery", prefix="fa")
-                    # )
                     ).add_to(marker_cluster)
 
                 map_data = st_folium(folium_map, width=900, height=600)
@@ -107,37 +106,13 @@ def show():
                             (filtered_restaurants["longitude"] == clicked["lng"])
                         ].iloc[0]
                         
-                    st.markdown(f"""
-                        <div style='
-                            background-color: white; 
-                            padding: 20px; 
-                            border-radius: 10px; 
-                            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                            width: 100%;
-                            height: 600px;
-                            overflow-y: auto;
-                            margin-bottom: 20px;
-                        '>
-                            <h2 style='
-                                font-size: 24px;
-                                margin-bottom: 15px;
-                                color: #1E1E1E;
-                            '>{restaurant['nom']}</h2>
-                            <p style='
-                                margin: 10px 0;
-                                font-size: 16px;
-                            '><strong>Note:</strong> {restaurant['note_globale']}/5</p>
-                            <p style='
-                                margin: 10px 0;
-                                font-size: 16px;
-                            '><i class="fas fa-map-marker-alt"></i> {restaurant['adresse']}</p>
-                            <p style='
-                                margin: 10px 0;
-                                font-size: 16px;
-                            '><strong>Info:</strong> {restaurant['infos_pratiques']}</p>
-
+                        st.markdown(f"""
+                        <div style='background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
+                            <h2>{restaurant['nom']}</h2>
+                            <p><i class="fas fa-map-marker-alt"></i> {restaurant['adresse']}</p>
+                            <p><strong>Info:</strong> {restaurant['infos_pratiques']}</p>
                         </div>
-                    """, unsafe_allow_html=True)
+                        """, unsafe_allow_html=True)
                 else:
                     st.info("👆 Cliquez sur un restaurant pour voir les détails.")
             except Exception as e:
