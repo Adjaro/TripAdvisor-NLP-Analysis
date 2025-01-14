@@ -81,19 +81,38 @@ def show():
             if filtered_restaurants.empty:
                 st.warning("Aucun restaurant ne correspond aux filtres.")
             else:
-                folium_map = folium.Map(location=[
-                    filtered_restaurants["latitude"].mean(),
-                    filtered_restaurants["longitude"].mean()
-                ], zoom_start=13)
-                marker_cluster = MarkerCluster().add_to(folium_map)
-
-                for _, restaurant in filtered_restaurants.iterrows():
+                # Centrer la carte sur le premier restaurant
+                first_restaurant = restaurants.iloc[0]
+                map_center = [first_restaurant["latitude"], first_restaurant["longitude"]]
+                
+                # Créer la carte Folium centrée sur le premier restaurant
+                folium_map = folium.Map(location=map_center, zoom_start=13)
+                
+                # Ajouter des marqueurs pour chaque restaurant
+                for _, restaurant in restaurants.iterrows():
                     folium.Marker(
                         location=[restaurant["latitude"], restaurant["longitude"]],
-                        tooltip=restaurant["nom"],
+                        tooltip=restaurant["nom"],  # Tooltip affiché au survol
                         icon=folium.Icon(color="red", icon="cutlery", prefix="fa")
-                    # )
-                    ).add_to(marker_cluster)
+                    ).add_to(folium_map)
+                
+                # Afficher la carte (si vous êtes dans un notebook Jupyter)
+                # folium_map.save("map.html")  # Enregistrer la carte dans un fichier HTML
+                # print("Carte générée avec succès. Ouvrez le fichier 'map.html' pour la voir.")
+
+                # folium_map = folium.Map(location=[
+                #     filtered_restaurants["latitude"].mean(),
+                #     filtered_restaurants["longitude"].mean()
+                # ], zoom_start=13)
+                # marker_cluster = MarkerCluster().add_to(folium_map)
+
+                # for _, restaurant in filtered_restaurants.iterrows():
+                #     folium.Marker(
+                #         location=[restaurant["latitude"], restaurant["longitude"]],
+                #         tooltip=restaurant["nom"],
+                #         icon=folium.Icon(color="red", icon="cutlery", prefix="fa")
+                #     # )
+                #     ).add_to(marker_cluster)
 
                 map_data = st_folium(folium_map, width=900, height=600)
 

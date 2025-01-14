@@ -1,18 +1,33 @@
 import streamlit as st
+from manager import read_restaurant, read_location, get_db
+import pandas as pd
 # from openai import OpenAI
 
 
 
 def show():
     st.title("Restaurant Assistant 🍽️")
-    with st.expander("ℹ️ Disclaimer"):
-        st.caption(
-            """We appreciate your engagement! Please note, this demo is designed to
-            process a maximum of 10 interactions and may be unavailable if too many
-            people use the service concurrently. Thank you for your understanding.
-            """
+    db = next(get_db())
+    try:
+        # Charger et fusionner les données
+        restaurants = pd.merge(
+            read_restaurant(db=db),
+            read_location(db=db),
+            on='id_location'
         )
 
+        if restaurants.empty:
+            st.error("Aucune donnée disponible.")
+            return
+    except Exception as e:
+        st.error(f"Erreur de chargement des données: {e}")
+        return
+    
+    # ajouter une  liste deroulante pour les restaurants
+    restaurant = st.selectbox(
+        "Choisissez un restaurant",
+        restaurants['nom']
+    )
     # client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
     if "openai_model" not in st.session_state:
