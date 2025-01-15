@@ -1,6 +1,6 @@
 # app.py
 import streamlit as st
-from interface import accueil , navbar, dashbord, cartographie, analyse_nlp, visualisation_data, scrapper_restaurant, rapport
+from interface import accueil , navbar, dashbord, cartographie, analyse_nlp, analyse_nlp2, visualisation_data, scrapper_restaurant, rapport
 import time
 from manager import InitialisationBD
 
@@ -40,6 +40,8 @@ if connect_DataBase():
         cartographie.show()
     elif st.session_state.page == 'Analyse NLP':
         analyse_nlp.show()
+    elif st.session_state.page == 'Analyse NLP2':
+        analyse_nlp2.show()
     elif st.session_state.page == 'Visualisation data':
         visualisation_data.show()
     elif st.session_state.page == 'Scrapper Restaurant':
