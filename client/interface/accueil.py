@@ -1,84 +1,100 @@
+from dotenv import find_dotenv, load_dotenv
+import numpy
 import streamlit as st
-from manager import read_restaurant, read_location, get_db
-import pandas as pd
-# from openai import OpenAI
+from rag_simulation.rag_augmented import AugmentedRAG
+from rag_simulation.corpus_ingestion import BDDChunks
 
+load_dotenv(find_dotenv())
+
+ 
+
+@st.cache_resource  # cache_data permet de ne pas avoir à reload la fonction à chaque fois que l'on fait une action sur l'application
+def instantiate_bdd() -> BDDChunks:
+    bdd = BDDChunks(embedding_model="paraphrase-multilingual-MiniLM-L12-v2", path='./')
+    # bdd()
+    return bdd
 
 
 def show():
-    st.title("Restaurant Assistant 🍽️")
-    db = next(get_db())
-    try:
-        # Charger et fusionner les données
-        restaurants = pd.merge(
-            read_restaurant(db=db),
-            read_location(db=db),
-            on='id_location'
+
+    col1, col2, col3 = st.columns([1, 2, 1])
+
+    with col1:
+        generation_model = st.selectbox(
+            label="Choose your LLM",
+            options=[
+                "ministral-8b-latest",
+                "open-codestral-mamba",
+            ],
         )
 
-        if restaurants.empty:
-            st.error("Aucune donnée disponible.")
-            return
-    except Exception as e:
-        st.error(f"Erreur de chargement des données: {e}")
-        return
-    
-    # ajouter une  liste deroulante pour les restaurants
-    restaurant = st.selectbox(
-        "Choisissez un restaurant",
-        restaurants['nom']
-    )
-    # client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+    with col2:
+        role_prompt = st.text_area(
+            label="Le rôle du chatbot",
+            value="""Tu es un agent conversationnel. Ton rôle est d'aider les élèves du Master 2 SISE.
+        Si tu n'as pas l'information nécessaire pour répondre, tu peux rediriger l'élève vers les responsables du Master.""",
+        )
 
-    if "openai_model" not in st.session_state:
-        st.session_state["openai_model"] = "gpt-3.5-turbo"
+    with col3:
+        path = st.text_input(label="Path to PDF", value="C:/Users/ediad/Documents/llm/TD2/ressources/Pratique_Methodes_Factorielles.pdf")
+
+    col_max_tokens, col_temperature, _ = st.columns([0.25, 0.25, 0.5])
+    with col_max_tokens:
+        max_tokens = st.select_slider(
+            label="Output max tokens", options=list(range(200, 2000, 50))
+        )
+
+    with col_temperature:
+        range_temperature = [round(x, 2) for x in list(numpy.linspace(0, 5, num=50))]
+        temperature = st.select_slider(label="Temperature", options=range_temperature)
+
+    if path:
+        llm = AugmentedRAG(
+            role_prompt=role_prompt,
+            generation_model=generation_model,
+            bdd_chunks= instantiate_bdd(),
+            top_n=10,
+            max_tokens=max_tokens,
+            temperature=temperature,
+        )
+
 
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
-    if "max_messages" not in st.session_state:
-        # Counting both user and assistant messages, so 10 rounds of conversation
-        st.session_state.max_messages = 20
-
+    # On affiche les messages de l'utilisateur et de l'IA entre chaque message
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    if len(st.session_state.messages) >= st.session_state.max_messages:
-        st.info(
-            """Notice: The maximum message limit for this demo version has been reached. We value your interest!
-            We encourage you to experience further interactions by building your own application with instructions
-            from Streamlit's [Build a basic LLM chat app](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)
-            tutorial. Thank you for your understanding."""
-        )
-
-    else:
-        if prompt := st.chat_input("What is up?"):
-            st.session_state.messages.append({"role": "user", "content": prompt})
-            with st.chat_message("user"):
-                st.markdown(prompt)
-
-            with st.chat_message("assistant"):
-                try:
-                    # stream = client.chat.completions.create(
-                    #     model=st.session_state["openai_model"],
-                    #     messages=[
-                    #         {"role": m["role"], "content": m["content"]}
-                    #         for m in st.session_state.messages
-                    #     ],
-                    #     stream=True,
-                    # )
-                    # response = st.write_stream(stream)
-                    st.session_state.messages.append(
-                        {"role": "assistant", "content": "response"}
-                    )
-                except:
-                    st.session_state.max_messages = len(st.session_state.messages)
-                    rate_limit_message = """
-                        Oops! Sorry, I can't talk now. Too many people have used
-                        this service recently.
-                    """
-                    st.session_state.messages.append(
-                        {"role": "assistant", "content": rate_limit_message}
-                    )
-                    st.rerun()
+    # Si présence d'un input par l'utilisateur,
+    if query := st.chat_input(""):
+        if not path:
+            st.error("You forgot to define a path!! 😱")
+        else:
+            if query.strip():
+                # On affiche le message de l'utilisateur
+                with st.chat_message("user"):
+                    st.markdown(query)
+                # On ajoute le message de l'utilisateur dans l'historique de la conversation
+                st.session_state.messages.append({"role": "user", "content": query})
+                # On récupère la réponse du chatbot à la question de l'utilisateur
+                response = llm(
+                    query=query,
+                    history=st.session_state.messages,
+                )
+                # On affiche la réponse du chatbot
+                with st.chat_message("assistant"):
+                    st.markdown(response['response'])
+                    # st.markdown(llm.latency)
+                    # st.markdown(llm.input_tokens)
+                    # st.markdown(llm.output_tokens)
+                    # st.markdown(llm.llm)
+                    # st.markdown(llm.dollor_cost)
+                    # st.markdown(llm.)
+                # On ajoute le message du chatbot dans l'historique de la conversation
+                st.session_state.messages.append({"role": "assistant", "content": response})
+            # On ajoute un bouton pour réinitialiser le chat
+    if st.button("Réinitialiser le Chat", type="primary"):
+        st.session_state.messages = []
+        st.rerun()

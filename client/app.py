@@ -3,6 +3,8 @@ import streamlit as st
 from interface import accueil , navbar, dashbord, cartographie, analyse_nlp, analyse_nlp2, visualisation_data, scrapper_restaurant, rapport
 import time
 from manager import InitialisationBD
+# from rag_simulation.corpus_ingestion import BDDChunks 
+# from rag_simulation.rag_augmented import AugmentedRAG
 
 
 # Initialisation de la base de données

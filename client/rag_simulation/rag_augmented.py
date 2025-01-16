@@ -1,12 +1,11 @@
-from dotenv import load_dotenv, find_dotenv
 import litellm
 import numpy as np
 from numpy.typing import NDArray
 import  time
-from ecologits import EcoLogits
+from dotenv import load_dotenv, find_dotenv
+# from .corpus_ingestion import BDDChunks
 
-from rag_simulation.corpus_ingestion import BDDChunks
-
+# from .rag_simulation.corpus_ingestion import BDDChunks
 load_dotenv(find_dotenv())
 
 
@@ -17,12 +16,16 @@ class AugmentedRAG:
     database (or corpus) and then passes it to a generative model for further processing.
 
     """
+    HF_TOKEN = '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'
+    MISTRAL_API_KEY =  'dkMKu81kFgJeP7HmIqjztosQTxyiynW6'
+
 
     def __init__(
         self,
         generation_model: str,
         role_prompt: str,
-        bdd_chunks: BDDChunks,
+        bdd_chunks: None,
+        # bdd_chunks: BDDChunks,
         max_tokens: int,
         temperature: int,
         top_n: int = 2,
@@ -62,34 +65,35 @@ class AugmentedRAG:
         """
 
         return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
-
+    
     def get_top_similarity(
-        self,
-        embedding_query: NDArray[np.float32],
-        embedding_chunks: NDArray[np.float32],
-        corpus: list[str],
-    ) -> list[str]:
-        """
-        Retrieves the top N most similar documents from the corpus based on the query's embedding.
+            self,
+            embedding_query: NDArray[np.float32],
+            embedding_chunks: NDArray[np.float32],
+            corpus: list[str],
+        ) -> list[str]:
+            """
+            Retrieves the top N most similar documents from the corpus based on the query's embedding.
 
-        Args:
-            embedding_query (NDArray[np.float32]): The embedding of the query.
-            embedding_chunks (NDArray[np.float32]): A NumPy array of embeddings for the documents in the corpus.
-            corpus (List[str]): A list of documents (strings) corresponding to the embeddings in `embedding_chunks`.
-            top_n (int, optional): The number of top similar documents to retrieve. Defaults to 5.
+            Args:
+                embedding_query (NDArray[np.float32]): The embedding of the query.
+                embedding_chunks (NDArray[np.float32]): A NumPy array of embeddings for the documents in the corpus.
+                corpus (List[str]): A list of documents (strings) corresponding to the embeddings in `embedding_chunks`.
+                top_n (int, optional): The number of top similar documents to retrieve. Defaults to 5.
 
-        Returns:
-            List[str]: A list of the most similar documents from the corpus, ordered by similarity to the query.
-        """
-        cos_dist_list = np.array(
-            [
-                self.get_cosim(embedding_query, embed_doc)
-                for embed_doc in embedding_chunks
-            ]
-        )
-        indices_of_max_values = np.argsort(cos_dist_list)[-self.top_n :][::-1]
-        print(indices_of_max_values)
-        return [corpus[i] for i in indices_of_max_values]
+            Returns:
+                List[str]: A list of the most similar documents from the corpus, ordered by similarity to the query.
+            """
+            cos_dist_list = np.array(
+                [
+                    self.get_cosim(embedding_query, embed_doc)
+                    for embed_doc in embedding_chunks
+                ]
+            )
+            indices_of_max_values = np.argsort(cos_dist_list)[-self.top_n :][::-1]
+            print(indices_of_max_values)
+            return [corpus[i] for i in indices_of_max_values]
+
 
     def build_prompt(
         self, context: list[str], history: str, query: str
@@ -129,10 +133,11 @@ class AugmentedRAG:
         ]
 
 
+
     def _generate(self, prompt_dict: list[dict[str, str]]) -> litellm.ModelResponse:
 
 
-        EcoLogits.init(providers="litellm", electricity_mix_zone="FRA")
+         
 
         response = litellm.completion(
             model=f"mistral/{self.llm}",
@@ -142,6 +147,8 @@ class AugmentedRAG:
         )  # type: ignore
 
         return response
+
+
 
     def call_model(self, prompt_dict: list[dict[str, str]]) -> str:
         """
@@ -159,32 +166,21 @@ class AugmentedRAG:
         chat_response: str = self._generate(prompt_dict=prompt_dict)
         end_time = time.process_time()
         self.latency = end_time - start_time
-        print(f"Latency: {self.latency}")
 
         self.input_tokens = chat_response.usage.prompt_tokens
         self.output_tokens = chat_response.usage.completion_tokens
     
-        # self.output = chat_response.choices[0].message.content
-        
-        # self.dollor_cost = self._get_price()
-        self.dollor_cost = chat_response
 
-        energy_usage  , gwp = self._get_energy_usage(chat_response)
-        print(f"Energy usage: {energy_usage}")
-        print(f"GWP: {gwp}")
         dict_response = {
             "response": chat_response.choices[0].message.content,
-            "energy_usage": energy_usage,
-            "gwp": gwp,
             "latency": self.latency,
             "input_tokens": self.input_tokens,
             "output_tokens": self.output_tokens,
-            "llm": self.llm,
-            "dollor_cost": self.dollor_cost
-            
+            "llm": self.llm,           
         }
         return dict_response
         # return str(chat_response.choices[0].message.content)
+
 
     def __call__(self, query: str, history: dict[str, str]) -> str:
         """
@@ -213,25 +209,34 @@ class AugmentedRAG:
         )
         response = self.call_model(prompt_dict=prompt_rag)
         return response
-    
-    def  _get_price(self ):
-        
-       dict_price = {
-            "ministral-8b-latest": {"input": 0.10, "output": 0.10},
-            "ministral-3b-latest": {"input": 0.04, "output": 0.04},
-            "codestral-latest": {"input": 0.20, "output": 0.60},
-            "mistral-large-latest": {"input": 2, "output": 6},
-        }
-       
-       input_prix = dict_price[self.llm]["input"] * self.input_tokens
-       output_prix = dict_price[self.llm]["output"] * self.output_tokens
 
-       return input_prix + output_prix
-    
-    def  _get_energy_usage(self, response: litellm.ModelResponse):
-         
-         energy_usage = getattr(response.impacts.energy.value, "min", response.impacts.energy.value)
-         gwp = getattr(response.impacts.gwp.value, "min", response.impacts.gwp.value)
-         return energy_usage , gwp
-    
 
+# generation_model = "ministral-8b-latest"
+# role_prompt = "Tu es un assistant virtuel qui aide les utilisateurs à répondre à des questions."
+# bdd_chunks = BDDChunks(embedding_model="paraphrase-xlm-r-multilingual-v1", path="./")
+# max_tokens = 100
+# temperature = 0.5
+
+# # Initialize the SimpleRAG instance
+# simple_rag = AugmentedRAG(
+#     generation_model=generation_model,
+#     role_prompt=role_prompt,
+#     bdd_chunks=bdd_chunks,
+#     max_tokens=max_tokens,
+#     temperature=temperature,
+
+# )
+
+# # Define the conversation history
+# history = {
+#     "user": "Quelle est la capitale de la France ?",
+#     "bot": "La capitale de la France est Paris.",
+# }
+
+# # Define the user query
+# query = "specialiter La Table de la Boucherie Bello"
+# bdd_chunks._create_collection(path="./")
+
+# # Generate a response using the SimpleRAG instance
+# response = simple_rag(query=query, history=history)
+# print(response)
