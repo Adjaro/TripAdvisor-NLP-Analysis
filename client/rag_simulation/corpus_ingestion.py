@@ -1,136 +1,176 @@
-import os
-import re
-import uuid
-import fitz
-import chromadb
+from model import models, schemas
+from utils import database
+import pandas as pd
 import tiktoken
 from tqdm import tqdm
 
-from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
-from chromadb.config import Settings
 
 enc = tiktoken.get_encoding("o200k_base")
 
-
 class BDDChunks:
     """
-    A class to handle operations related to chunking text data, embedding, and storing in a ChromaDB instance.
-
-    This class provides methods to:
-    - Read text from PDF files.
-    - Split the text into smaller chunks for processing.
-    - Create a ChromaDB collection with embeddings for the chunks.
-    - Add these chunks and their embeddings to the ChromaDB collection.
+    A class to process reviews from a SQLite database and store them as chunks with embeddings.
+    Each review is considered a single chunk.
     """
 
-    def __init__(self, embedding_model: str, path: str):
+    def __init__(self):
         """
-        Initialize a BDDChunks instance.
-
-        Args:
-            embedding_model (str): The name of the embedding model to use for generating embeddings.
-            path (str): The file path to the PDF or dataset to process.
+        Initialize the BDDChunksSQLite instance.
         """
-        self.path = path
-        self.chunks: list[str] | None = None
-        self.client = chromadb.PersistentClient(
-            path="./ChromaDB", settings=Settings(anonymized_telemetry=False)
-        )
-        self.embedding_name = embedding_model
-        self.embeddings = SentenceTransformerEmbeddingFunction(
-            model_name=embedding_model
-        )
-        self.chroma_db = None
+        self.db = None  # Placeholder for the database session.
 
-    def _create_collection(self, path: str) -> None:
+    def get_db(self):
         """
-        Create a new ChromaDB collection for storing embeddings.
+        Provide a database session.
 
-        Args:
-            path (str): The name of the collection to create in ChromaDB.
+        Yields:
+            db: A session instance from the database.
         """
-        # Tester qu'en changeant de path, on accède pas au reste
-        file_name = "a" + os.path.basename(path)[0:50].strip() + "a"
-        file_name = re.sub(r"\s+", "-", file_name)
-        # Expected collection name that (1) contains 3-63 characters, (2) starts and ends with an alphanumeric character, (3) otherwise contains only alphanumeric characters, underscores or hyphens (-), (4) contains no two consecutive periods (..)
-        self.chroma_db = self.client.get_or_create_collection(name=file_name, embedding_function=self.embeddings, metadata={"hnsw:space": "cosine"})  # type: ignore
+        db = database.SessionLocal()
+        try:
+            yield db
+        finally:
+            db.close()
 
-    def read_pdf(self, file_path: str) -> str:
+    def get_all_restaurants_names(self) -> list[str]:
         """
-        Reads the content of a PDF file, excluding the specified number of pages from the start and end.
-
-        Args:
-            file_path (str): The path to the PDF file.
+        Get all restaurant names from the SQLite database.
 
         Returns:
-            str: The extracted text from the specified pages of the PDF.
+            list[str]: A list of restaurant names.
         """
-        doc = fitz.open(file_path)
-        text = str()
-        for page_num in range(len(doc)):
-            page = doc.load_page(page_num)
-            text += page.get_text()  # type: ignore
-        return text  # type: ignore
+        try:
+            with next(self.get_db()) as db:
+                restaurants = db.query(models.DimRestaurant).all()
+                return [r.nom for r in restaurants]
+        except Exception as e:
+            print(f"An error occurred while fetching restaurant names: {e}")
+            return []
 
-    def split_text_into_chunks(self, corpus: str, chunk_size: int = 500) -> list[str]:
+    def convert_to_arrow_compatible(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Splits a given text corpus into chunks of a specified size.
+        Convert a DataFrame to an Arrow-compatible format.
+        
+        Args:
+            df (pd.DataFrame): Input DataFrame.
+        
+        Returns:
+            pd.DataFrame: Converted DataFrame.
+        """
+        for column in df.columns:
+            if df[column].dtype == 'object':
+                df[column] = df[column].astype(str)
+            elif df[column].dtype == 'int64':
+                df[column] = df[column].astype('int32')
+        return df
+
+    def get_restaurant_reviews_location(self, restaurant_name: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+        """
+        Get the location and reviews for a specific restaurant.
 
         Args:
-            corpus (str): The input text corpus to be split into chunks.
-            chunk_size (int, optional): The size of each chunk. Defaults to 500.
+            restaurant_name (str): The name of the restaurant.
 
         Returns:
-            list[str]: A list of text chunks.
+            tuple: DataFrames for reviews, location, and restaurant information.
         """
-        tokenized_corpus = enc.encode(corpus)
-        chunks = [
-            "".join(enc.decode(tokenized_corpus[i : i + chunk_size]))
-            for i in tqdm(range(0, len(tokenized_corpus), chunk_size))
-        ]
+        try:
+            with next(self.get_db()) as db:
+                restaurant = db.query(models.DimRestaurant).filter(models.DimRestaurant.nom == restaurant_name).first()
+                location = db.query(models.DimLocation).filter(models.DimLocation.id_location == restaurant.id_location).first()
+                avis = db.query(models.FaitAvis).filter(models.FaitAvis.id_restaurant == restaurant.id_restaurant).all()
+            
+            avis_df = pd.DataFrame([schemas.FaitAvis.from_orm(a).dict() for a in avis])
+            location_df = pd.DataFrame([schemas.DimLocation.from_orm(location).dict()])
+            restaurant_df = pd.DataFrame([schemas.DimRestaurant.from_orm(restaurant).dict()])
+            
+            return avis_df, location_df, restaurant_df
+        except Exception as e:
+            print(f"An error occurred while fetching restaurant reviews location: {e}")
+            return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
 
-        return chunks
-
-    def add_embeddings(self, list_chunks: list[str], batch_size: int = 100) -> None:
+    def transform_restaurant_chunk(self, restaurant_name: str) -> pd.DataFrame:
         """
-        Add embeddings for text chunks to the ChromaDB collection.
+        Transform a restaurant's data and reviews into structured chunks.
 
         Args:
-            list_chunks (list[str]): A list of text chunks to embed and add to the collection.
-            batch_size (int, optional): The batch size for adding documents to the collection. Defaults to 100.
+            restaurant_name (str): The name of the restaurant.
 
-        Note:
-            ChromaDB supports a maximum of 166 documents per batch.
+        Returns:
+            pd.DataFrame: A DataFrame containing the restaurant chunks.
         """
-        if len(list_chunks) < batch_size:
-            batch_size_for_chromadb = len(list_chunks)
-        else:
-            batch_size_for_chromadb = batch_size
+        colnames = ['restaurant', 'chunk']
+        avis_df, location_df, restaurant_df = self.get_restaurant_reviews_location(restaurant_name)
+        
+        if restaurant_df.empty:
+            return pd.DataFrame(columns=colnames)
 
-        document_ids: list[str] = []
+        chunks = []
+        for column in restaurant_df.columns:
+            value = restaurant_df[column].iloc[0]
+            chunks.append({'restaurant': restaurant_name, 'chunk': f"{column}: {value}"})
 
-        for i in tqdm(
-            range(0, len(list_chunks), batch_size_for_chromadb)
-        ):  # On met en place une stratégie d'ajout par batch car ChromaDB ne supporte pas plus de 166 documents d'un coup.
-            batch_documents = list_chunks[i : i + batch_size_for_chromadb]
-            list_ids = [
-                str(id_chunk) for id_chunk in list(range(i, i + len(batch_documents)))
+        # Include review comments as chunks
+        for _, review in avis_df.iterrows():
+            chunks.append({'restaurant': restaurant_name, 'chunk': f"Review: {review['review']}"})
+
+        return pd.DataFrame(chunks, columns=colnames)
+
+    def create_corpus(self) -> str:
+        """
+        Create a corpus from the restaurant chunks.
+
+        Returns:
+            str: The text corpus.
+        """
+        corpus = ""
+        for restaurant in self.get_all_restaurants_names():
+            df = self.transform_restaurant_chunk(restaurant)
+            corpus += " ".join(df['chunk'].values) + " "
+        return corpus
+
+    def insert_into_db(self):
+        """
+        Insert the chunks into the SQLite database in batches for improved performance.
+        """
+        all_restaurants = self.get_all_restaurants_names()
+        batch_size = 100 # Define the batch size for insertion
+
+        for restaurant in tqdm(all_restaurants):
+            #verifier si le restaurant est deja dans la table rag_avis
+            try:
+                with next(self.get_db()) as db:
+                    restaurant_exists = db.query(models.RagAvis).filter(models.RagAvis.restaurantName == restaurant).first()
+            except Exception as e:
+                print(f"An error occurred while checking if the restaurant exists in the database: {e}")
+                restaurant_exists = None
+
+            if restaurant_exists:
+                print(f"Restaurant {restaurant} already exists in the database.")
+                continue
+            df = self.transform_restaurant_chunk(restaurant)
+            chunks = [
+                models.RagAvis(restaurantName=row['restaurant'], review=row['chunk'])
+                for _, row in df.iterrows()
             ]
-            list_id_doc = [str(uuid.uuid4()) for x in list_ids]
-            self.chroma_db.add(documents=batch_documents, ids=list_id_doc)  # type: ignore
-            document_ids.extend(list_ids)
 
-    def __call__(self) -> None:
-        """
-        Execute the entire process of reading, chunking, creating a collection, and adding embeddings.
+            try:
+                with next(self.get_db()) as db:
+                    for i in range(0, len(chunks), batch_size):
+                        db.bulk_save_objects(chunks[i:i + batch_size])
+                        db.commit()
+            except Exception as e:
+                print(f"An error occurred while inserting chunks into the database for {restaurant}: {e}")
 
-        This method:
-        1. Reads the text from the specified PDF file.
-        2. Splits the text into chunks.
-        3. Creates a ChromaDB collection for storing the embeddings.
-        4. Adds the text chunks and their embeddings to the ChromaDB collection.
+
+    def __call__(self, *args, **kwargs):
         """
-        corpus = self.read_pdf(file_path=self.path)
-        chunks = self.split_text_into_chunks(corpus=corpus)
-        self._create_collection(path=self.path)
-        self.add_embeddings(list_chunks=chunks)
+        Entry point to invoke methods of the class.
+        """
+        self.insert_into_db()
+
+
+# # Test the class
+# if __name__ == "__main__":
+#     test = BDDChunksSQLite()
+#     test.insert_into_db()

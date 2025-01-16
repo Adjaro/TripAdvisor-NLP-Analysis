@@ -75,9 +75,13 @@ def scrape(url: str):
         raise RuntimeError(f"Scraping failed: {str(e)}")
 
 # Query restaurants
-def read_restaurant(db: Session, skip: int = 0, limit: int = 100) -> pd.DataFrame:
+def read_restaurant(db: Session, skip: int = 0, limit: Optional[int] = None) -> pd.DataFrame:
     try:
-        restaurants = db.query(models.DimRestaurant).offset(skip).limit(limit).all()
+        if limit is None:
+            restaurants = db.query(models.DimRestaurant).all()
+        else:
+            restaurants = db.query(models.DimRestaurant).offset(skip).limit(limit).all()
+            
         df = pd.DataFrame([schemas.DimRestaurant.from_orm(restaurant).dict() for restaurant in restaurants])
         return convert_to_arrow_compatible(df)
     except Exception as e:
@@ -85,9 +89,12 @@ def read_restaurant(db: Session, skip: int = 0, limit: int = 100) -> pd.DataFram
         raise RuntimeError(f"Query failed: {str(e)}") from e
 
 # Query locations
-def read_location(db: Session, skip: int = 0, limit: int = 100) -> pd.DataFrame:
+def read_location(db: Session, skip: int = 0, limit: Optional[int] = None) -> pd.DataFrame:
     try:
-        locations = db.query(models.DimLocation).offset(skip).limit(limit).all()
+        if limit is None:
+            locations = db.query(models.DimLocation).all()
+        else:
+            locations = db.query(models.DimLocation).offset(skip).limit(limit).all()
         df = pd.DataFrame([schemas.DimLocation.from_orm(location).dict() for location in locations])
         return convert_to_arrow_compatible(df)
     except Exception as e:
@@ -95,9 +102,13 @@ def read_location(db: Session, skip: int = 0, limit: int = 100) -> pd.DataFrame:
         raise RuntimeError(f"Query failed: {str(e)}")
 
 # Query dates
-def read_date(db: Session, skip: int = 0, limit: int = 100) -> pd.DataFrame:
+def read_date(db: Session, skip: int = 0, limit: Optional[int]= None) -> pd.DataFrame:
     try:
-        dates = db.query(models.DimDate).offset(skip).limit(limit).all()
+        if limit is None:
+            dates = db.query(models.DimDate).all()
+        else:
+            dates = db.query(models.DimDate).offset(skip).limit(limit).all()
+
         df = pd.DataFrame([schemas.DimDate.from_orm(date).dict() for date in dates])
         return convert_to_arrow_compatible(df)
     except Exception as e:
@@ -108,13 +119,14 @@ def read_date(db: Session, skip: int = 0, limit: int = 100) -> pd.DataFrame:
 def read_review(
     db: Session,
     skip: int = 0,
-    limit: int = 5,
+    limit: Optional[int] = None,
     restaurant_id: Optional[str] = None,
     min_note: Optional[int] = None,
     max_note: Optional[int] = None
 ) -> pd.DataFrame:
     try:
         query = db.query(models.FaitAvis)
+        
 
         # Apply filters
         if restaurant_id:
@@ -124,7 +136,11 @@ def read_review(
         if max_note is not None:
             query = query.filter(models.FaitAvis.note <= max_note)
 
-        reviews = query.offset(skip).limit(limit).all()
+        if limit is None:
+            reviews = query.all()
+        else:
+            reviews = query.offset(skip).limit(limit).all()
+
         df = pd.DataFrame([schemas.FaitAvis.from_orm(review).dict() for review in reviews])
         return convert_to_arrow_compatible(df)
     except Exception as e:

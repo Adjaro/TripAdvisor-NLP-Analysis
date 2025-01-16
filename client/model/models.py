@@ -54,4 +54,11 @@ class FaitAvis(Base):
     experience = Column(String, nullable=True)
     review = Column(String, nullable=True)
     titre_avis = Column(String, nullable=True)
-    
+
+
+class RagAvis(Base):
+    __tablename__ = "rag_avis"
+    id_rag = Column(String, primary_key=True, index=True, default=lambda: str(uuid.uuid4()))
+    restaurantName = Column(String, nullable=True)
+    review = Column(String, nullable=True)
+    embedding = Column(String, nullable=True)

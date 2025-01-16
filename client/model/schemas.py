@@ -50,7 +50,9 @@ class FaitAvisBase(BaseModel):
     # titre_avis: Optional[str]
     nb_etoiles: Optional[int]
 
-
+class RagAvisBase(BaseModel):
+    restaurantName: Optional[str]
+    review: Optional[str]
 
     
 # Create schemas
@@ -81,4 +83,8 @@ class DimDate(DimDateBase):
 
 class FaitAvis(FaitAvisBase):
     id_avis: str
+    model_config = ConfigDict(from_attributes=True)
+
+class RagAvis(RagAvisBase):
+    id_rag: str
     model_config = ConfigDict(from_attributes=True)

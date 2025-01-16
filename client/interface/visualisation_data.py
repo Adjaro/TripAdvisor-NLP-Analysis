@@ -28,7 +28,17 @@ def show():
         start_idx = (page - 1) * page_size
         end_idx = start_idx + page_size
         return df.iloc[start_idx:end_idx]
+    
+    #####################DELETE THIS PART
+    # Textbox to get user input
+    user_input = st.text_input("Enter some information:")
 
+    # Button to save the text into a variable
+    if st.button("Save"):
+        saved_text = user_input
+        # st.success(f"Text saved: {saved_text}")
+
+    #####################DELETE THIS PART
     # Onglets pour une navigation intuitive
     tab1, tab2, tab3, tab4, tab5 = st.tabs(
         ["📋 Reviews", "📍 Locations", "🍴 Restaurants", "📅 Dates", "🔄 Fusion Temp"]
@@ -37,16 +47,22 @@ def show():
     try:
         # Tab 1: Reviews
         with tab1:
+            st.success(f"Text saved: {saved_text}")
             st.subheader("📋 Avis")
             try:
                 reviews = read_review(db=db)  # Récupération des données
                 if reviews:  # Vérification que les données ne sont pas vides
-                    df_reviews = pd.DataFrame(reviews)
-                    if not df_reviews.empty:  # Vérification explicite pour les DataFrames
-                        df_paginated = paginate_dataframe(df_reviews)
-                        st.dataframe(df_paginated, use_container_width=True)
-                    else:
-                        st.info("ℹ️ Aucune donnée d'avis disponible.")
+                    # st.dataframe(reviews, use_container_width=True)
+                    st.write(reviews)
+                    # df_reviews = pd.DataFrame(reviews)
+                    # if not df_reviews.empty:  # Vérification explicite pour les DataFrames
+                        # df_paginated = paginate_dataframe(df_reviews)
+                        # st.write(df_reviews)
+                        # st.write(reviews)
+                        # st.dataframe(df_reviews, use_container_width=True)
+                        # st.dataframe(df_paginated, use_container_width=True)
+                    # else:
+                    #     st.info("ℹ️ Aucune donnée d'avis disponible.")
                 else:
                     st.info("ℹ️ Aucune donnée d'avis disponible.")
             except Exception as e:
@@ -71,6 +87,7 @@ def show():
 
         # Tab 3: Restaurants
         with tab3:
+            st.success(f"Text saved: {saved_text}")
             st.subheader("🍴 Restaurants")
             try:
                 restaurants = read_restaurant(db=db)  # Récupération des données
