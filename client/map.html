@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_13a75c683f27a0a7b2a88f30468b3f59 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_13a75c683f27a0a7b2a88f30468b3f59" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_13a75c683f27a0a7b2a88f30468b3f59 = L.map(
+                "map_13a75c683f27a0a7b2a88f30468b3f59",
+                {
+                    center: [45.766384, 4.847662],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e3bbd6693fa87b48323baad65da9f74c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e3bbd6693fa87b48323baad65da9f74c.addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var marker_d9ddc0f23d26a4c934009afe8b5f08ca = L.marker(
+                [45.766384, 4.847662],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_41541f4bd42d73756c5270f6346065f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_d9ddc0f23d26a4c934009afe8b5f08ca.setIcon(icon_41541f4bd42d73756c5270f6346065f2);
+        
+    
+            marker_d9ddc0f23d26a4c934009afe8b5f08ca.bindTooltip(
+                `<div>
+                     Agastache Restaurant
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5d5e0f7c5e140341c08eef112675b4f9 = L.marker(
+                [45.777657, 4.833919],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_8466eb97fe50808d49a4d6d45e4454d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_5d5e0f7c5e140341c08eef112675b4f9.setIcon(icon_8466eb97fe50808d49a4d6d45e4454d6);
+        
+    
+            marker_5d5e0f7c5e140341c08eef112675b4f9.bindTooltip(
+                `<div>
+                     Aromatic Restaurant
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_25c5b9e4554009fc2b24b05eb09434ba = L.marker(
+                [45.751785, 4.831047],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_0cae5407dc614d5f91075cc8aef21ad0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_25c5b9e4554009fc2b24b05eb09434ba.setIcon(icon_0cae5407dc614d5f91075cc8aef21ad0);
+        
+    
+            marker_25c5b9e4554009fc2b24b05eb09434ba.bindTooltip(
+                `<div>
+                     BLO Restaurant
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bec1e5bbd0a2f90633f006db3f98c83b = L.marker(
+                [45.76184, 4.826218],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_d326d47142fb58ce3deab81006b5e0fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_bec1e5bbd0a2f90633f006db3f98c83b.setIcon(icon_d326d47142fb58ce3deab81006b5e0fb);
+        
+    
+            marker_bec1e5bbd0a2f90633f006db3f98c83b.bindTooltip(
+                `<div>
+                     Bouchon Les Lyonnais
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_450eb9dd91448e7e96b6997fe7d240b4 = L.marker(
+                [45.74827, 4.828306],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_045e814c7259de594a830ac46ebd8c37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_450eb9dd91448e7e96b6997fe7d240b4.setIcon(icon_045e814c7259de594a830ac46ebd8c37);
+        
+    
+            marker_450eb9dd91448e7e96b6997fe7d240b4.bindTooltip(
+                `<div>
+                     Brasserie Georges
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a595a80c65e25f76f62b79d00f496fd9 = L.marker(
+                [45.762707, 4.850612],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_84276a79831934fae237934325b4d145 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_a595a80c65e25f76f62b79d00f496fd9.setIcon(icon_84276a79831934fae237934325b4d145);
+        
+    
+            marker_a595a80c65e25f76f62b79d00f496fd9.bindTooltip(
+                `<div>
+                     Chez Antonin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_268e1f20a06c30603a6f5ffc40e80e26 = L.marker(
+                [45.750404, 4.828682],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_eeffb8ba3470698ef1c90f923e17a71b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_268e1f20a06c30603a6f5ffc40e80e26.setIcon(icon_eeffb8ba3470698ef1c90f923e17a71b);
+        
+    
+            marker_268e1f20a06c30603a6f5ffc40e80e26.bindTooltip(
+                `<div>
+                     Chez Micheline
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c352d825c4950dfa601f896466cf3de4 = L.marker(
+                [45.774937, 4.827872],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_485f2e32501fcd21c36a93e635482253 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c352d825c4950dfa601f896466cf3de4.setIcon(icon_485f2e32501fcd21c36a93e635482253);
+        
+    
+            marker_c352d825c4950dfa601f896466cf3de4.bindTooltip(
+                `<div>
+                     Copains Copines Sur la Colline
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4b3af2ab69ebe2a02b17f901bf78b060 = L.marker(
+                [45.751328, 4.829706],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_5c1a3858943c2718e2c63869bd00c582 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_4b3af2ab69ebe2a02b17f901bf78b060.setIcon(icon_5c1a3858943c2718e2c63869bd00c582);
+        
+    
+            marker_4b3af2ab69ebe2a02b17f901bf78b060.bindTooltip(
+                `<div>
+                     Frazarin Bistrot Franco Italien
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c4d1067666464c8bd96ec71d1a1cd46d = L.marker(
+                [45.76018, 4.831401],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_154f4981f3a358f98cd9fe4e2f8fc349 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c4d1067666464c8bd96ec71d1a1cd46d.setIcon(icon_154f4981f3a358f98cd9fe4e2f8fc349);
+        
+    
+            marker_c4d1067666464c8bd96ec71d1a1cd46d.bindTooltip(
+                `<div>
+                     L'Acteur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cba561804b69a1586d6bf21fe72a5f78 = L.marker(
+                [45.75963, 4.847064],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_f93b04edd2cd355a742f64161071bfd7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_cba561804b69a1586d6bf21fe72a5f78.setIcon(icon_f93b04edd2cd355a742f64161071bfd7);
+        
+    
+            marker_cba561804b69a1586d6bf21fe72a5f78.bindTooltip(
+                `<div>
+                     L'affreux Jojo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b1b08e1b2a5c020597a34ba3a1f9f7b3 = L.marker(
+                [45.741806, 4.815833],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_f23ae42c54b936e7b5d0a8009cf0e511 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_b1b08e1b2a5c020597a34ba3a1f9f7b3.setIcon(icon_f23ae42c54b936e7b5d0a8009cf0e511);
+        
+    
+            marker_b1b08e1b2a5c020597a34ba3a1f9f7b3.bindTooltip(
+                `<div>
+                     La Criée
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e3213d3a10256b9d8815c0a790fc38a5 = L.marker(
+                [45.74624, 4.82741],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_48022f6420ef5c421fed6512319089bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e3213d3a10256b9d8815c0a790fc38a5.setIcon(icon_48022f6420ef5c421fed6512319089bb);
+        
+    
+            marker_e3213d3a10256b9d8815c0a790fc38a5.bindTooltip(
+                `<div>
+                     La Source
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_124a5e6847add468cd094ba1d58ee7c3 = L.marker(
+                [45.750454, 4.844666],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_3f5744fe88a483779c3eef528bc006b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_124a5e6847add468cd094ba1d58ee7c3.setIcon(icon_3f5744fe88a483779c3eef528bc006b4);
+        
+    
+            marker_124a5e6847add468cd094ba1d58ee7c3.bindTooltip(
+                `<div>
+                     La Table de Max
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a12e89c39e9971229d649b279fd49f95 = L.marker(
+                [45.75459, 4.834144],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_07f581e6e67cc900928773ebcd9e5a62 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_a12e89c39e9971229d649b279fd49f95.setIcon(icon_07f581e6e67cc900928773ebcd9e5a62);
+        
+    
+            marker_a12e89c39e9971229d649b279fd49f95.bindTooltip(
+                `<div>
+                     Les 3 Dômes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_623eb01dfc04be80509edde2ece2bc03 = L.marker(
+                [45.75126, 4.82946],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_f859d280f06f388d45009cf4e0cea523 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_623eb01dfc04be80509edde2ece2bc03.setIcon(icon_f859d280f06f388d45009cf4e0cea523);
+        
+    
+            marker_623eb01dfc04be80509edde2ece2bc03.bindTooltip(
+                `<div>
+                     Le Conde
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_944c3ee95cfc80f91cc70c0995cc8642 = L.marker(
+                [45.773502, 4.832231],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_5be9b8998147a67e081c40ec6213608f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_944c3ee95cfc80f91cc70c0995cc8642.setIcon(icon_5be9b8998147a67e081c40ec6213608f);
+        
+    
+            marker_944c3ee95cfc80f91cc70c0995cc8642.bindTooltip(
+                `<div>
+                     Le Desjeuneur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e005d893e1917320e4fa01d7a10b9973 = L.marker(
+                [45.75872, 4.836448],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_f36bb78b7ca7d3e7dbeb5a780f68cf1f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e005d893e1917320e4fa01d7a10b9973.setIcon(icon_f36bb78b7ca7d3e7dbeb5a780f68cf1f);
+        
+    
+            marker_e005d893e1917320e4fa01d7a10b9973.bindTooltip(
+                `<div>
+                     Le Grand Réfectoire
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9be4689a8e9922a156cb29b0f51e7706 = L.marker(
+                [45.76262, 4.827588],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_00fa36acb11b6a149a8db851402cf310 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_9be4689a8e9922a156cb29b0f51e7706.setIcon(icon_00fa36acb11b6a149a8db851402cf310);
+        
+    
+            marker_9be4689a8e9922a156cb29b0f51e7706.bindTooltip(
+                `<div>
+                     Le Palais Saint Jean
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_deb6c3a8642780a5725c46c952ffbc5b = L.marker(
+                [45.76234, 4.827478],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_2a4123fa083370b0d1b5dace297aaca9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_deb6c3a8642780a5725c46c952ffbc5b.setIcon(icon_2a4123fa083370b0d1b5dace297aaca9);
+        
+    
+            marker_deb6c3a8642780a5725c46c952ffbc5b.bindTooltip(
+                `<div>
+                     Le Vieux Lyon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_992f2ba1fe8b0740067b54080001915c = L.marker(
+                [45.763294, 4.835575],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_b3319cc3c5207784f33d14801f693ebc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_992f2ba1fe8b0740067b54080001915c.setIcon(icon_b3319cc3c5207784f33d14801f693ebc);
+        
+    
+            marker_992f2ba1fe8b0740067b54080001915c.bindTooltip(
+                `<div>
+                     L'Institution
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f957812883af67177764e196f38a8e2b = L.marker(
+                [45.75639, 4.83325],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_d0701633cdc818dc825773861682487c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f957812883af67177764e196f38a8e2b.setIcon(icon_d0701633cdc818dc825773861682487c);
+        
+    
+            marker_f957812883af67177764e196f38a8e2b.bindTooltip(
+                `<div>
+                     L'Institut Restaurant
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_265d4a9f9e71aebd16ebc179750a8f44 = L.marker(
+                [45.746998, 4.845089],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_050e868148d150c933cae5e5be47df79 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_265d4a9f9e71aebd16ebc179750a8f44.setIcon(icon_050e868148d150c933cae5e5be47df79);
+        
+    
+            marker_265d4a9f9e71aebd16ebc179750a8f44.bindTooltip(
+                `<div>
+                     Mama Restaurant Lyon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2a3ab565ba9253961e78a48575c6348f = L.marker(
+                [45.75953, 4.831695],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_101131b18c8d53c53a3af96d534143b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_2a3ab565ba9253961e78a48575c6348f.setIcon(icon_101131b18c8d53c53a3af96d534143b2);
+        
+    
+            marker_2a3ab565ba9253961e78a48575c6348f.bindTooltip(
+                `<div>
+                     Monsieur P
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dab467cfa1c0b652ca3ae38806636928 = L.marker(
+                [45.764557, 4.834678],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_a4d7399387121b0017633ab8a7fef734 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_dab467cfa1c0b652ca3ae38806636928.setIcon(icon_a4d7399387121b0017633ab8a7fef734);
+        
+    
+            marker_dab467cfa1c0b652ca3ae38806636928.bindTooltip(
+                `<div>
+                     Restaurant Le Musée
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_17965be9df3d8c9482981ae8aac05b76 = L.marker(
+                [45.767128, 4.855586],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_6d40a3e81483579220d76ccc3165712c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_17965be9df3d8c9482981ae8aac05b76.setIcon(icon_6d40a3e81483579220d76ccc3165712c);
+        
+    
+            marker_17965be9df3d8c9482981ae8aac05b76.bindTooltip(
+                `<div>
+                     Restaurant Lounge N133
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f43712fea9eff81179299651a08c97c0 = L.marker(
+                [45.779423, 4.833158],
+                {
+}
+            ).addTo(map_13a75c683f27a0a7b2a88f30468b3f59);
+        
+    
+            var icon_b30c755827b5f9fca2951bdc021c34e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f43712fea9eff81179299651a08c97c0.setIcon(icon_b30c755827b5f9fca2951bdc021c34e9);
+        
+    
+            marker_f43712fea9eff81179299651a08c97c0.bindTooltip(
+                `<div>
+                     Restaurant Opaline
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

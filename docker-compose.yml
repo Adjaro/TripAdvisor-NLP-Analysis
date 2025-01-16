@@ -1,0 +1,35 @@
+version: '5'
+
+services:
+  # temp:
+  #   build:
+  #     context: ./temp
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8501:8501"
+    # volumes:
+    #   - sqlite_data:/app/
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    # volumes:
+    #   - sqlite_data:/app/
+
+  # client:
+  #   build:
+  #     context: ./client
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8501:8501"
+  #   depends_on:
+  #     - server
+
+# volumes:
+#   sqlite_data:
+
+# networks:
+#   app_network:
+#     driver: bridge
