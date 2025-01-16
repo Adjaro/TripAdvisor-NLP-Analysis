@@ -48,6 +48,9 @@ def show():
     if st.sidebar.button("💡 Analyse NLP"):
         st.session_state.page = 'Analyse NLP'
 
+    if st.sidebar.button("💡 Analyse NLP2"):
+        st.session_state.page = 'Analyse NLP2'
+
     if st.sidebar.button("📊 Visualisation data"):
         st.session_state.page = 'Visualisation data'
 
