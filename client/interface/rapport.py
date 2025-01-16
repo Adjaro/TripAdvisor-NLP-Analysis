@@ -3,82 +3,197 @@ import pandas as pd
 import plotly.express as px
 import os
 import json
-from manager import read_restaurant, read_location, get_db, read_review
+from manager import read_restaurant, read_location, get_db, read_review, read_date
 
 
-
-
-# def load_restaurants_data():
-#     db = next(get_db())
-#     with db:
-#         df_restaurants = read_restaurant(db)
-#     return df_restaurants
-
-# def read_location_data():
-#     db = next(get_db())
-#     with db:
-#         df_location = read_location(db)
-#     return df_location
-
-# def read_review_data():
-#     db = next(get_db())
-#     with db:
-#         df_review = read_review(db)
-#     return df_review
-
+# Charger les données
 def load_data():
     db = next(get_db())
     with db:
-        df = read_restaurant(db)
-    return df
+        df_restaurant = read_restaurant(db)
+        df_date = read_date(db)
+        df_review = read_review(db)
+    return df_restaurant, df_date, df_review
 
-df = load_data()
+# Charger les données
+df_restaurant, df_date, df_review = load_data()
 
-
+# Interface Streamlit
 def show():
-    # st.write(df)
-    # Vérifier si des données ont été chargées
-    if df.empty:
-        st.error("Aucune donnée n'a été trouvée dans le dossier spécifié.")
-    else:
-        # Transformer `type_cuisine` en liste plate pour le filtrage
-        df["type_cuisine_flat"] = df["type_cuisines"].apply(lambda x: [cuisine.strip() for cuisine in x])
-        all_cuisines = set([cuisine for sublist in df["type_cuisine_flat"] for cuisine in sublist])
+    st.title("Analyse des performances des restaurants")
+    # Ajouter des onglets pour la navigation
+    tab1, tab2, tab3 = st.tabs(["Analyse Globale", "Analyse des Avis", "Autres Analyses"])
 
-        # Interface utilisateur
-        st.title("Analyse des Restaurants")
-        st.write("Bar plot des restaurants avec un filtre `type_cuisine`.")
+    # Onglet 1 : Analyse Globale
+    with tab1:
+        st.header("Analyse Globale des Performances")
+        
+        # Créer deux colonnes : une pour les filtres et une pour les graphiques
+        col1, col2 = st.columns([1, 3])
 
-        # Déplacer le filtre dans la barre latérale
-        st.sidebar.header("Filtres")
+        with col1:
+            st.write("##### Filtres")
+            
+            # Filtre restaurant via une fenêtre contextuelle
+            if st.checkbox("Tous les restaurants", value=True):
+                selected_restaurants = df_restaurant['nom'].unique()
+            else:
+                # Créer une fenêtre contextuelle pour afficher les restaurants avec des checkboxes
+                selected_restaurants = []
+                restaurant_names = df_restaurant['nom'].unique()
+                with st.expander("Sélectionnez un restaurants"):
+                    for restaurant in restaurant_names:
+                        if st.checkbox(restaurant, value=False):
+                            selected_restaurants.append(restaurant)
 
-        # Filtre par type de cuisine
-        selected_cuisine = st.sidebar.selectbox(
-            "Type de cuisine (sélectionner un mot-clé)",
-            options=list(all_cuisines),
-            index=0  # Par défaut, sélectionner le premier mot-clé
-        )
-
-        # Filtrer les données
-        def filter_by_cuisine(row):
-            return selected_cuisine in row["type_cuisine_flat"]
-
-        filtered_df = df[df.apply(filter_by_cuisine, axis=1)]
-
-        # Bar plot
-        if not filtered_df.empty:
-            bar_fig = px.bar(
-                filtered_df,
-                x="nom",
-                y="note_globale",
-                title=f"Notes globales des restaurants (cuisine : {selected_cuisine})",
-                labels={"nom": "Restaurant", "note_globale": "Note Globale"},
-                text="note_globale"
+            # Filtre pour le critère
+            critere = st.selectbox(
+                "Critère de comparaison",
+                ["note_globale", "note_cuisine", "note_service", "note_rapportqualiteprix", "note_ambiance"]
             )
-            bar_fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
-            bar_fig.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 
-            # Afficher le graphe
-            st.plotly_chart(bar_fig, use_container_width=True)
-        else:
-            st.warning("Aucun restaurant ne correspond au type de cuisine sélectionné.")
+        with col2:
+            # Filtrer les données
+            filtered_df = df_restaurant[df_restaurant['nom'].isin(selected_restaurants)]
+            
+            # Calcul des statistiques
+            stats = filtered_df.groupby('nom')[['note_globale', 'note_cuisine', 'note_service', 'note_rapportqualiteprix', 'note_ambiance']].mean().reset_index()
+           
+            # Graphique par critère
+            fig = px.bar(
+                stats,
+                x="nom",
+                y=critere,
+                title=f"Comparaison des restaurants selon {critere}",
+                labels={"nom": "Restaurant", critere: "Note"},
+                color="nom",
+                height=500
+            )
+            st.plotly_chart(fig, use_container_width=True)
+            
+            # Radar chart pour un aperçu global
+            radar_df = stats.melt(id_vars=["nom"], var_name="Critère", value_name="Note")
+            fig_radar = px.line_polar(
+                radar_df,
+                r="Note",
+                theta="Critère",
+                color="nom",
+                line_close=True,
+                title="Performance globale par critères"
+            )
+            st.plotly_chart(fig_radar, use_container_width=True)
+
+    # Onglet 2 : Analyse des Avis
+    with tab2:
+        st.header("Analyse des Avis")
+        
+        # Jointure des données avis et restaurant
+        avis_data = df_review.merge(df_restaurant, on="id_restaurant", how="left")
+        avis_data = avis_data.merge(df_date, on="id_date", how="left")
+        
+        # Créer une colonne pour la période
+        avis_data["période"] = avis_data["mois"].str.capitalize() + " " + avis_data["annee"].astype(str)
+
+        # Filtres dynamiques pour l'analyse des avis
+        col1, col2 = st.columns([1, 3])
+        with col1:
+            selected_critere = st.selectbox(
+                "Sélectionnez un critère",
+                ["Nombre d'avis", "Note moyenne", "Répartition des avis"]
+            )
+            selected_years = st.multiselect(
+                "Filtrer par année",
+                options=sorted(df_date["annee"].unique()),
+                default=list(df_date["annee"].unique())
+            )
+            selected_months = st.multiselect(
+                "Filtrer par mois",
+                options=df_date["mois"].unique(),
+                default=df_date["mois"].unique()
+            )
+            selected_restaurants = st.multiselect(
+                "Sélectionnez un ou plusieurs restaurants",
+                options=df_restaurant["nom"].unique(),
+                default=list(df_restaurant["nom"].unique())
+            )
+           
+        with col2:
+            # Appliquer les filtres sur les avis
+            filtered_avis = avis_data[
+                (avis_data["nom"].isin(selected_restaurants)) &
+                (avis_data["annee"].isin(selected_years)) &
+                (avis_data["mois"].isin(selected_months))
+            ]
+
+            if filtered_avis.empty:
+                st.warning("Aucune donnée disponible pour les filtres sélectionnés.")
+            else:
+                # Analyse et visualisation des avis
+                if selected_critere == "Nombre d'avis":
+                    avis_par_periode = filtered_avis.groupby("période").agg(nb_avis=("id_avis", "count")).reset_index()
+                    st.write("### Évolution du nombre d'avis par période")
+                    fig = px.line(
+                        avis_par_periode,
+                        x="période",
+                        y="nb_avis",
+                        title="Nombre d'avis au fil du temps",
+                        labels={"période": "Période", "nb_avis": "Nombre d'avis"}
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+
+                elif selected_critere == "Note moyenne":
+                    avis_par_periode = filtered_avis.groupby("période").agg(note_moyenne=("nb_etoiles", "mean")).reset_index()
+                    st.write("### Évolution de la note moyenne par période")
+                    fig = px.line(
+                        avis_par_periode,
+                        x="période",
+                        y="note_moyenne",
+                        title="Note moyenne au fil du temps",
+                        labels={"période": "Période", "note_moyenne": "Note moyenne"}
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+
+                elif selected_critere == "Répartition des avis":
+                    # Regrouper les données de dim_restaurant avec les périodes
+                    avis_categorie = filtered_avis.groupby(["période", "nom"]).agg(
+                        nbExcellent=("nbExcellent", "sum"),
+                        nbTresbon=("nbTresbon", "sum"),
+                        nbMoyen=("nbMoyen", "sum"),
+                        nbMediocre=("nbMediocre", "sum"),
+                        nbHorrible=("nbHorrible", "sum")
+                    ).reset_index()
+
+                    # Transformation pour le graphique
+                    avis_categorie = avis_categorie.melt(
+                        id_vars=["période", "nom"],
+                        value_vars=["nbExcellent", "nbTresbon", "nbMoyen", "nbMediocre", "nbHorrible"],
+                        var_name="Catégorie",
+                        value_name="Nombre"
+                    )
+
+                    # Renommer les catégories pour affichage
+                    avis_categorie["Catégorie"] = avis_categorie["Catégorie"].replace({
+                        "nbExcellent": "Excellent",
+                        "nbTresbon": "Très Bon",
+                        "nbMoyen": "Moyen",
+                        "nbMediocre": "Médiocre",
+                        "nbHorrible": "Horrible"
+                    })
+
+                    st.write("### Répartition des avis par période et par catégorie")
+                    fig = px.bar(
+                        avis_categorie,
+                        x="période",
+                        y="Nombre",
+                        color="Catégorie",
+                        title="Répartition des avis par catégorie au fil du temps",
+                        barmode="stack",
+                        labels={"période": "Période", "Nombre": "Nombre d'avis", "Catégorie": "Type d'avis"}
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+
+    # Onglet 3 : Autres Analyses
+    with tab3:
+        st.header("Autres Analyses")
+        st.write("Vous pouvez ajouter ici d'autres types d'analyses (par exemple, tendances temporelles, localisation, etc.).")
+
