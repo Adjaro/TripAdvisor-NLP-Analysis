@@ -10,7 +10,10 @@ load_dotenv(find_dotenv())
 
 @st.cache_resource  # cache_data permet de ne pas avoir à reload la fonction à chaque fois que l'on fait une action sur l'application
 def instantiate_bdd() -> BDDChunks:
-    bdd = BDDChunks(embedding_model="paraphrase-multilingual-MiniLM-L12-v2", path='./')
+    # bdd = BDDChunks(embedding_model="paraphrase-multilingual-MiniLM-L12-v2", path='./')
+    bdd  = BDDChunks(embedding_model="paraphrase-xlm-r-multilingual-v1", path="./")
+
+    bdd._create_collection(path="./")   
     # bdd()
     return bdd
 
@@ -48,10 +51,49 @@ def show():
         range_temperature = [round(x, 2) for x in list(numpy.linspace(0, 5, num=50))]
         temperature = st.select_slider(label="Temperature", options=range_temperature)
 
-    if path:
-        llm = AugmentedRAG(
+ 
+ 
+    # generation_model = "ministral-8b-latest"
+    # role_prompt = "Tu es un assistant virtuel qui aide les utilisateurs à répondre à des questions."
+    # bdd_chunks = BDDChunks(embedding_model="paraphrase-xlm-r-multilingual-v1", path="./")
+    # # bdd_chunks()
+    max_tokens = 100
+    temperature = 0.5
+
+    # # Initialize the SimpleRAG instance
+    # simple_rag = AugmentedRAG(
+    #     generation_model=generation_model,
+    #     role_prompt=role_prompt,
+    #     bdd_chunks=bdd_chunks,
+    #     max_tokens=max_tokens,
+    #     temperature=temperature,
+
+    # )
+
+    # # Define the conversation history
+    # history = {
+    #     "user": "Quelle est la capitale de la France ?",
+    #     "bot": "La capitale de la France est Paris.",
+    # }
+
+    # # Define the user query
+    # query = "LE RESTAURANT  AVEC LE PLUS DE  COMMENTAIRE "
+    # # bdd_chunks._create_collection(path="./")
+
+    # # Generate a response using the SimpleRAG instance
+    # response = simple_rag(query=query, history=history)
+    # # print(response)
+    # st.write(response)
+
+ 
+ 
+    # bdd = instantiate_bdd()
+    print('bdd')
+    # print(type(bdd))
+    # st.write(bdd)
+    llm = AugmentedRAG(
             role_prompt=role_prompt,
-            generation_model=generation_model,
+            generation_model="ministral-8b-latest",
             bdd_chunks= instantiate_bdd(),
             top_n=10,
             max_tokens=max_tokens,
@@ -59,6 +101,7 @@ def show():
         )
 
 
+    st.write(llm)
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
@@ -79,13 +122,25 @@ def show():
                 # On ajoute le message de l'utilisateur dans l'historique de la conversation
                 st.session_state.messages.append({"role": "user", "content": query})
                 # On récupère la réponse du chatbot à la question de l'utilisateur
+                # bdd._create_collection(path="./")
+                # response = llm(
+                #     query=query,
+                #     history=st.session_state.messages,
+                # )      
+                # 
+                history = {
+                    "user": "Quelle est la capitale de la France ?",
+                    "bot": "La capitale de la France est Paris.",
+                }          
                 response = llm(
                     query=query,
-                    history=st.session_state.messages,
+                    history=history,
                 )
+                print(response)
                 # On affiche la réponse du chatbot
                 with st.chat_message("assistant"):
-                    st.markdown(response['response'])
+                    st.markdown(response)
+                    # st.markdown(response['response'])
                     # st.markdown(llm.latency)
                     # st.markdown(llm.input_tokens)
                     # st.markdown(llm.output_tokens)

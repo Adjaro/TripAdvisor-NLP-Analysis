@@ -39,9 +39,14 @@ class BDDChunks:
             model_name=embedding_model
         )
         self.chroma_db = None
+        # self.chroma_db = self._create_collection(path)
+        # self.chroma_db = self.client.get_or_create_collection(name=file_name, embedding_function=self.embeddings, metadata={"hnsw:space": "cosine"})  # type: ignore
+
         
         logging.basicConfig(level=logging.INFO)
         self.logger = logging.getLogger(__name__)
+
+
 
     def get_db(self):
         """
@@ -243,11 +248,10 @@ class BDDChunks:
         Entry point to execute class methods.
         """
         # corpus = self.create_corpus()
-        self._create_collection
-        # chunks = self.split_text_into_chunks(corpus)
-        # self._create_collection(self.path)
-        # self.add_embeddings(chunks)
-
+        # corpus = self.read_pdf(file_path=self.path)
+        # chunks = self.split_text_into_chunks(corpus=corpus)
+        # self._create_collection(path=self.path)
+        # self.add_embeddings(list_chunks=chunks)
 
 # # Test the class
 # if __name__ == "__main__":

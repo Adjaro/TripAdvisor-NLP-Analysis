@@ -15,7 +15,7 @@ def updateDf(df, colname, filters):
     if not filters:
         return df
     try:
-        mask = df[colname].str.contains('&'.join(filters), na=False, case=False)
+        mask = df[colname].str.contains('|'.join(filters), na=False, case=False)
         return df[mask]
     except Exception as e:
         logger.error(f"Error updating DataFrame for column {colname}: {e}")
