@@ -44,6 +44,9 @@ def show():
 
     if st.sidebar.button("🗺️ Cartographie"):
         st.session_state.page = 'Cartographie'
+    
+    if st.sidebar.button("🤖 ChatBot"):
+        st.session_state.page = 'ChatBot'
 
     if st.sidebar.button("💡 Analyse NLP"):
         st.session_state.page = 'Analyse NLP'

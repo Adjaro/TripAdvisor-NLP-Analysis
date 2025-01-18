@@ -90,7 +90,7 @@ def show():
                 
                 # Créer la carte Folium
                 folium_map = folium.Map(location=map_center, zoom_start=13)
-                marker_cluster = MarkerCluster().add_to(folium_map)
+                # marker_cluster = MarkerCluster().add_to(folium_map)
                 
                 # Ajouter des marqueurs pour chaque restaurant filtré
                 for _, restaurant in filtered_restaurants.iterrows():
@@ -98,7 +98,7 @@ def show():
                         location=[restaurant["latitude"], restaurant["longitude"]],
                         tooltip=restaurant["nom"],
                         icon=folium.Icon(color="red", icon="cutlery", prefix="fa")
-                    ).add_to(marker_cluster)
+                    ).add_to(folium_map)
 
                 # Afficher la carte dans Streamlit
                 map_data = st_folium(folium_map, width=900, height=600)
@@ -133,10 +133,16 @@ def show():
                     st.info("👆 Cliquez sur un restaurant pour voir les détails.")
             except Exception as e:
                 logger.error(f"Error showing restaurant details: {e}")
-                st.error("Une erreur s'est produite lors de l'affichage des détails du restaurant.")
+                # st.error("Une erreur s'est produite lors de l'affichage des détails du restaurant.")
+                st.info("👆 Cliquez sur un restaurant pour voir les détails.")
+
+                
 
     except Exception as e:
         logger.error(f"Error in show function: {e}")
         st.error("Une erreur s'est produite lors du chargement des données.")
+        # st.info("👆 Cliquez sur un restaurant pour voir les détails.")
+
+        
     finally:
         db.close()

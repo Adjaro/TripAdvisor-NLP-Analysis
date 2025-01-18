@@ -1,6 +1,6 @@
 # app.py
 import streamlit as st
-from interface import accueil , navbar, dashbord, cartographie, analyse_nlp, analyse_nlp2, visualisation_data, scrapper_restaurant, rapport
+from interface import accueil , navbar, dashbord, cartographie, analyse_nlp, analyse_nlp2, visualisation_data, scrapper_restaurant, rapport, chatbot
 import time
 from manager import InitialisationBD
 # from rag_simulation.corpus_ingestion import BDDChunks 
@@ -48,6 +48,8 @@ if connect_DataBase():
         visualisation_data.show()
     elif st.session_state.page == 'Scrapper Restaurant':
         scrapper_restaurant.show()
+    elif st.session_state.page == 'ChatBot':
+        chatbot.show()
     elif st.session_state.page == 'Rapport':
         rapport.show()
 
