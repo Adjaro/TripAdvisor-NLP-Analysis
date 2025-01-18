@@ -11,13 +11,12 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def updateDf(df, colname, filters):
-    """Filtre le DataFrame selon les valeurs choisies pour une colonne (logique ET)."""
+    """Filtre le DataFrame selon les valeurs choisies pour une colonne."""
     if not filters:
         return df
     try:
-        for filter_value in filters:
-            df = df[df[colname].str.contains(filter_value, na=False, case=False)]
-        return df
+        mask = df[colname].str.contains('&'.join(filters), na=False, case=False)
+        return df[mask]
     except Exception as e:
         logger.error(f"Error updating DataFrame for column {colname}: {e}")
         return df
@@ -34,7 +33,7 @@ def makefiltre(df, colname):
         return []
 
 def show():
-    st.title("📍 Carte des Restaurants")
+    # st.title("📍 Carte des Restaurants")
 
     db = next(get_db())
     try:
@@ -51,7 +50,7 @@ def show():
 
         # Ajouter des filtres
         with st.expander("🔎 Filtres avancés"):
-            col1, col2, col3 = st.columns(3, gap="small")
+            col1, col2, col3 = st.columns(3 , gap="small")
             
             with col1:
                 cuisine_filters = st.multiselect(
@@ -69,7 +68,7 @@ def show():
                     makefiltre(restaurants, 'fonctionnalites')
                 )
 
-        # Appliquer les filtres avec logique ET
+        # Appliquer les filtres
         filtered_restaurants = restaurants.copy()
         filtered_restaurants = updateDf(filtered_restaurants, 'type_cuisines', cuisine_filters)
         filtered_restaurants = updateDf(filtered_restaurants, 'repas', repas_filters)
@@ -82,25 +81,39 @@ def show():
             if filtered_restaurants.empty:
                 st.warning("Aucun restaurant ne correspond aux filtres.")
             else:
-                # Centrer la carte sur les restaurants filtrés
-                map_center = [
-                    filtered_restaurants["latitude"].mean(),
-                    filtered_restaurants["longitude"].mean()
-                ]
+                # Centrer la carte sur le premier restaurant
+                first_restaurant = restaurants.iloc[0]
+                map_center = [first_restaurant["latitude"], first_restaurant["longitude"]]
                 
-                # Créer la carte Folium
+                # Créer la carte Folium centrée sur le premier restaurant
                 folium_map = folium.Map(location=map_center, zoom_start=13)
-                marker_cluster = MarkerCluster().add_to(folium_map)
                 
-                # Ajouter des marqueurs pour chaque restaurant filtré
-                for _, restaurant in filtered_restaurants.iterrows():
+                # Ajouter des marqueurs pour chaque restaurant
+                for _, restaurant in restaurants.iterrows():
                     folium.Marker(
                         location=[restaurant["latitude"], restaurant["longitude"]],
-                        tooltip=restaurant["nom"],
+                        tooltip=restaurant["nom"],  # Tooltip affiché au survol
                         icon=folium.Icon(color="red", icon="cutlery", prefix="fa")
-                    ).add_to(marker_cluster)
+                    ).add_to(folium_map)
+                
+                # Afficher la carte (si vous êtes dans un notebook Jupyter)
+                # folium_map.save("map.html")  # Enregistrer la carte dans un fichier HTML
+                # print("Carte générée avec succès. Ouvrez le fichier 'map.html' pour la voir.")
 
-                # Afficher la carte dans Streamlit
+                # folium_map = folium.Map(location=[
+                #     filtered_restaurants["latitude"].mean(),
+                #     filtered_restaurants["longitude"].mean()
+                # ], zoom_start=13)
+                # marker_cluster = MarkerCluster().add_to(folium_map)
+
+                # for _, restaurant in filtered_restaurants.iterrows():
+                #     folium.Marker(
+                #         location=[restaurant["latitude"], restaurant["longitude"]],
+                #         tooltip=restaurant["nom"],
+                #         icon=folium.Icon(color="red", icon="cutlery", prefix="fa")
+                #     # )
+                #     ).add_to(marker_cluster)
+
                 map_data = st_folium(folium_map, width=900, height=600)
 
         with details_col:
@@ -113,30 +126,46 @@ def show():
                             (filtered_restaurants["longitude"] == clicked["lng"])
                         ].iloc[0]
                         
-                        st.markdown(f"""
-                            <div style='
-                                background-color: white; 
-                                padding: 20px; 
-                                border-radius: 10px; 
-                                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                                width: 100%;
-                                overflow-y: auto;
-                                margin-bottom: 20px;
-                            '>
-                                <h2 style='font-size: 24px; color: #1E1E1E;'>{restaurant['nom']}</h2>
-                                <p><strong>Note:</strong> {restaurant['note_globale']}/5</p>
-                                <p><strong>Adresse:</strong> {restaurant['adresse']}</p>
-                                <p><strong>Info:</strong> {restaurant['infos_pratiques']}</p>
-                            </div>
-                        """, unsafe_allow_html=True)
+                    st.markdown(f"""
+                        <div style='
+                            background-color: white; 
+                            padding: 20px; 
+                            border-radius: 10px; 
+                            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                            width: 100%;
+                            height: 600px;
+                            overflow-y: auto;
+                            margin-bottom: 20px;
+                        '>
+                            <h2 style='
+                                font-size: 24px;
+                                margin-bottom: 15px;
+                                color: #1E1E1E;
+                            '>{restaurant['nom']}</h2>
+                            <p style='
+                                margin: 10px 0;
+                                font-size: 16px;
+                            '><strong>Note:</strong> {restaurant['note_globale']}/5</p>
+                            <p style='
+                                margin: 10px 0;
+                                font-size: 16px;
+                            '><i class="fas fa-map-marker-alt"></i> {restaurant['adresse']}</p>
+                            <p style='
+                                margin: 10px 0;
+                                font-size: 16px;
+                            '><strong>Info:</strong> {restaurant['infos_pratiques']}</p>
+
+                        </div>
+                    """, unsafe_allow_html=True)
                 else:
                     st.info("👆 Cliquez sur un restaurant pour voir les détails.")
             except Exception as e:
-                logger.error(f"Error showing restaurant details: {e}")
-                st.error("Une erreur s'est produite lors de l'affichage des détails du restaurant.")
+                # logger.error(f"Error showing restaurant details: {e}")
+                # st.error(f"Une erreur s'est produite: {str(e)}")
+                st.info(" Pas de restaurant.")
 
     except Exception as e:
         logger.error(f"Error in show function: {e}")
-        st.error("Une erreur s'est produite lors du chargement des données.")
+        st.error(f"Une erreur s'est produite: {str(e)}")
     finally:
         db.close()
