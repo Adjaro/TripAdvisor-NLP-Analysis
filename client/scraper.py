@@ -30,6 +30,7 @@ class TripadvisorScraper:
         self.driver = None
 
     def create_driver(self):
+       
         browser_executable_path = shutil.which("chromium")
 
         Path('selenium.log').unlink(missing_ok=True)
@@ -57,7 +58,8 @@ class TripadvisorScraper:
     
     def handle_cookies(self):
         try:
-            WebDriverWait(self.driver, 30).until(
+            WebDriverWait(self.driver, 5).until(
+            # WebDriverWait(self.driver, 30).until(
                 EC.element_to_be_clickable((By.CSS_SELECTOR, "button[id='onetrust-accept-btn-handler']"))
             ).click()
         except TimeoutException:
@@ -342,7 +344,8 @@ class TripadvisorScraper:
 
     
 # def main():
-#     url = "https://www.tripadvisor.fr/Restaurant_Review-g187265-d5539701-Reviews-L_Institut_Restaurant-Lyon_Rhone_Auvergne_Rhone_Alpes.html"
+#     # url = "https://www.tripadvisor.fr/Restaurant_Review-g187265-d5539701-Reviews-L_Institut_Restaurant-Lyon_Rhone_Auvergne_Rhone_Alpes.html"
+#     url = "https://www.tripadvisor.fr/Restaurant_Review-g187265-d15114321-Reviews-L_affreux_Jojo-Lyon_Rhone_Auvergne_Rhone_Alpes.html"
 #     scraper = TripadvisorScraper(url)
 #     scraper.scrapper()
 #     data = scraper.data
