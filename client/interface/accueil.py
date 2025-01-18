@@ -12,8 +12,12 @@ load_dotenv(find_dotenv())
 def instantiate_bdd() -> BDDChunks:
     # bdd = BDDChunks(embedding_model="paraphrase-multilingual-MiniLM-L12-v2", path='./')
     bdd  = BDDChunks(embedding_model="paraphrase-xlm-r-multilingual-v1", path="./")
-
-    bdd._create_collection(path="./")   
+    try:
+        bdd()
+    except Exception as e:
+        st.error(f"An error occurred while fetching restaurant names: {e}")
+        return []
+    # bdd._create_collection(path="./")   
     # bdd()
     return bdd
 
@@ -57,7 +61,7 @@ def show():
     # role_prompt = "Tu es un assistant virtuel qui aide les utilisateurs à répondre à des questions."
     # bdd_chunks = BDDChunks(embedding_model="paraphrase-xlm-r-multilingual-v1", path="./")
     # # bdd_chunks()
-    max_tokens = 100
+    max_tokens = 10
     temperature = 0.5
 
     # # Initialize the SimpleRAG instance
@@ -95,7 +99,7 @@ def show():
             role_prompt=role_prompt,
             generation_model="ministral-8b-latest",
             bdd_chunks= instantiate_bdd(),
-            top_n=10,
+            top_n=2,
             max_tokens=max_tokens,
             temperature=temperature,
         )
@@ -131,15 +135,20 @@ def show():
                 history = {
                     "user": "Quelle est la capitale de la France ?",
                     "bot": "La capitale de la France est Paris.",
-                }          
-                response = llm(
-                    query=query,
-                    history=history,
-                )
-                print(response)
+                }   
+                try:       
+                    response = llm(
+                        query=query,
+                        history=history
+                    )
+                except Exception as e:
+                    st.error(f"An error occurred while fetching restaurant names: {e}")
+                    # return []
+                # print(response)
                 # On affiche la réponse du chatbot
                 with st.chat_message("assistant"):
-                    st.markdown(response)
+                    pass
+                    # st.markdown(response)
                     # st.markdown(response['response'])
                     # st.markdown(llm.latency)
                     # st.markdown(llm.input_tokens)

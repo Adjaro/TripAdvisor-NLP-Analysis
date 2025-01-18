@@ -11,7 +11,8 @@ from .model import models, schemas
 from .utils import database
 from .scraper import TripadvisorScraper
 from .alimentationBd import insert_json_data, get_data_list, read_json_file
-
+from .rag_simulation.rag_augmented import AugmentedRAG
+from .rag_simulation.corpus_ingestion import BDDChunks
 # Setup logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -39,6 +40,20 @@ async def check_existing_data(db: Session, nom_restaurant: str, address: str) ->
         logger.error(f"Error checking existing data: {e}")
         return False
 
+# @app.on_event("startup")
+# async def rag_start():
+#     try:
+#         path="./"
+#         bdd = BDDChunks(embedding_model="paraphrase-multilingual-MiniLM-L12-v2", path=path)
+#         bdd()
+#         # return bdd
+#     except Exception as e:
+#         logger.error(f"Error during startup: {e}")
+#         raise
+
+
+
+
 @app.on_event("startup")
 async def startup():
     try:
@@ -65,6 +80,32 @@ async def startup():
     except Exception as e:
         logger.error(f"Error during startup: {e}")
         raise
+@app.get("/useRag")
+def use_rag(query: str):
+    try:
+        path="./"
+        bdd = BDDChunks(embedding_model="paraphrase-multilingual-MiniLM-L12-v2", path=path)
+        bd = bdd()
+        llm = AugmentedRAG(
+        role_prompt= "Give me a review of this restaurant",
+        generation_model=  "ministral-8b-latest",
+        bdd_chunks= bd,
+        top_n=2,
+        max_tokens=100,
+        temperature= 0.5,
+        )
+        jist = {
+                    "user": "Quelle est la capitale de la France ?",
+                    "bot": "La capitale de la France est Paris.",
+        } 
+        response = llm(
+                query=query,
+                history= jist,
+            )
+    except Exception as e:
+        logger.error(f"Error during RAG simulation: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+    
 
 @app.get("/scrape")
 def scrape(url: str):
