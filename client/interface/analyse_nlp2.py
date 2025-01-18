@@ -14,7 +14,7 @@ mots_vides = stopwords.words("french")
 mots_vides.append('très')
 mots_vides.append('avon')
 mots_vides.append('plu')
-
+import io 
 #pour la tokénisation
 from nltk.tokenize import word_tokenize
 #lem
@@ -25,14 +25,11 @@ from textblob import TextBlob
 # from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-import gensim
 from gensim.models import Word2Vec
 import os
 from transformers import pipeline
-from gensim import corpora
-from bertopic import BERTopic
+#from bertopic import BERTopic
 from nrclex import NRCLex
-from collections import Counter
 
 def nettoyage_doc(doc_param):
     # Passage en minuscule
@@ -80,15 +77,35 @@ def label_sentiment(polarity):
 
 @st.cache_data(show_spinner=False)
 def calculer_emotions(corpus_final):
+    # Dictionnaire de mappage des émotions en anglais vers le français
+    emotion_mapping = {
+        "positive": "Positif",
+        "negative": "Négatif",
+        "trust": "Confiance",
+        "joy": "Joie",
+        "fear": "Peur",
+        "sadness": "Tristesse",
+        "anger": "Colère",
+        "disgust": "Dégoût",
+        "surprise": "Surprise",
+        "anticipation": "Anticipation"
+    }
+    
     emotions_totales = {}
     for texte in corpus_final:
         emotion_obj = NRCLex(texte)
         for emotion, score in emotion_obj.top_emotions:
-            emotions_totales[emotion] = emotions_totales.get(emotion, 0) + score
+            # Ajoute les scores aux émotions traduites
+            emotion_fr = emotion_mapping.get(emotion, emotion.capitalize())  # Par défaut, utilise le mot capitalisé
+            emotions_totales[emotion_fr] = emotions_totales.get(emotion_fr, 0) + score
+    
+    # Trier les émotions par score total
     emotions_triees = sorted(emotions_totales.items(), key=lambda x: x[1], reverse=True)
+    
+    # Créer un DataFrame
     df_emotions = pd.DataFrame(emotions_triees, columns=['Émotion', 'Score'])
-    df_emotions['Émotion'] = df_emotions['Émotion'].str.capitalize()
     df_emotions.set_index('Émotion', inplace=True)
+    
     return df_emotions
 
 @st.cache_data(show_spinner=False)
@@ -104,6 +121,24 @@ def calculer_sentiments_mensuels(df):
     monthly_counts = df.groupby(['annee_mois', 'sentiment']).size().unstack(fill_value=0).sort_index()
     return monthly_counts
 
+
+@st.cache_resource
+def get_word2vec_model(corpus, model_path="word2vec_reviews.model"):
+    # Tente de charger le modèle si le fichier existe
+    if os.path.exists(model_path):
+        model = Word2Vec.load(model_path)
+    else:
+        # Sinon, entraîne un nouveau modèle et le sauvegarde
+        model = Word2Vec(
+            sentences=corpus,
+            vector_size=100,
+            window=5,
+            min_count=1,
+            workers=4,
+            sg=1
+            )
+        model.save(model_path)
+    return model
 
 def show():
     st.title("Analyse NLP")
@@ -127,278 +162,227 @@ def show():
     global_corpus = reviews_df['review'].astype(str).tolist()
     global_corpus_nettoye = nettoyage_corpus(global_corpus)
     global_corpus_final = [" ".join(doc) for doc in global_corpus_nettoye]
+
     df_emotions = calculer_emotions(global_corpus_final)
-    df_emotions_styled = df_emotions.style.format({'Score': '{:.2f}'})
+    #df_emotions_styled = df_emotions.style.format({'Score': '{:.2f}'})
 
     #st.dataframe(reviews_df2.head())
     columns = ['nom','date','review','nb_etoiles']
     data = reviews_df[columns]
 
+        # Filtre sous le titre
+    restaurant_names = data['nom'].unique().tolist()
+    selected_restaurant = st.selectbox("Choisissez un restaurant :", restaurant_names)
 
-    # Calculer les émotions globales une seule fois et mettre en cache
-    df_emotions = calculer_emotions(global_corpus_final)
+    # Filtrer les avis en fonction du restaurant sélectionné
+    filtered_reviews = data[data['nom'] == selected_restaurant].copy()
+    # Disposition avec colonne pour le filtre et onglets à droite
+    col1, col2 = st.columns([1, 4])
 
     #st.dataframe(reviews_df)
 
-    restaurant_names = reviews_df['nom'].unique().tolist()
-    selected_restaurant = st.selectbox("Choisissez un restaurant :", restaurant_names)
 
-    filtered_reviews = data[reviews_df['nom'] == selected_restaurant].copy()
+    tab1, tab2, tab3 = st.tabs(["WordClouds & Émotions", "Recherche de mots", "Aperçu & Graphique"])
     
-     # -- Ajout du filtre sur les notes (1 à 5)
-    possible_notes = sorted(filtered_reviews['nb_etoiles'].unique())
-    selected_notes = st.multiselect(
-        "Filtrer par note(s) :", possible_notes
-    )
+    #  # -- Ajout du filtre sur les notes (1 à 5)
+    # possible_notes = sorted(filtered_reviews['nb_etoiles'].unique())
+    # selected_notes = st.multiselect(
+    #     "Filtrer par note(s) :", possible_notes
+    # )
 
-     # Filtrer sur les notes choisies
-    filtered_reviews = filtered_reviews[filtered_reviews['nb_etoiles'].isin(selected_notes)]
-    filtered_reviews = filtered_reviews[columns].reset_index(drop=True)
+    #  # Filtrer sur les notes choisies
+    # filtered_reviews = filtered_reviews[filtered_reviews['nb_etoiles'].isin(selected_notes)]
+    # filtered_reviews = filtered_reviews[columns].reset_index(drop=True)
     
-
     # Nettoyage et calcul de la polarité
+    
     corpus = filtered_reviews['review'].astype(str).tolist()
     corpus_nettoye = nettoyage_corpus(corpus)
     corpus_final = [" ".join(doc) for doc in corpus_nettoye]
-
     polarities = [sentiment_textblob_fr(text) for text in corpus_final]
-    
     # Convertir la polarité numérique en label (positif/negatif)
     sentiments = [label_sentiment(pol) for pol in polarities]
-
+    # Plus tard dans votre code, pour obtenir le modèle :
+    model = get_word2vec_model(corpus_nettoye)
     # Ajouter au DataFrame
     #filtered_reviews['review_clean'] = corpus_final
     #filtered_reviews['polarity'] = polarities
     filtered_reviews['sentiment'] = sentiments
 
-        #Affichage commentaires & dates
-    st.dataframe(filtered_reviews)
+    with tab1:
+        st.header("WordClouds pour les avis positifs et négatifs")
+        # Filtrer les commentaires par notes
+        global_negatifs = reviews_df[reviews_df['nb_etoiles'].isin([1, 2])]
+        global_positifs = reviews_df[reviews_df['nb_etoiles'].isin([4, 5])]
 
-    # st.subheader(f"Commentaires pour {selected_restaurant}")
-    # colonnes_affichage = ['review', 'nb_etoiles', 'polarity', 'sentiment']
-    # df_pour_affichage = filtered_reviews[colonnes_affichage].reset_index(drop=True)
-    # st.dataframe(df_pour_affichage)
+        # Nettoyage et applatissage des textes pour chaque groupe
+        negatifs_nettoyes = nettoyage_corpus(global_negatifs['review'].astype(str).tolist(), vire_vide=False)
+        positifs_nettoyes = nettoyage_corpus(global_positifs['review'].astype(str).tolist(), vire_vide=False)
 
-    # # -- Création des textes pour chaque sentiment
-    # # Positif
-    # positif_text = " ".join(
-    #     filtered_reviews.loc[filtered_reviews['sentiment'] == 'Positif', 'review_clean']
-    # )
-    # # Négatif
-    # negatif_text = " ".join(
-    #     filtered_reviews.loc[filtered_reviews['sentiment'] == 'Négatif', 'review_clean']
-    # )
+        texte_negatif = " ".join([" ".join(doc) for doc in negatifs_nettoyes])
+        texte_positif = " ".join([" ".join(doc) for doc in positifs_nettoyes])
 
-# --- Section 3 : WordClouds globaux pour notes 1&2 et 4&5 ---
+        # 1) On récupère les stopwords par défaut de WordCloud
+        stopwords_wc = set(WordCloud().stopwords)
+        # 2) On y ajoute nos mots spécifiques
+        stopwords_wc.update(["tres", "très", "plu", "plus", "avon", "comme","cest", "restaurant","donc","alors","nest","foi"])
 
-    st.header("WordClouds pour les avis postifs et négatifs")
+        # Générer les WordClouds
+        wordcloud_negatif = WordCloud(
+            stopwords=stopwords_wc,
+            max_words=80,
+            width=400,
+            height=200,
+        ).generate(texte_negatif if texte_negatif.strip() else "vide")
 
-    # Filtrer les commentaires par notes
-    global_negatifs = reviews_df[reviews_df['nb_etoiles'].isin([1, 2])]
-    global_positifs = reviews_df[reviews_df['nb_etoiles'].isin([4, 5])]
+        wordcloud_positif = WordCloud(
+            stopwords=stopwords_wc,
+            max_words=80,
+            width=400,
+            height=200,
+        ).generate(texte_positif if texte_positif.strip() else "vide")
 
-    # Nettoyage et applatissage des textes pour chaque groupe
-    negatifs_nettoyes = nettoyage_corpus(global_negatifs['review'].astype(str).tolist(), vire_vide=False)
-    positifs_nettoyes = nettoyage_corpus(global_positifs['review'].astype(str).tolist(), vire_vide=False)
+        col1, col2 = st.columns(2)
 
-    texte_negatif = " ".join([" ".join(doc) for doc in negatifs_nettoyes])
-    texte_positif = " ".join([" ".join(doc) for doc in positifs_nettoyes])
+        with col1:
+            st.subheader("WordCloud - Notes 1 & 2")
+            if texte_negatif.strip():
+                fig_neg, ax_neg = plt.subplots(figsize=(4, 2), dpi=100)
+                ax_neg.imshow(wordcloud_negatif, interpolation='bilinear')
+                ax_neg.axis("off")
+                plt.tight_layout()
+                st.pyplot(fig_neg)
+            else:
+                st.info("Aucun commentaire pour les notes 1 & 2.")
 
-      # 1) On récupère les stopwords par défaut de WordCloud
-    stopwords_wc = set(WordCloud().stopwords)
-    # 2) On y ajoute nos mots spécifiques
-    stopwords_wc.update(["tres", "très", "plu", "plus", "avon", "comme","cest", "restaurant","donc","alors","nest","foi"])
-
-    # Générer les WordClouds
-    wordcloud_negatif = WordCloud(
-        background_color='white',
-        stopwords=stopwords_wc,
-        max_words=80,
-        width=400,
-        height=200,
-    ).generate(texte_negatif if texte_negatif.strip() else "vide")
-
-    wordcloud_positif = WordCloud(
-        background_color='white',
-        stopwords=stopwords_wc,
-        max_words=80,
-        width=400,
-        height=200,
-    ).generate(texte_positif if texte_positif.strip() else "vide")
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.subheader("WordCloud - Notes 1 & 2")
-        if texte_negatif.strip():
-            fig_neg, ax_neg = plt.subplots(figsize=(4, 2), dpi=100)
-            ax_neg.imshow(wordcloud_negatif, interpolation='bilinear')
-            ax_neg.axis("off")
-            plt.tight_layout()
-            st.pyplot(fig_neg)
-        else:
-            st.info("Aucun commentaire pour les notes 1 & 2.")
-
-    with col2:
-        st.subheader("WordCloud - Notes 4 & 5")
-        if texte_positif.strip():
-            fig_pos, ax_pos = plt.subplots(figsize=(4, 2), dpi=100)
-            ax_pos.imshow(wordcloud_positif, interpolation='bilinear')
-            ax_pos.axis("off")
-            plt.tight_layout()
-            st.pyplot(fig_pos)
-        else:
-            st.info("Aucun commentaire pour les notes 4 & 5.")
-
-
-    #Evolution des sentiments
-    # Calcul des sentiments mensuels globaux en tenant compte de l'année et du mois
-    monthly_counts = calculer_sentiments_mensuels(reviews_df)
-
-    # Extraire les années disponibles
-    available_years = sorted(reviews_df['annee'].unique())
-
-    # Définir 2024 comme l'année par défaut si elle est présente, sinon prendre la première année
-    default_year_index = available_years.index(2024) if 2024 in available_years else 0
-
-    # Ajouter un filtre sur l'année
-    selected_year = st.selectbox(
-        "Choisissez une année pour le graphique :",
-        available_years,
-        index=default_year_index  # Sélectionne 2024 par défaut si disponible
-    )
-
-    # Filtrer les données mensuelles pour l'année sélectionnée
-    if selected_year:
-        filtered_monthly_counts = monthly_counts.loc[monthly_counts.index.str.startswith(str(selected_year))]
-
-        st.subheader(f"Évolution mensuelle des sentiments en {selected_year}")
-        
-        # Vérifier que les colonnes 'Positif' et 'Négatif' existent
-        columns_to_plot = []
-        if 'Positif' in filtered_monthly_counts.columns:
-            columns_to_plot.append('Positif')
-        if 'Négatif' in filtered_monthly_counts.columns:
-            columns_to_plot.append('Négatif')
-
-        if not filtered_monthly_counts.empty and columns_to_plot:
-            st.line_chart(filtered_monthly_counts[columns_to_plot])
-        else:
-            st.info("Aucune donnée disponible pour l'année sélectionnée.")
-
-    # # -- Générer deux wordclouds --
-    # # WordCloud pour les avis positifs
-    # wordcloud_pos = WordCloud(
-    #     background_color='white',
-    #     max_words=80,
-    #     colormap='Greens',
-    #     stopwords=stopwords_wc
-    # ).generate(positif_text if positif_text else "vide")
-
-    # # WordCloud pour les avis négatifs
-    # wordcloud_neg = WordCloud(
-    #     background_color='white',
-    #     max_words=80,
-    #     colormap='Reds',
-    #     stopwords=stopwords_wc
-    # ).generate(negatif_text if negatif_text else "vide")
-
-    # # -- Affichage côte à côte --
-    # col1, col2 = st.columns(2)
-
-    # with col1:
-    #     st.subheader("WordCloud - Avis Positifs")
-    #     fig_pos, ax_pos = plt.subplots()
-    #     ax_pos.imshow(wordcloud_pos, interpolation='bilinear')
-    #     ax_pos.axis("off")
-    #     st.pyplot(fig_pos)
-
-    # with col2:
-    #     st.subheader("WordCloud - Avis Négatifs")
-    #     fig_neg, ax_neg = plt.subplots()
-    #     ax_neg.imshow(wordcloud_neg, interpolation='bilinear')
-    #     ax_neg.axis("off")
-    #     st.pyplot(fig_neg)
-
-
-    # # 3) Création d'un seul WordCloud à partir des commentaires filtrés
-    # corpus = filtered_reviews['review'].astype(str).tolist()
-    # corpus_nettoye = nettoyage_corpus(corpus)
-
-    # # On transforme la liste de listes en un seul gros string
-    # text_for_wordcloud = " ".join([" ".join(doc) for doc in corpus_nettoye])
-
-    # if not text_for_wordcloud.strip():
-    #     # S’il n’y a aucun mot dans le texte, on affiche un message
-    #     st.info("Aucun avis selectionné.")
-    # else:
-    #     # Stopwords personnalisés
-    #     stopwords_wc = set(WordCloud().stopwords)
-    #     stopwords_wc.update(["tres", "très", "plu", "plus", "avon", "comme", "restaurant", "lyon"])
-
-    #     # Génération du WordCloud
-    #     wordcloud = WordCloud(
-    #         background_color='white',
-    #         stopwords=stopwords_wc,
-    #         max_words=80,
-    #         width=400,      # Largeur du canvas du WordCloud
-    #         height=200,     # Hauteur du canvas du WordCloud
-    #     ).generate(text_for_wordcloud)
-
-    #     # 4) Affichage dans Streamlit
-    #     st.subheader("WordCloud")
-    #     fig, ax = plt.subplots(figsize=(3, 2), dpi=100)
-    #     ax.imshow(wordcloud, interpolation='bilinear')
-    #     ax.axis("off")
-    #     plt.tight_layout()
-        
-    #     st.pyplot(fig)
-
-
-    @st.cache_resource
-    def get_word2vec_model(corpus, model_path="word2vec_reviews.model"):
-        # Tente de charger le modèle si le fichier existe
-        if os.path.exists(model_path):
-            model = Word2Vec.load(model_path)
-        else:
-            # Sinon, entraîne un nouveau modèle et le sauvegarde
-            model = Word2Vec(
-                sentences=corpus,
-                vector_size=100,
-                window=5,
-                min_count=1,
-                workers=4,
-                sg=1
-            )
-            model.save(model_path)
-        return model
-
-    # Plus tard dans votre code, pour obtenir le modèle :
-    model = get_word2vec_model(corpus_nettoye)
-
-    st.title("Recherche de mots similaires avec Word2Vec")
-
-    # Saisie utilisateur pour le mot de recherche
-    mot_recherche = st.text_input("Entrez un mot pour trouver des mots similaires :", value="service")
-    
-    # Affichage des mots similaires
-    if mot_recherche:
-        if mot_recherche in model.wv.key_to_index:
-            nb_resultats = st.slider("Nombre de résultats :", 1, 20, 5)
-            similaires = model.wv.most_similar(mot_recherche, topn=nb_resultats)
+        with col2:
+            st.subheader("WordCloud - Notes 4 & 5")
+            if texte_positif.strip():
+                fig_pos, ax_pos = plt.subplots(figsize=(4, 2), dpi=100)
+                ax_pos.imshow(wordcloud_positif, interpolation='bilinear')
+                ax_pos.axis("off")
+                plt.tight_layout()
+                st.pyplot(fig_pos)
+            else:
+                st.info("Aucun commentaire pour les notes 4 & 5.")    
             
-            # Créer un DataFrame pour les résultats
-            df_similaires = pd.DataFrame(similaires, columns=["Mot", "Score de similarité"])
-            # Définir la colonne "Mot" comme index pour un affichage plus épuré
-            df_similaires.set_index("Mot", inplace=True)
-            # Styliser le DataFrame pour formater les scores
-            df_styled = df_similaires.style.format({"Score de similarité": "{:.4f}"})
-            
-            # Afficher le tableau épuré
-            st.table(df_styled)
-        else:
-            st.warning(f"Le mot '{mot_recherche}' n'est pas dans le vocabulaire du modèle Word2Vec.")
         
+        st.subheader("Émotions globales pour l'ensemble des commentaires")
+        st.table(df_emotions)
+
+
+    with tab2:
+        st.header("Recherche de mots similaires avec Word2Vec")
+        # Saisie utilisateur pour le mot de recherche
+        mot_recherche = st.text_input("Entrez un mot pour trouver des mots similaires :", value="parfait")
+        
+        # Affichage des mots similaires
+        if mot_recherche:
+            if mot_recherche in model.wv.key_to_index:
+                nb_resultats = st.slider("Nombre de mots à afficher :", 1, 20, 10)
+
+                # Calculer la similarité avec tous les mots du vocabulaire
+                similarites = [
+                    (mot, model.wv.similarity(mot_recherche, mot))
+                    for mot in model.wv.key_to_index
+                    if mot != mot_recherche  # Exclure le mot recherché
+                ]
+
+                # Créer un DataFrame pour trier les mots
+                df_similarites = pd.DataFrame(similarites, columns=["Mot", "Score"]).set_index("Mot")
+
+                # Trier par score (du plus proche au moins proche)
+                df_similarites = df_similarites.sort_values(by="Score", ascending=False)
+
+                # Séparer les meilleurs et les pires scores
+                meilleurs_scores = df_similarites.head(nb_resultats)
+                pires_scores = df_similarites.tail(nb_resultats)
+
+                # Afficher les résultats
+                col1, col2 = st.columns(2)
+
+                with col1:
+                    st.subheader("Mots les plus proches")
+                    st.table(meilleurs_scores.style.format({"Score": "{:.4f}"}))
+
+                with col2:
+                    st.subheader("Mots les moins proches")
+                    st.table(pires_scores.style.format({"Score": "{:.4f}"}))
+            else:
+                st.warning(f"Le mot '{mot_recherche}' n'est pas dans le vocabulaire du modèle Word2Vec.")
+
+
+
+    with tab3:
+        
+        st.header("Aperçu des commentaires et évolution mensuelle")
+
+        # Convertir 'date' en datetime si ce n'est pas déjà le cas
+        if filtered_reviews['date'].dtype == 'O':  # Objet indique string pour pandas
+            filtered_reviews['date'] = pd.to_datetime(filtered_reviews['date'])
+
+        # Trier par ordre décroissant de la date
+        filtered_reviews = filtered_reviews.sort_values(by='date', ascending=False)
+
+                # Afficher uniquement la date sans l'heure dans la vue tout en conservant datetime
+        filtered_reviews['date'] = filtered_reviews['date'].dt.date
+
+        # Affichage des commentaires triés par date
+        st.dataframe(filtered_reviews.reset_index(drop=True))
+
+        # Créer un buffer pour stocker les données CSV
+        buffer = io.BytesIO()
+
+        # Convertir les données filtrées en CSV avec l'encodage et le séparateur souhaité
+        filtered_reviews.to_csv(buffer, index=False, sep=";", encoding="utf-8-sig")
+        # Revenir au début du buffer
+        buffer.seek(0)
+        # Ajouter le bouton de téléchargement avec le contenu du buffer
+        st.download_button(
+            label="Télécharger les commentaires",
+            data=buffer.getvalue(),
+            file_name="commentaires.csv",
+            mime="text/csv"
+        )
+
+        # CONVERTIR date en format datetime
+        if filtered_reviews['date'].dtype == 'O':  # Objet indique string pour pandas
+            filtered_reviews['date'] = pd.to_datetime(filtered_reviews['date'])
+
+        sentiments_mensuels = (
+            filtered_reviews.groupby([filtered_reviews['date'].dt.to_period('M'), 'sentiment'])
+            .size()
+            .unstack(fill_value=0)
+        )
+
+        # Restituer les périodes en format string pour un affichage clair
+        sentiments_mensuels.index = sentiments_mensuels.index.astype(str)
+        sentiments_mensuels.reset_index(inplace=True)
+        sentiments_mensuels.rename(columns={'index': 'date'}, inplace=True)
+
+        available_years = sorted(filtered_reviews['date'].dt.year.unique())
+
+        selected_years = st.multiselect(
+            "Choisissez une ou plusieurs années :",
+            available_years,
+            default=[2024]
+        )
+
+        # Filtrer les périodes correspondant aux années sélectionnées
+        if selected_years:
+            filtered_sentiments = sentiments_mensuels[
+                sentiments_mensuels['date'].str[:4].isin(map(str, selected_years))
+            ]
+
+            # Afficher le graphique
+            st.subheader("Évolution mensuelle des sentiments")
+            if not filtered_sentiments.empty:
+                st.line_chart(filtered_sentiments.set_index('date')[['Positif', 'Négatif']])
+            else:
+                st.info("Aucune donnée disponible pour les années sélectionnées.")
+        else:
+            st.info("Veuillez sélectionner au moins une année.")
+
 
     # # Créer et ajuster le modèle
     # topic_model = BERTopic(language="french")  # Spécifiez la langue si nécessaire
@@ -448,5 +432,4 @@ def show():
 
         # Supposons que 'corpus_final' est une liste de commentaires nettoyés
     # ...
-    st.subheader("Émotions globales pour l'ensemble des commentaires")
-    st.table(df_emotions_styled)
+
