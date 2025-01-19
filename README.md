@@ -1,14 +1,10 @@
 # TripAdvisor-NLP-Analysis
 
+Dans le cadre du Master 2 Statistique & Informatique (SISE), nous avons créé une application destinée à analyser les données de plusieurs restaurants lyonnais. L’objectif de cette application est d’examiner les avis et les notes laissés par les clients sur TripAdvisor. Les informations sont extraites via du "web scraping" puis stockées dans une base de données structurée. Ces données sont ensuite soumises à une analyse complète, alliant une étude descriptive approfondie, l’application de méthodes de traitement du langage naturel (NLP) ainsi que l’utilisation d’un chatbot capable d’interroger la base de données pour fournir des réponses précises et personnalisées.
 
-An NLP and Text Mining project focused on analyzing TripAdvisor reviews of restaurants in Lyon. Developed as part of the Master 2 SISE program, this project extracts valuable insights from customer feedback using natural language processing (NLP) and text analytics techniques. Key objectives include:
+Cette application vise donc à extraire des informations clés afin de mettre en évidence des opportunités d’amélioration ainsi que des tendances majeures. Ces connaissances permettraient aux restaurants de mieux comprendre les attentes de leurs clients et d’optimiser leurs services en conséquence.
 
-Scraping data for a curated selection of Lyon-based restaurants (e.g., Brasserie Georges), including metadata such as location, presentation, services, ratings, and customer reviews.
-Structuring and storing this data in a data warehouse designed for advanced analytics.
-Conducting intra-restaurant and inter-restaurant analyses, incorporating geographic dimensions and potentially augmenting with open data (e.g., geographic proximity, socioeconomic factors, transportation, etc.).
-Performing NLP-driven sentiment analysis and exploring relationships between customer comments, ratings, and restaurant attributes.
-Building an interactive Python-based web application (e.g., Dash, Streamlit, or Bokeh) for dynamic data exploration and analysis, allowing new restaurants to be seamlessly added to the study.
-This project integrates web scraping (BeautifulSoup, Selenium), geographic visualization, and dynamic data-driven dashboards while ensuring seamless deployment through Docker."
+---
 
 ## **Structure du projet** :
 
@@ -18,60 +14,97 @@ TripAdvisor-NLP-Analysis/
 │   ├── interface/           # Interfaces utilisateur (frontend)
 │   ├── requirements.txt     # Dépendances spécifiques au client
 │   └── app.py               # Point d'entrée pour l'application utilisateur
-├── server/
-│   ├── app/
-│   │   ├── data/            # Répertoire pour les fichiers JSON ou CSV
-│   │   ├── requirements.txt # Dépendances spécifiques au serveur
-│   │   ├── main.py          # Point d'entrée pour l'API backend
-│   │   ├── model/           # Définition des modèles de données
-│   │   ├── utils/           # Fonctions utilitaires
-│   │   └── schemas.py       # Validation des schémas de données
-├── requirements.txt         # Liste globale des dépendances Python
+├── documentation/           # Documentation du projet
+├── notebook/                # Notebooks pour analyses exploratoires
+├── packages/                # Modules Python personnalisés
+├── render.yaml              # Configuration pour le déploiement
 └── docker-compose.yml       # Configuration Docker pour orchestrer les services
 ```
 
- 
-## **Clonage et démarrage du projet** :
+---
 
-### 1. **Cloner le projet :**
+## **Remarques importantes** :
+
+1. L'installation peut paraître longue en raison de certaines bibliothèques utilisées dans ce projet, notamment PyTorch.
+2. En utilisant notre application avec Docker, certains modules comme le scraping ou le chatbot risquent de ne pas fonctionner correctement à cause des différences entre les environnements Linux et celui de développement. Par exemple, Selenium, qui utilise un driver spécifique, peut poser des problèmes.
+
+---
+
+## **Installation du projet** :
+
+### 1. **Cloner le projet**
+
 ```bash
 git clone https://github.com/Linn2d/TripAdvisor-NLP-Analysis.git
+```
+
+Accéder au projet :
+
+```bash
 cd TripAdvisor-NLP-Analysis
 ```
- 
 
-### 2. **Installation avec Conda :**
+### 2. **Installation avec Conda**
 
 #### Étape 1 : Créer un environnement virtuel
+
 ```bash
 conda create -n tripAdvisorNLP python=3.9
 conda activate tripAdvisorNLP
-cd client
 ```
 
 #### Étape 2 : Installer les dépendances
+
 ```bash
 pip install -r requirements.txt
 ```
 
-#### Étape 3 : Lancer le serveur
+#### Étape 3 : Lancer le client
+
 ```bash
-uvicorn server.app.main:app --reload --host 0.0.0.0 --port 8000
+cd client
+streamlit run app.py
 ```
- 
-#### Étape 4 : Lancer le client
-```bash
-streamlit  run  app.py
-```
-### 3. **Installation avec Docker :**
+
+### 3. **Installation avec Docker**
 
 #### Étape 1 : Construire et démarrer les services Docker
+
 ```bash
 docker-compose up --build
 ```
 
 #### Étape 2 : Accéder à l’application
+
 - **Backend API** : [http://localhost:8000](http://localhost:8000)  
 - **Interface utilisateur** : [http://localhost:8501](http://localhost:8501)
 
- 
+---
+
+## **Architecture de la base de données**
+
+![Diagramme architecture](documentation/bdd.png)
+
+
+## **Architecture de l'application**
+
+![Diagramme architecture](documentation/architecture.png)
+
+## **Présentation de quelques modules de l'application**
+
+![Diagramme architecture](documentation/accueil.png)
+
+![Diagramme architecture](documentation/carte.png)
+
+![Diagramme architecture](documentation/Analyse_globale_restaurant.png)
+![Diagramme architecture](documentation/analyseNbAvis.png)
+![Diagramme architecture](documentation/analyseRestaurantALL.png)
+
+
+![Diagramme architecture](documentation/chatBot.png)
+
+![Diagramme architecture](documentation/evolutionSentiment.png)
+![Diagramme architecture](documentation/WordClouds.png)
+
+![Diagramme architecture](documentation/scrap.png) 
+
