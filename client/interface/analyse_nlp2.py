@@ -30,6 +30,10 @@ import os
 from transformers import pipeline
 #from bertopic import BERTopic
 from nrclex import NRCLex
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+
 
 def nettoyage_doc(doc_param):
     # Passage en minuscule
@@ -139,6 +143,7 @@ def get_word2vec_model(corpus, model_path="word2vec_reviews.model"):
             )
         model.save(model_path)
     return model
+    
 
 def show():
     st.title("Analyse NLP")
@@ -182,7 +187,7 @@ def show():
     #st.dataframe(reviews_df)
 
 
-    tab1, tab2, tab3 = st.tabs(["WordClouds & Émotions", "Recherche de mots", "Aperçu & Graphique"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Analyse inter restaurant","WordClouds & Émotions", "Recherche de mots", "Aperçu & Graphique"])
     
     #  # -- Ajout du filtre sur les notes (1 à 5)
     # possible_notes = sorted(filtered_reviews['nb_etoiles'].unique())
@@ -209,7 +214,78 @@ def show():
     #filtered_reviews['polarity'] = polarities
     filtered_reviews['sentiment'] = sentiments
 
+
+    
     with tab1:
+
+
+        st.header("Analyse inter restaurant")
+        
+
+    # Charger le modèle Word2Vec global
+        model_all = get_word2vec_model(global_corpus_nettoye)
+
+        # Regrouper les avis par restaurant
+        restaurant_groups = reviews_df.groupby('nom')['review'].apply(list).reset_index()
+
+        restaurant_names = []
+        restaurant_vectors = []
+        # Calcul des vecteurs moyens par restaurant
+        for _, row in restaurant_groups.iterrows():
+            nom = row['nom']
+            avis = row['review']
+            # Nettoyer et tokeniser les avis
+            tokens = nettoyage_corpus(avis)
+            # Filtrer les tokens présents dans le vocabulaire Word2Vec
+            tokens = [mot for doc in tokens for mot in doc if mot in model_all.wv.key_to_index]
+            
+            if tokens:
+                # Calculer la moyenne des vecteurs de mots pour le restaurant
+                word_vectors = [model_all.wv[mot] for mot in tokens]
+                mean_vector = np.mean(word_vectors, axis=0)
+                restaurant_names.append(nom)
+                restaurant_vectors.append(mean_vector)
+
+        if restaurant_vectors:
+            restaurant_vectors_np = np.array(restaurant_vectors)
+            perplexity_value = min(30, len(restaurant_vectors_np) - 1)
+
+            # Réduire à 3 dimensions avec t-SNE
+            tsne = TSNE(n_components=3, random_state=42, perplexity=perplexity_value)
+            vectors_3d = tsne.fit_transform(restaurant_vectors_np)
+            
+            # Créer une figure 3D interactive avec Plotly
+            fig = go.Figure(data=[go.Scatter3d(
+                x=vectors_3d[:, 0],
+                y=vectors_3d[:, 1],
+                z=vectors_3d[:, 2],
+                mode='markers+text',
+                text=restaurant_names,  # Annote chaque point avec le nom du restaurant
+                textposition="top center",
+                marker=dict(
+                    size=5,
+                    color=vectors_3d[:, 2],  # Couleur basée sur la troisième dimension par exemple
+                    colorscale='Viridis',
+                    opacity=0.8
+                )
+            )])
+
+            fig.update_layout(
+                title="Proximité inter restaurant basée sur Word2Vec et t-SNE",
+                scene=dict(
+                    xaxis_title='Dimension 1',
+                    yaxis_title='Dimension 2',
+                    zaxis_title='Dimension 3'
+                ),
+                width=1000,   # largeur souhaitée en pixels
+                height=800    # hauteur souhaitée en pixels
+            )
+
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("Aucun restaurant avec des données suffisantes pour la visualisation.")
+
+    with tab2:
         st.header("WordClouds pour les avis positifs et négatifs")
         # Filtrer les commentaires par notes
         global_negatifs = reviews_df[reviews_df['nb_etoiles'].isin([1, 2])]
@@ -271,7 +347,7 @@ def show():
         st.table(df_emotions)
 
 
-    with tab2:
+    with tab3:
         st.header("Recherche de mots similaires avec Word2Vec")
         # Saisie utilisateur pour le mot de recherche
         mot_recherche = st.text_input("Entrez un mot pour trouver des mots similaires :", value="parfait")
@@ -313,7 +389,7 @@ def show():
 
 
 
-    with tab3:
+    with tab4:
         
         st.header("Aperçu des commentaires et évolution mensuelle")
 
