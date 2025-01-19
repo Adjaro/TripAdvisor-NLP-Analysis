@@ -76,7 +76,6 @@ docker-compose up --build
 
 #### Étape 2 : Accéder à l’application
 
-- **Backend API** : [http://localhost:8000](http://localhost:8000)  
 - **Interface utilisateur** : [http://localhost:8501](http://localhost:8501)
 
 ---
