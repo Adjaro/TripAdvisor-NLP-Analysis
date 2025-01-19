@@ -235,10 +235,8 @@ def show():
 
     
     with tab1:
-
-
         st.header("Analyse inter restaurant")
-        st.dataframe(mots_vides)
+
 
     # Charger le modèle Word2Vec global
         model_all = get_word2vec_model(global_corpus_nettoye)
