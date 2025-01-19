@@ -5,6 +5,43 @@ from rag_simulation.corpus_ingestion import BDDChunks
 
 load_dotenv(find_dotenv())
 
+def load_css():
+    st.markdown("""
+        <style>
+        .main {
+            padding: 2rem;
+        }
+        .title-container {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            padding: 2rem;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+        }
+        .team-card {
+            text-align: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+
 @st.cache_resource
 def instantiate_bdd(path: str) -> BDDChunks:
     # bdd = BDDChunks(embedding_model="paraphrase-xlm-r-multilingual-v1", path=path)

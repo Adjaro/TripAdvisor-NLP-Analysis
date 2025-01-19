@@ -37,6 +37,43 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import numpy as np
 
+def load_css():
+    st.markdown("""
+        <style>
+        .main {
+            padding: 2rem;
+        }
+        .title-container {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            padding: 2rem;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+        }
+        .team-card {
+            text-align: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+
 
 # Construire le chemin vers fichier de stopwords
 # Déterminer le répertoire du script courant
@@ -164,6 +201,7 @@ def get_word2vec_model(corpus, model_path="word2vec_reviews.model"):
     
 
 def show():
+    
     st.title("Analyse NLP")
 
     db = next(get_db())

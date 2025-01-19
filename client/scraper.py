@@ -27,34 +27,48 @@ class TripadvisorScraper:
         self.nb_commentaires_par_page = None
         self.data = None
         
-        self.driver = None
+        self.driver = self.create_driver()
 
     def create_driver(self):
-       
-        browser_executable_path = shutil.which("chromium")
+        service = Service('chromedriver')
 
-        Path('selenium.log').unlink(missing_ok=True)
-        time.sleep(1)
-
-        options = uc.ChromeOptions()
         user_agents = [
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         ]
+        options = uc.ChromeOptions()
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_argument("--incognito")
         options.add_argument("--headless")
+        options.add_argument("--disable-gpu")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--disable-gpu")
-        options.add_argument("--disable-features=NetworkService")
-        options.add_argument("--window-size=1920x1080")
-        options.add_argument("--disable-features=VizDisplayCompositor")
         user_agent = random.choice(user_agents)
         options.add_argument(f'--user-agent={user_agent}')
+        return uc.Chrome(options=options, service=service)        
+        # browser_executable_path = shutil.which("chromium")
 
-        return uc.Chrome(browser_executable_path=browser_executable_path,
-                options=options,
-                use_subprocess=False,
-                log_level=logging.DEBUG,
-                service_log_path='selenium.log')
+        # Path('selenium.log').unlink(missing_ok=True)
+        # time.sleep(1)
+
+        # options = uc.ChromeOptions()
+        # user_agents = [
+        # 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        # ]
+        # options.add_argument("--headless")
+        # options.add_argument("--no-sandbox")
+        # options.add_argument("--disable-dev-shm-usage")
+        # options.add_argument("--disable-gpu")
+        # options.add_argument("--disable-features=NetworkService")
+        # options.add_argument("--window-size=1920x1080")
+        # options.add_argument("--disable-features=VizDisplayCompositor")
+        # user_agent = random.choice(user_agents)
+        # options.add_argument(f'--user-agent={user_agent}')
+
+        # return uc.Chrome(browser_executable_path=browser_executable_path,
+        #         options=options,
+        #         use_subprocess=False,
+        #         log_level=logging.DEBUG,
+        #         service_log_path='selenium.log')
     
     def handle_cookies(self):
         try:
@@ -347,9 +361,13 @@ class TripadvisorScraper:
 #     # url = "https://www.tripadvisor.fr/Restaurant_Review-g187265-d5539701-Reviews-L_Institut_Restaurant-Lyon_Rhone_Auvergne_Rhone_Alpes.html"
 #     url = "https://www.tripadvisor.fr/Restaurant_Review-g187265-d15114321-Reviews-L_affreux_Jojo-Lyon_Rhone_Auvergne_Rhone_Alpes.html"
 #     scraper = TripadvisorScraper(url)
-#     scraper.scrapper()
-#     data = scraper.data
-#     print(data)
+#     scraper.find_restaurant_name()
+#     print(scraper.nom_restaurant)
+#     # scraper.scraper_infos_restaurant()
+    
+#     # scraper.scrapper()
+#     # data = scraper.data
+#     # print(data)
 
 # if __name__ == "__main__":
 #     main()

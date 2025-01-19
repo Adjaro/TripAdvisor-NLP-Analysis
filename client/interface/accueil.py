@@ -44,7 +44,7 @@ def show():
     # Hero Section
     st.markdown("""
         <div class='title-container'>
-            <h2>🍽️ TripAdvisor NLP Analysis</h1>
+            <h2>🍽️ Welcome to TripAdvisor NLP Analysis</h1>
             <h3>Découvrez les insights cachés des avis de restaurants</h3>
         </div>
     """, unsafe_allow_html=True)
@@ -55,15 +55,18 @@ def show():
     with col1:
         st.write("""
         Nous utilisons l'intelligence artificielle et le traitement du langage naturel pour :
-        - 📊 Analyser les sentiments des clients
-        - 🔍 Identifier les tendances gastronomiques
-        - 💡 Générer des insights actionnables
-        - 🌟 Prédire les succès culinaires
+        - ☁️ Analyser les sentiments des clients
+        - 📊 Identifier les tendances
+        - 🤖 Assister les utilisateurs
+        - 🌟 Montrer des informations cachées
         """)
     with col2:
         # Add project logo or illustration here
         # st.image("https://via.placeholder.com/300", caption="")
-        st.image("https://c.clc2l.com/c/screenshot/d/tripadvisor-resultats-61079ffde3239346241387.jpg")
+        # st.image("https://c.clc2l.com/c/screenshot/d/tripadvisor-resultats-61079ffde3239346241387.jpg")
+        # st.image('image.png')
+        # Corrected image display
+        st.image('data/image.png')
     # Features Section
     st.markdown("## ✨ Fonctionnalités")
     col1, col2, col3 = st.columns(3)
@@ -71,7 +74,7 @@ def show():
     with col1:
         st.markdown("""
         <div class='feature-card'>
-            <h3>🤖 Intelligence Artificielle</h3>
+            <h3>☁️ NLP</h3>
             <p>Analyse avancée des sentiments et des émotions dans les avis</p>
         </div>
         """, unsafe_allow_html=True)
@@ -87,8 +90,8 @@ def show():
     with col3:
         st.markdown("""
         <div class='feature-card'>
-            <h3>📈 Prédictions</h3>
-            <p>Modèles prédictifs pour anticiper les tendances</p>
+            <h3>🤖 ChatBot </h3>
+            <p>Assistant intelligent </p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -97,8 +100,8 @@ def show():
     col1, col2, col3 = st.columns(3)
 
     team_members = [
-        {"name": "Adjaro", "role": "Data Scientist", "skills": ["NLP", "Deep Learning"]},
-        {"name": "Linh nhi", "role": "ML Engineer", "skills": ["Machine Learning", "Backend"]},
+        {"name": "Adjaro ", "role": "ML Engineer", "skills": ["Machine Learning", "Data Pipelines"]},
+        {"name": "Linh nhi", "role": "Data Scientist", "skills": ["NLP", "Data Analysis"]},
         {"name": "Nancy", "role": "Data Analyst", "skills": ["Data Analysis", "Visualization"]}
     ]
 

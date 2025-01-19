@@ -32,10 +32,11 @@ def init_database() -> Optional[bool]:
 # Page routing dictionary
 PAGES = {
     "Accueil": accueil,
-    "Analyse NLP2": analyse_nlp2,
+    "Analyse NLP2": dashbord,
     "Cartographie": cartographie,
-    "WordCloud": visualisation_data,
-    "chatbot": chatbot
+    "Analyse NLP": analyse_nlp2,
+    "chatbot": chatbot,
+    "Ajouter Restaurant": scrapper_restaurant,
 }
 
 def main():
@@ -56,5 +57,10 @@ def main():
         st.error(f"Page {current_page} not found")
 
 if __name__ == "__main__":
-    st.set_page_config(page_title="TripAdvisor NLP", layout="wide")
+    st.set_page_config(
+    page_title="Tripadvisor Scraper",
+    page_icon="🌍",
+    layout="wide",
+    initial_sidebar_state="expanded"
+    )
     main()

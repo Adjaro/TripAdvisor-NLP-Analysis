@@ -133,9 +133,12 @@ def insert_data(dict_data):
         db.add_all(date_entries)
         db.add_all(avis_entries)
         db.commit()
+        logger.info(f"Data inserted for {dict_data['nom']}")
+        print(f"Data inserted for {dict_data['nom']}")
 
     except Exception as e:
         logger.error(f"Erreur : {e}")
+        print(f"Erreur : {e}")
         db.rollback()
     finally:
         db.close()
