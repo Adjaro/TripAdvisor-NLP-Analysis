@@ -60,7 +60,7 @@ def show():
         role_prompt=role_prompt,
         generation_model=generation_model,
         bdd_chunks=instantiate_bdd(path=path),
-        top_n=100,
+        top_n=1000,
         max_tokens=max_tokens,
         temperature=temperature,
     )

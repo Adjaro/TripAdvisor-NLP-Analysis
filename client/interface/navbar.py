@@ -52,16 +52,47 @@ def show():
     # Navigation items with working buttons
     menu_items = {
         "🏠 Accueil": "Accueil",
-        "📊 Analyse NLP": "Analyse NLP2",
         "🗺️ Carte": "Cartographie",
-        "☁️ Word Cloud": "wordcloud"
+        "📊 Analyse": "Analyse NLP2",
+        "🤖 ChatBot" : "chatbot",
+        "☁️ NLP": "Analyse NLP",
+        #Ajouter restaurant
+        "🍽️ Ajouter Restaurant": "Ajouter Restaurant",
+        
     }
         # Sidebar Header
+    # st.sidebar.markdown("""
+    #     <div class="sidebar-title">
+    #         <h1><i class="fas fa-utensils"></i> TripAdvisor NLP</h1>
+    #     </div>
+    # """, unsafe_allow_html=True)
+
+        # Titre avec une icône dans la barre latérale
     st.sidebar.markdown("""
-        <div class="sidebar-title">
-            <h1><i class="fas fa-utensils"></i> TripAdvisor NLP</h1>
+        <style>
+            .sidebar-title {
+                display: flex;
+                align-items: justify;
+                color: green;
+                    
+                
+            }
+            .sidebar-title img {
+                margin-right: 5px;   
+            }
+            .sidebar-button {
+                font-size: 12em;
+                margin: 0;
+            }
+                        
+        </style>
+        <div class='sidebar-title'>
+            <img src='https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg' width='200'/>
+            <h1>ML</h1>
         </div>
     """, unsafe_allow_html=True)
+
+    st.sidebar.markdown("<hr>", unsafe_allow_html=True)
 
     # Create buttons for each menu item
     for label, page in menu_items.items():
@@ -72,16 +103,13 @@ def show():
             use_container_width=True
         ):
             st.session_state.current_page = page
-
+    
     st.sidebar.markdown("<hr>", unsafe_allow_html=True)
-
-    # ChatBot button
-    if st.sidebar.button(
-        "🤖 ChatBot",
-        key="chatbot_button",
-        help="Ouvrir le ChatBot",
-        use_container_width=True
-    ):
-        st.session_state.current_page = "chatbot"
-    print(st.session_state.current_page)
+    st.sidebar.markdown("""
+        <div style='text-align: center'>
+            <p>Made with ❤️ by Team: </p>
+            <p>Adjaro, Linh nhi & Nancy</p>
+            <p>Master Data Science - 2024</p>
+        </div>
+    """, unsafe_allow_html=True)
     return st.session_state.current_page

@@ -44,7 +44,7 @@ def show():
     # Hero Section
     st.markdown("""
         <div class='title-container'>
-            <h1>🍽️ TripAdvisor NLP Analysis</h1>
+            <h2>🍽️ TripAdvisor NLP Analysis</h1>
             <h3>Découvrez les insights cachés des avis de restaurants</h3>
         </div>
     """, unsafe_allow_html=True)
@@ -98,7 +98,7 @@ def show():
 
     team_members = [
         {"name": "Adjaro", "role": "Data Scientist", "skills": ["NLP", "Deep Learning"]},
-        {"name": "Lin", "role": "ML Engineer", "skills": ["Machine Learning", "Backend"]},
+        {"name": "Linh nhi", "role": "ML Engineer", "skills": ["Machine Learning", "Backend"]},
         {"name": "Nancy", "role": "Data Analyst", "skills": ["Data Analysis", "Visualization"]}
     ]
 
@@ -111,30 +111,6 @@ def show():
                 <p>{'• '.join(member['skills'])}</p>
             </div>
             """, unsafe_allow_html=True)
-
-    # Project Stats
-    st.markdown("## 📊 Statistiques du Projet")
-    metrics = st.columns(4)
-    stats = [
-        {"label": "Restaurants", "value": "1000+"},
-        {"label": "Avis analysés", "value": "50K+"},
-        {"label": "Précision", "value": "85%"},
-        {"label": "Utilisateurs", "value": "100+"}
-    ]
-
-    for metric, stat in zip(metrics, stats):
-        with metric:
-            st.markdown(f"""
-            <div class='stat-card'>
-                <h4>{stat['label']}</h4>
-                <h2>{stat['value']}</h2>
-            </div>
-            """, unsafe_allow_html=True)
-
-    # Demo Section
-    st.markdown("## 🚀 Démarrer l'analyse")
-    if st.button("Lancer la démonstration"):
-        st.success("Naviguez vers l'onglet 'Analyse NLP' pour explorer les données !")
 
     # Footer
     st.markdown("---")
