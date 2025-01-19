@@ -74,6 +74,7 @@ def load_css():
     """, unsafe_allow_html=True)
 
 
+ 
 
 # Construire le chemin vers fichier de stopwords
 # Déterminer le répertoire du script courant
@@ -236,6 +237,7 @@ def show():
     columns = ['nom','date','review','nb_etoiles']
     data = reviews_df[columns]
 
+
         # Filtre sous le titre
     restaurant_names = data['nom'].unique().tolist()
     selected_restaurant = st.selectbox("Choisissez un restaurant à analyser :", restaurant_names)
@@ -245,6 +247,7 @@ def show():
     # Disposition avec colonne pour le filtre et onglets à droite
     col1, col2 = st.columns([1, 4])
 
+ 
     #st.dataframe(reviews_df)
 
 
@@ -286,6 +289,7 @@ def show():
 
         # Regrouper les avis par restaurant
         restaurant_groups = reviews_df.groupby('nom')['review'].apply(list).reset_index()
+ 
 
         restaurant_names = []
         restaurant_vectors = []
@@ -328,6 +332,7 @@ def show():
                     opacity=0.8
                 )
             )])
+
 
             fig.update_layout(
                 title="Proximité inter restaurant basée sur Word2Vec et t-SNE",
