@@ -33,6 +33,7 @@ from nrclex import NRCLex
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
+import numpy as np
 
 
 def nettoyage_doc(doc_param):
