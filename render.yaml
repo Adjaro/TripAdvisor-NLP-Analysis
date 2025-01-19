@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: TripAdvisorApp
+    env: python
+    plan: free
+    buildCommand: "pip install -r client/requirements.txt"
+    startCommand: "streamlit run client/app.py"

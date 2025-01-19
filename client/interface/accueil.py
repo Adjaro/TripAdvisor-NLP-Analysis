@@ -1,84 +1,128 @@
 import streamlit as st
-from manager import read_restaurant, read_location, get_db
-import pandas as pd
-# from openai import OpenAI
+from PIL import Image
+import os
 
-
+def load_css():
+    st.markdown("""
+        <style>
+        .main {
+            padding: 2rem;
+        }
+        .title-container {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            padding: 2rem;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+        }
+        .team-card {
+            text-align: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
 def show():
-    st.title("Restaurant Assistant 🍽️")
-    db = next(get_db())
-    try:
-        # Charger et fusionner les données
-        restaurants = pd.merge(
-            read_restaurant(db=db),
-            read_location(db=db),
-            on='id_location'
-        )
+    load_css()
 
-        if restaurants.empty:
-            st.error("Aucune donnée disponible.")
-            return
-    except Exception as e:
-        st.error(f"Erreur de chargement des données: {e}")
-        return
+    # Hero Section
+    st.markdown("""
+        <div class='title-container'>
+            <h1>🍽️ Welcome to TripAdvisor NLP Analysis</h1>
+            <h3>Découvrez les insights cachés des avis de restaurants</h3>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Project Overview
+    st.markdown("## 🎯 Notre Mission")
+    col1, col2 = st.columns([2,1])
+    with col1:
+        st.write("""
+        Nous utilisons l'intelligence artificielle et le traitement du langage naturel pour :
+        - ☁️ Analyser les sentiments des clients
+        - 📊 Identifier les tendances
+        - 🤖 Assister les utilisateurs
+        - 🌟 Montrer des informations cachées
+        """)
+    with col2:
+        # Add project logo or illustration here
+        # st.image("https://via.placeholder.com/300", caption="")
+        # st.image("https://c.clc2l.com/c/screenshot/d/tripadvisor-resultats-61079ffde3239346241387.jpg")
+        # st.image('image.png')
+        # Corrected image display
+        st.image('data/image.png')
+    # Features Section
+    st.markdown("## ✨ Fonctionnalités")
+    col1, col2, col3 = st.columns(3)
     
-    # ajouter une  liste deroulante pour les restaurants
-    restaurant = st.selectbox(
-        "Choisissez un restaurant",
-        restaurants['nom']
-    )
-    # client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+    with col1:
+        st.markdown("""
+        <div class='feature-card'>
+            <h3>☁️ NLP</h3>
+            <p>Analyse avancée des sentiments et des émotions dans les avis</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        <div class='feature-card'>
+            <h3>📊 Visualisation</h3>
+            <p>Graphiques interactifs et tableaux de bord dynamiques</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown("""
+        <div class='feature-card'>
+            <h3>🤖 ChatBot </h3>
+            <p>Assistant intelligent </p>
+        </div>
+        """, unsafe_allow_html=True)
 
-    if "openai_model" not in st.session_state:
-        st.session_state["openai_model"] = "gpt-3.5-turbo"
+    # Team Section
+    st.markdown("## 👥 Notre Équipe")
+    col1, col2, col3 = st.columns(3)
 
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
+    team_members = [
+        {"name": "Edina", "role": "ML Engineer", "skills": ["Machine Learning", "Data Pipelines"]},
+        {"name": "Linh nhi", "role": "Data Scientist", "skills": ["NLP", "Data Analysis"]},
+        {"name": "Nancy", "role": "Data Analyst", "skills": ["Data Analysis", "Visualization"]}
+    ]
 
-    if "max_messages" not in st.session_state:
-        # Counting both user and assistant messages, so 10 rounds of conversation
-        st.session_state.max_messages = 20
+    for col, member in zip([col1, col2, col3], team_members):
+        with col:
+            st.markdown(f"""
+            <div class='team-card'>
+                <h3>{member['name']}</h3>
+                <p><em>{member['role']}</em></p>
+                <p>{'• '.join(member['skills'])}</p>
+            </div>
+            """, unsafe_allow_html=True)
 
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+    # Footer
+    st.markdown("---")
+    st.markdown("""
+        <div style='text-align: center'>
+            <p>Made with ❤️ by Team TripAdvisor NLP</p>
+            <p>Master Data Science - 2024</p>
+        </div>
+    """, unsafe_allow_html=True)
 
-    if len(st.session_state.messages) >= st.session_state.max_messages:
-        st.info(
-            """Notice: The maximum message limit for this demo version has been reached. We value your interest!
-            We encourage you to experience further interactions by building your own application with instructions
-            from Streamlit's [Build a basic LLM chat app](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)
-            tutorial. Thank you for your understanding."""
-        )
-
-    else:
-        if prompt := st.chat_input("What is up?"):
-            st.session_state.messages.append({"role": "user", "content": prompt})
-            with st.chat_message("user"):
-                st.markdown(prompt)
-
-            with st.chat_message("assistant"):
-                try:
-                    # stream = client.chat.completions.create(
-                    #     model=st.session_state["openai_model"],
-                    #     messages=[
-                    #         {"role": m["role"], "content": m["content"]}
-                    #         for m in st.session_state.messages
-                    #     ],
-                    #     stream=True,
-                    # )
-                    # response = st.write_stream(stream)
-                    st.session_state.messages.append(
-                        {"role": "assistant", "content": "response"}
-                    )
-                except:
-                    st.session_state.max_messages = len(st.session_state.messages)
-                    rate_limit_message = """
-                        Oops! Sorry, I can't talk now. Too many people have used
-                        this service recently.
-                    """
-                    st.session_state.messages.append(
-                        {"role": "assistant", "content": rate_limit_message}
-                    )
-                    st.rerun()
+# if __name__ == "__main__":
+#     show()

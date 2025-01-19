@@ -37,6 +37,44 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import numpy as np
 
+def load_css():
+    st.markdown("""
+        <style>
+        .main {
+            padding: 2rem;
+        }
+        .title-container {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            padding: 2rem;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+        }
+        .team-card {
+            text-align: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+
+ 
 
 # Construire le chemin vers fichier de stopwords
 # Déterminer le répertoire du script courant
@@ -164,7 +202,13 @@ def get_word2vec_model(corpus, model_path="word2vec_reviews.model"):
     
 
 def show():
-    st.title("Analyse NLP")
+    
+    # st.title("Analyse NLP")
+    st.markdown("""
+        <div class='title-container'>
+            <h1> ☁️ Analyse NLP</h1>    
+        </div>
+    """, unsafe_allow_html=True)
 
     db = next(get_db())
     try:
@@ -193,6 +237,7 @@ def show():
     columns = ['nom','date','review','nb_etoiles']
     data = reviews_df[columns]
 
+
         # Filtre sous le titre
     restaurant_names = data['nom'].unique().tolist()
     selected_restaurant = st.selectbox("Choisissez un restaurant à analyser :", restaurant_names)
@@ -202,6 +247,7 @@ def show():
     # Disposition avec colonne pour le filtre et onglets à droite
     col1, col2 = st.columns([1, 4])
 
+ 
     #st.dataframe(reviews_df)
 
 
@@ -243,6 +289,7 @@ def show():
 
         # Regrouper les avis par restaurant
         restaurant_groups = reviews_df.groupby('nom')['review'].apply(list).reset_index()
+ 
 
         restaurant_names = []
         restaurant_vectors = []
@@ -285,6 +332,7 @@ def show():
                     opacity=0.8
                 )
             )])
+
 
             fig.update_layout(
                 title="Proximité inter restaurant basée sur Word2Vec et t-SNE",
@@ -474,5 +522,4 @@ def show():
                 st.info("Aucune donnée disponible pour les années sélectionnées.")
         else:
             st.info("Veuillez sélectionner au moins une année.")
-
 

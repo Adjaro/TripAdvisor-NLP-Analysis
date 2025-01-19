@@ -44,8 +44,9 @@ cd TripAdvisor-NLP-Analysis
 
 #### Étape 1 : Créer un environnement virtuel
 ```bash
-conda create -n nlpProject python=3.9
-conda activate nlpProject
+conda create -n tripAdvisorNLP python=3.9
+conda activate tripAdvisorNLP
+cd client
 ```
 
 #### Étape 2 : Installer les dépendances
