@@ -85,7 +85,7 @@ def show():
     # Hero Section
     st.markdown("""
         <div class='title-container'>
-            <h2>📍 Carte des Restaurants</h2>
+            <h1>📍 Carte des Restaurants</h1>
         </div>
     """, unsafe_allow_html=True)
     try:

@@ -52,7 +52,12 @@ def load_data():
 df_restaurant, df_date, df_review, df_location = load_data()
 
 def show():
-    st.title("Analyse des performances des restaurants")
+    st.markdown("""
+        <div class='title-container'>
+            <h1> ☁️ Analyse des performances des restaurants</h1>    
+        </div>
+    """, unsafe_allow_html=True)
+
     tab1, tab2 = st.tabs(["Analyse Globale", "Analyse des Avis"])
 
  

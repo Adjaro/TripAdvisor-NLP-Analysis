@@ -44,7 +44,7 @@ def show():
     # Hero Section
     st.markdown("""
         <div class='title-container'>
-            <h2>🍽️ Welcome to TripAdvisor NLP Analysis</h1>
+            <h1>🍽️ Welcome to TripAdvisor NLP Analysis</h1>
             <h3>Découvrez les insights cachés des avis de restaurants</h3>
         </div>
     """, unsafe_allow_html=True)
@@ -100,7 +100,7 @@ def show():
     col1, col2, col3 = st.columns(3)
 
     team_members = [
-        {"name": "Adjaro ", "role": "ML Engineer", "skills": ["Machine Learning", "Data Pipelines"]},
+        {"name": "Edina", "role": "ML Engineer", "skills": ["Machine Learning", "Data Pipelines"]},
         {"name": "Linh nhi", "role": "Data Scientist", "skills": ["NLP", "Data Analysis"]},
         {"name": "Nancy", "role": "Data Analyst", "skills": ["Data Analysis", "Visualization"]}
     ]

@@ -4,11 +4,8 @@ from interface import (
     navbar, 
     dashbord, 
     cartographie, 
-    analyse_nlp, 
     analyse_nlp2, 
-    visualisation_data, 
     scrapper_restaurant, 
-    rapport, 
     chatbot
 )
 import time
@@ -63,4 +60,5 @@ if __name__ == "__main__":
     layout="wide",
     initial_sidebar_state="expanded"
     )
+    
     main()

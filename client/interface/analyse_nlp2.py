@@ -202,7 +202,12 @@ def get_word2vec_model(corpus, model_path="word2vec_reviews.model"):
 
 def show():
     
-    st.title("Analyse NLP")
+    # st.title("Analyse NLP")
+    st.markdown("""
+        <div class='title-container'>
+            <h1> ☁️ Analyse NLP</h1>    
+        </div>
+    """, unsafe_allow_html=True)
 
     db = next(get_db())
     try:

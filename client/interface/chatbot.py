@@ -52,7 +52,12 @@ def instantiate_bdd(path: str) -> BDDChunks:
     return bdd
 
 def show():
-    st.title("🤖 ChatBot - Restaurants de Lyon")
+    # st.title("🤖 ChatBot - Restaurants de Lyon")
+    st.markdown("""
+        <div class='title-container'>
+            <h1>🤖 ChatBot - Restaurants de Lyon</h1>    
+        </div>
+    """, unsafe_allow_html=True)
 
     # Configuration initiale
     # path = "./ChromaDB11"

@@ -108,7 +108,7 @@ def show():
     st.sidebar.markdown("""
         <div style='text-align: center'>
             <p>Made with ❤️ by Team: </p>
-            <p>Adjaro, Linh nhi & Nancy</p>
+            <p>Edina, Linh nhi & Nancy</p>
             <p>Master Data Science - 2024</p>
         </div>
     """, unsafe_allow_html=True)
