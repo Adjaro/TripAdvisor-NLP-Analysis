@@ -1,57 +1,60 @@
-# app.py
 import streamlit as st
-from interface import accueil , navbar, dashbord, cartographie, analyse_nlp, analyse_nlp2, visualisation_data, scrapper_restaurant, rapport, chatbot
-import time
-from manager import InitialisationBD
-# from rag_simulation.corpus_ingestion import BDDChunks 
-# from rag_simulation.rag_augmented import AugmentedRAG
-
-
-# Initialisation de la base de données
-InitialisationBD()
-
- 
-
-# Configuration pour la largeur de la page
-
-st.set_page_config(
-    page_title="Tripadvisor Scraper",
-    page_icon="🌍",
-    layout="wide",
-    initial_sidebar_state="expanded"
+from interface import (
+    accueil, 
+    navbar, 
+    dashbord, 
+    cartographie, 
+    analyse_nlp, 
+    analyse_nlp2, 
+    visualisation_data, 
+    scrapper_restaurant, 
+    rapport, 
+    chatbot
 )
+import time
+from typing import Optional
+from manager import InitialisationBD
 
-def connect_DataBase():
-    return True
+# Initialize session state
+if "current_page" not in st.session_state:
+    st.session_state.current_page = "Accueil"
 
-# Vérifiez le serveur avant de lancer l'application Streamlit
-if connect_DataBase():
-    # Initialisation de l'état de la page si nécessaire
-    if 'page' not in st.session_state:
-        st.session_state.page = 'Accueil'
+@st.cache_resource
+def init_database() -> Optional[bool]:
+    """Initialize database with caching"""
+    try:
+        InitialisationBD()
+        return True
+    except Exception as e:
+        st.error(f"Database initialization failed: {str(e)}")
+        return False
+
+# Page routing dictionary
+PAGES = {
+    "Accueil": accueil,
+    "Analyse NLP2": analyse_nlp2,
+    "Cartographie": cartographie,
+    "WordCloud": visualisation_data,
+    "chatbot": chatbot
+}
+
+def main():
+    # Initialize database
+    init_success = init_database()
     
-    # Afficher le menu latéral
-    navbar.show()
+    if not init_success:
+        st.error("Failed to initialize database")
+        return
 
-    # Affichage du contenu en fonction de la page sélectionnée
-    if st.session_state.page == 'Accueil':
-        accueil.show()
-    elif st.session_state.page == 'Dashbord':
-        dashbord.show()
-    elif st.session_state.page == 'Cartographie':
-        cartographie.show()
-    elif st.session_state.page == 'Analyse NLP':
-        analyse_nlp.show()
-    elif st.session_state.page == 'Analyse NLP2':
-        analyse_nlp2.show()
-    elif st.session_state.page == 'Visualisation data':
-        visualisation_data.show()
-    elif st.session_state.page == 'Scrapper Restaurant':
-        scrapper_restaurant.show()
-    elif st.session_state.page == 'ChatBot':
-        chatbot.show()
-    elif st.session_state.page == 'Rapport':
-        rapport.show()
+    # Show navbar and get current page
+    current_page = navbar.show()
+    
+    # Show selected page content
+    if current_page in PAGES:
+        PAGES[current_page].show()
+    else:
+        st.error(f"Page {current_page} not found")
 
-else:
-    st.error("Le serveur n'est pas disponible. Veuillez réessayer plus tard.")
+if __name__ == "__main__":
+    st.set_page_config(page_title="TripAdvisor NLP", layout="wide")
+    main()

@@ -25,3 +25,4 @@ undetected_chromedriver
 folium
 streamlit_folium
 sqlalchemy
+Word2Vec
