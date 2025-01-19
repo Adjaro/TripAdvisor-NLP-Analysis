@@ -195,7 +195,7 @@ def show():
 
         # Filtre sous le titre
     restaurant_names = data['nom'].unique().tolist()
-    selected_restaurant = st.selectbox("Choisissez un restaurant :", restaurant_names)
+    selected_restaurant = st.selectbox("Choisissez un restaurant à analyser :", restaurant_names)
 
     # Filtrer les avis en fonction du restaurant sélectionné
     filtered_reviews = data[data['nom'] == selected_restaurant].copy()
@@ -235,7 +235,7 @@ def show():
 
     
     with tab1:
-        st.header("Analyse inter restaurant")
+        st.header("Analyse globale inter restaurant")
 
 
     # Charger le modèle Word2Vec global
