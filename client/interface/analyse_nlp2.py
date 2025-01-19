@@ -14,6 +14,8 @@ mots_vides = stopwords.words("french")
 mots_vides.append('très')
 mots_vides.append('avon')
 mots_vides.append('plu')
+
+
 import io 
 #pour la tokénisation
 from nltk.tokenize import word_tokenize
@@ -34,6 +36,21 @@ from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import numpy as np
+
+
+# Construire le chemin vers fichier de stopwords
+# Déterminer le répertoire du script courant
+chemin_actuel = os.path.dirname(__file__)  # Répertoire client/interface
+# Construire le chemin vers le fichier stopwords-fr.txt en remontant d'un niveau
+chemin_stopwords = os.path.join(chemin_actuel, "..", "stopwords-fr.txt")
+# Normaliser le chemin pour éviter les problèmes de syntaxe selon le système d'exploitation
+chemin_stopwords = os.path.normpath(chemin_stopwords)
+try:
+    with open(chemin_stopwords, "r", encoding="utf-8") as f:
+        stopwords_local = f.read().splitlines()
+        mots_vides.extend(stopwords_local)
+except FileNotFoundError:
+    print(f"Le fichier {chemin_stopwords} n'a pas été trouvé.")
 
 
 def nettoyage_doc(doc_param):
@@ -221,7 +238,7 @@ def show():
 
 
         st.header("Analyse inter restaurant")
-        
+        st.dataframe(mots_vides)
 
     # Charger le modèle Word2Vec global
         model_all = get_word2vec_model(global_corpus_nettoye)
@@ -460,53 +477,4 @@ def show():
         else:
             st.info("Veuillez sélectionner au moins une année.")
 
-
-    # # Créer et ajuster le modèle
-    # topic_model = BERTopic(language="french")  # Spécifiez la langue si nécessaire
-    # topics, probs = topic_model.fit_transform(corpus_final)  # corpus_final : vos textes nettoyés
-
-    # # Voir les thèmes
-    # topic_info = topic_model.get_topic_info()
-    # st.write(topic_info)
-
-    # # Pour chaque sujet, afficher les mots principaux
-    # for topic_id in topic_info.Topic:
-    #     st.write(f"Thème {topic_id}: {topic_model.get_topic(topic_id)}")
-
-    # st.header("Thèmes et leurs 5 mots associés")
-
-    # # Récupérer les informations sur les sujets
-    # topic_info = topic_model.get_topic_info()
-
-    # # Filtrer pour exclure le thème -1 et sélectionner les 5 premiers thèmes
-    # valid_topics = topic_info[topic_info.Topic != -1].head(5)
-
-    # for _, row in valid_topics.iterrows():
-    #     topic_id = row['Topic']
-    #     # Obtenir les mots clés et leurs poids pour le sujet
-    #     topic_words = topic_model.get_topic(topic_id)
-    #     if not topic_words:
-    #         continue  # Si aucun mot n'est trouvé, passer au suivant
-        
-    #     # Limiter à 5 mots
-    #     top_words = topic_words[:5]
-        
-    #     # Décomposer en deux listes : mots et scores
-    #     mots = [word for word, _ in top_words]
-    #     scores = [score for _, score in top_words]
-        
-    #     st.subheader(f"Thème {topic_id}")
-    #     st.write(f"Top 5 Mots clés : {', '.join(mots)}")
-        
-    #     # Création du graphique en barres pour ce sujet
-    #     fig, ax = plt.subplots()
-    #     ax.barh(mots, scores, color="skyblue")
-    #     ax.invert_yaxis()  # Afficher le mot le plus important en haut
-    #     ax.set_xlabel("Poids")
-    #     ax.set_title(f"Mots clés du Thème {topic_id}")
-        
-    #     st.pyplot(fig)
-
-        # Supposons que 'corpus_final' est une liste de commentaires nettoyés
-    # ...
 
