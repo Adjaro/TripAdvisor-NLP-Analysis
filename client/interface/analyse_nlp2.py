@@ -5,8 +5,10 @@ from manager import get_db, read_review, read_restaurant, read_date
 #A ajouter dans requirements
 import string
 import nltk
+nltk.download('punkt_tab')
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('wordnet')
 ponctuations = list(string.punctuation)
 chiffres = list("0123456789")
 from nltk.corpus import stopwords
